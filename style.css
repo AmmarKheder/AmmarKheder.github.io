@@ -53,7 +53,7 @@ body {
     justify-content: center;
     padding: 28px 32px;
 }
-.name-logo { height: 36px; width: auto; margin-bottom: 14px; }
+.name-logo { height: 52px; width: auto; margin-bottom: 14px; }
 .role {
     font-size: 1.05rem; font-weight: 700; color: #1a1a1a;
     margin-bottom: 2px;
@@ -75,7 +75,6 @@ body {
 
 /* ── Social Link Cards ── */
 .card-link {
-    grid-row: span 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,6 +88,7 @@ body {
 }
 .card-link svg { width: 28px; height: 28px; }
 .card-link span { opacity: 0.7; }
+.card-link:hover span { opacity: 1; }
 
 .card-github { grid-column: 4; grid-row: 1; }
 .card-github:hover { background: #24292f; color: #fff; }
@@ -102,83 +102,10 @@ body {
 .card-email { grid-column: 1; grid-row: 4; }
 .card-email:hover { background: #ea4335; color: #fff; }
 
-.card-link:hover span { opacity: 1; }
-
-/* ── Stats ── */
-.card-stat {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 16px;
-}
-.card-stat:nth-of-type(1) { grid-column: 2; grid-row: 4; }
-.card-stat:nth-of-type(2) { grid-column: 3; grid-row: 4; }
-.card-stat:nth-of-type(3) { grid-column: 4; grid-row: 4; }
-.card-stat:nth-of-type(4) { grid-column: 1; grid-row: 5; }
-
-.stat-val {
-    font-size: 1.6rem; font-weight: 900; color: #0066ff;
-    letter-spacing: -0.5px;
-}
-.stat-lbl {
-    font-size: 0.68rem; color: #aaa; font-weight: 600;
-    text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px;
-}
-
-/* ── Projects ── */
-.card-project {
-    padding: 22px 24px;
-}
-.card-project-main {
-    grid-column: 2 / 5;
-    grid-row: 5 / 7;
-    background: linear-gradient(135deg, #0066ff, #004bbd);
-    color: #fff;
-}
-.card-project-main .tags span { background: rgba(255,255,255,0.2); color: #fff; }
-.card-project-main .project-links a { color: #fff; border-color: rgba(255,255,255,0.4); }
-.card-project-main .project-links a:hover { background: rgba(255,255,255,0.2); }
-
-.card-project:nth-of-type(2) {
-    grid-column: 1 / 3;
-    grid-row: 7;
-}
-
-.project-top {
-    display: flex; align-items: center; gap: 8px; margin-bottom: 8px;
-}
-.card-project h3 { font-size: 1.1rem; font-weight: 800; }
-.card-project p { font-size: 0.85rem; color: inherit; opacity: 0.85; line-height: 1.55; margin-bottom: 12px; }
-
-.badge {
-    font-size: 0.6rem; font-weight: 700; text-transform: uppercase;
-    padding: 2px 8px; border-radius: 4px;
-    background: #e8f0fe; color: #0066ff; letter-spacing: 0.5px;
-}
-.badge-green { background: #e6f9e6; color: #1a7a1a; }
-
-.tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 12px; }
-.tags span {
-    font-size: 0.68rem; font-weight: 600; padding: 3px 9px;
-    background: #f5f5f5; border-radius: 4px; color: #666;
-}
-
-.project-links { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
-.project-links a {
-    font-size: 0.75rem; font-weight: 700; color: #0066ff;
-    text-decoration: none; padding: 4px 12px;
-    border: 1px solid #0066ff; border-radius: 5px;
-    transition: all 0.2s;
-}
-.project-links a:hover { background: #0066ff; color: #fff; }
-.muted { font-size: 0.72rem; color: #bbb; font-style: italic; }
-
 /* ── News ── */
 .card-news {
-    grid-column: 1 / 3;
-    grid-row: 6;
+    grid-column: 2 / 5;
+    grid-row: 4;
     padding: 22px 24px;
 }
 .card-news h4 { font-size: 0.9rem; font-weight: 800; margin-bottom: 12px; }
@@ -197,8 +124,8 @@ body {
 
 /* ── Publication ── */
 .card-pub {
-    grid-column: 3 / 5;
-    grid-row: 6 / 8;
+    grid-column: 1 / 5;
+    grid-row: 5;
     padding: 22px 24px;
 }
 .card-pub h4 { font-size: 0.9rem; font-weight: 800; margin-bottom: 14px; }
@@ -222,7 +149,7 @@ body {
 /* ── Experience ── */
 .card-exp {
     grid-column: 1 / 3;
-    grid-row: 8;
+    grid-row: 6;
     padding: 22px 24px;
 }
 .card-exp h4 { font-size: 0.9rem; font-weight: 800; margin-bottom: 14px; }
@@ -230,7 +157,7 @@ body {
 /* ── Education ── */
 .card-edu {
     grid-column: 3 / 5;
-    grid-row: 8;
+    grid-row: 6;
     padding: 22px 24px;
 }
 .card-edu h4 { font-size: 0.9rem; font-weight: 800; margin-bottom: 14px; }
@@ -246,13 +173,19 @@ body {
 /* ── Skills ── */
 .card-skills {
     grid-column: 1 / 5;
-    grid-row: 9;
+    grid-row: 7;
 }
 .card-skills h4 { font-size: 0.9rem; font-weight: 800; margin-bottom: 10px; }
 .card-skills .tags span {
     background: #f8f8f8; border: 1px solid #eee;
     padding: 5px 14px; border-radius: 20px;
     font-size: 0.75rem;
+}
+
+.tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 12px; }
+.tags span {
+    font-size: 0.68rem; font-weight: 600; padding: 3px 9px;
+    background: #f5f5f5; border-radius: 4px; color: #666;
 }
 
 /* ── Footer ── */
@@ -270,17 +203,11 @@ footer {
     .card-scholar { grid-column: 1; grid-row: 3; }
     .card-linkedin { grid-column: 2; grid-row: 3; }
     .card-email { grid-column: 1; grid-row: 4; }
-    .card-stat:nth-of-type(1) { grid-column: 2; grid-row: 4; }
-    .card-stat:nth-of-type(2) { grid-column: 1; grid-row: 5; }
-    .card-stat:nth-of-type(3) { grid-column: 2; grid-row: 5; }
-    .card-stat:nth-of-type(4) { grid-column: 1; grid-row: 6; }
-    .card-project-main { grid-column: 1 / 3; grid-row: 7; }
-    .card-project:nth-of-type(2) { grid-column: 1 / 3; grid-row: 8; }
-    .card-news { grid-column: 1 / 3; grid-row: 9; }
-    .card-pub { grid-column: 1 / 3; grid-row: 10; }
-    .card-exp { grid-column: 1 / 3; grid-row: 11; }
-    .card-edu { grid-column: 1 / 3; grid-row: 12; }
-    .card-skills { grid-column: 1 / 3; grid-row: 13; }
+    .card-news { grid-column: 1 / 3; grid-row: 5; }
+    .card-pub { grid-column: 1 / 3; grid-row: 6; }
+    .card-exp { grid-column: 1 / 3; grid-row: 7; }
+    .card-edu { grid-column: 1 / 3; grid-row: 8; }
+    .card-skills { grid-column: 1 / 3; grid-row: 9; }
 }
 
 @media (max-width: 480px) {
