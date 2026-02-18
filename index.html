@@ -21,12 +21,23 @@
     <div class="card card-intro">
         <img src="NAME TEXT.svg" alt="Ammar Kheder" class="name-logo">
         <p class="role">Doctoral Researcher in Computational Engineering</p>
-        <p class="sub">LUT University &mdash; Atmospheric Modelling Centre (AMC-Lahti)</p>
+        <p class="sub">LUT University &mdash; <a href="https://amc-lahti.fi/" target="_blank">Atmospheric Modelling Centre (AMC-Lahti)</a></p>
         <p class="desc">
             I develop neural network architectures that explicitly encode atmospheric physics
             &mdash; terrain-atmosphere interactions, advective transport &mdash; to push spatial resolution
             and forecast accuracy for air quality and Earth system prediction.
-            Supervised by Prof.&nbsp;Michael&nbsp;Boy and Assoc.&nbsp;Prof.&nbsp;Zhi-Song&nbsp;Liu.
+            Supervised by <a href="https://scholar.google.com/citations?user=sv7zMEwAAAAJ&hl=en" target="_blank">Prof.&nbsp;Michael&nbsp;Boy</a>
+            and <a href="https://holmes-alan.github.io/" target="_blank">Assoc.&nbsp;Prof.&nbsp;Zhi-Song&nbsp;Liu</a>.
+        </p>
+        <p class="desc">
+            I have hands-on experience running large-scale distributed training on the
+            <strong>LUMI supercomputer</strong>, scaling experiments up to 1,024 AMD MI250X GPUs
+            for training vision transformer models on high-resolution atmospheric reanalysis data.
+        </p>
+        <p class="desc">
+            MSc in Engineering (Big Data &amp; AI) from EiCnam Paris, with a one-year
+            apprenticeship at <strong>INRIA Bordeaux</strong> within the Mnemosyne team,
+            co-led by Fr&eacute;d&eacute;ric Alexandre and Nicolas Rougier.
         </p>
     </div>
 
@@ -69,21 +80,21 @@
         <span class="stat-lbl">MI250X GPUs</span>
     </div>
 
-    <!-- Project: TopoFlow Europe -->
+    <!-- Project: TopoFlow -->
     <div class="card card-project card-project-main">
         <div class="project-top">
-            <h3>TopoFlow Europe</h3>
-            <span class="badge">In progress</span>
+            <h3>TopoFlow</h3>
         </div>
-        <p>Multi-scale ViT for PM<sub>2.5</sub> forecasting at 0.01&deg; over Europe. Cross-attention between global (ERA5/CAMS) and local (GHAP/elevation) branches.</p>
+        <p>Physics-informed vision transformer with wind-following patch reordering and elevation-aware bias correction for high-resolution PM<sub>2.5</sub> forecasting.</p>
         <div class="tags">
             <span>Vision Transformer</span>
+            <span>Wind Reordering</span>
+            <span>Elevation Bias</span>
             <span>Cross-Attention</span>
-            <span>Delta Prediction</span>
         </div>
         <div class="project-links">
-            <a href="https://github.com/AmmarKheder/topoflow-europe" target="_blank">GitHub</a>
-            <span class="muted">Paper coming soon</span>
+            <a href="https://github.com/AmmarKheder/topoflow" target="_blank">GitHub</a>
+            <a href="https://ammarkheder.github.io/topoflow/" target="_blank">Project Page</a>
         </div>
     </div>
 
@@ -105,19 +116,16 @@
         </div>
     </div>
 
-    <!-- Project: TopoFlow China -->
-    <div class="card card-project">
-        <div class="project-top">
-            <h3>TopoFlow</h3>
-        </div>
-        <p>Physics-informed ViT with wind-following patch reordering for PM<sub>2.5</sub> over China.</p>
-        <div class="tags">
-            <span>Wind Reordering</span>
-            <span>Elevation Bias</span>
-        </div>
-        <div class="project-links">
-            <a href="https://github.com/AmmarKheder/topoflow" target="_blank">GitHub</a>
-        </div>
+    <!-- News -->
+    <div class="card card-news">
+        <h4>News</h4>
+        <ul class="news-list">
+            <li><span class="news-date">Jun 2025</span> AQ-Net paper presented at SCIA 2025 and published in Springer LNCS</li>
+            <li><span class="news-date">Feb 2025</span> AQ-Net preprint available on <a href="https://arxiv.org/abs/2502.11941" target="_blank">arXiv</a></li>
+            <li><span class="news-date">Oct 2024</span> Started Ph.D. at LUT University, Atmospheric Modelling Centre (Lahti)</li>
+            <li><span class="news-date">Oct 2024</span> Teaching assistant for Foundations of AI &amp; Machine Learning at LUT</li>
+            <li><span class="news-date">Sep 2023</span> Founded Neo Great Line &mdash; AI &amp; web development company</li>
+        </ul>
     </div>
 
     <!-- Publications -->
@@ -127,21 +135,11 @@
         <div class="pub-entry">
             <span class="pub-year">2025</span>
             <div>
-                <p class="pub-title">TopoFlow Europe: Multi-Scale Vision Transformer for High-Resolution Air Quality Forecasting</p>
-                <p class="pub-meta"><strong>A. Kheder</strong> et al.</p>
-                <div class="pub-links">
-                    <span class="pub-soon">Coming soon</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="pub-entry">
-            <span class="pub-year">2025</span>
-            <div>
                 <p class="pub-title">TopoFlow: Physics-Informed Topological Air Quality Prediction with Wind-Aware Attention</p>
                 <p class="pub-meta"><strong>A. Kheder</strong> et al.</p>
                 <div class="pub-links">
                     <a href="https://github.com/AmmarKheder/topoflow" target="_blank">Code</a>
+                    <a href="https://ammarkheder.github.io/topoflow/" target="_blank">Project</a>
                     <span class="pub-soon">arXiv &amp; npj &mdash; coming soon</span>
                 </div>
             </div>
@@ -162,6 +160,39 @@
 
     </div>
 
+    <!-- Experience -->
+    <div class="card card-exp">
+        <h4>Experience</h4>
+        <div class="edu-entry">
+            <span class="edu-date">2024 &ndash; now</span>
+            <div>
+                <p class="edu-title">Junior Researcher &amp; Teaching Assistant</p>
+                <p class="edu-place">LUT University, Lahti, Finland</p>
+            </div>
+        </div>
+        <div class="edu-entry">
+            <span class="edu-date">2023 &ndash; now</span>
+            <div>
+                <p class="edu-title">CEO &mdash; Neo Great Line</p>
+                <p class="edu-place">AI services &amp; web development</p>
+            </div>
+        </div>
+        <div class="edu-entry">
+            <span class="edu-date">2021 &ndash; 2022</span>
+            <div>
+                <p class="edu-title">Research Engineer (Apprenticeship)</p>
+                <p class="edu-place">INRIA Bordeaux &mdash; Mnemosyne team (F. Alexandre &amp; N. Rougier)</p>
+            </div>
+        </div>
+        <div class="edu-entry">
+            <span class="edu-date">2021 &ndash; 2023</span>
+            <div>
+                <p class="edu-title">Volunteer Firefighter</p>
+                <p class="edu-place">Sapeurs-pompiers des Deux-S&egrave;vres</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Education -->
     <div class="card card-edu">
         <h4>Education</h4>
@@ -173,10 +204,17 @@
             </div>
         </div>
         <div class="edu-entry">
-            <span class="edu-date">2022 &ndash; 2024</span>
+            <span class="edu-date">2021 &ndash; 2024</span>
             <div>
                 <p class="edu-title">MSc Engineering &mdash; Big Data &amp; AI</p>
-                <p class="edu-place">EiCnam Paris &mdash; Apprenticeship at INRIA Bordeaux (Mnemosyne team, F.&nbsp;Alexandre &amp; N.&nbsp;Rougier)</p>
+                <p class="edu-place">EiCnam Paris &mdash; Apprenticeship at INRIA Bordeaux (Mnemosyne team)</p>
+            </div>
+        </div>
+        <div class="edu-entry">
+            <span class="edu-date">2019 &ndash; 2021</span>
+            <div>
+                <p class="edu-title">Bachelor &mdash; Data Science</p>
+                <p class="edu-place">BUT Niort &mdash; Statistics, Big Data, Business Intelligence &amp; Data Science</p>
             </div>
         </div>
     </div>
