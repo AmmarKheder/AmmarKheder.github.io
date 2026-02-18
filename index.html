@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ammar Kheder — Research Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<nav>
+    <div class="container nav-inner">
+        <a href="#" class="logo">A.K.</a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- ── Hero ── -->
+<section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Ammar Kheder</h1>
+        <p class="hero-title">Researcher in AI &amp; Atmospheric Science</p>
+        <p class="hero-desc">
+            Developing deep learning systems for high-resolution air quality forecasting.
+            Combining vision transformers, multi-scale architectures, and HPC
+            to predict pollution at 1&thinsp;km resolution across Europe.
+        </p>
+        <div class="hero-links">
+            <a href="https://github.com/ammar-kheder" class="btn btn-primary" target="_blank">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+            </a>
+            <a href="https://scholar.google.com/" class="btn btn-outline" target="_blank">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+                Scholar
+            </a>
+            <a href="mailto:ammar.kheder@lumi-supercomputer.eu" class="btn btn-outline">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Email
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ── About ── -->
+<section class="section" id="about">
+    <div class="container">
+        <h2 class="section-title">About</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>
+                    I am a researcher working at the intersection of <strong>computer vision</strong>,
+                    <strong>deep learning</strong>, and <strong>atmospheric science</strong>. My work focuses
+                    on developing neural network architectures that can predict air pollution
+                    at unprecedented spatial resolutions.
+                </p>
+                <p>
+                    My current research introduces <strong>TopoFlow</strong>, a multi-scale vision transformer
+                    that combines global meteorological context (ERA5, CAMS) with local high-resolution
+                    observations (GHAP, elevation) through cross-attention mechanisms. The model produces
+                    daily PM<sub>2.5</sub> forecasts at 0.01&deg; (~1&thinsp;km) resolution across Europe,
+                    outperforming operational systems like CAMS and foundation models like Aurora.
+                </p>
+                <p>
+                    I train and deploy models on the <strong>LUMI supercomputer</strong> (Europe's fastest),
+                    leveraging multi-node distributed training on AMD MI250X GPUs with PyTorch DDP.
+                </p>
+            </div>
+            <div class="about-highlights">
+                <div class="highlight-card">
+                    <span class="highlight-number">0.01&deg;</span>
+                    <span class="highlight-label">Spatial resolution (~1 km)</span>
+                </div>
+                <div class="highlight-card">
+                    <span class="highlight-number">5.99</span>
+                    <span class="highlight-label">RMSE [&mu;g/m&sup3;] on Europe</span>
+                </div>
+                <div class="highlight-card">
+                    <span class="highlight-number">0.74</span>
+                    <span class="highlight-label">Pearson correlation (r)</span>
+                </div>
+                <div class="highlight-card">
+                    <span class="highlight-number">32</span>
+                    <span class="highlight-label">MI250X GPUs (LUMI)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Projects ── -->
+<section class="section section-alt" id="projects">
+    <div class="container">
+        <h2 class="section-title">Research Projects</h2>
+        <div class="projects-grid">
+
+            <!-- TopoFlow Europe -->
+            <article class="project-card project-featured">
+                <span class="project-badge">Featured</span>
+                    <h3>TopoFlow Europe</h3>
+                    <p class="project-subtitle">Multi-Scale Vision Transformer for High-Resolution PM<sub>2.5</sub> Forecasting</p>
+                    <p>
+                        A dual-branch architecture combining a global ViT (ERA5 + CAMS at 0.25&deg;)
+                        with a local ViT (GHAP + elevation at 0.01&deg;) through cross-attention.
+                        Delta prediction formulation enables learning corrections from persistence baseline.
+                        Evaluated on 362 days over Europe (2022), achieving <strong>RMSE&nbsp;=&nbsp;5.99</strong>
+                        and <strong>r&nbsp;=&nbsp;0.74</strong>, outperforming CAMS (-47% RMSE) and persistence baselines.
+                    </p>
+                    <div class="project-tags">
+                        <span>Vision Transformer</span>
+                        <span>Cross-Attention</span>
+                        <span>Delta Prediction</span>
+                        <span>0.01&deg; Resolution</span>
+                        <span>DDP Training</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ammar-kheder/topoflow-europe" target="_blank">Code</a>
+                        <a href="#">Paper (coming soon)</a>
+                    </div>
+            </article>
+
+            <!-- TopoFlow Original -->
+            <article class="project-card">
+                    <h3>TopoFlow</h3>
+                    <p class="project-subtitle">Wind-Aware Topological Air Quality Prediction</p>
+                    <p>
+                        Physics-informed architecture with wind-following patch reordering
+                        and elevation-aware bias correction for PM<sub>2.5</sub> forecasting over China.
+                        Captures atmospheric transport dynamics through topology-guided attention.
+                    </p>
+                    <div class="project-tags">
+                        <span>Wind Reordering</span>
+                        <span>Elevation Bias</span>
+                        <span>China Domain</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ammar-kheder/topoflow" target="_blank">Code</a>
+                    </div>
+            </article>
+
+            <!-- AQ-Net2 -->
+            <article class="project-card">
+                    <h3>AQ-Net2</h3>
+                    <p class="project-subtitle">Deep Learning for Regional Air Quality</p>
+                    <p>
+                        Multi-pollutant prediction framework integrating satellite observations,
+                        reanalysis data, and ground station networks. Supports PM<sub>2.5</sub>,
+                        NO<sub>2</sub>, O<sub>3</sub>, and other pollutants with regional grid architecture.
+                    </p>
+                    <div class="project-tags">
+                        <span>Multi-Pollutant</span>
+                        <span>Satellite Data</span>
+                        <span>Regional Grid</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ammar-kheder/aq-net2" target="_blank">Code</a>
+                    </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- ── Publications ── -->
+<section class="section" id="publications">
+    <div class="container">
+        <h2 class="section-title">Publications</h2>
+        <div class="publications-list">
+
+            <div class="pub-item">
+                <div class="pub-year">2025</div>
+                <div class="pub-content">
+                    <h4>TopoFlow: Multi-Scale Vision Transformer for High-Resolution Air Quality Forecasting over Europe</h4>
+                    <p class="pub-authors"><strong>A. Kheder</strong> et al.</p>
+                    <p class="pub-venue">Submitted to ECCV 2026</p>
+                    <div class="pub-links">
+                        <a href="#">Preprint (coming soon)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-year">2024</div>
+                <div class="pub-content">
+                    <h4>TopoFlow: Physics-Informed Topological Air Quality Prediction with Wind-Aware Attention</h4>
+                    <p class="pub-authors"><strong>A. Kheder</strong> et al.</p>
+                    <p class="pub-venue">Preprint</p>
+                    <div class="pub-links">
+                        <a href="https://github.com/ammar-kheder/topoflow" target="_blank">Code</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ── Skills ── -->
+<section class="section section-alt" id="skills">
+    <div class="container">
+        <h2 class="section-title">Technical Stack</h2>
+        <div class="skills-grid">
+            <div class="skill-group">
+                <h4>Deep Learning</h4>
+                <div class="skill-tags">
+                    <span>PyTorch</span>
+                    <span>Vision Transformers</span>
+                    <span>Cross-Attention</span>
+                    <span>U-Net</span>
+                    <span>DDP / FSDP</span>
+                    <span>Mixed Precision (bf16)</span>
+                    <span>PyTorch Lightning</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h4>HPC &amp; Infrastructure</h4>
+                <div class="skill-tags">
+                    <span>LUMI Supercomputer</span>
+                    <span>AMD MI250X</span>
+                    <span>ROCm</span>
+                    <span>SLURM</span>
+                    <span>Multi-node Training</span>
+                    <span>MIOpen</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h4>Data &amp; Scientific Computing</h4>
+                <div class="skill-tags">
+                    <span>Python</span>
+                    <span>NumPy</span>
+                    <span>Zarr</span>
+                    <span>xarray</span>
+                    <span>Matplotlib</span>
+                    <span>ERA5 / CAMS</span>
+                    <span>GHAP</span>
+                    <span>NetCDF</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h4>Research Domains</h4>
+                <div class="skill-tags">
+                    <span>Air Quality Forecasting</span>
+                    <span>Computer Vision</span>
+                    <span>Remote Sensing</span>
+                    <span>Atmospheric Science</span>
+                    <span>Geospatial ML</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Contact ── -->
+<section class="section" id="contact">
+    <div class="container contact-section">
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="contact-text">
+            Interested in collaboration or have questions about my research?
+        </p>
+        <div class="contact-links">
+            <a href="mailto:ammar.kheder@lumi-supercomputer.eu" class="contact-card">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <span>Email</span>
+            </a>
+            <a href="https://github.com/ammar-kheder" target="_blank" class="contact-card">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                <span>GitHub</span>
+            </a>
+            <a href="https://scholar.google.com/" target="_blank" class="contact-card">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+                <span>Google Scholar</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Ammar Kheder. Built with research and caffeine.</p>
+    </div>
+</footer>
+
+<!-- ── Scripts ── -->
+<script>
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+});
+
+// Nav scroll effect
+window.addEventListener('scroll', () => {
+    document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Mobile toggle
+document.querySelector('.nav-toggle')?.addEventListener('click', function() {
+    document.querySelector('.nav-links').classList.toggle('active');
+    this.classList.toggle('active');
+});
+
+// Fade-in on scroll
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.project-card, .pub-item, .skill-group, .highlight-card').forEach(el => {
+    el.classList.add('fade-in');
+    observer.observe(el);
+});
+</script>
+
+</body>
+</html>
