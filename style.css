@@ -116,6 +116,8 @@ body {
     grid-column: 1 / 5;
     grid-row: 4;
     padding: 22px 24px;
+    max-height: 180px;
+    overflow-y: auto;
 }
 .card-news h4 {
     font-size: 0.9rem; font-weight: 800; margin-bottom: 12px;
