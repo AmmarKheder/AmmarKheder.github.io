@@ -129,9 +129,33 @@ h1, h2, h3, h4 {
 
 /* ── Prose / main container ─────────────────────────────── */
 .prose {
-    max-width: 860px;
+    max-width: 1180px;
     margin: 0 auto;
-    padding: 48px 28px 24px;
+    padding: 48px 32px 24px;
+}
+
+/* narrow the "reading" sections (header + intro) while keeping wide grid below */
+.page-header,
+.intro {
+    max-width: 860px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ── Desktop: news & publications side by side ──────────── */
+.main-grid {
+    margin-top: 8px;
+}
+@media (min-width: 960px) {
+    .main-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+        column-gap: 56px;
+        row-gap: 0;
+        align-items: start;
+    }
+    .main-grid > section { margin-top: 0; }
+    .main-grid > section h2 { margin-top: 16px; }
 }
 
 /* ── Title ─────────────────────────────────────────────────── */
