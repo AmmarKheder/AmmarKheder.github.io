@@ -235,9 +235,9 @@ h3 {
 }
 
 /* ── News (numbered list) ────────────────────────────────── */
+.news-wrap { counter-reset: news; }
 .news-list {
     list-style: none;
-    counter-reset: news;
     padding-left: 0;
 }
 .news-list li {
@@ -294,6 +294,44 @@ h3 {
     box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.06);
 }
 .news-featured::before { left: 12px !important; top: 12px !important; }
+
+/* ── News expander (<details>) ──────────────────────────── */
+.news-more { margin-top: 4px; }
+.news-more summary {
+    list-style: none;
+    cursor: pointer;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--link);
+    letter-spacing: 0.02em;
+    padding: 12px 0 10px;
+    border-top: 1px dashed var(--rule);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.15s;
+}
+.news-more summary::-webkit-details-marker,
+.news-more summary::marker { display: none; content: none; }
+.news-more summary::before {
+    content: "▸";
+    display: inline-block;
+    color: var(--link);
+    transition: transform 0.2s ease;
+    font-size: 0.9rem;
+}
+.news-more[open] summary::before { transform: rotate(90deg); }
+.news-more summary:hover { color: var(--link-hover); }
+.news-more-count {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+}
+.news-more[open] summary { margin-bottom: 4px; }
+.news-more .news-list { padding-top: 2px; }
 
 /* ── Publications (bibliography) ─────────────────────────── */
 .publications {
