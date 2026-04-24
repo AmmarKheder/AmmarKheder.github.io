@@ -32,6 +32,11 @@
 
 html { font-size: 17px; scroll-behavior: smooth; }
 
+/* Offset anchor jumps so they don't hide behind the sticky navbar */
+main section[id], main [id] {
+    scroll-margin-top: 80px;
+}
+
 body {
     font-family: var(--font-body);
     background:
@@ -126,6 +131,10 @@ h1, h2, h3, h4 {
 }
 .nav-icon:hover { color: #fff; transform: translateY(-1px); text-decoration: none; }
 .nav-icon svg { width: 20px; height: 20px; display: block; }
+
+/* Hamburger (hidden on desktop) */
+.nav-toggle-check { display: none; }
+.nav-toggle { display: none; }
 
 /* ── Prose / main container ─────────────────────────────── */
 .prose {
@@ -528,11 +537,88 @@ footer .footer-sub {
 
 @media (max-width: 640px) {
     html { font-size: 16px; }
-    .navbar { padding: 12px 18px; }
-    .nav-links { gap: 10px; }
-    .nav-item { display: none; }
-    .nav-sep { display: none; }
+    .navbar {
+        padding: 12px 18px;
+        position: sticky;
+        top: 0;
+    }
     .brand span { display: none; }
+
+    /* Hamburger visible on mobile */
+    .nav-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 26px;
+        height: 20px;
+        cursor: pointer;
+        padding: 0;
+        z-index: 102;
+    }
+    .nav-toggle span {
+        display: block;
+        height: 2px;
+        width: 100%;
+        background: var(--nav-ink);
+        border-radius: 2px;
+        transition: transform 0.25s ease, opacity 0.2s ease;
+        transform-origin: center;
+    }
+    .nav-toggle-check:checked ~ .nav-toggle span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    .nav-toggle-check:checked ~ .nav-toggle span:nth-child(2) { opacity: 0; }
+    .nav-toggle-check:checked ~ .nav-toggle span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* Nav-links dropdown on mobile */
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--nav-bg);
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+        border-bottom: 2px solid #000;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+    .nav-toggle-check:checked ~ .nav-links {
+        max-height: 520px;
+        padding: 4px 0 14px;
+    }
+
+    .nav-item {
+        flex: 0 0 100%;
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+    .nav-item:hover { background: rgba(244, 241, 232, 0.06); }
+
+    /* Full-width line that forces icons onto a new row */
+    .nav-sep {
+        display: block;
+        flex: 0 0 100%;
+        height: 0;
+        width: auto;
+        margin: 6px 20px 4px;
+        border-top: 1px solid rgba(244, 241, 232, 0.12);
+        background: none;
+    }
+
+    /* Icons laid out horizontally below the separator */
+    .nav-links .nav-icon {
+        padding: 8px 10px;
+        margin-left: 14px;
+    }
+
     .prose { padding: 32px 20px 20px; }
     .page-header h1 { font-size: 2.3rem; }
     .intro .avatar,
@@ -663,6 +749,48 @@ footer .footer-sub {
     overflow: hidden;
     background: #0a0a0a;
     border-bottom: 2px solid #000;
+}
+
+/* Text-only hero variant (no cover image) */
+.project-hero-textonly {
+    min-height: 380px;
+    max-height: none;
+    overflow: visible;
+    background:
+        radial-gradient(800px 400px at 85% 15%, rgba(67, 56, 202, 0.45) 0%, transparent 60%),
+        radial-gradient(700px 380px at 10% 90%, rgba(198, 40, 40, 0.22) 0%, transparent 55%),
+        linear-gradient(160deg, #0a0a2e 0%, #1a1a1a 60%, #0a0a0a 100%);
+    display: flex;
+    align-items: center;
+}
+.project-hero-textonly .hero-overlay {
+    position: static;
+    inset: auto;
+    background: none;
+    padding: 64px 32px;
+    width: 100%;
+    display: block;
+}
+.project-hero-textonly h1 {
+    font-size: 5rem;
+    letter-spacing: 0.01em;
+}
+@media (max-width: 900px) {
+    .project-hero-textonly { min-height: 320px; }
+    .project-hero-textonly h1 { font-size: 3.4rem; }
+    .project-hero-textonly .hero-overlay { padding: 40px 24px; }
+}
+@media (max-width: 560px) {
+    .project-hero-textonly h1 { font-size: 2.4rem; }
+    .project-hero-textonly .hero-overlay { padding: 32px 20px; }
+}
+
+/* Stat card — when value is a word, not a number */
+.stat-value.stat-text {
+    font-size: 1.8rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-dark);
 }
 .project-hero .hero-img {
     width: 100%;
