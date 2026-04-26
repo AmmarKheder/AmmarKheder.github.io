@@ -510,6 +510,22 @@ h3 {
     color: var(--muted);
     font-style: italic;
 }
+.history .exp-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: color 0.18s;
+}
+.history .exp-link:hover { color: var(--link); text-decoration: none; }
+.history .exp-link:hover .role { color: var(--link); }
+.history .exp-arrow {
+    display: inline-block;
+    color: var(--link);
+    font-weight: 400;
+    transition: transform 0.18s;
+    margin-left: 4px;
+}
+.history .exp-link:hover .exp-arrow { transform: translateX(4px); }
 
 /* ── Footer ─────────────────────────────────────────────── */
 footer {
