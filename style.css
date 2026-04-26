@@ -466,6 +466,35 @@ h3 {
 }
 .pub-featured::before { left: 14px !important; top: 14px !important; }
 
+/* Citation badge (live-fetched from OpenAlex) */
+.cite-count {
+    display: inline-block;
+    margin-left: 10px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--link);
+    background: var(--accent-bg);
+    border: 1.5px solid var(--ink-dark);
+    padding: 2px 9px;
+    border-radius: var(--sketchy-radius-sm);
+    vertical-align: 2px;
+    white-space: nowrap;
+}
+.citation-total {
+    font-family: var(--font-head);
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--link);
+    margin-bottom: 16px;
+    padding: 8px 14px;
+    background: var(--accent-bg);
+    border-left: 3px solid var(--link);
+    border-radius: var(--sketchy-radius-sm);
+}
+
 /* ── Experience & Education (two-column tables) ─────────── */
 .two-col {
     display: grid;
