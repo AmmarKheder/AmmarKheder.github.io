@@ -250,6 +250,33 @@ h1, h2, h3, h4 {
 }
 .intro p.keywords strong { color: var(--ink-dark); }
 
+/* Download CV pill */
+.intro p.cv-download {
+    margin-top: 14px;
+    text-align: left;
+}
+.intro p.cv-download a {
+    display: inline-block;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--link);
+    border: 1.8px solid var(--link);
+    border-radius: var(--sketchy-radius-sm);
+    padding: 6px 16px;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: all 0.18s;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.06);
+}
+.intro p.cv-download a:hover {
+    background: var(--link);
+    color: #fff;
+    text-decoration: none;
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
 /* ── Section headings ───────────────────────────────────── */
 h2 {
     font-size: 2.3rem;
