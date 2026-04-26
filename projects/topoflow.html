@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopoFlow, by Ammar Kheder</title>
+    <meta name="description" content="TopoFlow: a topography-aware Vision Transformer for high-resolution air quality prediction over China. Published in npj Climate and Atmospheric Science (Nature Portfolio), 2026.">
+    <meta name="author" content="Ammar Kheder">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="TopoFlow, by Ammar Kheder">
+    <meta property="og:description" content="A physics-informed Vision Transformer with wind-following patch reordering and elevation-aware attention. Published in npj Climate and Atmospheric Science (Nature Portfolio), 2026.">
+    <meta property="og:image" content="https://ammarkheder.github.io/TopoFlow/assets/figures/china_pm25_publication.png">
+    <meta property="og:url" content="https://ammarkheder.github.io/projects/topoflow.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#1a1a1a">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Neucha&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="../index.html" class="brand">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="11" fill="#fafafa"/>
+            <text x="32" y="32" text-anchor="middle" dominant-baseline="central" font-family="Georgia, serif" font-weight="700" font-size="34" letter-spacing="-1" fill="#0a0a0a">AK</text>
+        </svg>
+        <span>Ammar Kheder</span>
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-check" aria-hidden="true">
+    <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+        <a href="../index.html#news" class="nav-item">News</a>
+        <a href="../index.html#publications" class="nav-item">Publications</a>
+        <a href="../projects.html" class="nav-item nav-active">Projects</a>
+        <a href="../index.html#experience" class="nav-item">CV</a>
+        <span class="nav-sep"></span>
+        <a href="https://github.com/AmmarKheder" target="_blank" aria-label="GitHub" class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+        <a href="https://scholar.google.com/citations?user=ZYvKJF4AAAAJ&hl=fr" target="_blank" aria-label="Scholar" class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg></a>
+        <a href="https://www.linkedin.com/in/ammar-kheder-a37053193/" target="_blank" aria-label="LinkedIn" class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="mailto:ammar.kheder@lut.fi" aria-label="Email" class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/></svg></a>
+    </div>
+</nav>
+
+<section class="project-hero">
+    <img src="https://ammarkheder.github.io/TopoFlow/assets/figures/china_pm25_publication.png" alt="TopoFlow PM2.5 prediction map over China" class="hero-img">
+    <div class="hero-overlay">
+        <div class="hero-content">
+            <p class="hero-kicker">Lead author &middot; 2026 &middot; npj Climate and Atmospheric Science</p>
+            <h1>TopoFlow</h1>
+            <p class="hero-tagline">Topography-aware pollutant flow learning for high-resolution air quality prediction.</p>
+            <p class="hero-breadcrumb"><a href="../projects.html">&larr; All projects</a></p>
+        </div>
+    </div>
+</section>
+
+<main class="prose project-detail">
+
+    <section class="project-intro">
+        <p>TopoFlow is a Vision Transformer for daily multi-pollutant air quality forecasting over China, extended with two physics-informed components that turn raw atmospheric reanalysis data into accurate, station-validated predictions of <strong>PM<sub>2.5</sub></strong>, <strong>PM<sub>10</sub></strong>, <strong>NO<sub>2</sub></strong>, <strong>SO<sub>2</sub></strong>, <strong>O<sub>3</sub></strong> and <strong>CO</strong>.</p>
+        <p>The first contribution is a <strong>wind-following patch reordering</strong>: instead of feeding patches in fixed raster order, we re-sort them along the prevailing wind so the transformer attends in the direction pollutants actually travel. The second is an <strong>elevation-aware attention bias</strong>: terrain barriers like the Sichuan Basin trap pollutants, and the model is told about that geometry through a learnable bias informed by digital elevation maps.</p>
+        <p>I led the model design, training, and evaluation. The paper was published in <a href="https://www.nature.com/articles/s41612-026-01417-5" target="_blank"><em>npj Climate and Atmospheric Science</em></a> (Nature Portfolio) on 24 April 2026.</p>
+    </section>
+
+    <section class="stats-grid">
+        <div class="stat-card"><p class="stat-value stat-text">npj</p><p class="stat-label">Clim. Atmos. Sci.<br><span>Nature Portfolio</span></p></div>
+        <div class="stat-card"><p class="stat-value stat-text">6</p><p class="stat-label">Pollutants<br><span>PM, NO<sub>2</sub>, SO<sub>2</sub>, O<sub>3</sub>, CO</span></p></div>
+        <div class="stat-card"><p class="stat-value stat-text">ViT</p><p class="stat-label">Backbone<br><span>physics-informed</span></p></div>
+        <div class="stat-card"><p class="stat-value stat-text">LUMI</p><p class="stat-label">Trained on<br><span>AMD MI250X GPUs</span></p></div>
+    </section>
+
+    <section class="project-section">
+        <h2>Key ideas</h2>
+        <ol class="feature-list">
+            <li><strong>Wind-following patch reordering.</strong> Patches are re-sorted along the prevailing wind so attention flows in the direction pollutants actually move, not in raster order.</li>
+            <li><strong>Elevation-aware attention bias.</strong> A learnable bias keyed on digital elevation lets the model encode topographic blocking, like the Sichuan Basin trapping haze for days.</li>
+            <li><strong>Multi-pollutant, single model.</strong> Six species predicted jointly, sharing the atmospheric representation rather than training six separate models.</li>
+            <li><strong>Validated against ground stations.</strong> Compared to CAMS, Aurora and CAQRA on OpenAQ stations, with case studies on the Beijing November 2018 haze and Sichuan Basin blocking.</li>
+        </ol>
+    </section>
+
+    <section class="project-section">
+        <h2>Visualisations</h2>
+        <div class="photo-gallery">
+            <a href="https://ammarkheder.github.io/TopoFlow/assets/architecture.png" target="_blank" class="gallery-item">
+                <img src="https://ammarkheder.github.io/TopoFlow/assets/architecture.png" alt="TopoFlow architecture" loading="lazy">
+                <span class="gallery-caption">Architecture: wind-guided patches + elevation bias</span>
+            </a>
+            <a href="https://ammarkheder.github.io/TopoFlow/assets/figures/figure_seasonal_final.png" target="_blank" class="gallery-item">
+                <img src="https://ammarkheder.github.io/TopoFlow/assets/figures/figure_seasonal_final.png" alt="Seasonal multi-model comparison" loading="lazy">
+                <span class="gallery-caption">Seasonal comparison vs. CAMS, Aurora, CAQRA</span>
+            </a>
+            <a href="https://ammarkheder.github.io/TopoFlow/assets/figures/figure6_beijing_haze_v5.png" target="_blank" class="gallery-item">
+                <img src="https://ammarkheder.github.io/TopoFlow/assets/figures/figure6_beijing_haze_v5.png" alt="Beijing November 2018 haze case study" loading="lazy">
+                <span class="gallery-caption">Beijing haze, November 2018</span>
+            </a>
+            <a href="https://ammarkheder.github.io/TopoFlow/assets/figures/figure_sichuan_blocking.png" target="_blank" class="gallery-item">
+                <img src="https://ammarkheder.github.io/TopoFlow/assets/figures/figure_sichuan_blocking.png" alt="Sichuan Basin topographic blocking" loading="lazy">
+                <span class="gallery-caption">Sichuan Basin: topographic trapping</span>
+            </a>
+            <a href="https://ammarkheder.github.io/TopoFlow/assets/figures/3DDD.png" target="_blank" class="gallery-item">
+                <img src="https://ammarkheder.github.io/TopoFlow/assets/figures/3DDD.png" alt="3D PM2.5 surface with stations" loading="lazy">
+                <span class="gallery-caption">3D PM<sub>2.5</sub> surface with OpenAQ validation</span>
+            </a>
+            <a href="https://ammarkheder.github.io/TopoFlow/assets/figures/animation_pm25.gif" target="_blank" class="gallery-item">
+                <img src="https://ammarkheder.github.io/TopoFlow/assets/figures/animation_pm25.gif" alt="TopoFlow vs ground-truth animation 2018" loading="lazy">
+                <span class="gallery-caption">TopoFlow vs. ground truth, 2018 (animated)</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="project-section">
+        <h2>Resources</h2>
+        <p class="credits-outro">
+            <a href="https://www.nature.com/articles/s41612-026-01417-5" target="_blank" class="pill-link">Nature paper</a>
+            <a href="https://ammarkheder.github.io/TopoFlow/" target="_blank" class="pill-link">Project website</a>
+            <a href="https://arxiv.org/abs/2602.16821" target="_blank" class="pill-link">arXiv</a>
+            <a href="https://github.com/AmmarKheder/TopoFlow" target="_blank" class="pill-link">Code on GitHub</a>
+        </p>
+    </section>
+
+    <section class="project-section credits">
+        <h2>Credits</h2>
+        <dl class="credits-list">
+            <dt>Authors</dt>
+            <dd><strong>A. Kheder</strong>, H. Toropainen, W. Peng, S. Ant&atilde;o, J. Chen, M. Boy, Z.-S. Liu</dd>
+            <dt>Venue</dt>
+            <dd><em>npj Climate and Atmospheric Science</em>, Nature Portfolio, 2026</dd>
+            <dt>Compute</dt>
+            <dd>LUMI supercomputer (AMD MI250X GPUs)</dd>
+            <dt>Affiliation</dt>
+            <dd>LUT University, Atmospheric Modelling Centre (AMC-Lahti)</dd>
+        </dl>
+    </section>
+
+    <p class="back-link"><a href="../projects.html">&larr; Back to all projects</a></p>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Ammar Kheder</p>
+    <p class="footer-sub">LUT University &middot; Atmospheric Modelling Centre &middot; Lahti, Finland</p>
+</footer>
+
+</body>
+</html>
