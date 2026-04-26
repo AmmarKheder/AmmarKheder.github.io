@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pok&eacute;mon Card Detection &mdash; Ammar Kheder</title>
+    <title>Pok&eacute;mon Card Detection, by Ammar Kheder</title>
     <meta name="description" content="A Flask + TensorFlow web app that recognises Pokémon Base Set cards from a photo and extracts their name, number, set and year. Trained on French Base Set 2.">
     <meta name="author" content="Ammar Kheder">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Pokémon Card Detection — Ammar Kheder">
+    <meta property="og:title" content="Pokémon Card Detection, by Ammar Kheder">
     <meta property="og:description" content="A Flask + TensorFlow web app that recognises Pokémon Base Set cards and extracts their metadata. French + English support.">
     <meta property="og:image" content="https://ammarkheder.github.io/pic/pokemoncards-cover.png">
     <meta property="og:url" content="https://ammarkheder.github.io/projects/pokemoncards.html">
@@ -58,7 +58,7 @@
 
 <!-- Hero -->
 <section class="project-hero">
-    <img src="../pic/pokemoncards-cover.png" alt="Pokémon Card Detection — demo screenshot" class="hero-img">
+    <img src="../pic/pokemoncards-cover.png" alt="Pokémon Card Detection, demo screenshot" class="hero-img">
     <div class="hero-overlay">
         <div class="hero-content">
             <p class="hero-kicker">ML web app &middot; 2023 &middot; Flask + TensorFlow</p>
@@ -72,8 +72,8 @@
 <main class="prose project-detail">
 
     <section class="project-intro">
-        <p>A web application that takes a photograph of a Pok&eacute;mon Base Set card and tells you exactly which one it is &mdash; <strong>name, number, set, year</strong> &mdash; in real time. Built end-to-end: a TensorFlow CNN classifier behind a Flask + Jinja2 web app, served with a clean HTML / CSS / JS front-end.</p>
-        <p>The model was originally trained on the <strong>French Base Set 2</strong> &mdash; the cards I grew up with &mdash; but generalises well to the entire Base Set, including the English release. Edge cases (lighting, glare, partial framing) are handled by the augmentation strategy used during training.</p>
+        <p>A web application that takes a photograph of a Pok&eacute;mon Base Set card and tells you exactly which one it is, returning the <strong>name, number, set and year</strong> in real time. Built end to end: a TensorFlow CNN classifier behind a Flask + Jinja2 web app, served with a clean HTML / CSS / JS front-end.</p>
+        <p>The model was originally trained on the <strong>French Base Set 2</strong> (the cards I grew up with), but generalises well to the entire Base Set, including the English release. Edge cases (lighting, glare, partial framing) are handled by the augmentation strategy used during training.</p>
         <p>It scratched a personal itch: collectors like me often need to look up a card&rsquo;s edition / value on the fly. Pointing a phone camera at the card and getting an instant identification was the right user experience.</p>
     </section>
 
@@ -99,9 +99,9 @@
     <section class="project-section">
         <h2>What it does</h2>
         <ol class="feature-list">
-            <li><strong>Card detection.</strong> Upload a photo &mdash; the model recognises the card from the Pok&eacute;mon Base Set.</li>
+            <li><strong>Card detection.</strong> Upload a photo and the model recognises the card from the Pok&eacute;mon Base Set.</li>
             <li><strong>Metadata extraction.</strong> Returns the card&rsquo;s name, number, set and release year, ready to display or pipe to a collection database.</li>
-            <li><strong>Cross-language.</strong> Trained on the French Base Set 2 but accurately classifies English Base Set cards too &mdash; the visual signal carries.</li>
+            <li><strong>Cross-language.</strong> Trained on the French Base Set 2 but accurately classifies English Base Set cards too. The visual signal carries.</li>
             <li><strong>Lightweight stack.</strong> A single Flask app, a TensorFlow CNN, a Jinja2 template, Git LFS for the model weights. No heavy framework, deploys anywhere Python runs.</li>
         </ol>
     </section>
