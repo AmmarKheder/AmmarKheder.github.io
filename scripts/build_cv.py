@@ -210,8 +210,8 @@ def build() -> Path:
         "Junior Researcher and Teaching Assistant",
         "LUT University, Computational Engineering",
         "Research on physics-informed deep learning for atmospheric science. "
-        "Teaching assistant for Foundations of AI and Machine Learning (twice), "
-        "Foundations of Computer Science, and Seminar on Data-Centric Engineering. "
+        "Teaching assistant for Foundations of AI and Machine Learning (twice) "
+        "and Foundations of Computer Science. "
         "Contributor to the AMC-Lahti summer school (25 participants, 2025).",
     )
     pdf.entry(
@@ -291,8 +291,6 @@ def build() -> Path:
     pdf.section("Teaching")
     pdf.bullet("BM40A1601 Foundations of AI and Machine Learning, Fall 2024 and Fall "
                "2025 (LUT, blended, Lpr/Lahti).")
-    pdf.bullet("BM40A1003 Seminar on Data-Centric Engineering, 2025-2026 (LUT, "
-               "contact, Lpr).")
     pdf.bullet("BM40A0202 Foundations of Computer Science, Spring 2026 (LUT, blended, "
                "Lpr).")
     pdf.bullet("AMC-Lahti summer school, Application of AI / ML techniques in "
