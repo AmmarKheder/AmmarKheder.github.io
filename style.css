@@ -156,7 +156,8 @@ h1, h2, h3, h4 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 14px;
-    margin: 36px 0 28px;
+    margin: 36px auto 28px;
+    max-width: 820px;
 }
 .home-stats .stat-card {
     background: var(--paper-2);
