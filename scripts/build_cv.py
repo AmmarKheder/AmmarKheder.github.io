@@ -298,8 +298,9 @@ def build() -> Path:
 
     # ---- Visits ---- #
     pdf.section("Academic visits")
-    pdf.bullet("February 2026: Prof. Jia Chen's group, TU Munich. Atmospheric sensing "
-               "and AI.")
+    pdf.bullet("May 2026 (5-6 May): two-day research stay with AMC member Prof. Jia Chen "
+               "and her group at the Technical University of Munich (TUM). Start of a new "
+               "international collaboration.")
     pdf.bullet("July 2025: Istanbul Technical University. Air quality modelling with "
                "Dr Metin Baykara.")
     pdf.bullet("April 2025: INRIA Bordeaux (N. Rougier and F. Alexandre) and Ecole "
