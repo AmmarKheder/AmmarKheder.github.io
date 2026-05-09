@@ -398,13 +398,15 @@ h1, h2, h3, h4 {
     /* Scroll-driven via --scroll-progress (set by JS, defaults to 0 = full photo) */
     opacity: var(--scroll-progress, 0);
 }
-/* Hover overrides scroll: instant full reveal of Arita */
+/* Hover or click-toggle: instant full reveal of Arita.
+   .is-flipped is set by JS on click/tap and persists until next click. */
 .intro .avatar-swap:hover .avatar-front,
 .intro .avatar-swap:focus-within .avatar-front,
-.intro .avatar-swap:active .avatar-front { opacity: 0 !important; }
+.intro .avatar-swap.is-flipped .avatar-front { opacity: 0 !important; }
 .intro .avatar-swap:hover .avatar-back,
 .intro .avatar-swap:focus-within .avatar-back,
-.intro .avatar-swap:active .avatar-back { opacity: 1 !important; transition: opacity 0.45s ease; }
+.intro .avatar-swap.is-flipped .avatar-back { opacity: 1 !important; transition: opacity 0.45s ease; }
+.intro .avatar-swap { cursor: pointer; }
 
 /* Subtle "hover" hint badge that nudges visitors to discover the swap */
 .intro .avatar-swap .avatar-hint {
