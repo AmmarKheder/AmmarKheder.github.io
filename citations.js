@@ -91,6 +91,17 @@
                 + src;
             totalEl.style.display = '';
         }
+
+        // Home stats card
+        const homeStat = document.getElementById('home-stat-cites');
+        const homeStatSub = document.getElementById('home-stat-cites-sub');
+        if (homeStat && counted) {
+            homeStat.textContent = total;
+            if (homeStatSub) {
+                homeStatSub.textContent = 'across ' + counted
+                    + ' work' + (counted === 1 ? '' : 's');
+            }
+        }
     }
 
     if (document.readyState === 'loading') {

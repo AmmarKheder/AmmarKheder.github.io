@@ -68,21 +68,59 @@
 
     <header class="page-header">
         <h1><span class="fw-light">Ammar</span> <span class="fw-bold">Kheder</span></h1>
-        <p class="subtitle">Doctoral Researcher in Computational Engineering &middot; LUT University</p>
+        <p class="subtitle">Doctoral Researcher in Computational Engineering &middot; LUT University &middot; AMC-Lahti</p>
+        <p class="tagline">Teaching neural networks how the atmosphere actually flows. Physics-informed deep learning at exascale.</p>
     </header>
 
     <section class="intro">
         <div class="avatar-swap" title="Touch / hover for Arita illustration">
+            <span class="avatar-hint" aria-hidden="true">hover</span>
             <img src="photo.jpeg" alt="Ammar Kheder" class="avatar avatar-front">
             <img src="pic/ammar_arita.jpeg" alt="Ammar Kheder, portrait illustrated by Mitsuhiro Arita" class="avatar avatar-back" loading="lazy">
         </div>
         <p>I develop neural network architectures that explicitly encode atmospheric physics, like terrain-atmosphere interactions and advective transport, to push spatial resolution and forecast accuracy for air quality and Earth system prediction. Based at LUT University within the <a href="https://amc-lahti.fi/" target="_blank">Atmospheric Modelling Centre (AMC-Lahti)</a>, supervised by <a href="https://scholar.google.com/citations?user=sv7zMEwAAAAJ&hl=en" target="_blank">Prof.&nbsp;Michael&nbsp;Boy</a> and <a href="https://holmes-alan.github.io/" target="_blank">Assoc.&nbsp;Prof.&nbsp;Zhi-Song&nbsp;Liu</a>.</p>
         <p>I have hands-on experience running large-scale distributed training on the <strong>LUMI supercomputer</strong>, scaling experiments up to 1,024 AMD MI250X GPUs for training vision transformer models on high-resolution atmospheric reanalysis data.</p>
-        <p>MSc in Engineering (Big Data &amp; AI) from EiCnam Paris, with a one-year apprenticeship at <strong>INRIA Bordeaux</strong> within the Mnemosyne team, co&ndash;led by <a href="https://www.inria.fr/fr/frederic-alexandre" target="_blank">Fr&eacute;d&eacute;ric Alexandre</a> and <a href="https://github.com/rougier" target="_blank">Nicolas Rougier</a>.</p>
+        <p>MSc in Engineering (Big Data &amp; AI) from EiCnam Paris, with a one-year apprenticeship at <strong>INRIA Bordeaux</strong> within the Mnemosyne team, co-led by <a href="https://www.inria.fr/fr/frederic-alexandre" target="_blank">Fr&eacute;d&eacute;ric Alexandre</a> and <a href="https://github.com/rougier" target="_blank">Nicolas Rougier</a>.</p>
         <p class="keywords"><strong>Keywords.</strong> <em>Air quality, atmospheric modelling, physics-informed neural networks, vision transformers, climate, spatial downscaling, high-performance computing, large-scale distributed training.</em></p>
         <p class="cv-download">
             <a href="AmmarKheder-CV.pdf" target="_blank">Download CV (PDF) &darr;</a>
         </p>
+    </section>
+
+    <!-- Stats banner -->
+    <section class="home-stats" aria-label="Key numbers">
+        <div class="stat-card">
+            <p class="stat-value stat-text">npj</p>
+            <p class="stat-label">Nature Portfolio<br><span>1 publication, 2026</span></p>
+        </div>
+        <div class="stat-card">
+            <p class="stat-value" id="home-stat-cites">10</p>
+            <p class="stat-label">Citations<br><span id="home-stat-cites-sub">across 4 works</span></p>
+        </div>
+        <div class="stat-card">
+            <p class="stat-value">1,024</p>
+            <p class="stat-label">GPUs scaled<br><span>LUMI / AMD MI250X</span></p>
+        </div>
+        <div class="stat-card">
+            <p class="stat-value">5</p>
+            <p class="stat-label">Conferences<br><span>2025-2026</span></p>
+        </div>
+    </section>
+
+    <!-- Featured paper -->
+    <section class="featured-paper" aria-label="Featured paper">
+        <a href="projects/topoflow.html" class="featured-paper-card">
+            <div class="featured-img">
+                <img src="https://ammarkheder.github.io/TopoFlow/assets/figures/china_pm25_publication.png" alt="TopoFlow PM2.5 prediction over China" loading="lazy">
+            </div>
+            <div class="featured-body">
+                <p class="featured-kicker">Latest paper &middot; April 2026 &middot; lead author</p>
+                <h2 class="featured-title">TopoFlow</h2>
+                <p class="featured-sub">Topography-aware pollutant flow learning for high-resolution air quality prediction. A physics-informed Vision Transformer with wind-following patches and elevation-aware attention.</p>
+                <p class="featured-venue"><em>npj Climate and Atmospheric Science</em>, Nature Portfolio.</p>
+                <p class="featured-cta">Read the case study <span class="arrow">&rarr;</span></p>
+            </div>
+        </a>
     </section>
 
     <div class="main-grid">
@@ -188,5 +226,6 @@
 </footer>
 
 <script src="citations.js" defer></script>
+<script src="home.js" defer></script>
 </body>
 </html>
