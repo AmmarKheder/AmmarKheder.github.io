@@ -395,8 +395,9 @@ h1, h2, h3, h4 {
     transition: opacity 0.45s ease;
 }
 .intro .avatar-swap .avatar-back {
-    /* Scroll-driven via --scroll-progress (set by JS, defaults to 0 = full photo) */
-    opacity: var(--scroll-progress, 0);
+    /* Hidden by default. Hover or .is-flipped reveals it. */
+    opacity: 0;
+    transition: opacity 0.45s ease;
 }
 /* Hover or click-toggle: instant full reveal of Arita.
    .is-flipped is set by JS on click/tap and persists until next click. */
@@ -445,7 +446,7 @@ h1, h2, h3, h4 {
     35%, 65% { opacity: 0; }
 }
 @keyframes avatarRevealBack {
-    0%, 100% { opacity: var(--scroll-progress, 0); }
+    0%, 100% { opacity: 0; }
     35%, 65% { opacity: 1; }
 }
 
