@@ -32,7 +32,7 @@ class CV(FPDF):
         self.set_text_color(*self.MUTED)
         self.cell(
             0, 5,
-            f"Ammar Kheder  |  ammarkheder.github.io  |  page {self.page_no()}/{{nb}}",
+            f"Ammar Kheder  |  ammarkheder.com  |  page {self.page_no()}/{{nb}}",
             align="C",
         )
 
@@ -55,7 +55,7 @@ class CV(FPDF):
         # Two compact lines so the right margin is never overflown.
         line1 = [
             "ammar.kheder@lut.fi",
-            "ammarkheder.github.io",
+            "ammarkheder.com",
             "ORCID 0009-0001-2306-1223",
         ]
         line2 = [
