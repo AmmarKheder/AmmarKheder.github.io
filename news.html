@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News archive, by Ammar Kheder</title>
+    <meta name="description" content="Chronological news archive of Ammar Kheder's academic and professional activity: publications, talks, visits, teaching, milestones.">
+    <meta name="author" content="Ammar Kheder">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="News archive, by Ammar Kheder">
+    <meta property="og:description" content="Chronological archive: publications, talks, visits, teaching, milestones.">
+    <meta property="og:image" content="https://ammarkheder.com/photo.jpeg">
+    <meta property="og:url" content="https://ammarkheder.com/news.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#1a1a1a">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Neucha&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="index.html" class="brand">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="11" fill="#fafafa"/>
+            <text x="32" y="32" text-anchor="middle" dominant-baseline="central" font-family="Georgia, serif" font-weight="700" font-size="34" letter-spacing="-1" fill="#0a0a0a">AK</text>
+        </svg>
+        <span>Ammar Kheder</span>
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-check" aria-hidden="true">
+    <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+        <a href="index.html#news" class="nav-item nav-active">News</a>
+        <a href="index.html#publications" class="nav-item">Publications</a>
+        <a href="teaching.html" class="nav-item">Teaching</a>
+        <a href="projects.html" class="nav-item">Projects</a>
+        <a href="index.html#experience" class="nav-item">CV</a>
+        <span class="nav-sep"></span>
+        <a href="https://github.com/AmmarKheder" target="_blank" aria-label="GitHub" class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+        <a href="https://scholar.google.com/citations?user=ZYvKJF4AAAAJ&hl=fr" target="_blank" aria-label="Scholar" class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg></a>
+        <a href="https://orcid.org/0009-0001-2306-1223" target="_blank" aria-label="ORCID" class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947 0 .525-.422.947-.947.947-.525 0-.946-.422-.946-.947 0-.525.421-.947.946-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg></a>
+        <a href="https://www.researchgate.net/profile/Ammar-Kheder-2" target="_blank" aria-label="ResearchGate" class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.586 0H4.414C1.978 0 0 1.978 0 4.414v15.172C0 22.022 1.978 24 4.414 24h15.172C22.022 24 24 22.022 24 19.586V4.414C24 1.978 22.022 0 19.586 0zM10.5 17.6c-2.7 0-4.6-1.9-4.6-4.6s1.9-4.6 4.6-4.6c1.3 0 2.5.5 3.4 1.4l-1.1 1.1c-.6-.6-1.4-.9-2.3-.9-1.7 0-3 1.3-3 3s1.3 3 3 3c1.4 0 2.6-.9 2.9-2.2h-2.7v-1.5h4.4v.7c0 2.7-2 4.6-4.6 4.6zm7.7-.2h-1.7l-2.2-3.6c-.1.1-.3.2-.4.3v3.3h-1.5V8.5h2.6c1.7 0 2.8 1 2.8 2.6 0 1.2-.7 2.1-1.8 2.5l2.2 3.8z"/></svg></a>
+        <a href="https://www.linkedin.com/in/ammar-kheder-a37053193/" target="_blank" aria-label="LinkedIn" class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="mailto:ammar.kheder@lut.fi" aria-label="Email" class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/></svg></a>
+    </div>
+</nav>
+
+<section class="project-hero project-hero-textonly">
+    <div class="hero-overlay">
+        <div class="hero-content">
+            <p class="hero-kicker">Archive &middot; chronological</p>
+            <h1>News</h1>
+            <p class="hero-tagline">Publications, talks, visits, teaching and milestones from 2023 onwards.</p>
+            <p class="hero-breadcrumb"><a href="index.html">&larr; Back to home</a></p>
+        </div>
+    </div>
+</section>
+
+<main class="prose project-detail news-archive">
+
+    <nav class="news-toc">
+        <p class="news-toc-label">Jump to</p>
+        <a href="#y2026">2026</a>
+        <a href="#y2025">2025</a>
+        <a href="#y2024">2024</a>
+        <a href="#y2023">2023</a>
+    </nav>
+
+    <section class="news-year" id="y2026">
+        <h2>2026</h2>
+
+        <h3>May 2026</h3>
+        <ul class="news-archive-list">
+            <li><span class="news-cat cat-visit">#VISIT</span> <span class="news-date">5&ndash;6 May</span> Two-day research stay with AMC member <a href="https://www.professoren.tum.de/en/chen-jia" target="_blank">Prof.&nbsp;Jia Chen</a> and her group at the Technical University of Munich (TUM). Start of a new international collaboration.</li>
+        </ul>
+
+        <h3>April 2026</h3>
+        <ul class="news-archive-list">
+            <li><span class="news-cat cat-pub">#PUBLICATION</span> <span class="news-date">24 Apr</span> <strong>TopoFlow</strong> published in <a href="https://www.nature.com/articles/s41612-026-01417-5" target="_blank"><em>npj Climate and Atmospheric Science</em></a> (Nature Portfolio).</li>
+            <li><span class="news-cat cat-talk">#TALK</span> Talk accepted at <a href="https://www.iac2026.cn/#/" target="_blank">IAC 2026</a> (International Aerosol Conference), Xi&rsquo;an, China.</li>
+        </ul>
+
+        <h3>March 2026</h3>
+        <ul class="news-archive-list">
+            <li><span class="news-cat cat-pub">#PUBLICATION</span> CRAN-PM preprint released on <a href="https://arxiv.org/abs/2603.11725" target="_blank">arXiv</a>.</li>
+            <li><span class="news-cat cat-pub">#PUBLICATION</span> Inverse Neural Operator preprint released on <a href="https://arxiv.org/abs/2603.11854" target="_blank">arXiv</a>.</li>
+        </ul>
+
+        <h3>February 2026</h3>
+        <ul class="news-archive-list">
+            <li><span class="news-cat cat-pub">#PUBLICATION</span> TopoFlow preprint released on <a href="https://arxiv.org/abs/2602.16821" target="_blank">arXiv</a>.</li>
+        </ul>
+
+        <h3>January 2026</h3>
+        <ul class="news-archive-list">
+            <li><span class="news-cat cat-talk">#TALK</span> <span class="news-date">5 Jan</span> Invited visit to my former programme <a href="https://iutp.univ-poitiers.fr/sd/" target="_blank">BUT&nbsp;SD Niort</a> to share my academic and professional journey with current students.</li>
+        </ul>
+    </section>
+
+    <section class="news-year" id="y2025">
+        <h2>2025</h2>
+
+        <h3>October 2025</h3>
+        <ul class="news-archive-list">
+            <li><span class="news-cat cat-event">#EVENT</span> Attended LUMI training sessions in Tallinn on supercomputing, GPU profiling and performance optimisation.</li>
+        </ul>
+
+        <h3>September 2025</h3>
+        <ul class="news-archive-list">
+            <li><span class="news-cat cat-event">#EVENT</span> <span class="news-date">8&ndash;10 Sep</span> MSM &amp; AMC group retreat in Hyytiäl&auml;: scientific presentations, breakouts on AI for atmospheric modelling, visit to the SMEAR&nbsp;II station. <a href="https://amc-lahti.fi/news/" target="_blank">AMC news</a>.</li>
+            <li><span class="news-cat cat-talk">#TALK</span> Presented the <strong>AQ-Net</strong> poster at <strong>EAC 2025</strong> (European Aerosol Conference) in Lecce, Italy.</li>
+        </ul>
+
+        <h3>August 2025</h3>
+        <ul class="news-archive-list">
+            <li><span class="news-cat cat-teach">#TEACH</span> <span class="news-date">11&ndash;15 Aug</span> Teaching assistant at the AMC-Lahti summer school <em>Application of AI/ML techniques in Atmospheric Science</em>. <a href="https://amc-lahti.fi/education/" target="_blank">Programme</a>.</li>
+        </ul>
+
+        <h3>July 2025</h3>
+        <ul class="news-archive-list">
+            <li><span class="news-cat cat-visit">#VISIT</span> Academic visit to Istanbul Technical University, discussing air quality with Dr Metin Baykara.</li>
+        </ul>
+
+        <h3>June 2025</h3>
+        <ul class="news-archive-list">
+            <li><span class="news-cat cat-talk">#TALK</span> Presented <strong>AQ-Net</strong> at <strong>SCIA 2025</strong> in Reykjav&iacute;k (speed talk and poster, published in Springer LNCS).</li>
+        </ul>
+
+        <h3>May 2025</h3>
+        <ul class="news-archive-list">
+            <li><span class="news-cat cat-talk">#TALK</span> <span class="news-date">20 May</span> Presented at the <strong>LUT Doctoral School Science Conference 2025</strong> in Lappeenranta, one of four AMC-Lahti PhD students contributing to the programme.</li>
+        </ul>
+
+        <h3>April 2025</h3>
+        <ul class="news-archive-list">
+            <li><span class="news-cat cat-visit">#VISIT</span> Research visit at INRIA Bordeaux (<a href="https://github.com/rougier" target="_blank">N. Rougier</a> &amp; <a href="https://www.inria.fr/fr/frederic-alexandre" target="_blank">F. Alexandre</a>) and &Eacute;cole Polytechnique Paris (<a href="https://vicky.kalogeiton.info/" target="_blank">V. Kalogeiton</a> &amp; <a href="https://www.lix.polytechnique.fr/~cani/" target="_blank">M.-P. Cani</a>).</li>
+        </ul>
+
+        <h3>February 2025</h3>
+        <ul class="news-archive-list">
+            <li><span class="news-cat cat-pub">#PUBLICATION</span> AQ-Net preprint released on <a href="https://arxiv.org/abs/2502.11941" target="_blank">arXiv</a>.</li>
+        </ul>
+    </section>
+
+    <section class="news-year" id="y2024">
+        <h2>2024</h2>
+
+        <h3>October 2024</h3>
+        <ul class="news-archive-list">
+            <li><span class="news-cat cat-milestone">#MILESTONE</span> Started Ph.D. at LUT University. Teaching assistant for Foundations of AI and Machine Learning.</li>
+        </ul>
+    </section>
+
+    <section class="news-year" id="y2023">
+        <h2>2023</h2>
+
+        <h3>December 2023</h3>
+        <ul class="news-archive-list">
+            <li><span class="news-cat cat-project">#PROJECT</span> <span class="news-date">22 Dec</span> Co-hosted the <a href="projects/pokemon-nao.html">first Pok&eacute;mon card auction co-animated by a NAO humanoid robot</a> in Paris. 1,693 viewers, endorsed by the French Presidency.</li>
+        </ul>
+
+        <h3>May 2023</h3>
+        <ul class="news-archive-list">
+            <li><span class="news-cat cat-project">#PROJECT</span> Founded Wabel Group, an AI and web development company.</li>
+        </ul>
+    </section>
+
+    <p class="back-link"><a href="index.html">&larr; Back to home</a></p>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Ammar Kheder</p>
+    <p class="footer-sub">LUT University &middot; Atmospheric Modelling Centre &middot; Lahti, Finland</p>
+</footer>
+
+</body>
+</html>
