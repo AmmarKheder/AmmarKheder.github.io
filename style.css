@@ -1365,6 +1365,14 @@ footer .footer-sub {
     max-width: 740px;
 }
 
+/* Featured video (home) */
+.featured-video {
+    margin: 8px 0 32px;
+}
+.featured-video .featured-kicker {
+    margin-bottom: 10px;
+}
+
 /* Video embeds */
 .video-embed {
     position: relative;
