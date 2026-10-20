@@ -173,7 +173,7 @@
                 </div>
             </a>
             <a href="https://ammarkheder.com/Otso/" target="_blank" class="project-card" id="otso-card">
-                <div class="project-card-cover"><img id="otso-map" src="" alt="Otso, the live forecast" loading="lazy"></div>
+                <div class="project-card-cover"><img id="otso-map" alt="Otso, the live forecast"></div>
                 <div class="project-card-body">
                     <p class="project-card-kicker">Otso &middot; live, every morning</p>
                     <h3 class="project-card-title">A live research forecast</h3>
@@ -339,10 +339,14 @@
 (function () {
     const img = document.getElementById("otso-map"), d = document.getElementById("otso-date");
     if (!img) return;
-    fetch("https://raw.githubusercontent.com/AmmarKheder/Otso/live/latest.json", { cache: "no-cache" }).then((r) => r.json()).then((j) => {
-        img.src = "https://raw.githubusercontent.com/AmmarKheder/Otso/live/" + j.latest + "/map_024h.png";
-        img.alt = "Otso forecast issued " + j.latest + ", 24 hours ahead";
+    const BASE = "https://raw.githubusercontent.com/AmmarKheder/Otso/live/";
+    fetch(BASE + "latest.json", { cache: "no-cache" }).then((r) => r.json()).then((j) => {
         if (d) d.textContent = "Latest: issued " + j.latest + ", shown 24 hours ahead.";
+        // the picture is fetched as a blob (raw.githubusercontent.com allows it), so that it shows even where
+        // third-party images are blocked; a plain src would be the fallback
+        return fetch(BASE + j.latest + "/map_024h.png", { cache: "no-cache" }).then((r) => { if (!r.ok) throw new Error(r.status); return r.blob(); })
+            .then((b) => { img.src = URL.createObjectURL(b); img.alt = "Otso forecast issued " + j.latest + ", 24 hours ahead"; })
+            .catch(() => { img.src = BASE + j.latest + "/map_024h.png"; });
     }).catch(() => { const c = img.closest(".project-card-cover"); if (c) c.style.display = "none"; });
 })();
 </script>
