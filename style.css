@@ -1617,8 +1617,6 @@ footer .footer-sub {
 @media (max-width: 480px) { .home-stats { grid-template-columns: 1fr; } }
 #research .section-desc { max-width: 860px; margin: -6px 0 22px; color: var(--muted); font-size: 1.05rem; }
 .research-grid { margin-bottom: 8px; }
-#otso-card .project-card-cover { background: #ffffff; }
-#otso-card .project-card-cover img { object-fit: contain; }
 
 /* BibTeX under each publication */
 .pub-bib { margin: 6px 0 2px; }
