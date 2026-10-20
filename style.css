@@ -1602,3 +1602,20 @@ footer .footer-sub {
     .stat-value { font-size: 2.3rem; }
     .photo-gallery { grid-template-columns: 1fr; }
 }
+
+/* ── 2026-10: hero calls to action, four stat cards, research cards on the home page ── */
+.hero-cta { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 0; }
+.hero-cta a {
+    display: inline-block; font-family: var(--font-head); font-weight: 700; font-size: 1rem; color: var(--link);
+    border: 1.8px solid var(--link); border-radius: var(--sketchy-radius-sm); padding: 6px 16px; letter-spacing: 0.02em;
+    text-decoration: none; transition: all 0.18s; box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.06); background: var(--paper-2);
+}
+.hero-cta a:first-child { background: var(--link); color: #fff; }
+.hero-cta a:hover { background: var(--link); color: #fff; text-decoration: none; transform: translate(-1px, -1px); box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1); }
+.home-stats { grid-template-columns: repeat(4, 1fr); max-width: 1040px; }
+@media (max-width: 900px) { .home-stats { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .home-stats { grid-template-columns: 1fr; } }
+#research .section-desc { max-width: 860px; margin: -6px 0 22px; color: var(--muted); font-size: 1.05rem; }
+.research-grid { margin-bottom: 8px; }
+#otso-card .project-card-cover { background: #ffffff; }
+#otso-card .project-card-cover img { object-fit: contain; }
