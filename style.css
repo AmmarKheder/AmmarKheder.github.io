@@ -1619,3 +1619,9 @@ footer .footer-sub {
 .research-grid { margin-bottom: 8px; }
 #otso-card .project-card-cover { background: #ffffff; }
 #otso-card .project-card-cover img { object-fit: contain; }
+
+/* BibTeX under each publication */
+.pub-bib { margin: 6px 0 2px; }
+.pub-bib summary { cursor: pointer; font-family: var(--font-head); font-weight: 700; font-size: 0.88rem; color: var(--muted); letter-spacing: 0.02em; }
+.pub-bib summary:hover { color: var(--link); }
+.pub-bib pre { font-family: 'Courier New', monospace; font-size: 0.76rem; line-height: 1.4; background: var(--accent-bg); border: 1px dashed var(--rule); border-radius: var(--sketchy-radius-sm); padding: 10px 12px; margin: 6px 0 2px; overflow: auto; white-space: pre; }
