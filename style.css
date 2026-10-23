@@ -1710,3 +1710,13 @@ footer .footer-sub { color: var(--muted); }
 @media (max-width: 720px) {
     body { background-attachment: scroll; }
 }
+
+/* ── 2026-10: looping MP4 clips in the galleries (they replace the heavy GIFs) ── */
+.gallery-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+.gallery-item:hover video { transform: scale(1.05); }
