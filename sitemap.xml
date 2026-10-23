@@ -1,20 +1,241 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://ammarkheder.com/</loc><lastmod>2026-10-23</lastmod></url>
-  <url><loc>https://ammarkheder.com/projects.html</loc><lastmod>2026-10-23</lastmod></url>
-  <url><loc>https://ammarkheder.com/news.html</loc><lastmod>2026-10-23</lastmod></url>
-  <url><loc>https://ammarkheder.com/videos.html</loc><lastmod>2026-10-23</lastmod></url>
-  <url><loc>https://ammarkheder.com/teaching.html</loc><lastmod>2026-10-23</lastmod></url>
-  <url><loc>https://ammarkheder.com/bia.html</loc><lastmod>2026-10-23</lastmod></url>
-  <url><loc>https://ammarkheder.com/firefighter.html</loc><lastmod>2026-10-23</lastmod></url>
-  <url><loc>https://ammarkheder.com/projects/aqnet.html</loc><lastmod>2026-10-23</lastmod></url>
-  <url><loc>https://ammarkheder.com/projects/cdesp.html</loc><lastmod>2026-10-23</lastmod></url>
-  <url><loc>https://ammarkheder.com/projects/cranpm-studio.html</loc><lastmod>2026-10-23</lastmod></url>
-  <url><loc>https://ammarkheder.com/projects/cranpm.html</loc><lastmod>2026-10-23</lastmod></url>
-  <url><loc>https://ammarkheder.com/projects/foehn.html</loc><lastmod>2026-10-23</lastmod></url>
-  <url><loc>https://ammarkheder.com/projects/galton-vba.html</loc><lastmod>2026-10-23</lastmod></url>
-  <url><loc>https://ammarkheder.com/projects/lingorob.html</loc><lastmod>2026-10-23</lastmod></url>
-  <url><loc>https://ammarkheder.com/projects/pokemon-nao.html</loc><lastmod>2026-10-23</lastmod></url>
-  <url><loc>https://ammarkheder.com/projects/pokemoncards.html</loc><lastmod>2026-10-23</lastmod></url>
-  <url><loc>https://ammarkheder.com/projects/topoflow.html</loc><lastmod>2026-10-23</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://ammarkheder.com/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/"/>
+  </url>
+  <url>
+    <loc>https://ammarkheder.com/fr/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/"/>
+  </url>
+  <url>
+    <loc>https://ammarkheder.com/projects.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/projects.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/projects.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/projects.html"/>
+  </url>
+  <url>
+    <loc>https://ammarkheder.com/fr/projects.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/projects.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/projects.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/projects.html"/>
+  </url>
+  <url>
+    <loc>https://ammarkheder.com/news.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/news.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/news.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/news.html"/>
+  </url>
+  <url>
+    <loc>https://ammarkheder.com/fr/news.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/news.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/news.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/news.html"/>
+  </url>
+  <url>
+    <loc>https://ammarkheder.com/videos.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/videos.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/videos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/videos.html"/>
+  </url>
+  <url>
+    <loc>https://ammarkheder.com/fr/videos.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/videos.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/videos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/videos.html"/>
+  </url>
+  <url>
+    <loc>https://ammarkheder.com/teaching.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/teaching.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/teaching.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/teaching.html"/>
+  </url>
+  <url>
+    <loc>https://ammarkheder.com/fr/teaching.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/teaching.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/teaching.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/teaching.html"/>
+  </url>
+  <url>
+    <loc>https://ammarkheder.com/bia.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/bia.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/bia.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/bia.html"/>
+  </url>
+  <url>
+    <loc>https://ammarkheder.com/fr/bia.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/bia.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/bia.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/bia.html"/>
+  </url>
+  <url>
+    <loc>https://ammarkheder.com/firefighter.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/firefighter.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/firefighter.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/firefighter.html"/>
+  </url>
+  <url>
+    <loc>https://ammarkheder.com/fr/firefighter.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/firefighter.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/firefighter.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/firefighter.html"/>
+  </url>
+  <url>
+    <loc>https://ammarkheder.com/projects/aqnet.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/projects/aqnet.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/projects/aqnet.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/projects/aqnet.html"/>
+  </url>
+  <url>
+    <loc>https://ammarkheder.com/fr/projects/aqnet.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/projects/aqnet.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/projects/aqnet.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/projects/aqnet.html"/>
+  </url>
+  <url>
+    <loc>https://ammarkheder.com/projects/cdesp.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/projects/cdesp.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/projects/cdesp.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/projects/cdesp.html"/>
+  </url>
+  <url>
+    <loc>https://ammarkheder.com/fr/projects/cdesp.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/projects/cdesp.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/projects/cdesp.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/projects/cdesp.html"/>
+  </url>
+  <url>
+    <loc>https://ammarkheder.com/projects/cranpm-studio.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/projects/cranpm-studio.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/projects/cranpm-studio.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/projects/cranpm-studio.html"/>
+  </url>
+  <url>
+    <loc>https://ammarkheder.com/fr/projects/cranpm-studio.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/projects/cranpm-studio.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/projects/cranpm-studio.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/projects/cranpm-studio.html"/>
+  </url>
+  <url>
+    <loc>https://ammarkheder.com/projects/cranpm.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/projects/cranpm.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/projects/cranpm.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/projects/cranpm.html"/>
+  </url>
+  <url>
+    <loc>https://ammarkheder.com/fr/projects/cranpm.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/projects/cranpm.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/projects/cranpm.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/projects/cranpm.html"/>
+  </url>
+  <url>
+    <loc>https://ammarkheder.com/projects/foehn.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/projects/foehn.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/projects/foehn.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/projects/foehn.html"/>
+  </url>
+  <url>
+    <loc>https://ammarkheder.com/fr/projects/foehn.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/projects/foehn.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/projects/foehn.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/projects/foehn.html"/>
+  </url>
+  <url>
+    <loc>https://ammarkheder.com/projects/galton-vba.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/projects/galton-vba.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/projects/galton-vba.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/projects/galton-vba.html"/>
+  </url>
+  <url>
+    <loc>https://ammarkheder.com/fr/projects/galton-vba.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/projects/galton-vba.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/projects/galton-vba.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/projects/galton-vba.html"/>
+  </url>
+  <url>
+    <loc>https://ammarkheder.com/projects/lingorob.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/projects/lingorob.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/projects/lingorob.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/projects/lingorob.html"/>
+  </url>
+  <url>
+    <loc>https://ammarkheder.com/fr/projects/lingorob.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/projects/lingorob.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/projects/lingorob.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/projects/lingorob.html"/>
+  </url>
+  <url>
+    <loc>https://ammarkheder.com/projects/pokemon-nao.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/projects/pokemon-nao.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/projects/pokemon-nao.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/projects/pokemon-nao.html"/>
+  </url>
+  <url>
+    <loc>https://ammarkheder.com/fr/projects/pokemon-nao.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/projects/pokemon-nao.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/projects/pokemon-nao.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/projects/pokemon-nao.html"/>
+  </url>
+  <url>
+    <loc>https://ammarkheder.com/projects/pokemoncards.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/projects/pokemoncards.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/projects/pokemoncards.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/projects/pokemoncards.html"/>
+  </url>
+  <url>
+    <loc>https://ammarkheder.com/fr/projects/pokemoncards.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/projects/pokemoncards.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/projects/pokemoncards.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/projects/pokemoncards.html"/>
+  </url>
+  <url>
+    <loc>https://ammarkheder.com/projects/topoflow.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/projects/topoflow.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/projects/topoflow.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/projects/topoflow.html"/>
+  </url>
+  <url>
+    <loc>https://ammarkheder.com/fr/projects/topoflow.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammarkheder.com/projects/topoflow.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/projects/topoflow.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/projects/topoflow.html"/>
+  </url>
 </urlset>

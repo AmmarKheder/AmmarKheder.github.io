@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pok&eacute;mon Card Detection, by Ammar Kheder</title>
+    <meta name="description" content="A Flask + TensorFlow web app that recognises Pokémon Base Set cards from a photo and extracts their name, number, set and year. Trained on French Base Set 2.">
+    <meta name="author" content="Ammar Kheder">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Pokémon Card Detection, by Ammar Kheder">
+    <meta property="og:site_name" content="Ammar Kheder">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:description" content="A Flask + TensorFlow web app that recognises Pokémon Base Set cards and extracts their metadata. French + English support.">
+    <meta property="og:image" content="https://ammarkheder.com/pic/pokemoncards-cover.png">
+    <meta property="og:url" content="https://ammarkheder.com/fr/projects/pokemoncards.html">
+    <link rel="canonical" href="https://ammarkheder.com/fr/projects/pokemoncards.html">
+    <link rel="alternate" hreflang="en" href="https://ammarkheder.com/projects/pokemoncards.html">
+    <link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/projects/pokemoncards.html">
+    <link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/projects/pokemoncards.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#1a1a1a">
+    <link rel="preload" href="/assets/fonts/cabin-sketch-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/neucha-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<nav class="navbar" aria-label="Main">
+    <a href="../index.html" class="brand">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="11" fill="#fafafa"/>
+            <text x="32" y="32" text-anchor="middle" dominant-baseline="central" font-family="'Cabin Sketch', Georgia, serif" font-weight="700" font-size="34" letter-spacing="-1" fill="#0a0a0a">AK</text>
+        </svg>
+        <span>Ammar Kheder</span>
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-check" aria-label="Menu">
+    <label for="nav-toggle" class="nav-toggle" aria-hidden="true"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+        <a href="../index.html#about" class="nav-item">About</a>
+        <a href="../projects.html" class="nav-item nav-active">Research</a>
+        <a href="../videos.html" class="nav-item">Videos</a>
+        <a href="../index.html#publications" class="nav-item">Publications</a>
+        <a href="../index.html#contact" class="nav-item nav-contact">Contact</a>
+        <span class="nav-sep"></span>
+        <a href="https://github.com/AmmarKheder" target="_blank" rel="noopener" aria-label="GitHub" class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+        <a href="https://scholar.google.com/citations?user=ZYvKJF4AAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar" class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg></a>
+        <span class="lang-switch" role="group" aria-label="Langue" translate="no"><a class="lang-opt" href="../../projects/pokemoncards.html" hreflang="en" lang="en" rel="alternate" title="English">EN</a><span class="lang-sep" aria-hidden="true">&middot;</span><span class="lang-opt" aria-current="true" lang="fr">FR</span></span>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="project-hero">
+    <picture><source srcset="../../pic/pokemoncards-cover.webp" type="image/webp"><img src="../../pic/pokemoncards-cover.png" alt="Pokémon Card Detection, demo screenshot" class="hero-img" width="2000" height="937" fetchpriority="high" decoding="async"></picture>
+    <div class="hero-overlay">
+        <div class="hero-content">
+            <p class="hero-kicker">ML web app &middot; 2023 &middot; Flask + TensorFlow</p>
+            <h1>Pok&eacute;mon Card Detection</h1>
+            <p class="hero-tagline">A computer-vision web app that identifies Pok&eacute;mon Base Set cards from a photo and extracts their metadata.</p>
+            <p class="hero-breadcrumb"><a href="../projects.html">&larr; All projects</a></p>
+        </div>
+    </div>
+</section>
+
+<main class="prose project-detail" id="main-content" tabindex="-1">
+
+    <section class="project-intro">
+        <p>A web application that takes a photograph of a Pok&eacute;mon Base Set card and tells you exactly which one it is, returning the <strong>name, number, set and year</strong> in real time. Built end to end: a TensorFlow CNN classifier behind a Flask + Jinja2 web app, served with a clean HTML / CSS / JS front-end.</p>
+        <p>The model was originally trained on the <strong>French Base Set 2</strong> (the cards I grew up with), but generalises well to the entire Base Set, including the English release. Edge cases (lighting, glare, partial framing) are handled by the augmentation strategy used during training.</p>
+        <p>It scratched a personal itch: collectors like me often need to look up a card&rsquo;s edition / value on the fly. Pointing a phone camera at the card and getting an instant identification was the right user experience.</p>
+    </section>
+
+    <section class="stats-grid">
+        <div class="stat-card">
+            <p class="stat-value stat-text">CNN</p>
+            <p class="stat-label">Vision model<br><span>TensorFlow</span></p>
+        </div>
+        <div class="stat-card">
+            <p class="stat-value stat-text">Flask</p>
+            <p class="stat-label">Web app<br><span>Python + Jinja2</span></p>
+        </div>
+        <div class="stat-card">
+            <p class="stat-value stat-text">FR / EN</p>
+            <p class="stat-label">Base Set<br><span>cross-language</span></p>
+        </div>
+        <div class="stat-card">
+            <p class="stat-value stat-text">2023</p>
+            <p class="stat-label">Side project<br><span>open source</span></p>
+        </div>
+    </section>
+
+    <section class="project-section">
+        <h2>What it does</h2>
+        <ol class="feature-list">
+            <li><strong>Card detection.</strong> Upload a photo and the model recognises the card from the Pok&eacute;mon Base Set.</li>
+            <li><strong>Metadata extraction.</strong> Returns the card&rsquo;s name, number, set and release year, ready to display or pipe to a collection database.</li>
+            <li><strong>Cross-language.</strong> Trained on the French Base Set 2 but accurately classifies English Base Set cards too. The visual signal carries.</li>
+            <li><strong>Lightweight stack.</strong> A single Flask app, a TensorFlow CNN, a Jinja2 template, Git LFS for the model weights. No heavy framework, deploys anywhere Python runs.</li>
+        </ol>
+    </section>
+
+    <section class="project-section">
+        <h2>Stack</h2>
+        <p class="credits-outro">
+            <a class="pill-link">TensorFlow</a>
+            <a class="pill-link">Flask</a>
+            <a class="pill-link">Python 3.7+</a>
+            <a class="pill-link">Jinja2</a>
+            <a class="pill-link">HTML &middot; CSS &middot; JS</a>
+            <a class="pill-link">Git LFS</a>
+        </p>
+    </section>
+
+    <section class="project-section">
+        <h2>Repository</h2>
+        <p class="section-desc">Code, model, training data and a complete README on GitHub.</p>
+        <p class="credits-outro">
+            <a href="https://github.com/AmmarKheder/pokemoncards" target="_blank" class="pill-link">GitHub repo &rarr;</a>
+            <a href="https://github.com/AmmarKheder/pokemoncards#readme" target="_blank" class="pill-link">README</a>
+        </p>
+    </section>
+
+    <section class="project-section credits">
+        <h2>Credits</h2>
+        <dl class="credits-list">
+            <dt>Concept &amp; engineering</dt>
+            <dd><strong>Ammar Kheder</strong></dd>
+            <dt>Stack</dt>
+            <dd>TensorFlow &middot; Flask &middot; Jinja2 &middot; HTML / CSS / JS &middot; Git LFS</dd>
+            <dt>Training data</dt>
+            <dd>Pok&eacute;mon Base Set 2 (French release), generalising to English Base Set</dd>
+            <dt>Status</dt>
+            <dd>Open source on <a href="https://github.com/AmmarKheder/pokemoncards" target="_blank">GitHub</a></dd>
+        </dl>
+    </section>
+
+    <nav class="project-pager" aria-label="Other projects">
+        <a class="pill-link" href="pokemon-nao.html" rel="prev">&larr; Previous: Pok&eacute;mon Robot Auction</a>
+        <a class="pill-link" href="lingorob.html" rel="next">Next: LingoRob &rarr;</a>
+    </nav>
+
+    <p class="back-link"><a href="../projects.html">&larr; Back to all projects</a></p>
+
+</main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <img src="../../signature.svg" width="200" height="80" alt="Ammar Kheder" loading="lazy" decoding="async">
+            <p class="footer-tagline">Teaching neural networks how the atmosphere flows.</p>
+        </div>
+        <div class="footer-col">
+            <p class="footer-head">Explore</p>
+            <ul>
+                <li><a href="../projects.html">Research</a></li>
+                <li><a href="../videos.html">Videos</a></li>
+                <li><a href="../index.html#publications">Publications</a></li>
+                <li><a href="../news.html">News</a></li>
+                <li><a href="../teaching.html">Teaching</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <p class="footer-head">Elsewhere</p>
+            <ul>
+                <li><a href="https://github.com/AmmarKheder" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="https://scholar.google.com/citations?user=ZYvKJF4AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
+                <li><a href="https://orcid.org/0009-0001-2306-1223" target="_blank" rel="noopener">ORCID</a></li>
+                <li><a href="https://www.linkedin.com/in/ammar-kheder-a37053193/" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="https://www.researchgate.net/profile/Ammar-Kheder-2" target="_blank" rel="noopener">ResearchGate</a></li>
+                <li><a href="https://www.youtube.com/@FoehnAI" target="_blank" rel="noopener">YouTube (@FoehnAI)</a></li>
+            </ul>
+        </div>
+        <div class="footer-col footer-contact">
+            <p class="footer-head">Contact</p>
+            <ul>
+                <li><a href="mailto:ammar.kheder@lut.fi">ammar.kheder@lut.fi</a></li>
+            </ul>
+        </div>
+    </div>
+    <p class="footer-legal">&copy; 2026 Ammar Kheder &middot; LUT University &middot; Atmospheric Modelling Centre &middot; Lahti, Finland</p>
+</footer>
+
+<script src="../../site.js" defer></script>
+</body>
+</html>
