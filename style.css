@@ -1799,6 +1799,17 @@ mark.mark {
     text-transform: uppercase;
     color: #fdeca0;
 }
+/* links in the dark panel keep the colour of their line (the global link blue is unreadable on #1a1a1a) */
+.flagship-kicker a,
+.flagship-lead a {
+    color: inherit;
+    text-decoration: underline dashed;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+}
+.flagship-kicker a { white-space: nowrap; }   /* a name is never cut at its hyphen (Zhi-Song) */
+.flagship-kicker a:hover,
+.flagship-lead a:hover { color: #fff; text-decoration-style: solid; }
 .flagship h2 {
     display: block;
     margin: 0 0 14px;
