@@ -1,6 +1,7 @@
 /* Shared behaviour for every page (no library).
    - the CSS-only mobile menu closes after a tap on one of its links, on the brand, and on Escape
    - a "New" badge in the news list disappears after its data-until date
+   - looping gallery clips do not autoplay when the visitor prefers reduced motion
    - video cards: a plain click opens the video in a lightbox; the YouTube player is created only then,
      so nothing is requested from YouTube before a click. Ctrl/Cmd/Shift-click, a middle click and
      browsers without <dialog> follow the link to YouTube instead. */
@@ -25,6 +26,15 @@
         var until = Date.parse(b.getAttribute('data-until'));
         if (!isNaN(until) && Date.now() > until) { b.parentNode.removeChild(b); }
     });
+
+    /* ── reduced motion: the looping clips in the galleries stay on their poster ── */
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        Array.prototype.forEach.call(document.querySelectorAll('video[autoplay]'), function (v) {
+            v.removeAttribute('autoplay');
+            v.pause();
+            v.load();   /* back to the poster */
+        });
+    }
 
     /* ── video lightbox ───────────────────────────────────── */
     var ALLOW = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';

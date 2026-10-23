@@ -10,7 +10,7 @@
     --ink: #1f1f1f;
     --ink-dark: #0a0a0a;
     --muted: #6b6b6b;
-    --muted-2: #9a9a9a;
+    --muted-2: #757575;
     --rule: #e4e0d7;
     --rule-strong: #0a0a0a;
 
@@ -30,7 +30,7 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { font-size: 17px; scroll-behavior: smooth; }
+html { font-size: 17px; scroll-behavior: smooth; color-scheme: light; }
 
 /* Offset anchor jumps so they don't hide behind the sticky navbar */
 main section[id], main [id] {
@@ -560,21 +560,16 @@ h3 {
 .news-archive-list li:last-child { border-bottom: none; }
 .news-archive-list a {
     color: var(--link);
-    text-decoration: none;
     font-weight: 600;
-    border-bottom: 1px solid rgba(0, 0, 136, 0.25);
 }
-.news-archive-list a:hover {
-    color: var(--link-hover);
-    border-bottom-color: currentColor;
-}
+.news-archive-list a:hover { color: var(--link-hover); }
 
 /* Category tags (#PUB, #TALK, #VISIT, etc.) */
 .news-cat {
     display: inline-block;
     font-family: var(--font-body);
     font-weight: 700;
-    font-size: 0.7rem;
+    font-size: 0.78rem;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     padding: 2px 9px;
@@ -1229,8 +1224,8 @@ table.history { width: 100%; border-collapse: collapse; }
     font-size: 1.1rem;
     line-height: 1.7;
     margin-bottom: 14px;
-    text-align: justify;
-    hyphens: auto;
+    text-align: left;
+    hyphens: manual;
 }
 
 /* Stats grid */
@@ -1553,7 +1548,7 @@ table.history { width: 100%; border-collapse: collapse; }
 .pub-bib summary::-webkit-details-marker { display: none; }
 .pub-bib[open] { flex: 1 1 100%; }
 .pub-bib[open] summary { margin-bottom: 4px; }
-.pub-bib pre { font-family: 'Courier New', monospace; font-size: 0.76rem; line-height: 1.4; background: var(--accent-bg); border: 1px dashed var(--rule); border-radius: var(--sketchy-radius-sm); padding: 10px 12px; margin: 6px 0 2px; overflow: auto; white-space: pre; }
+.pub-bib pre { font-family: 'Courier New', monospace; font-size: 0.8rem; line-height: 1.4; background: var(--accent-bg); border: 1px dashed var(--rule); border-radius: var(--sketchy-radius-sm); padding: 10px 12px; margin: 6px 0 2px; overflow: auto; white-space: pre; }
 
 /* ── 2026-10: <picture> wrappers (WebP + PNG fallback) do not take part in the layout ── */
 picture { display: contents; }
@@ -2245,3 +2240,52 @@ mark.mark {
 }
 .project-pager .pill-link { padding: 9px 16px; line-height: 1.4; }
 .project-pager + .back-link { margin-top: 28px; }
+
+/* ═════════════════════════════════════════════════════════════
+   2026-10: readability and touch
+   ═════════════════════════════════════════════════════════════ */
+/* Links inside running text are underlined (dashed, like the page's rules), so they can be told apart without hovering.
+   Pills, cards, the navigation and the buttons are not touched. */
+.about p a,
+.news-list li a,
+.news-archive-list li a,
+.project-detail .project-intro a,
+.project-section p:not(.credits-outro) a,
+.feature-list a,
+.credits-list dd a,
+.presidential-text a,
+.video-caption a,
+.flagship-lead a,
+.section-desc a {
+    text-decoration: underline dashed;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+}
+.about p a:hover,
+.news-list li a:hover,
+.news-archive-list li a:hover,
+.project-detail .project-intro a:hover,
+.project-section p:not(.credits-outro) a:hover,
+.feature-list a:hover,
+.credits-list dd a:hover,
+.presidential-text a:hover,
+.video-caption a:hover,
+.flagship-lead a:hover,
+.section-desc a:hover { text-decoration-style: solid; }
+
+/* a short press feedback on everything that can be tapped */
+.project-card:active,
+.video-card:active,
+.pill-link:active,
+.hero-cta a:active {
+    transform: translate(1px, 1px);
+    box-shadow: 2px 3px 0 rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 640px) {
+    /* tap targets of at least 40 px */
+    .pub-links a,
+    .pub-bib summary { padding: 10px 14px; font-size: 0.85rem; }
+    .news-all-link a,
+    .section-more a { display: inline-block; padding: 11px 0; }
+}
