@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Détection de cartes Pokémon, par Ammar Kheder</title>
-    <meta name="description" content="Une application web Flask + TensorFlow qui reconnaît les cartes Pokémon du Set de Base à partir d’une photo et en extrait le nom, le numéro, l’extension et l’année. Entraînée sur le Set de Base 2 français.">
+    <meta name="description" content="Une application web Flask + TensorFlow qui reconnaît les cartes Pokémon du Set de Base à partir d’une photo et en extrait le nom, le numéro, l’extension et l’année. Modèle entraîné sur le Set de Base 2 français.">
     <meta name="author" content="Ammar Kheder">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Détection de cartes Pokémon, par Ammar Kheder">
@@ -56,7 +56,7 @@
     <picture><source srcset="../../pic/pokemoncards-cover.webp" type="image/webp"><img src="../../pic/pokemoncards-cover.png" alt="Détection de cartes Pokémon, capture d’écran de la démo" class="hero-img" width="2000" height="937" fetchpriority="high" decoding="async"></picture>
     <div class="hero-overlay">
         <div class="hero-content">
-            <p class="hero-kicker">Application web ML &middot; 2023 &middot; Flask + TensorFlow</p>
+            <p class="hero-kicker">Application web de ML &middot; 2023 &middot; Flask + TensorFlow</p>
             <h1>Détection de cartes Pokémon</h1>
             <p class="hero-tagline">Une application web de vision par ordinateur qui identifie les cartes Pokémon du Set de Base à partir d’une photo et en extrait les métadonnées.</p>
             <p class="hero-breadcrumb"><a href="../projects.html">&larr; Tous les projets</a></p>
@@ -68,8 +68,8 @@
 
     <section class="project-intro">
         <p>Une application web qui prend la photo d’une carte Pokémon du Set de Base et vous dit exactement de laquelle il s’agit, en renvoyant en temps réel <strong>le nom, le numéro, l’extension et l’année</strong>. Conçue de bout en bout&nbsp;: un classifieur CNN sous TensorFlow derrière une application web Flask + Jinja2, avec une interface HTML / CSS / JS épurée.</p>
-        <p>Le modèle a d’abord été entraîné sur le <strong>Set de Base 2 français</strong> (les cartes de mon enfance), mais il se généralise bien à tout le Set de Base, y compris l’édition anglaise. Les cas difficiles (éclairage, reflets, cadrage partiel) sont gérés par l’augmentation de données utilisée pendant l’entraînement.</p>
-        <p>Le projet répondait à un besoin personnel&nbsp;: les collectionneurs comme moi ont souvent besoin de vérifier sur le moment l’édition ou la valeur d’une carte. Pointer l’appareil photo du téléphone vers la carte et obtenir une identification instantanée, c’était la bonne expérience utilisateur.</p>
+        <p>Le modèle a d’abord été entraîné sur le <strong>Set de Base 2 français</strong> (les cartes de mon enfance), mais il généralise bien à tout le Set de Base, y compris l’édition anglaise. Les cas difficiles (éclairage, reflets, cadrage partiel) sont gérés par l’augmentation de données utilisée pendant l’entraînement.</p>
+        <p>Le projet est né d’un besoin personnel&nbsp;: les collectionneurs comme moi doivent souvent vérifier sur le moment l’édition ou la valeur d’une carte. Pointer l’appareil photo du téléphone vers la carte et l’identifier instantanément&nbsp;: c’était l’expérience utilisateur qu’il fallait.</p>
     </section>
 
     <section class="stats-grid">
@@ -97,7 +97,7 @@
             <li><strong>Détection de la carte.</strong> Envoyez une photo&nbsp;: le modèle reconnaît la carte parmi celles du Set de Base Pokémon.</li>
             <li><strong>Extraction des métadonnées.</strong> Renvoie le nom, le numéro, l’extension et l’année de sortie de la carte, prêts à être affichés ou envoyés vers une base de données de collection.</li>
             <li><strong>D’une langue à l’autre.</strong> Entraîné sur le Set de Base 2 français, le modèle classe aussi correctement les cartes anglaises du Set de Base. Le signal visuel suffit.</li>
-            <li><strong>Une pile logicielle légère.</strong> Une seule application Flask, un CNN TensorFlow, un gabarit Jinja2 et Git LFS pour les poids du modèle. Aucun framework lourd&nbsp;: elle se déploie partout où Python tourne.</li>
+            <li><strong>Une pile logicielle légère.</strong> Une seule application Flask, un CNN TensorFlow, un gabarit Jinja2 et Git LFS pour les poids du modèle. Aucun framework lourd&nbsp;: l’application se déploie partout où Python tourne.</li>
         </ol>
     </section>
 

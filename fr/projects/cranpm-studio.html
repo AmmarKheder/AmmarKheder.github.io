@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CranPM Studio, par Ammar Kheder</title>
-    <meta name="description" content="CranPM Studio&nbsp;: un paquet Python open source et une démo en ligne pour la prévision des PM2.5 à haute résolution (1&nbsp;km) sur l’Europe, en double version CUDA/ROCm.">
+    <meta name="description" content="CranPM Studio&nbsp;: un paquet Python open source et une démo en ligne pour la prévision des PM2.5 à haute résolution (1&nbsp;km) sur l’Europe, avec une double compatibilité CUDA/ROCm.">
     <meta name="author" content="Ammar Kheder">
     <meta property="og:type" content="website">
     <meta property="og:title" content="CranPM Studio, par Ammar Kheder">
     <meta property="og:site_name" content="Ammar Kheder">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:locale:alternate" content="en_US">
-    <meta property="og:description" content="Paquet open source et démo en ligne pour la prévision des PM2.5 à 1&nbsp;km sur l’Europe. API Python, ligne de commande, double version CUDA/ROCm, démonstrateur Gradio sur HuggingFace.">
+    <meta property="og:description" content="Paquet open source et démo en ligne pour la prévision des PM2.5 à 1&nbsp;km sur l’Europe. API Python, ligne de commande, double compatibilité CUDA/ROCm, démonstrateur Gradio sur HuggingFace.">
     <meta property="og:image" content="https://ammarkheder.com/cran-pm/assets/studio_schematic.png">
     <meta property="og:url" content="https://ammarkheder.com/fr/projects/cranpm-studio.html">
     <link rel="canonical" href="https://ammarkheder.com/fr/projects/cranpm-studio.html">
@@ -71,8 +71,8 @@
 <main class="prose project-detail" id="main-content" tabindex="-1">
 
     <section class="project-intro">
-        <p>CranPM Studio est la version logicielle open source de <a href="cranpm.html">CRAN-PM</a>&nbsp;: un Vision Transformer multi-échelle qui réalise la descente d’échelle des champs de réanalyse ERA5/CAMS à 25&nbsp;km vers des <strong>prévisions quotidiennes des PM<sub>2.5</sub> à 1&nbsp;km</strong> sur l’Europe, grâce à un pont d’attention entre les résolutions, avec un ordonnancement guidé par le vent et un biais d’attention sensible à l’altitude.</p>
-        <p>Le modèle atteint une <strong>RMSE de 6,85&nbsp;µg/m³ à J+1</strong>, évaluée sur 2&nbsp;971 stations de mesure de l’AEE (4,7&ndash;10,7&nbsp;% de moins que le meilleur modèle de référence en apprentissage profond), et se généralise en zero-shot (sans réentraînement) à 8 régions hors distribution, dont l’Inde, la Chine et les États-Unis.</p>
+        <p>CranPM Studio est la version logicielle open source de <a href="cranpm.html">CRAN-PM</a>&nbsp;: un Vision Transformer multi-échelle qui transforme, par descente d’échelle, les champs de réanalyse ERA5/CAMS à 25&nbsp;km en <strong>prévisions quotidiennes des PM<sub>2.5</sub> à 1&nbsp;km</strong> sur l’Europe, grâce à un pont d’attention entre les résolutions, avec un ordonnancement guidé par le vent et un biais d’attention sensible à l’altitude.</p>
+        <p>Le modèle atteint une <strong>RMSE de 6,85&nbsp;µg/m³ à J+1</strong>, évaluée sur 2&nbsp;971 stations de mesure de l’AEE (4,7&ndash;10,7&nbsp;% de moins que le meilleur modèle de référence en apprentissage profond), et généralise en zero-shot (sans réentraînement) à 8 régions hors distribution, dont l’Inde, la Chine et les États-Unis.</p>
         <p>Au-delà de la précision, le paquet est pensé pour la <strong>reproductibilité et l’accessibilité</strong>&nbsp;: une API Python et une interface en ligne de commande stables, des procédures d’entraînement et d’inférence, la prise en charge de NVIDIA CUDA comme d’AMD ROCm, des images de conteneur, un dépôt de modèles sur HuggingFace et un démonstrateur web Gradio que chacun peut lancer sans aucune installation.</p>
     </section>
 
@@ -80,14 +80,14 @@
         <div class="stat-card"><p class="stat-value">6,85</p><p class="stat-label">RMSE µg/m³<br><span>J+1, 2&nbsp;971 stations de l’AEE</span></p></div>
         <div class="stat-card"><p class="stat-value">8</p><p class="stat-label">Régions en zero-shot<br><span>Inde, Chine, États-Unis…</span></p></div>
         <div class="stat-card"><p class="stat-value stat-text">1&nbsp;km</p><p class="stat-label">Résolution<br><span>quotidienne, sur toute l’Europe</span></p></div>
-        <div class="stat-card"><p class="stat-value stat-text">CUDA<br>+ROCm</p><p class="stat-label">Portable sur GPU<br><span>NVIDIA et AMD</span></p></div>
+        <div class="stat-card"><p class="stat-value stat-text">CUDA<br>+ROCm</p><p class="stat-label">Portabilité GPU<br><span>NVIDIA et AMD</span></p></div>
     </section>
 
     <section class="project-section">
         <h2>Ce que contient le paquet</h2>
         <ol class="feature-list">
             <li><strong>API Python et CLI stables.</strong> Importez le modèle dans un notebook ou lancez des prévisions en ligne de commande, avec des procédures d’entraînement et d’inférence documentées.</li>
-            <li><strong>Deux backends GPU.</strong> Fonctionne sous NVIDIA CUDA et AMD ROCm, avec le même code validé chez les deux constructeurs (y compris l’environnement MI250X de LUMI).</li>
+            <li><strong>Deux plateformes GPU.</strong> Fonctionne avec NVIDIA CUDA comme avec AMD ROCm&nbsp;: le même code est validé chez les deux constructeurs (y compris l’environnement MI250X de LUMI).</li>
             <li><strong>Images de conteneur.</strong> Des environnements reproductibles pour le calcul haute performance et le cloud, sans l’enfer des dépendances.</li>
             <li><strong>Dépôt de modèles sur HuggingFace.</strong> Des poids pré-entraînés, hébergés et versionnés, téléchargeables en une ligne.</li>
             <li><strong>Démo Gradio en ligne.</strong> Choisissez des coordonnées n’importe où en Europe et une date en 2022&nbsp;; le serveur exécute une vraie passe avant de CRAN-PM sur des entrées ERA5/CAMS/GHAP mises en cache et affiche la prévision à 1&nbsp;km à J+1, évaluée sur les stations de l’AEE. Aucune installation&nbsp;: elle tourne sur HuggingFace Spaces.</li>
@@ -127,8 +127,8 @@
                 <span class="gallery-caption">Étude de cas&nbsp;: poussières sahariennes</span>
             </a>
             <a href="https://ammarkheder.com/cran-pm/figures/fig_gpu_benchmarks.png" target="_blank" class="gallery-item">
-                <img src="https://ammarkheder.com/cran-pm/figures/fig_gpu_benchmarks.png" alt="Bancs d’essai GPU, CUDA et ROCm" loading="lazy" width="3878" height="1202" decoding="async">
-                <span class="gallery-caption">Bancs d’essai GPU&nbsp;: CUDA face à ROCm</span>
+                <img src="https://ammarkheder.com/cran-pm/figures/fig_gpu_benchmarks.png" alt="Comparaison des performances GPU, CUDA et ROCm" loading="lazy" width="3878" height="1202" decoding="async">
+                <span class="gallery-caption">Performances GPU&nbsp;: CUDA face à ROCm</span>
             </a>
         </div>
     </section>
@@ -140,7 +140,7 @@
             <a href="https://ammarkheder.com/cran-pm/#demo" target="_blank" class="pill-link">Démo en ligne</a>
             <a href="https://github.com/AmmarKheder/cran-pm" target="_blank" class="pill-link">Dépôt GitHub</a>
             <a href="https://arxiv.org/abs/2603.11725" target="_blank" class="pill-link">Article CRAN-PM (arXiv)</a>
-            <a href="cranpm.html" class="pill-link">Page de recherche CRAN-PM</a>
+            <a href="cranpm.html" class="pill-link">Page du projet CRAN-PM</a>
         </p>
     </section>
 
@@ -154,7 +154,7 @@
             <dt>Affiliations</dt>
             <dd>LUT University, AMC-Lahti et INAR (Université d’Helsinki)</dd>
             <dt>Technologies</dt>
-            <dd>PyTorch, double version CUDA / ROCm, Docker, HuggingFace Hub et Spaces, Gradio</dd>
+            <dd>PyTorch, double compatibilité CUDA / ROCm, Docker, HuggingFace Hub et Spaces, Gradio</dd>
             <dt>Statut</dt>
             <dd>Open source, v1.0 sur <a href="https://github.com/AmmarKheder/cran-pm" target="_blank">GitHub</a></dd>
         </dl>
