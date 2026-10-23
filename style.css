@@ -1703,3 +1703,10 @@ footer .footer-sub { color: var(--muted); }
     }
     .intro .avatar-swap .avatar-hint { animation: none; opacity: 0; }
 }
+
+/* ── 2026-10: small screens. The project grid had a 340 px minimum column, wider than the
+   335 px of content at 375 px (horizontal scroll); the fixed background repaints on every scroll on phones ── */
+.project-grid { grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr)); }
+@media (max-width: 720px) {
+    body { background-attachment: scroll; }
+}
