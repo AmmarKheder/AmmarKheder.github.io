@@ -1564,6 +1564,28 @@ main:focus-visible { outline: none; }
 .video-play svg { display: block; width: 100%; height: 100%; }
 .video-thumb:hover .video-play,
 .video-thumb:focus-visible .video-play { transform: rotate(-4deg) scale(1.06); }
+/* a poster with its title in the middle (the film, "What's in the air?", cDESP): the play button waits in the lower-left corner, off the text */
+.video-thumb-corner .video-play {
+    left: 12px;
+    top: auto;
+    bottom: 12px;
+    width: 56px;
+    height: 56px;
+    margin: 0;
+}
+/* keyboard focus. The card clips whatever sticks out of it (overflow:hidden) and the poster is painted over the link's own
+   outline, so the ring is a hand-drawn frame laid on top of the poster: white with a dark edge, readable on a light
+   or a dark picture. The transparent outline is what forced-colours modes show. */
+.video-card .video-thumb:focus-visible { outline: 3px solid transparent; outline-offset: -7px; }
+.video-card .video-thumb:focus-visible::after {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    border: 3px solid #fff;
+    border-radius: var(--sketchy-radius-sm);
+    box-shadow: 0 0 0 2px rgba(10, 10, 10, 0.6), inset 0 0 0 2px rgba(10, 10, 10, 0.6);
+    pointer-events: none;
+}
 
 .video-badge {
     position: absolute;
