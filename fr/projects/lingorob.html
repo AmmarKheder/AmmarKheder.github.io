@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LingoRob, by Ammar Kheder</title>
-    <meta name="description" content="LingoRob: a crowdsourcing platform for multi-language corpora, built at INRIA to train brain-inspired language models for human-robot interaction.">
+    <title>LingoRob, par Ammar Kheder</title>
+    <meta name="description" content="LingoRob&nbsp;: une plateforme de collecte participative de corpus multilingues, développée à l’INRIA pour entraîner des modèles de langage inspirés du cerveau, destinés à l’interaction humain-robot.">
     <meta name="author" content="Ammar Kheder">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="LingoRob, by Ammar Kheder">
+    <meta property="og:title" content="LingoRob, par Ammar Kheder">
     <meta property="og:site_name" content="Ammar Kheder">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:locale:alternate" content="en_US">
-    <meta property="og:description" content="A crowdsourcing platform built at INRIA Bordeaux for multi-language language-learning corpora, used to train Reservoir Computing models for human-robot interaction.">
+    <meta property="og:description" content="Une plateforme de collecte participative développée à l’INRIA Bordeaux pour des corpus multilingues d’apprentissage du langage, qui servent à entraîner des modèles de Reservoir Computing pour l’interaction humain-robot.">
     <meta property="og:image" content="https://ammarkheder.com/pic/ammar_inria.jpeg">
     <meta property="og:url" content="https://ammarkheder.com/fr/projects/lingorob.html">
     <link rel="canonical" href="https://ammarkheder.com/fr/projects/lingorob.html">
@@ -26,9 +26,9 @@
     <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
 </head>
 <body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
+<a class="skip-link" href="#main-content">Aller au contenu principal</a>
 
-<nav class="navbar" aria-label="Main">
+<nav class="navbar" aria-label="Menu principal">
     <a href="../index.html" class="brand">
         <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
             <rect width="64" height="64" rx="11" fill="#fafafa"/>
@@ -39,9 +39,9 @@
     <input type="checkbox" id="nav-toggle" class="nav-toggle-check" aria-label="Menu">
     <label for="nav-toggle" class="nav-toggle" aria-hidden="true"><span></span><span></span><span></span></label>
     <div class="nav-links">
-        <a href="../index.html#about" class="nav-item">About</a>
-        <a href="../projects.html" class="nav-item nav-active">Research</a>
-        <a href="../videos.html" class="nav-item">Videos</a>
+        <a href="../index.html#about" class="nav-item">À propos</a>
+        <a href="../projects.html" class="nav-item nav-active">Recherche</a>
+        <a href="../videos.html" class="nav-item">Vidéos</a>
         <a href="../index.html#publications" class="nav-item">Publications</a>
         <a href="../index.html#contact" class="nav-item nav-contact">Contact</a>
         <span class="nav-sep"></span>
@@ -53,13 +53,13 @@
 
 <!-- Hero -->
 <section class="project-hero">
-    <img src="../../pic/ammar_inria.jpeg" alt="Ammar Kheder with the NAO humanoid robot at INRIA Bordeaux" class="hero-img" width="1600" height="1200" fetchpriority="high" decoding="async">
+    <img src="../../pic/ammar_inria.jpeg" alt="Ammar Kheder avec le robot humanoïde NAO à l’INRIA Bordeaux" class="hero-img" width="1600" height="1200" fetchpriority="high" decoding="async">
     <div class="hero-overlay">
         <div class="hero-content">
-            <p class="hero-kicker">Research engineer &middot; 2021&ndash;2022 &middot; INRIA Bordeaux</p>
+            <p class="hero-kicker">Ingénieur de recherche &middot; 2021&ndash;2022 &middot; INRIA Bordeaux</p>
             <h1>LingoRob</h1>
-            <p class="hero-tagline">A crowdsourcing platform for multi-language linguistic corpora, designed to train brain-inspired language models for human-robot interaction.</p>
-            <p class="hero-breadcrumb"><a href="../projects.html">&larr; All projects</a></p>
+            <p class="hero-tagline">Une plateforme de collecte participative de corpus linguistiques multilingues, conçue pour entraîner des modèles de langage inspirés du cerveau, au service de l’interaction humain-robot.</p>
+            <p class="hero-breadcrumb"><a href="../projects.html">&larr; Tous les projets</a></p>
         </div>
     </div>
 </section>
@@ -67,80 +67,80 @@
 <main class="prose project-detail" id="main-content" tabindex="-1">
 
     <section class="project-intro">
-        <p>During my one-year apprenticeship at INRIA Bordeaux&rsquo;s <strong>Mnemosyne</strong> project team, supervised by <a href="https://sites.google.com/site/xavierhinaut/" target="_blank">Xavier Hinaut</a>, I worked on <strong>LingoRob</strong>, a citizen-science platform that collects multi-language linguistic data to train neural models for human-robot interaction.</p>
-        <p>The platform crowdsources three flavours of data on the same sentence: a written form, an audio recording, and a structured semantic representation (predicates, Semantic Role Labelling). The resulting corpora are used to train recurrent neural networks built on the <strong>Reservoir Computing</strong> paradigm, the family of brain-inspired models studied in the team. Once trained, the same models drive language understanding on humanoid robots like the <strong>NAO</strong> shown above.</p>
-        <p>My role focused on the engineering side: stitching together prototype components into a single Django/Python web application, integrating the audio pipeline, designing contributor flows for writing, reading, and evaluating sentences, and laying the groundwork for the live demo where visitors can test the model with their own input directly from the browser.</p>
+        <p>Pendant mon année d’alternance dans l’équipe-projet <strong>Mnemosyne</strong> de l’INRIA Bordeaux, sous l’encadrement de <a href="https://sites.google.com/site/xavierhinaut/" target="_blank">Xavier Hinaut</a>, j’ai travaillé sur <strong>LingoRob</strong>, une plateforme de science participative qui collecte des données linguistiques multilingues pour entraîner des modèles neuronaux destinés à l’interaction humain-robot.</p>
+        <p>La plateforme recueille auprès des contributeurs trois types de données sur une même phrase&nbsp;: sa forme écrite, un enregistrement audio et une représentation sémantique structurée (prédicats, étiquetage des rôles sémantiques). Les corpus obtenus servent à entraîner des réseaux de neurones récurrents fondés sur le paradigme du <strong>Reservoir Computing</strong>, la famille de modèles inspirés du cerveau étudiée dans l’équipe. Une fois entraînés, ces mêmes modèles assurent la compréhension du langage sur des robots humanoïdes comme le <strong>NAO</strong> ci-dessus.</p>
+        <p>Mon rôle portait sur l’ingénierie&nbsp;: assembler des briques prototypes en une seule application web Django/Python, intégrer la chaîne de traitement audio, concevoir les parcours des contributeurs pour écrire, lire et évaluer des phrases, et poser les bases de la démo en ligne, où les visiteurs peuvent tester le modèle avec leurs propres entrées, directement depuis le navigateur.</p>
     </section>
 
     <section class="stats-grid">
         <div class="stat-card">
             <p class="stat-value stat-text">INRIA</p>
-            <p class="stat-label">Mnemosyne team<br><span>Bordeaux</span></p>
+            <p class="stat-label">Équipe Mnemosyne<br><span>Bordeaux</span></p>
         </div>
         <div class="stat-card">
-            <p class="stat-value stat-text">1&nbsp;year</p>
-            <p class="stat-label">Apprenticeship<br><span>2021&ndash;2022</span></p>
+            <p class="stat-value stat-text">1&nbsp;an</p>
+            <p class="stat-label">Alternance<br><span>2021&ndash;2022</span></p>
         </div>
         <div class="stat-card">
             <p class="stat-value stat-text">RC</p>
-            <p class="stat-label">Reservoir Computing<br><span>brain-inspired RNNs</span></p>
+            <p class="stat-label">Reservoir Computing<br><span>RNN inspirés du cerveau</span></p>
         </div>
         <div class="stat-card">
             <p class="stat-value stat-text">FR / EN / DE</p>
-            <p class="stat-label">Multi-language<br><span>cross-lingual corpora</span></p>
+            <p class="stat-label">Multilingue<br><span>corpus interlingues</span></p>
         </div>
     </section>
 
     <section class="project-section">
-        <h2>What it does</h2>
+        <h2>Ce que fait la plateforme</h2>
         <ol class="feature-list">
-            <li><strong>Three-faceted data collection.</strong> For each prompt, the platform records a written sentence, an audio reading, and a semantic annotation (predicates and roles), making the corpus reusable across multiple modelling stacks.</li>
-            <li><strong>Multi-language by design.</strong> French, English, German and other languages share the same task design, supporting research on language universality and cross-lingual generalisation.</li>
-            <li><strong>Quality control via peer evaluation.</strong> Contributors review each other&rsquo;s productions and flag content that does not match the task, keeping the corpus clean without manual curation.</li>
-            <li><strong>Live model demo.</strong> Trained Reservoir Computing models are exposed through the same web interface, letting neuro-linguists and visitors run sentences through the model with no code, no setup.</li>
-            <li><strong>Robot-grounded prompts.</strong> Many tasks ask the contributor to write or speak commands aimed at a humanoid robot in a simulated scene, anchoring the linguistic data in the human-machine interaction loop.</li>
+            <li><strong>Une collecte à trois facettes.</strong> Pour chaque consigne, la plateforme enregistre une phrase écrite, sa lecture audio et une annotation sémantique (prédicats et rôles), ce qui rend le corpus réutilisable par plusieurs chaînes de modélisation.</li>
+            <li><strong>Multilingue dès la conception.</strong> Le français, l’anglais, l’allemand et d’autres langues partagent les mêmes tâches, ce qui sert la recherche sur l’universalité du langage et la généralisation d’une langue à l’autre.</li>
+            <li><strong>Contrôle qualité par les pairs.</strong> Les contributeurs relisent les productions des uns et des autres et signalent les contenus qui ne correspondent pas à la tâche&nbsp;: le corpus reste propre sans tri manuel.</li>
+            <li><strong>Démo du modèle en ligne.</strong> Les modèles de Reservoir Computing entraînés sont accessibles depuis la même interface web&nbsp;: neurolinguistes et visiteurs peuvent y soumettre des phrases, sans code ni installation.</li>
+            <li><strong>Des consignes ancrées dans la robotique.</strong> De nombreuses tâches demandent au contributeur d’écrire ou de prononcer des commandes destinées à un robot humanoïde dans une scène simulée, ce qui ancre les données linguistiques dans la boucle d’interaction humain-machine.</li>
         </ol>
     </section>
 
     <section class="project-section">
-        <h2>Stack</h2>
+        <h2>Technologies</h2>
         <p class="credits-outro">
             <a class="pill-link">Python</a>
             <a class="pill-link">Django</a>
             <a class="pill-link">HTML &middot; CSS &middot; JS</a>
             <a class="pill-link">Reservoir Computing</a>
-            <a class="pill-link">MFCC audio</a>
-            <a class="pill-link">Semantic Role Labelling</a>
+            <a class="pill-link">Audio MFCC</a>
+            <a class="pill-link">Étiquetage des rôles sémantiques</a>
         </p>
     </section>
 
     <section class="project-section">
-        <h2>Context &amp; prior work</h2>
-        <p>LingoRob built on a body of prior work in the team: years of research on Reservoir Computing for language, and earlier collaborations with the University of Hamburg around contributor-experience design, audio-quality control, and natural-language interpretation for simulated robotic arms. Those preliminary studies, conducted as bachelor projects at Hamburg, informed the platform&rsquo;s task taxonomy, gamification approach (motivational arc, leaderboards, multi-step evaluations), and quality-assurance pipeline. The engineering work during this apprenticeship consolidated those building blocks into a single deployable Django application.</p>
+        <h2>Contexte et travaux antérieurs</h2>
+        <p>LingoRob s’appuie sur des travaux antérieurs de l’équipe&nbsp;: des années de recherche sur le Reservoir Computing appliqué au langage, et des collaborations plus anciennes avec l’Université de Hambourg sur la conception de l’expérience des contributeurs, le contrôle de la qualité audio et l’interprétation du langage naturel pour des bras robotiques simulés. Ces études préliminaires, menées dans le cadre de projets de licence à Hambourg, ont guidé la taxonomie des tâches de la plateforme, son approche de ludification (arc motivationnel, classements, évaluations en plusieurs étapes) et sa chaîne d’assurance qualité. Le travail d’ingénierie mené pendant cette alternance a réuni ces briques en une seule application Django déployable.</p>
     </section>
 
     <section class="project-section credits">
-        <h2>Credits</h2>
+        <h2>Crédits</h2>
         <dl class="credits-list">
-            <dt>Engineering</dt>
-            <dd><strong>Ammar Kheder</strong>, research engineer (apprenticeship)</dd>
-            <dt>Supervision</dt>
-            <dd><a href="https://sites.google.com/site/xavierhinaut/" target="_blank">Xavier Hinaut</a>, INRIA Bordeaux, Mnemosyne project team</dd>
-            <dt>Host lab</dt>
+            <dt>Ingénierie</dt>
+            <dd><strong>Ammar Kheder</strong>, ingénieur de recherche (alternance)</dd>
+            <dt>Encadrement</dt>
+            <dd><a href="https://sites.google.com/site/xavierhinaut/" target="_blank">Xavier Hinaut</a>, INRIA Bordeaux, équipe-projet Mnemosyne</dd>
+            <dt>Laboratoire d’accueil</dt>
             <dd><a href="https://www.inria.fr/en/mnemosyne" target="_blank">INRIA Mnemosyne</a>, Bordeaux</dd>
-            <dt>Stack</dt>
-            <dd>Python, Django, web stack, Reservoir Computing models</dd>
-            <dt>Prior design &amp; feasibility studies</dt>
-            <dd>Bachelor projects at the University of Hamburg, used with attribution</dd>
+            <dt>Technologies</dt>
+            <dd>Python, Django, technologies web, modèles de Reservoir Computing</dd>
+            <dt>Études préalables de conception et de faisabilité</dt>
+            <dd>Projets de licence à l’Université de Hambourg, réutilisés en citant leurs auteurs</dd>
         </dl>
     </section>
 
-    <nav class="project-pager" aria-label="Other projects">
-        <a class="pill-link" href="pokemoncards.html" rel="prev">&larr; Previous: Pok&eacute;mon Card Detection</a>
-        <a class="pill-link" href="galton-vba.html" rel="next">Next: Galton Board in Excel &rarr;</a>
+    <nav class="project-pager" aria-label="Autres projets">
+        <a class="pill-link" href="pokemoncards.html" rel="prev">&larr; Précédent&nbsp;: Détection de cartes Pokémon</a>
+        <a class="pill-link" href="galton-vba.html" rel="next">Suivant&nbsp;: Planche de Galton sous Excel &rarr;</a>
     </nav>
 
-    <p class="back-link"><a href="../projects.html">&larr; Back to all projects</a></p>
+    <p class="back-link"><a href="../projects.html">&larr; Retour à tous les projets</a></p>
 
 </main>
 
@@ -148,20 +148,20 @@
     <div class="footer-inner">
         <div class="footer-brand">
             <img src="../../signature.svg" width="200" height="80" alt="Ammar Kheder" loading="lazy" decoding="async">
-            <p class="footer-tagline">Teaching neural networks how the atmosphere flows.</p>
+            <p class="footer-tagline">Apprendre aux réseaux de neurones comment circule l’atmosphère.</p>
         </div>
         <div class="footer-col">
-            <p class="footer-head">Explore</p>
+            <p class="footer-head">Explorer</p>
             <ul>
-                <li><a href="../projects.html">Research</a></li>
-                <li><a href="../videos.html">Videos</a></li>
+                <li><a href="../projects.html">Recherche</a></li>
+                <li><a href="../videos.html">Vidéos</a></li>
                 <li><a href="../index.html#publications">Publications</a></li>
-                <li><a href="../news.html">News</a></li>
-                <li><a href="../teaching.html">Teaching</a></li>
+                <li><a href="../news.html">Actualités</a></li>
+                <li><a href="../teaching.html">Enseignement</a></li>
             </ul>
         </div>
         <div class="footer-col">
-            <p class="footer-head">Elsewhere</p>
+            <p class="footer-head">Ailleurs</p>
             <ul>
                 <li><a href="https://github.com/AmmarKheder" target="_blank" rel="noopener">GitHub</a></li>
                 <li><a href="https://scholar.google.com/citations?user=ZYvKJF4AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
@@ -178,7 +178,7 @@
             </ul>
         </div>
     </div>
-    <p class="footer-legal">&copy; 2026 Ammar Kheder &middot; LUT University &middot; Atmospheric Modelling Centre &middot; Lahti, Finland</p>
+    <p class="footer-legal">&copy; 2026 Ammar Kheder &middot; LUT University &middot; Atmospheric Modelling Centre &middot; Lahti, Finlande</p>
 </footer>
 
 <script src="../../site.js" defer></script>

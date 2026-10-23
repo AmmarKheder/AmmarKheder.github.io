@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CranPM Studio, by Ammar Kheder</title>
-    <meta name="description" content="CranPM Studio: an open-source Python package and live web demo for high-resolution (1 km) PM2.5 forecasting over Europe, with a dual CUDA/ROCm build.">
+    <title>CranPM Studio, par Ammar Kheder</title>
+    <meta name="description" content="CranPM Studio&nbsp;: un paquet Python open source et une démo en ligne pour la prévision des PM2.5 à haute résolution (1&nbsp;km) sur l’Europe, en double version CUDA/ROCm.">
     <meta name="author" content="Ammar Kheder">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="CranPM Studio, by Ammar Kheder">
+    <meta property="og:title" content="CranPM Studio, par Ammar Kheder">
     <meta property="og:site_name" content="Ammar Kheder">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:locale:alternate" content="en_US">
-    <meta property="og:description" content="Open-source package + live demo for 1 km PM2.5 forecasting over Europe. Python API, CLI, dual CUDA/ROCm, HuggingFace Gradio demonstrator.">
+    <meta property="og:description" content="Paquet open source et démo en ligne pour la prévision des PM2.5 à 1&nbsp;km sur l’Europe. API Python, ligne de commande, double version CUDA/ROCm, démonstrateur Gradio sur HuggingFace.">
     <meta property="og:image" content="https://ammarkheder.com/cran-pm/assets/studio_schematic.png">
     <meta property="og:url" content="https://ammarkheder.com/fr/projects/cranpm-studio.html">
     <link rel="canonical" href="https://ammarkheder.com/fr/projects/cranpm-studio.html">
@@ -26,9 +26,9 @@
     <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
 </head>
 <body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
+<a class="skip-link" href="#main-content">Aller au contenu principal</a>
 
-<nav class="navbar" aria-label="Main">
+<nav class="navbar" aria-label="Menu principal">
     <a href="../index.html" class="brand">
         <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
             <rect width="64" height="64" rx="11" fill="#fafafa"/>
@@ -39,9 +39,9 @@
     <input type="checkbox" id="nav-toggle" class="nav-toggle-check" aria-label="Menu">
     <label for="nav-toggle" class="nav-toggle" aria-hidden="true"><span></span><span></span><span></span></label>
     <div class="nav-links">
-        <a href="../index.html#about" class="nav-item">About</a>
-        <a href="../projects.html" class="nav-item nav-active">Research</a>
-        <a href="../videos.html" class="nav-item">Videos</a>
+        <a href="../index.html#about" class="nav-item">À propos</a>
+        <a href="../projects.html" class="nav-item nav-active">Recherche</a>
+        <a href="../videos.html" class="nav-item">Vidéos</a>
         <a href="../index.html#publications" class="nav-item">Publications</a>
         <a href="../index.html#contact" class="nav-item nav-contact">Contact</a>
         <span class="nav-sep"></span>
@@ -52,18 +52,18 @@
 </nav>
 
 <section class="project-hero">
-    <img src="https://ammarkheder.com/cran-pm/assets/studio_schematic.png" alt="CranPM Studio end-to-end pipeline schematic" class="hero-img" width="1494" height="792" fetchpriority="high" decoding="async">
+    <img src="https://ammarkheder.com/cran-pm/assets/studio_schematic.png" alt="Schéma de la chaîne de traitement complète de CranPM Studio" class="hero-img" width="1494" height="792" fetchpriority="high" decoding="async">
     <div class="hero-overlay">
         <div class="hero-content">
-            <p class="hero-kicker">Open-source software &middot; v1.0 &middot; lead author</p>
+            <p class="hero-kicker">Logiciel open source &middot; v1.0 &middot; premier auteur</p>
             <h1>CranPM Studio</h1>
-            <p class="hero-tagline">An open-source Python package and live web demo for high-resolution (1 km) PM<sub>2.5</sub> forecasting over Europe.</p>
+            <p class="hero-tagline">Un paquet Python open source et une démo en ligne pour la prévision des PM<sub>2.5</sub> à haute résolution (1&nbsp;km) sur l’Europe.</p>
             <p class="hero-actions">
-                <a href="https://ammarkheder.com/cran-pm/#demo" target="_blank" rel="noopener" class="pill-link">Live demo</a>
-                <a href="https://ammarkheder.com/cran-pm/" target="_blank" rel="noopener" class="pill-link">CranPM Studio site</a>
-                <a href="https://github.com/AmmarKheder/cran-pm" target="_blank" rel="noopener" class="pill-link">GitHub repo</a>
+                <a href="https://ammarkheder.com/cran-pm/#demo" target="_blank" rel="noopener" class="pill-link">Démo en ligne</a>
+                <a href="https://ammarkheder.com/cran-pm/" target="_blank" rel="noopener" class="pill-link">Site de CranPM Studio</a>
+                <a href="https://github.com/AmmarKheder/cran-pm" target="_blank" rel="noopener" class="pill-link">Dépôt GitHub</a>
             </p>
-            <p class="hero-breadcrumb"><a href="../projects.html">&larr; All projects</a></p>
+            <p class="hero-breadcrumb"><a href="../projects.html">&larr; Tous les projets</a></p>
         </div>
     </div>
 </section>
@@ -71,35 +71,35 @@
 <main class="prose project-detail" id="main-content" tabindex="-1">
 
     <section class="project-intro">
-        <p>CranPM Studio is the open-source software release of <a href="cranpm.html">CRAN-PM</a>: a multi-scale Vision Transformer that downscales 25 km ERA5/CAMS reanalysis fields to <strong>1 km daily PM<sub>2.5</sub> forecasts</strong> over Europe, through a cross-resolution attention bridge with wind-guided ordering and an elevation-aware attention bias.</p>
-        <p>The model reaches <strong>RMSE = 6.85 µg/m³ at T+1</strong> against 2,971 EEA ground stations (4.7&ndash;10.7% lower than the best deep-learning baseline), and generalises zero-shot to 8 out-of-distribution regions including India, China and the USA.</p>
-        <p>Beyond accuracy, the package is built for <strong>reproducibility and accessibility</strong>: a stable Python API and command-line interface, training and inference workflows, dual support for NVIDIA CUDA and AMD ROCm, container images, a HuggingFace model repository, and a Gradio web demonstrator that anyone can run with no setup.</p>
+        <p>CranPM Studio est la version logicielle open source de <a href="cranpm.html">CRAN-PM</a>&nbsp;: un Vision Transformer multi-échelle qui réalise la descente d’échelle des champs de réanalyse ERA5/CAMS à 25&nbsp;km vers des <strong>prévisions quotidiennes des PM<sub>2.5</sub> à 1&nbsp;km</strong> sur l’Europe, grâce à un pont d’attention entre les résolutions, avec un ordonnancement guidé par le vent et un biais d’attention sensible à l’altitude.</p>
+        <p>Le modèle atteint une <strong>RMSE de 6,85&nbsp;µg/m³ à J+1</strong>, évaluée sur 2&nbsp;971 stations de mesure de l’AEE (4,7&ndash;10,7&nbsp;% de moins que le meilleur modèle de référence en apprentissage profond), et se généralise en zero-shot (sans réentraînement) à 8 régions hors distribution, dont l’Inde, la Chine et les États-Unis.</p>
+        <p>Au-delà de la précision, le paquet est pensé pour la <strong>reproductibilité et l’accessibilité</strong>&nbsp;: une API Python et une interface en ligne de commande stables, des procédures d’entraînement et d’inférence, la prise en charge de NVIDIA CUDA comme d’AMD ROCm, des images de conteneur, un dépôt de modèles sur HuggingFace et un démonstrateur web Gradio que chacun peut lancer sans aucune installation.</p>
     </section>
 
     <section class="stats-grid">
-        <div class="stat-card"><p class="stat-value">6.85</p><p class="stat-label">RMSE µg/m³<br><span>T+1, 2971 EEA stations</span></p></div>
-        <div class="stat-card"><p class="stat-value">8</p><p class="stat-label">Zero-shot regions<br><span>India, China, USA…</span></p></div>
-        <div class="stat-card"><p class="stat-value stat-text">1&nbsp;km</p><p class="stat-label">Resolution<br><span>daily, across Europe</span></p></div>
-        <div class="stat-card"><p class="stat-value stat-text">CUDA<br>+ROCm</p><p class="stat-label">GPU portable<br><span>NVIDIA &amp; AMD</span></p></div>
+        <div class="stat-card"><p class="stat-value">6,85</p><p class="stat-label">RMSE µg/m³<br><span>J+1, 2&nbsp;971 stations de l’AEE</span></p></div>
+        <div class="stat-card"><p class="stat-value">8</p><p class="stat-label">Régions en zero-shot<br><span>Inde, Chine, États-Unis…</span></p></div>
+        <div class="stat-card"><p class="stat-value stat-text">1&nbsp;km</p><p class="stat-label">Résolution<br><span>quotidienne, sur toute l’Europe</span></p></div>
+        <div class="stat-card"><p class="stat-value stat-text">CUDA<br>+ROCm</p><p class="stat-label">Portable sur GPU<br><span>NVIDIA et AMD</span></p></div>
     </section>
 
     <section class="project-section">
-        <h2>What ships in the package</h2>
+        <h2>Ce que contient le paquet</h2>
         <ol class="feature-list">
-            <li><strong>Stable Python API &amp; CLI.</strong> Import the model in a notebook or run forecasts from the command line, with documented training and inference workflows.</li>
-            <li><strong>Dual GPU backends.</strong> Runs on NVIDIA CUDA and AMD ROCm, the same code path validated on both vendors (including the LUMI MI250X stack).</li>
-            <li><strong>Container images.</strong> Reproducible environments for HPC and cloud, no dependency hell.</li>
-            <li><strong>HuggingFace model repository.</strong> Pre-trained weights hosted and versioned, downloadable in one line.</li>
-            <li><strong>Gradio live demo.</strong> Pick coordinates anywhere in Europe and a date in 2022; the back-end runs a genuine CRAN-PM forward pass on cached ERA5/CAMS/GHAP inputs and renders the 1 km T+1 forecast, scored against EEA stations. No setup, runs on HuggingFace Spaces.</li>
+            <li><strong>API Python et CLI stables.</strong> Importez le modèle dans un notebook ou lancez des prévisions en ligne de commande, avec des procédures d’entraînement et d’inférence documentées.</li>
+            <li><strong>Deux backends GPU.</strong> Fonctionne sous NVIDIA CUDA et AMD ROCm, avec le même code validé chez les deux constructeurs (y compris l’environnement MI250X de LUMI).</li>
+            <li><strong>Images de conteneur.</strong> Des environnements reproductibles pour le calcul haute performance et le cloud, sans l’enfer des dépendances.</li>
+            <li><strong>Dépôt de modèles sur HuggingFace.</strong> Des poids pré-entraînés, hébergés et versionnés, téléchargeables en une ligne.</li>
+            <li><strong>Démo Gradio en ligne.</strong> Choisissez des coordonnées n’importe où en Europe et une date en 2022&nbsp;; le serveur exécute une vraie passe avant de CRAN-PM sur des entrées ERA5/CAMS/GHAP mises en cache et affiche la prévision à 1&nbsp;km à J+1, évaluée sur les stations de l’AEE. Aucune installation&nbsp;: elle tourne sur HuggingFace Spaces.</li>
         </ol>
     </section>
 
     <section class="project-section">
-        <h2>Try the live demo</h2>
-        <p class="section-desc">Enter any coordinates in Europe, pick a date in the 2022 test year, and get a real 1 km next-day PM<sub>2.5</sub> forecast scored against ground stations. Runs in the browser on HuggingFace Spaces (~60 s/inference, free CPU tier).</p>
+        <h2>Essayer la démo en ligne</h2>
+        <p class="section-desc">Entrez des coordonnées n’importe où en Europe, choisissez une date de l’année de test 2022 et obtenez une vraie prévision des PM<sub>2.5</sub> à 1&nbsp;km pour le lendemain, évaluée sur les stations de mesure. La démo tourne dans le navigateur, sur HuggingFace Spaces (environ 60&nbsp;s par inférence, offre CPU gratuite).</p>
         <p class="credits-outro">
-            <a href="https://ammarkheder.com/cran-pm/#demo" target="_blank" class="pill-link">Open the live demo &rarr;</a>
-            <a href="https://ammarkheder.com/cran-pm/" target="_blank" class="pill-link">CranPM Studio site</a>
+            <a href="https://ammarkheder.com/cran-pm/#demo" target="_blank" class="pill-link">Ouvrir la démo en ligne &rarr;</a>
+            <a href="https://ammarkheder.com/cran-pm/" target="_blank" class="pill-link">Site de CranPM Studio</a>
         </p>
     </section>
 
@@ -107,65 +107,65 @@
         <h2>Figures</h2>
         <div class="photo-gallery figures">
             <a href="../../assets/ext/cranpm-studio/robinson-study-domain.webp" target="_blank" class="gallery-item">
-                <img src="../../assets/ext/cranpm-studio/robinson-study-domain.webp" alt="Training and zero-shot domains" loading="lazy" width="1600" height="902" decoding="async">
-                <span class="gallery-caption">Training &amp; zero-shot domains</span>
+                <img src="../../assets/ext/cranpm-studio/robinson-study-domain.webp" alt="Domaines d’entraînement et de transfert zero-shot" loading="lazy" width="1600" height="902" decoding="async">
+                <span class="gallery-caption">Domaines d’entraînement et de transfert zero-shot</span>
             </a>
             <a href="../../assets/ext/cranpm-studio/china-shuffling-paths.mp4" target="_blank" class="gallery-item">
-                <img src="../../assets/ext/cranpm-studio/china-shuffling-paths.webp" alt="Wind-following patch reordering" loading="lazy" width="1600" height="748" decoding="async">
-                <span class="gallery-caption">Wind-guided patch ordering (animated)</span>
+                <img src="../../assets/ext/cranpm-studio/china-shuffling-paths.webp" alt="Patchs réordonnés en suivant le vent" loading="lazy" width="1600" height="748" decoding="async">
+                <span class="gallery-caption">Ordre des patchs guidé par le vent (animation)</span>
             </a>
             <a href="../../assets/ext/cranpm-studio/attention-elevation-slicer.webp" target="_blank" class="gallery-item">
-                <img src="../../assets/ext/cranpm-studio/attention-elevation-slicer.webp" alt="Elevation-aware attention" loading="lazy" width="1600" height="1022" decoding="async">
-                <span class="gallery-caption">Elevation-aware attention slicer</span>
+                <img src="../../assets/ext/cranpm-studio/attention-elevation-slicer.webp" alt="Attention sensible à l’altitude" loading="lazy" width="1600" height="1022" decoding="async">
+                <span class="gallery-caption">Attention sensible à l’altitude, vue en coupe</span>
             </a>
             <a href="https://ammarkheder.com/cran-pm/figures/fig_physics_ablations_bars.png" target="_blank" class="gallery-item">
-                <img src="https://ammarkheder.com/cran-pm/figures/fig_physics_ablations_bars.png" alt="Physics-informed ablations" loading="lazy" width="3242" height="1170" decoding="async">
-                <span class="gallery-caption">Physics-informed ablations</span>
+                <img src="https://ammarkheder.com/cran-pm/figures/fig_physics_ablations_bars.png" alt="Ablations des composantes physiques" loading="lazy" width="3242" height="1170" decoding="async">
+                <span class="gallery-caption">Ablations des composantes physiques</span>
             </a>
             <a href="../../assets/ext/cranpm-studio/case-saharan-dust-maps.webp" target="_blank" class="gallery-item">
-                <img src="../../assets/ext/cranpm-studio/case-saharan-dust-maps.webp" alt="Saharan dust case study" loading="lazy" width="1600" height="1234" decoding="async">
-                <span class="gallery-caption">Case study: Saharan dust</span>
+                <img src="../../assets/ext/cranpm-studio/case-saharan-dust-maps.webp" alt="Étude de cas sur les poussières sahariennes" loading="lazy" width="1600" height="1234" decoding="async">
+                <span class="gallery-caption">Étude de cas&nbsp;: poussières sahariennes</span>
             </a>
             <a href="https://ammarkheder.com/cran-pm/figures/fig_gpu_benchmarks.png" target="_blank" class="gallery-item">
-                <img src="https://ammarkheder.com/cran-pm/figures/fig_gpu_benchmarks.png" alt="GPU benchmarks CUDA vs ROCm" loading="lazy" width="3878" height="1202" decoding="async">
-                <span class="gallery-caption">GPU benchmarks: CUDA vs ROCm</span>
+                <img src="https://ammarkheder.com/cran-pm/figures/fig_gpu_benchmarks.png" alt="Bancs d’essai GPU, CUDA et ROCm" loading="lazy" width="3878" height="1202" decoding="async">
+                <span class="gallery-caption">Bancs d’essai GPU&nbsp;: CUDA face à ROCm</span>
             </a>
         </div>
     </section>
 
     <section class="project-section">
-        <h2>Resources</h2>
+        <h2>Ressources</h2>
         <p class="credits-outro">
-            <a href="https://ammarkheder.com/cran-pm/" target="_blank" class="pill-link">CranPM Studio site</a>
-            <a href="https://ammarkheder.com/cran-pm/#demo" target="_blank" class="pill-link">Live demo</a>
-            <a href="https://github.com/AmmarKheder/cran-pm" target="_blank" class="pill-link">GitHub repo</a>
-            <a href="https://arxiv.org/abs/2603.11725" target="_blank" class="pill-link">CRAN-PM paper (arXiv)</a>
-            <a href="cranpm.html" class="pill-link">CRAN-PM research page</a>
+            <a href="https://ammarkheder.com/cran-pm/" target="_blank" class="pill-link">Site de CranPM Studio</a>
+            <a href="https://ammarkheder.com/cran-pm/#demo" target="_blank" class="pill-link">Démo en ligne</a>
+            <a href="https://github.com/AmmarKheder/cran-pm" target="_blank" class="pill-link">Dépôt GitHub</a>
+            <a href="https://arxiv.org/abs/2603.11725" target="_blank" class="pill-link">Article CRAN-PM (arXiv)</a>
+            <a href="cranpm.html" class="pill-link">Page de recherche CRAN-PM</a>
         </p>
     </section>
 
     <section class="project-section credits">
-        <h2>Credits</h2>
+        <h2>Crédits</h2>
         <dl class="credits-list">
-            <dt>Lead author &amp; maintainer</dt>
-            <dd><strong>Ammar Kheder</strong> (corresponding)</dd>
-            <dt>Authors</dt>
+            <dt>Premier auteur et mainteneur</dt>
+            <dd><strong>Ammar Kheder</strong> (auteur correspondant)</dd>
+            <dt>Auteurs</dt>
             <dd>A. Kheder, W. Peng, H. Toropainen, Z.-S. Liu, M. Boy</dd>
             <dt>Affiliations</dt>
-            <dd>LUT University, AMC-Lahti, and INAR (University of Helsinki)</dd>
-            <dt>Stack</dt>
-            <dd>PyTorch, dual CUDA / ROCm, Docker, HuggingFace Hub &amp; Spaces, Gradio</dd>
-            <dt>Status</dt>
-            <dd>Open source v1.0 on <a href="https://github.com/AmmarKheder/cran-pm" target="_blank">GitHub</a></dd>
+            <dd>LUT University, AMC-Lahti et INAR (Université d’Helsinki)</dd>
+            <dt>Technologies</dt>
+            <dd>PyTorch, double version CUDA / ROCm, Docker, HuggingFace Hub et Spaces, Gradio</dd>
+            <dt>Statut</dt>
+            <dd>Open source, v1.0 sur <a href="https://github.com/AmmarKheder/cran-pm" target="_blank">GitHub</a></dd>
         </dl>
     </section>
 
-    <nav class="project-pager" aria-label="Other projects">
-        <a class="pill-link" href="cranpm.html" rel="prev">&larr; Previous: CRAN-PM</a>
-        <a class="pill-link" href="aqnet.html" rel="next">Next: AQ-Net &rarr;</a>
+    <nav class="project-pager" aria-label="Autres projets">
+        <a class="pill-link" href="cranpm.html" rel="prev">&larr; Précédent&nbsp;: CRAN-PM</a>
+        <a class="pill-link" href="aqnet.html" rel="next">Suivant&nbsp;: AQ-Net &rarr;</a>
     </nav>
 
-    <p class="back-link"><a href="../projects.html">&larr; Back to all projects</a></p>
+    <p class="back-link"><a href="../projects.html">&larr; Retour à tous les projets</a></p>
 
 </main>
 
@@ -173,20 +173,20 @@
     <div class="footer-inner">
         <div class="footer-brand">
             <img src="../../signature.svg" width="200" height="80" alt="Ammar Kheder" loading="lazy" decoding="async">
-            <p class="footer-tagline">Teaching neural networks how the atmosphere flows.</p>
+            <p class="footer-tagline">Apprendre aux réseaux de neurones comment circule l’atmosphère.</p>
         </div>
         <div class="footer-col">
-            <p class="footer-head">Explore</p>
+            <p class="footer-head">Explorer</p>
             <ul>
-                <li><a href="../projects.html">Research</a></li>
-                <li><a href="../videos.html">Videos</a></li>
+                <li><a href="../projects.html">Recherche</a></li>
+                <li><a href="../videos.html">Vidéos</a></li>
                 <li><a href="../index.html#publications">Publications</a></li>
-                <li><a href="../news.html">News</a></li>
-                <li><a href="../teaching.html">Teaching</a></li>
+                <li><a href="../news.html">Actualités</a></li>
+                <li><a href="../teaching.html">Enseignement</a></li>
             </ul>
         </div>
         <div class="footer-col">
-            <p class="footer-head">Elsewhere</p>
+            <p class="footer-head">Ailleurs</p>
             <ul>
                 <li><a href="https://github.com/AmmarKheder" target="_blank" rel="noopener">GitHub</a></li>
                 <li><a href="https://scholar.google.com/citations?user=ZYvKJF4AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
@@ -203,7 +203,7 @@
             </ul>
         </div>
     </div>
-    <p class="footer-legal">&copy; 2026 Ammar Kheder &middot; LUT University &middot; Atmospheric Modelling Centre &middot; Lahti, Finland</p>
+    <p class="footer-legal">&copy; 2026 Ammar Kheder &middot; LUT University &middot; Atmospheric Modelling Centre &middot; Lahti, Finlande</p>
 </footer>
 
 <script src="../../site.js" defer></script>
