@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRAN-PM, by Ammar Kheder</title>
-    <meta name="description" content="CRAN-PM: a Cross-Resolution Attention Network for daily 1 km PM2.5 prediction across Europe, with zero-shot transfer to the USA, Canada and India. arXiv, 2026.">
+    <title>CRAN-PM, par Ammar Kheder</title>
+    <meta name="description" content="CRAN-PM&nbsp;: un réseau d’attention croisée entre résolutions qui prédit chaque jour les PM2.5 à 1&nbsp;km dans toute l’Europe, avec un transfert zero-shot vers les États-Unis, le Canada et l’Inde. arXiv, 2026.">
     <meta name="author" content="Ammar Kheder">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="CRAN-PM, by Ammar Kheder">
+    <meta property="og:title" content="CRAN-PM, par Ammar Kheder">
     <meta property="og:site_name" content="Ammar Kheder">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:locale:alternate" content="en_US">
-    <meta property="og:description" content="A dual-branch Vision Transformer that predicts daily 1 km PM2.5 across Europe in 1.8 seconds per map, with zero-shot transfer to North America and India.">
+    <meta property="og:description" content="Un Vision Transformer à deux branches qui prédit chaque jour les PM2.5 à 1&nbsp;km dans toute l’Europe, en 1,8&nbsp;seconde par carte, avec un transfert zero-shot vers l’Amérique du Nord et l’Inde.">
     <meta property="og:image" content="https://ammarkheder.com/assets/ext/og/cranpm-teaser.jpg">
     <meta property="og:url" content="https://ammarkheder.com/fr/projects/cranpm.html">
     <link rel="canonical" href="https://ammarkheder.com/fr/projects/cranpm.html">
@@ -26,9 +26,9 @@
     <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
 </head>
 <body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
+<a class="skip-link" href="#main-content">Aller au contenu principal</a>
 
-<nav class="navbar" aria-label="Main">
+<nav class="navbar" aria-label="Menu principal">
     <a href="../index.html" class="brand">
         <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
             <rect width="64" height="64" rx="11" fill="#fafafa"/>
@@ -39,9 +39,9 @@
     <input type="checkbox" id="nav-toggle" class="nav-toggle-check" aria-label="Menu">
     <label for="nav-toggle" class="nav-toggle" aria-hidden="true"><span></span><span></span><span></span></label>
     <div class="nav-links">
-        <a href="../index.html#about" class="nav-item">About</a>
-        <a href="../projects.html" class="nav-item nav-active">Research</a>
-        <a href="../videos.html" class="nav-item">Videos</a>
+        <a href="../index.html#about" class="nav-item">À propos</a>
+        <a href="../projects.html" class="nav-item nav-active">Recherche</a>
+        <a href="../videos.html" class="nav-item">Vidéos</a>
         <a href="../index.html#publications" class="nav-item">Publications</a>
         <a href="../index.html#contact" class="nav-item nav-contact">Contact</a>
         <span class="nav-sep"></span>
@@ -52,18 +52,18 @@
 </nav>
 
 <section class="project-hero">
-    <picture><source srcset="../../assets/ext/cranpm/fig1-teaser.webp" type="image/webp"><img src="https://ammarkheder.com/cran_pm/assets/figures/fig1_teaser.png" alt="CRAN-PM 1 km PM2.5 predictions across Europe" class="hero-img" width="1600" height="916" fetchpriority="high" decoding="async"></picture>
+    <picture><source srcset="../../assets/ext/cranpm/fig1-teaser.webp" type="image/webp"><img src="https://ammarkheder.com/cran_pm/assets/figures/fig1_teaser.png" alt="Prédictions des PM2.5 à 1&nbsp;km par CRAN-PM, dans toute l’Europe" class="hero-img" width="1600" height="916" fetchpriority="high" decoding="async"></picture>
     <div class="hero-overlay">
         <div class="hero-content">
-            <p class="hero-kicker">Lead author &middot; 2026 &middot; arXiv preprint</p>
+            <p class="hero-kicker">Premier auteur &middot; 2026 &middot; prépublication arXiv</p>
             <h1>CRAN-PM</h1>
-            <p class="hero-tagline">Cross-Resolution Attention Network for daily 1 km PM<sub>2.5</sub> prediction across Europe, with zero-shot transfer to North America and India.</p>
+            <p class="hero-tagline">Un réseau d’attention croisée entre résolutions pour prédire chaque jour les PM<sub>2.5</sub> à 1&nbsp;km dans toute l’Europe, avec un transfert zero-shot (sans réentraînement) vers l’Amérique du Nord et l’Inde.</p>
             <p class="hero-actions">
-                <a href="https://arxiv.org/abs/2603.11725" target="_blank" rel="noopener" class="pill-link">arXiv preprint</a>
-                <a href="https://github.com/AmmarKheder/cran_pm" target="_blank" rel="noopener" class="pill-link">Code on GitHub</a>
-                <a href="https://ammarkheder.com/cran_pm/" target="_blank" rel="noopener" class="pill-link">Project website</a>
+                <a href="https://arxiv.org/abs/2603.11725" target="_blank" rel="noopener" class="pill-link">Prépublication arXiv</a>
+                <a href="https://github.com/AmmarKheder/cran_pm" target="_blank" rel="noopener" class="pill-link">Code sur GitHub</a>
+                <a href="https://ammarkheder.com/cran_pm/" target="_blank" rel="noopener" class="pill-link">Site du projet</a>
             </p>
-            <p class="hero-breadcrumb"><a href="../projects.html">&larr; All projects</a></p>
+            <p class="hero-breadcrumb"><a href="../projects.html">&larr; Tous les projets</a></p>
         </div>
     </div>
 </section>
@@ -71,26 +71,26 @@
 <main class="prose project-detail" id="main-content" tabindex="-1">
 
     <section class="project-intro">
-        <p>CRAN-PM is a dual-branch Vision Transformer that predicts daily PM<sub>2.5</sub> at <strong>1 km resolution across all of Europe</strong>. A single forward pass produces a 29-million-pixel map in about 1.8 seconds on a single GPU.</p>
-        <p>The architecture combines a coarse global branch (25 km, captures continental dynamics) with a fine local branch (1 km, captures urban-scale detail), connected by cross-resolution attention and an elevation-aware bias. A wind-driven patch reordering module mirrors the design used in TopoFlow.</p>
-        <p>The most striking result is <strong>zero-shot transfer</strong>: trained only on European data (2017&ndash;2021), the model produces accurate PM<sub>2.5</sub> predictions over the United States, Canada and India without any fine-tuning, including capturing the 2023 Canadian wildfire smoke plume drifting into the eastern US.</p>
+        <p>CRAN-PM est un Vision Transformer à deux branches qui prédit chaque jour les PM<sub>2.5</sub> à <strong>1&nbsp;km de résolution dans toute l’Europe</strong>. Une seule passe avant produit une carte de 29&nbsp;millions de pixels en 1,8&nbsp;seconde environ, sur un seul GPU.</p>
+        <p>L’architecture associe une branche globale à basse résolution (25&nbsp;km, qui capte la dynamique continentale) à une branche locale à haute résolution (1&nbsp;km, qui capte les détails à l’échelle de la ville), reliées par une attention croisée entre résolutions et un biais qui tient compte de l’altitude. Un module de réordonnancement des patchs guidé par le vent reprend le principe utilisé dans TopoFlow.</p>
+        <p>Le résultat le plus marquant est le <strong>transfert zero-shot</strong>&nbsp;: entraîné uniquement sur des données européennes (2017&ndash;2021), le modèle produit des prédictions précises des PM<sub>2.5</sub> aux États-Unis, au Canada et en Inde sans aucun réentraînement, et capte notamment le panache de fumée des incendies canadiens de 2023, qui a dérivé jusque dans l’est des États-Unis.</p>
     </section>
 
     <section class="stats-grid">
-        <div class="stat-card"><p class="stat-value stat-text">1&nbsp;km</p><p class="stat-label">Resolution<br><span>across Europe</span></p></div>
-        <div class="stat-card"><p class="stat-value stat-text">96M</p><p class="stat-label">Parameters<br><span>dual-branch ViT</span></p></div>
-        <div class="stat-card"><p class="stat-value stat-text">1.8s</p><p class="stat-label">Inference<br><span>29M pixels / map</span></p></div>
-        <div class="stat-card"><p class="stat-value stat-text">0-shot</p><p class="stat-label">Transfer<br><span>USA, Canada, India</span></p></div>
+        <div class="stat-card"><p class="stat-value stat-text">1&nbsp;km</p><p class="stat-label">Résolution<br><span>dans toute l’Europe</span></p></div>
+        <div class="stat-card"><p class="stat-value stat-text">96&nbsp;M</p><p class="stat-label">Paramètres<br><span>ViT à deux branches</span></p></div>
+        <div class="stat-card"><p class="stat-value stat-text">1,8&nbsp;s</p><p class="stat-label">Inférence<br><span>29&nbsp;millions de pixels par carte</span></p></div>
+        <div class="stat-card"><p class="stat-value stat-text">0-shot</p><p class="stat-label">Transfert<br><span>États-Unis, Canada, Inde</span></p></div>
     </section>
 
     <section class="project-section">
-        <h2>Key ideas</h2>
+        <h2>Idées clés</h2>
         <ol class="feature-list">
-            <li><strong>Two-branch cross-resolution attention.</strong> Coarse 25 km global branch captures synoptic atmospheric flow; fine 1 km local branch captures urban gradients; cross-attention fuses them.</li>
-            <li><strong>Elevation-aware attention.</strong> A learnable bias keyed on a digital elevation model lets the network respect topographic constraints on pollutant transport.</li>
-            <li><strong>Wind-driven patch reordering.</strong> Patches are re-sorted along the wind direction so attention flows downstream of sources.</li>
-            <li><strong>Zero-shot continental transfer.</strong> Trained on Europe (2017&ndash;2021), tested on Europe (2022), then evaluated unchanged on USA, Canada and India. The model captures wildfire smoke and Indo-Gangetic Plain hotspots out of the box.</li>
-            <li><strong>PixelShuffle decoder.</strong> Progressive upsampling from coarse latent to 1 km output, no blurry interpolation.</li>
+            <li><strong>Deux branches, une attention croisée entre résolutions.</strong> La branche globale, à basse résolution (25&nbsp;km), capte la circulation atmosphérique synoptique&nbsp;; la branche locale, à haute résolution (1&nbsp;km), capte les gradients urbains&nbsp;; l’attention croisée les fusionne.</li>
+            <li><strong>Une attention qui tient compte de l’altitude.</strong> Un biais appris, fondé sur un modèle numérique de terrain, permet au réseau de respecter les contraintes que le relief impose au transport des polluants.</li>
+            <li><strong>Réordonnancement des patchs guidé par le vent.</strong> Les patchs sont triés selon la direction du vent, pour que l’attention circule en aval des sources.</li>
+            <li><strong>Transfert zero-shot d’un continent à l’autre.</strong> Entraîné sur l’Europe (2017&ndash;2021), testé sur l’Europe (2022), puis évalué tel quel sur les États-Unis, le Canada et l’Inde. Le modèle capte d’emblée les fumées d’incendies et les foyers de pollution de la plaine indo-gangétique.</li>
+            <li><strong>Décodeur PixelShuffle.</strong> Un suréchantillonnage progressif, de la représentation latente à basse résolution jusqu’à la sortie à 1&nbsp;km, sans interpolation floue.</li>
         </ol>
     </section>
 
@@ -98,63 +98,63 @@
         <h2>Visualisations</h2>
         <div class="photo-gallery figures">
             <a href="../../assets/ext/cranpm/fig2-architecture.webp" target="_blank" class="gallery-item">
-                <img src="../../assets/ext/cranpm/fig2-architecture.webp" alt="CRAN-PM dual-branch architecture" loading="lazy" width="1600" height="683" decoding="async">
-                <span class="gallery-caption">Two-branch cross-resolution architecture</span>
+                <img src="../../assets/ext/cranpm/fig2-architecture.webp" alt="Architecture à deux branches de CRAN-PM" loading="lazy" width="1600" height="683" decoding="async">
+                <span class="gallery-caption">Architecture à deux branches, qui croise les résolutions</span>
             </a>
             <a href="../../assets/ext/cranpm/fig3-europe-maps.webp" target="_blank" class="gallery-item">
-                <img src="../../assets/ext/cranpm/fig3-europe-maps.webp" alt="Europe-wide ground truth vs prediction" loading="lazy" width="1600" height="1180" decoding="async">
-                <span class="gallery-caption">Europe-wide evaluation: ground truth, prediction, RMSE</span>
+                <img src="../../assets/ext/cranpm/fig3-europe-maps.webp" alt="Vérité terrain et prédiction à l’échelle de l’Europe" loading="lazy" width="1600" height="1180" decoding="async">
+                <span class="gallery-caption">Évaluation à l’échelle de l’Europe&nbsp;: vérité terrain, prédiction, RMSE</span>
             </a>
             <a href="../../assets/ext/cranpm/fig4-spatial.webp" target="_blank" class="gallery-item">
-                <img src="../../assets/ext/cranpm/fig4-spatial.webp" alt="Spatial detail Po Valley, Paris" loading="lazy" width="1600" height="1371" decoding="async">
-                <span class="gallery-caption">Spatial detail: Po Valley, Paris and others</span>
+                <img src="../../assets/ext/cranpm/fig4-spatial.webp" alt="Détail spatial&nbsp;: plaine du Pô, Paris" loading="lazy" width="1600" height="1371" decoding="async">
+                <span class="gallery-caption">Détail spatial&nbsp;: plaine du Pô, Paris et d’autres zones</span>
             </a>
             <a href="../../assets/ext/cranpm/fig5-temporal.webp" target="_blank" class="gallery-item">
-                <img src="../../assets/ext/cranpm/fig5-temporal.webp" alt="Temporal evolution of PM2.5" loading="lazy" width="1600" height="755" decoding="async">
-                <span class="gallery-caption">Temporal evolution across six regions</span>
+                <img src="../../assets/ext/cranpm/fig5-temporal.webp" alt="Évolution temporelle des PM2.5" loading="lazy" width="1600" height="755" decoding="async">
+                <span class="gallery-caption">Évolution temporelle dans six régions</span>
             </a>
             <a href="../../assets/ext/cranpm/fig8-ood-usa.webp" target="_blank" class="gallery-item">
-                <img src="../../assets/ext/cranpm/fig8-ood-usa.webp" alt="Zero-shot USA wildfire smoke" loading="lazy" width="1600" height="743" decoding="async">
-                <span class="gallery-caption">Zero-shot USA &amp; Canada (wildfire smoke)</span>
+                <img src="../../assets/ext/cranpm/fig8-ood-usa.webp" alt="Transfert zero-shot aux États-Unis&nbsp;: fumées d’incendies" loading="lazy" width="1600" height="743" decoding="async">
+                <span class="gallery-caption">Transfert zero-shot aux États-Unis et au Canada (fumées d’incendies)</span>
             </a>
             <a href="../../assets/ext/cranpm/fig9-ood-india.webp" target="_blank" class="gallery-item">
-                <img src="../../assets/ext/cranpm/fig9-ood-india.webp" alt="Zero-shot India Indo-Gangetic Plain" loading="lazy" width="1600" height="743" decoding="async">
-                <span class="gallery-caption">Zero-shot India: Indo-Gangetic Plain</span>
+                <img src="../../assets/ext/cranpm/fig9-ood-india.webp" alt="Transfert zero-shot en Inde&nbsp;: plaine indo-gangétique" loading="lazy" width="1600" height="743" decoding="async">
+                <span class="gallery-caption">Transfert zero-shot en Inde&nbsp;: plaine indo-gangétique</span>
             </a>
         </div>
     </section>
 
     <section class="project-section">
-        <h2>Resources</h2>
+        <h2>Ressources</h2>
         <p class="credits-outro">
-            <a href="https://ammarkheder.com/cran_pm/" target="_blank" class="pill-link">Project website</a>
-            <a href="https://arxiv.org/abs/2603.11725" target="_blank" class="pill-link">arXiv preprint</a>
-            <a href="https://github.com/AmmarKheder/cran_pm" target="_blank" class="pill-link">Code on GitHub</a>
+            <a href="https://ammarkheder.com/cran_pm/" target="_blank" class="pill-link">Site du projet</a>
+            <a href="https://arxiv.org/abs/2603.11725" target="_blank" class="pill-link">Prépublication arXiv</a>
+            <a href="https://github.com/AmmarKheder/cran_pm" target="_blank" class="pill-link">Code sur GitHub</a>
         </p>
     </section>
 
     <section class="project-section credits">
-        <h2>Credits</h2>
+        <h2>Crédits</h2>
         <dl class="credits-list">
-            <dt>Lead author</dt>
+            <dt>Premier auteur</dt>
             <dd><strong>Ammar Kheder</strong></dd>
-            <dt>Status</dt>
-            <dd>Preprint on arXiv (2026)</dd>
-            <dt>Compute</dt>
-            <dd><a href="https://www.lumi-supercomputer.eu/" target="_blank">LUMI supercomputer</a> (AMD MI250X GPUs), distributed training</dd>
-            <dt>Framework</dt>
-            <dd>PyTorch with Distributed Data Parallel</dd>
+            <dt>Statut</dt>
+            <dd>Prépublication sur arXiv (2026)</dd>
+            <dt>Calcul</dt>
+            <dd><a href="https://www.lumi-supercomputer.eu/" target="_blank">Supercalculateur LUMI</a> (GPU AMD MI250X), entraînement distribué</dd>
+            <dt>Logiciel</dt>
+            <dd>PyTorch avec Distributed Data Parallel</dd>
             <dt>Affiliation</dt>
             <dd>LUT University, Atmospheric Modelling Centre (AMC-Lahti)</dd>
         </dl>
     </section>
 
-    <nav class="project-pager" aria-label="Other projects">
-        <a class="pill-link" href="topoflow.html" rel="prev">&larr; Previous: TopoFlow</a>
-        <a class="pill-link" href="cranpm-studio.html" rel="next">Next: CranPM Studio &rarr;</a>
+    <nav class="project-pager" aria-label="Autres projets">
+        <a class="pill-link" href="topoflow.html" rel="prev">&larr; Précédent&nbsp;: TopoFlow</a>
+        <a class="pill-link" href="cranpm-studio.html" rel="next">Suivant&nbsp;: CranPM Studio &rarr;</a>
     </nav>
 
-    <p class="back-link"><a href="../projects.html">&larr; Back to all projects</a></p>
+    <p class="back-link"><a href="../projects.html">&larr; Retour à tous les projets</a></p>
 
 </main>
 
@@ -162,20 +162,20 @@
     <div class="footer-inner">
         <div class="footer-brand">
             <img src="../../signature.svg" width="200" height="80" alt="Ammar Kheder" loading="lazy" decoding="async">
-            <p class="footer-tagline">Teaching neural networks how the atmosphere flows.</p>
+            <p class="footer-tagline">Apprendre aux réseaux de neurones comment circule l’atmosphère.</p>
         </div>
         <div class="footer-col">
-            <p class="footer-head">Explore</p>
+            <p class="footer-head">Explorer</p>
             <ul>
-                <li><a href="../projects.html">Research</a></li>
-                <li><a href="../videos.html">Videos</a></li>
+                <li><a href="../projects.html">Recherche</a></li>
+                <li><a href="../videos.html">Vidéos</a></li>
                 <li><a href="../index.html#publications">Publications</a></li>
-                <li><a href="../news.html">News</a></li>
-                <li><a href="../teaching.html">Teaching</a></li>
+                <li><a href="../news.html">Actualités</a></li>
+                <li><a href="../teaching.html">Enseignement</a></li>
             </ul>
         </div>
         <div class="footer-col">
-            <p class="footer-head">Elsewhere</p>
+            <p class="footer-head">Ailleurs</p>
             <ul>
                 <li><a href="https://github.com/AmmarKheder" target="_blank" rel="noopener">GitHub</a></li>
                 <li><a href="https://scholar.google.com/citations?user=ZYvKJF4AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
@@ -192,7 +192,7 @@
             </ul>
         </div>
     </div>
-    <p class="footer-legal">&copy; 2026 Ammar Kheder &middot; LUT University &middot; Atmospheric Modelling Centre &middot; Lahti, Finland</p>
+    <p class="footer-legal">&copy; 2026 Ammar Kheder &middot; LUT University &middot; Atmospheric Modelling Centre &middot; Lahti, Finlande</p>
 </footer>
 
 <script src="../../site.js" defer></script>

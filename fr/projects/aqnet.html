@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AQ-Net, by Ammar Kheder</title>
-    <meta name="description" content="AQ-Net (SCIA 2025, Springer LNCS): a deep spatio-temporal network for air quality reanalysis that predicts pollution where no sensor exists.">
+    <title>AQ-Net, par Ammar Kheder</title>
+    <meta name="description" content="AQ-Net (SCIA 2025, Springer LNCS)&nbsp;: un réseau profond spatio-temporel pour la réanalyse de la qualité de l’air, qui prédit la pollution là où il n’y a aucun capteur.">
     <meta name="author" content="Ammar Kheder">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="AQ-Net, by Ammar Kheder">
+    <meta property="og:title" content="AQ-Net, par Ammar Kheder">
     <meta property="og:site_name" content="Ammar Kheder">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:locale:alternate" content="en_US">
-    <meta property="og:description" content="LSTM + attention + neural kNN for filling air-quality sensor gaps. SCIA 2025, Springer LNCS.">
+    <meta property="og:description" content="LSTM + attention + kNN neuronal pour combler les lacunes des réseaux de capteurs de qualité de l’air. SCIA 2025, Springer LNCS.">
     <meta property="og:image" content="https://ammarkheder.com/assets/ext/og/aqnet-poster.jpg">
     <meta property="og:url" content="https://ammarkheder.com/fr/projects/aqnet.html">
     <link rel="canonical" href="https://ammarkheder.com/fr/projects/aqnet.html">
@@ -26,9 +26,9 @@
     <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
 </head>
 <body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
+<a class="skip-link" href="#main-content">Aller au contenu principal</a>
 
-<nav class="navbar" aria-label="Main">
+<nav class="navbar" aria-label="Menu principal">
     <a href="../index.html" class="brand">
         <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
             <rect width="64" height="64" rx="11" fill="#fafafa"/>
@@ -39,9 +39,9 @@
     <input type="checkbox" id="nav-toggle" class="nav-toggle-check" aria-label="Menu">
     <label for="nav-toggle" class="nav-toggle" aria-hidden="true"><span></span><span></span><span></span></label>
     <div class="nav-links">
-        <a href="../index.html#about" class="nav-item">About</a>
-        <a href="../projects.html" class="nav-item nav-active">Research</a>
-        <a href="../videos.html" class="nav-item">Videos</a>
+        <a href="../index.html#about" class="nav-item">À propos</a>
+        <a href="../projects.html" class="nav-item nav-active">Recherche</a>
+        <a href="../videos.html" class="nav-item">Vidéos</a>
         <a href="../index.html#publications" class="nav-item">Publications</a>
         <a href="../index.html#contact" class="nav-item nav-contact">Contact</a>
         <span class="nav-sep"></span>
@@ -52,18 +52,18 @@
 </nav>
 
 <section class="project-hero">
-    <picture><source srcset="../../assets/ext/aqnet/mapc.webp" type="image/webp"><img src="https://raw.githubusercontent.com/AmmarKheder/AQ-Net/main/img/mapc.png" alt="AQ-Net PM2.5 reanalysis map over Northern China" class="hero-img" width="1600" height="913" fetchpriority="high" decoding="async"></picture>
+    <picture><source srcset="../../assets/ext/aqnet/mapc.webp" type="image/webp"><img src="https://raw.githubusercontent.com/AmmarKheder/AQ-Net/main/img/mapc.png" alt="Carte de réanalyse des PM2.5 par AQ-Net sur le nord de la Chine" class="hero-img" width="1600" height="913" fetchpriority="high" decoding="async"></picture>
     <div class="hero-overlay">
         <div class="hero-content">
-            <p class="hero-kicker">Lead author &middot; SCIA 2025 &middot; Springer LNCS</p>
+            <p class="hero-kicker">Premier auteur &middot; SCIA 2025 &middot; Springer LNCS</p>
             <h1>AQ-Net</h1>
-            <p class="hero-tagline">Predicting pollution where no sensor dares to go. A deep spatio-temporal network for air-quality reanalysis.</p>
+            <p class="hero-tagline">Prédire la pollution là où aucun capteur n’ose s’aventurer. Un réseau profond spatio-temporel pour la réanalyse de la qualité de l’air.</p>
             <p class="hero-actions">
                 <a href="https://link.springer.com/chapter/10.1007/978-3-031-95911-0_6" target="_blank" rel="noopener" class="pill-link">Springer LNCS</a>
                 <a href="https://arxiv.org/abs/2502.11941" target="_blank" rel="noopener" class="pill-link">arXiv</a>
-                <a href="https://github.com/AmmarKheder/AQ-Net" target="_blank" rel="noopener" class="pill-link">Code on GitHub</a>
+                <a href="https://github.com/AmmarKheder/AQ-Net" target="_blank" rel="noopener" class="pill-link">Code sur GitHub</a>
             </p>
-            <p class="hero-breadcrumb"><a href="../projects.html">&larr; All projects</a></p>
+            <p class="hero-breadcrumb"><a href="../projects.html">&larr; Tous les projets</a></p>
         </div>
     </div>
 </section>
@@ -71,88 +71,88 @@
 <main class="prose project-detail" id="main-content" tabindex="-1">
 
     <section class="project-intro">
-        <p>Most cities in the world are partially monitored: a handful of stations cover a few neighbourhoods, the rest is silent. <strong>AQ-Net</strong> bridges that gap, learning to <em>reanalyse</em> air quality across an entire region using only the sparse stations that exist, plus reanalysis weather and time encodings.</p>
-        <p>The model combines three building blocks: an <strong>LSTM with multi-head attention</strong> for long-range temporal dependencies, a <strong>cyclic encoding</strong> that lifts discrete time (day-of-year, hour-of-day) into continuous space, and a <strong>learnable neural kNN</strong> module that interpolates from sensed locations to unsensed ones in feature space rather than physical space.</p>
-        <p>AQ-Net was accepted at <strong>SCIA 2025</strong> (Scandinavian Conference on Image Analysis) and published in Springer LNCS. I presented it as a speed talk and poster in Reykjav&iacute;k.</p>
+        <p>La plupart des villes du monde ne sont que partiellement surveillées&nbsp;: une poignée de stations couvrent quelques quartiers, le reste est muet. <strong>AQ-Net</strong> comble ce vide&nbsp;: il apprend à <em>réanalyser</em> la qualité de l’air sur toute une région, en s’appuyant uniquement sur les quelques stations existantes, ainsi que sur des données météorologiques de réanalyse et sur des encodages du temps.</p>
+        <p>Le modèle associe trois briques&nbsp;: un <strong>LSTM avec attention multi-têtes</strong> pour les dépendances temporelles à longue portée, un <strong>encodage cyclique</strong> qui transpose le temps discret (jour de l’année, heure de la journée) dans un espace continu, et un module de <strong>kNN neuronal entraînable</strong> qui interpole des lieux équipés de capteurs vers ceux qui n’en ont pas, dans l’espace des caractéristiques plutôt que dans l’espace physique.</p>
+        <p>AQ-Net a été accepté à <strong>SCIA 2025</strong> (Scandinavian Conference on Image Analysis) et publié dans Springer LNCS. À Reykjav&iacute;k, j’en ai fait une présentation éclair et un poster.</p>
     </section>
 
     <section class="stats-grid">
-        <div class="stat-card"><p class="stat-value stat-text">SCIA</p><p class="stat-label">Venue<br><span>2025, Reykjav&iacute;k</span></p></div>
-        <div class="stat-card"><p class="stat-value stat-text">LSTM</p><p class="stat-label">Temporal<br><span>+ multi-head attention</span></p></div>
-        <div class="stat-card"><p class="stat-value stat-text">kNN</p><p class="stat-label">Spatial<br><span>learnable neural</span></p></div>
-        <div class="stat-card"><p class="stat-value stat-text">5y</p><p class="stat-label">Training data<br><span>2013&ndash;2017, N. China</span></p></div>
+        <div class="stat-card"><p class="stat-value stat-text">SCIA</p><p class="stat-label">Conférence<br><span>2025, Reykjav&iacute;k</span></p></div>
+        <div class="stat-card"><p class="stat-value stat-text">LSTM</p><p class="stat-label">Temporel<br><span>+ attention multi-têtes</span></p></div>
+        <div class="stat-card"><p class="stat-value stat-text">kNN</p><p class="stat-label">Spatial<br><span>neuronal, entraînable</span></p></div>
+        <div class="stat-card"><p class="stat-value stat-text">5&nbsp;ans</p><p class="stat-label">Données d’entraînement<br><span>2013&ndash;2017, nord de la Chine</span></p></div>
     </section>
 
     <section class="project-section">
-        <h2>Core ideas</h2>
+        <h2>Idées principales</h2>
         <ol class="feature-list">
-            <li><strong>Time-aware encoding.</strong> LSTM stacked with multi-head attention captures long-term dependencies in the pollutant signal. A cyclic encoding projects discrete calendar time into continuous space so the model never sees a hard discontinuity at midnight or new year.</li>
-            <li><strong>Spatial interpolation by neural kNN.</strong> Instead of inverse-distance weighting in physical space, AQ-Net learns a feature-space embedding where nearest neighbours mean similar pollution dynamics. This handles topography and meteorology implicitly.</li>
-            <li><strong>Reanalysis-style outputs.</strong> The model can fill gaps (where stations are missing) and run for short-term (6&ndash;24 h) and long-term (2&ndash;7 days) horizons.</li>
-            <li><strong>Real-world data.</strong> Trained and evaluated on Northern China stations from 2013&ndash;2017, covering the post-2013 air quality crisis era when data quality and density became reliable.</li>
+            <li><strong>Un encodage qui tient compte du temps.</strong> Un LSTM couplé à une attention multi-têtes capte les dépendances à long terme du signal de pollution. Un encodage cyclique projette le temps calendaire discret dans un espace continu, si bien que le modèle ne voit jamais de rupture brutale à minuit ou au Nouvel An.</li>
+            <li><strong>Interpolation spatiale par kNN neuronal.</strong> Au lieu d’une pondération par l’inverse de la distance dans l’espace physique, AQ-Net apprend un plongement dans l’espace des caractéristiques, où les plus proches voisins sont les lieux dont la pollution évolue de façon semblable. Le relief et la météorologie sont ainsi pris en compte implicitement.</li>
+            <li><strong>Des sorties de type réanalyse.</strong> Le modèle peut combler les lacunes (là où les stations manquent) et fonctionner à court terme (6&ndash;24&nbsp;h) comme à long terme (2&ndash;7&nbsp;jours).</li>
+            <li><strong>Des données réelles.</strong> Entraîné et évalué sur des stations du nord de la Chine de 2013 à 2017, soit la période qui a suivi la crise de la qualité de l’air de 2013, quand la qualité et la densité des données sont devenues fiables.</li>
         </ol>
     </section>
 
     <section class="project-section">
-        <h2>Poster &amp; visualisations</h2>
+        <h2>Poster et visualisations</h2>
         <div class="photo-gallery figures">
             <a href="https://raw.githubusercontent.com/AmmarKheder/AQ-Net/main/img/poster%20SCIA%202025V.pdf" target="_blank" class="gallery-item">
-                <img src="../../assets/ext/aqnet/poster-scia2025.webp" alt="AQ-Net SCIA 2025 poster" loading="lazy" width="1000" height="1414" decoding="async">
-                <span class="gallery-caption">SCIA 2025 poster (click for PDF)</span>
+                <img src="../../assets/ext/aqnet/poster-scia2025.webp" alt="Poster d’AQ-Net à SCIA 2025" loading="lazy" width="1000" height="1414" decoding="async">
+                <span class="gallery-caption">Poster SCIA 2025 (cliquez pour le PDF)</span>
             </a>
             <a href="https://raw.githubusercontent.com/AmmarKheder/AQ-Net/main/img/archi.png" target="_blank" class="gallery-item">
-                <img src="https://raw.githubusercontent.com/AmmarKheder/AQ-Net/main/img/archi.png" alt="AQ-Net architecture" loading="lazy" width="2312" height="954" decoding="async">
-                <span class="gallery-caption">Architecture: LSTM + attention + neural kNN</span>
+                <img src="https://raw.githubusercontent.com/AmmarKheder/AQ-Net/main/img/archi.png" alt="Architecture d’AQ-Net" loading="lazy" width="2312" height="954" decoding="async">
+                <span class="gallery-caption">Architecture&nbsp;: LSTM + attention + kNN neuronal</span>
             </a>
             <a href="../../assets/ext/aqnet/mapc.webp" target="_blank" class="gallery-item">
-                <img src="../../assets/ext/aqnet/mapc.webp" alt="AQ-Net pollution map over China" loading="lazy" width="1600" height="913" decoding="async">
-                <span class="gallery-caption">Reanalysed PM<sub>2.5</sub> across Northern China</span>
+                <img src="../../assets/ext/aqnet/mapc.webp" alt="Carte de pollution d’AQ-Net sur la Chine" loading="lazy" width="1600" height="913" decoding="async">
+                <span class="gallery-caption">PM<sub>2.5</sub> réanalysées dans tout le nord de la Chine</span>
             </a>
             <a href="../../assets/ext/aqnet/mapc-anim.mp4" target="_blank" class="gallery-item">
-                <video src="../../assets/ext/aqnet/mapc-anim.mp4" poster="../../assets/ext/aqnet/mapc-anim-poster.webp" aria-label="Animated PM2.5 reanalysis" autoplay muted loop playsinline preload="metadata" width="1600" height="760"></video>
-                <span class="gallery-caption">Animated reanalysis (PM<sub>2.5</sub>)</span>
+                <video src="../../assets/ext/aqnet/mapc-anim.mp4" poster="../../assets/ext/aqnet/mapc-anim-poster.webp" aria-label="Réanalyse animée des PM2.5" autoplay muted loop playsinline preload="metadata" width="1600" height="760"></video>
+                <span class="gallery-caption">Réanalyse animée (PM<sub>2.5</sub>)</span>
             </a>
             <a href="https://raw.githubusercontent.com/AmmarKheder/AQ-Net/main/img/cyclic_encoding.gif" target="_blank" class="gallery-item">
-                <img src="https://raw.githubusercontent.com/AmmarKheder/AQ-Net/main/img/cyclic_encoding.gif" alt="Cyclic time encoding visualisation" loading="lazy" width="500" height="500" decoding="async">
-                <span class="gallery-caption">Cyclic encoding of calendar time</span>
+                <img src="https://raw.githubusercontent.com/AmmarKheder/AQ-Net/main/img/cyclic_encoding.gif" alt="Visualisation de l’encodage cyclique du temps" loading="lazy" width="500" height="500" decoding="async">
+                <span class="gallery-caption">Encodage cyclique du temps calendaire</span>
             </a>
             <a href="../../assets/ext/aqnet/pm25-upscaled-map.webp" target="_blank" class="gallery-item">
-                <img src="../../assets/ext/aqnet/pm25-upscaled-map.webp" alt="Upscaled PM2.5 prediction map" loading="lazy" width="1600" height="1104" decoding="async">
-                <span class="gallery-caption">Upscaled PM<sub>2.5</sub> prediction map</span>
+                <img src="../../assets/ext/aqnet/pm25-upscaled-map.webp" alt="Carte de prédiction des PM2.5 à résolution augmentée" loading="lazy" width="1600" height="1104" decoding="async">
+                <span class="gallery-caption">Carte de prédiction des PM<sub>2.5</sub> à résolution augmentée</span>
             </a>
         </div>
     </section>
 
     <section class="project-section">
-        <h2>Resources</h2>
+        <h2>Ressources</h2>
         <p class="credits-outro">
             <a href="https://link.springer.com/chapter/10.1007/978-3-031-95911-0_6" target="_blank" class="pill-link">Springer LNCS</a>
             <a href="https://arxiv.org/abs/2502.11941" target="_blank" class="pill-link">arXiv</a>
-            <a href="https://github.com/AmmarKheder/AQ-Net" target="_blank" class="pill-link">Code on GitHub</a>
+            <a href="https://github.com/AmmarKheder/AQ-Net" target="_blank" class="pill-link">Code sur GitHub</a>
             <a href="https://raw.githubusercontent.com/AmmarKheder/AQ-Net/main/img/poster%20SCIA%202025V.pdf" target="_blank" class="pill-link">Poster (PDF)</a>
         </p>
     </section>
 
     <section class="project-section credits">
-        <h2>Credits</h2>
+        <h2>Crédits</h2>
         <dl class="credits-list">
-            <dt>Authors</dt>
+            <dt>Auteurs</dt>
             <dd><strong>A. Kheder</strong>, B. Foreback, L. Wang, Z.-S. Liu, M. Boy</dd>
-            <dt>Venue</dt>
+            <dt>Publication</dt>
             <dd>SCIA 2025, Scandinavian Conference on Image Analysis (Reykjav&iacute;k), Springer LNCS</dd>
-            <dt>Data</dt>
-            <dd>Northern China air-quality stations, 2013&ndash;2017</dd>
+            <dt>Données</dt>
+            <dd>Stations de qualité de l’air du nord de la Chine, 2013&ndash;2017</dd>
             <dt>Affiliation</dt>
             <dd>LUT University, Atmospheric Modelling Centre (AMC-Lahti)</dd>
         </dl>
     </section>
 
-    <nav class="project-pager" aria-label="Other projects">
-        <a class="pill-link" href="cranpm-studio.html" rel="prev">&larr; Previous: CranPM Studio</a>
-        <a class="pill-link" href="cdesp.html" rel="next">Next: cDESP &rarr;</a>
+    <nav class="project-pager" aria-label="Autres projets">
+        <a class="pill-link" href="cranpm-studio.html" rel="prev">&larr; Précédent&nbsp;: CranPM Studio</a>
+        <a class="pill-link" href="cdesp.html" rel="next">Suivant&nbsp;: cDESP &rarr;</a>
     </nav>
 
-    <p class="back-link"><a href="../projects.html">&larr; Back to all projects</a></p>
+    <p class="back-link"><a href="../projects.html">&larr; Retour à tous les projets</a></p>
 
 </main>
 
@@ -160,20 +160,20 @@
     <div class="footer-inner">
         <div class="footer-brand">
             <img src="../../signature.svg" width="200" height="80" alt="Ammar Kheder" loading="lazy" decoding="async">
-            <p class="footer-tagline">Teaching neural networks how the atmosphere flows.</p>
+            <p class="footer-tagline">Apprendre aux réseaux de neurones comment circule l’atmosphère.</p>
         </div>
         <div class="footer-col">
-            <p class="footer-head">Explore</p>
+            <p class="footer-head">Explorer</p>
             <ul>
-                <li><a href="../projects.html">Research</a></li>
-                <li><a href="../videos.html">Videos</a></li>
+                <li><a href="../projects.html">Recherche</a></li>
+                <li><a href="../videos.html">Vidéos</a></li>
                 <li><a href="../index.html#publications">Publications</a></li>
-                <li><a href="../news.html">News</a></li>
-                <li><a href="../teaching.html">Teaching</a></li>
+                <li><a href="../news.html">Actualités</a></li>
+                <li><a href="../teaching.html">Enseignement</a></li>
             </ul>
         </div>
         <div class="footer-col">
-            <p class="footer-head">Elsewhere</p>
+            <p class="footer-head">Ailleurs</p>
             <ul>
                 <li><a href="https://github.com/AmmarKheder" target="_blank" rel="noopener">GitHub</a></li>
                 <li><a href="https://scholar.google.com/citations?user=ZYvKJF4AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
@@ -190,7 +190,7 @@
             </ul>
         </div>
     </div>
-    <p class="footer-legal">&copy; 2026 Ammar Kheder &middot; LUT University &middot; Atmospheric Modelling Centre &middot; Lahti, Finland</p>
+    <p class="footer-legal">&copy; 2026 Ammar Kheder &middot; LUT University &middot; Atmospheric Modelling Centre &middot; Lahti, Finlande</p>
 </footer>
 
 <script src="../../site.js" defer></script>
