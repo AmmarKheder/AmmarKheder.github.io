@@ -107,8 +107,9 @@ h1, h2, h3, h4 {
     font-weight: 400;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    padding: 4px 2px;
-    border-bottom: 2px solid transparent;
+    padding: 4px 2px 3px;
+    border-bottom: 3px solid transparent;
+    white-space: nowrap;
     transition: border-color 0.2s, color 0.2s;
 }
 .nav-item:hover {
@@ -939,19 +940,79 @@ h3 {
 }
 .history .exp-link:hover .exp-arrow { transform: translateX(4px); }
 
-/* ── Footer ─────────────────────────────────────────────── */
-footer {
-    text-align: center;
-    padding: 48px 24px 28px;
-    margin-top: 48px;
-    border-top: 2px solid var(--rule-strong);
-    color: var(--muted);
+/* ── Footer (mirrors the navbar) ─────────────────────────── */
+.site-footer {
+    margin-top: 64px;
+    padding: 52px 32px 24px;
+    background: var(--nav-bg);
+    color: var(--nav-ink);
+    border-top: 2px solid #000;
 }
-footer p { margin: 2px 0; }
-footer .footer-sub {
+.footer-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 32px 40px;
+}
+.footer-brand img {
+    display: block;
+    width: 200px;
+    height: auto;
+    margin-left: -16px; /* the drawing has a margin inside its viewBox; this lines it up with the text */
+    filter: invert(1);
+}
+.footer-tagline {
+    margin-top: 14px;
+    max-width: 30ch;
+    font-size: 1rem;
+    line-height: 1.45;
+    color: rgba(244, 241, 232, 0.78);
+}
+.footer-head {
+    margin-bottom: 8px;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #fff;
+}
+.footer-col ul { list-style: none; }
+.footer-col a {
+    display: inline-block;
+    padding: 4px 0;
+    color: var(--nav-ink);
+    text-decoration: none;
+}
+.footer-col a:hover {
+    color: #fff;
+    text-decoration: underline dashed;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 4px;
+}
+.site-footer a:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+.footer-legal {
+    max-width: 1180px;
+    margin: 32px auto 0;
+    padding-top: 18px;
+    border-top: 1px dashed rgba(244, 241, 232, 0.28);
     font-size: 0.88rem;
-    color: var(--muted-2);
-    font-style: italic;
+    color: rgba(244, 241, 232, 0.72);
+}
+@media (max-width: 900px) {
+    .footer-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+    .site-footer { padding: 36px 20px 20px; }
+    .footer-inner { gap: 22px 20px; }
+    .footer-brand { grid-column: 1 / -1; }
+    .footer-brand img { width: 160px; margin-left: -13px; }
+    .footer-tagline { margin-top: 8px; }
+    .footer-col a { padding: 3px 0; }
+    .footer-contact { grid-column: 1 / -1; }
+    .footer-contact ul { display: flex; flex-wrap: wrap; gap: 0 22px; }
+    .footer-legal { margin-top: 22px; padding-top: 14px; }
 }
 
 /* ── Responsive ─────────────────────────────────────────── */
@@ -963,15 +1024,13 @@ footer .footer-sub {
     h2 { font-size: 1.9rem; }
 }
 
-@media (max-width: 640px) {
-    html { font-size: 16px; }
+/* Navigation: hamburger and dropdown up to 900 px (a tablet in portrait used to get the desktop bar, 977 px wide) */
+@media (max-width: 900px) {
     .navbar {
         padding: 12px 18px;
         position: sticky;
         top: 0;
     }
-    .brand span { display: none; }
-
     /* Hamburger visible on mobile */
     .nav-toggle {
         display: flex;
@@ -1046,7 +1105,10 @@ footer .footer-sub {
         padding: 8px 10px;
         margin-left: 14px;
     }
+}
 
+@media (max-width: 640px) {
+    html { font-size: 16px; }
     .prose { padding: 32px 20px 20px; }
     .page-header h1 { font-size: 2.3rem; }
     .intro .avatar,
@@ -1067,7 +1129,23 @@ footer .footer-sub {
    ═════════════════════════════════════════════════════════════ */
 .nav-item.nav-active {
     color: #fff;
-    border-bottom-color: rgba(255, 255, 255, 0.5);
+    border-bottom: 3px solid #fff;
+}
+
+/* Contact: an outlined pill, drawn like the other sketchy shapes */
+.nav-item.nav-contact {
+    border: 1.6px solid var(--nav-ink);
+    border-radius: var(--sketchy-radius-sm);
+    padding: 4px 12px;
+}
+.nav-item.nav-contact:hover {
+    background: var(--nav-ink);
+    color: var(--nav-bg);
+    border-color: var(--nav-ink);
+}
+@media (max-width: 900px) {
+    .nav-item.nav-contact { border: 0; border-radius: 0; padding: 12px 24px; }
+    .nav-item.nav-contact:hover { background: rgba(244, 241, 232, 0.06); color: #fff; }
 }
 
 /* ═════════════════════════════════════════════════════════════
@@ -1665,9 +1743,8 @@ main:focus-visible { outline: none; }
 .navbar label:focus-visible,
 .project-hero a:focus-visible { outline-color: #fff; }
 
-footer .footer-sub { color: var(--muted); }
 
-@media (max-width: 640px) {
+@media (max-width: 900px) {
     /* the checkbox behind the hamburger can take focus; the label shows the ring */
     .nav-toggle-check {
         display: block;
