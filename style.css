@@ -2237,13 +2237,14 @@ a.lang-opt { opacity: 0.75; transition: opacity 0.2s, border-color 0.2s; }
 a.lang-opt:hover { color: #fff; opacity: 1; text-decoration: none; border-bottom-color: #fff; }
 .lang-opt[aria-current] { color: #fff; font-weight: 700; border-bottom-color: #fff; }
 .lang-sep { color: rgba(244, 241, 232, 0.45); }
-@media (min-width: 901px) and (max-width: 1080px) {
+@media (min-width: 900.02px) and (max-width: 1080px) {
     /* just above the hamburger: tighter spacing, so the bar stays on one line with the switch
-       (and with the longer French labels) */
-    .navbar { padding-left: 18px; padding-right: 18px; }
+       (and with the longer French labels), also next to a classic scrollbar.
+       900.02px, not 901px: a zoomed page can be 900.5px wide, which (max-width: 900px) does not match either */
+    .navbar { padding-left: 16px; padding-right: 16px; }
     .brand { gap: 9px; font-size: 1.2rem; }
-    .nav-links { gap: 10px; }
-    .nav-item { letter-spacing: 0.01em; }
+    .nav-links { gap: 8px; }
+    .nav-item { letter-spacing: 0; }
     .nav-item.nav-contact { padding: 4px 9px; }
     .nav-sep { margin: 0 1px; }
     .lang-switch { padding: 1px 3px; }
