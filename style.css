@@ -1797,3 +1797,213 @@ main:focus-visible { outline: none; }
     transition: transform 0.5s ease;
 }
 .gallery-item:hover video { transform: scale(1.05); }
+
+/* ═════════════════════════════════════════════════════════════
+   2026-10: video cards (the player loads on click, in a lightbox) and the lightbox
+   ═════════════════════════════════════════════════════════════ */
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 8px;
+}
+@media (min-width: 600px) {
+    .video-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .video-grid > .video-card-wide { grid-column: 1 / -1; }
+}
+@media (min-width: 900px) {
+    .video-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .video-grid > .video-card-wide { grid-column: auto; }
+}
+.video-grid-single { grid-template-columns: minmax(0, 480px); }
+
+.video-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--paper-2);
+    border: 2px solid var(--ink-dark);
+    border-radius: var(--sketchy-radius-sm);
+    overflow: hidden;
+    box-shadow: 4px 5px 0 rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.video-card:hover {
+    transform: translate(-2px, -3px);
+    box-shadow: 6px 8px 0 rgba(0, 0, 0, 0.12);
+}
+
+.video-thumb {
+    position: relative;
+    display: block;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #0a0a0a;
+    border-bottom: 2px solid var(--ink-dark);
+}
+.video-thumb img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+.video-card:hover .video-thumb img { transform: scale(1.04); }
+.video-thumb:hover { text-decoration: none; }
+
+.video-play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 64px;
+    height: 64px;
+    margin: -32px 0 0 -32px;
+    transition: transform 0.2s ease;
+    filter: drop-shadow(2px 3px 0 rgba(0, 0, 0, 0.35));
+}
+.video-play svg { display: block; width: 100%; height: 100%; }
+.video-thumb:hover .video-play,
+.video-thumb:focus-visible .video-play { transform: rotate(-4deg) scale(1.06); }
+
+.video-badge {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    max-width: calc(100% - 20px);
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+    color: #fff;
+    background: rgba(10, 10, 10, 0.82);
+    padding: 1px 10px;
+    border-radius: var(--sketchy-radius-sm);
+}
+
+.video-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 16px 18px 18px;
+}
+.video-title {
+    display: block;
+    margin: 0 0 6px;
+    padding: 0;
+    border: 0;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    color: var(--ink-dark);
+}
+.video-title::after { content: none; }
+.video-caption {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--ink);
+    margin-bottom: 8px;
+}
+.video-meta {
+    font-size: 0.9rem;
+    line-height: 1.45;
+    color: var(--muted);
+}
+.video-links {
+    margin-top: auto;
+    padding-top: 10px;
+    border-top: 1px dashed var(--rule);
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 0.92rem;
+    letter-spacing: 0.02em;
+}
+.video-links { margin-top: 12px; }
+.video-card .video-links { margin-top: auto; }
+.video-links a { white-space: nowrap; }
+.video-links .sep, .video-related .sep { color: var(--muted); margin: 0 4px; }
+
+/* wide card: the poster on the left (46 %), the text on the right */
+.video-card-wide .video-body { justify-content: center; }
+@media (min-width: 720px) {
+    .video-card-wide { display: grid; grid-template-columns: 46% minmax(0, 1fr); }
+    .video-card-wide .video-thumb {
+        aspect-ratio: auto;
+        border-bottom: 0;
+        border-right: 2px solid var(--ink-dark);
+    }
+    .video-card-wide .video-thumb::before { content: ''; display: block; padding-top: 56.25%; }
+    .video-card-wide .video-body { padding: 22px 26px; }
+    .video-card-wide .video-title { font-size: 1.5rem; }
+}
+/* inside a three-column grid the wide card is a normal card again */
+@media (min-width: 900px) {
+    .video-grid > .video-card-wide { display: flex; flex-direction: column; }
+    .video-grid > .video-card-wide .video-thumb { aspect-ratio: 16 / 9; min-height: 0; border-bottom: 2px solid var(--ink-dark); border-right: 0; }
+    .video-grid > .video-card-wide .video-thumb::before { display: none; }
+    .video-grid > .video-card-wide .video-body { padding: 16px 18px 18px; justify-content: flex-start; }
+    .video-grid > .video-card-wide .video-title { font-size: 1.25rem; }
+}
+
+.video-related {
+    margin-top: 28px;
+    font-family: var(--font-head);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.video-page .page-header { max-width: none; }
+
+/* lightbox */
+dialog.video-modal {
+    width: min(1000px, 94vw);
+    max-width: none;
+    margin: auto;   /* the global reset removes the UA centring */
+    padding: 0;
+    border: 2px solid #000;
+    border-radius: var(--sketchy-radius-sm);
+    background: #000;
+    color: #fff;
+    overflow: hidden;
+}
+dialog.video-modal::backdrop { background: rgba(10, 10, 10, 0.85); }
+.video-modal-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-left: 16px;
+    background: #0a0a0a;
+}
+.video-modal-title {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+}
+.video-modal-close {
+    flex: none;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    background: none;
+    color: #fff;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+}
+.video-modal-close:hover { background: rgba(255, 255, 255, 0.12); }
+.video-modal :focus-visible { outline: 3px solid #fff; outline-offset: -3px; }
+.video-frame { position: relative; aspect-ratio: 16 / 9; background: #000; }
+.video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+dialog.video-modal.is-portrait { width: fit-content; max-width: 94vw; }
+dialog.video-modal.is-portrait .video-frame { aspect-ratio: 9 / 16; width: auto; height: min(80vh, 820px); }
+html.modal-open { overflow: hidden; }
