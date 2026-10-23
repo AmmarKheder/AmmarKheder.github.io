@@ -1654,10 +1654,15 @@ main:focus-visible { outline: none; }
 
 .video-page .page-header { max-width: none; }
 
-/* lightbox */
+/* lightbox.
+   The width is also capped by the screen HEIGHT (the 16:9 player + the 44 px bar + the borders must fit), and the
+   default max-height of a modal dialog is lifted: on a short screen, a phone held sideways for instance, the box
+   was cut under the player and its control bar and full-screen button were out of reach. */
 dialog.video-modal {
-    width: min(1000px, 94vw);
+    width: min(1000px, 94vw, calc((100vh - 72px) * 16 / 9));
+    width: min(1000px, 94vw, calc((100dvh - 72px) * 16 / 9));   /* dynamic viewport where supported (phone toolbars) */
     max-width: none;
+    max-height: none;
     margin: auto;   /* the global reset removes the UA centring */
     padding: 0;
     border: 2px solid #000;
@@ -1703,7 +1708,14 @@ dialog.video-modal::backdrop { background: rgba(10, 10, 10, 0.85); }
 .video-frame { position: relative; aspect-ratio: 16 / 9; background: #000; }
 .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 dialog.video-modal.is-portrait { width: fit-content; max-width: 94vw; }
-dialog.video-modal.is-portrait .video-frame { aspect-ratio: 9 / 16; width: auto; height: min(80vh, 820px); }
+dialog.video-modal.is-portrait .video-frame {
+    aspect-ratio: 9 / 16;
+    width: auto;
+    margin: 0 auto;   /* centred when the title makes the bar wider than the player */
+    /* never taller than the screen, never wider than the dialog's 94vw cap (a tall phone, 390 x 844 for instance) */
+    height: min(80vh, 820px, calc(100vh - 72px), calc((94vw - 4px) * 16 / 9));
+    height: min(80dvh, 820px, calc(100dvh - 72px), calc((94vw - 4px) * 16 / 9));
+}
 html.modal-open { overflow: hidden; }
 
 /* ═════════════════════════════════════════════════════════════
