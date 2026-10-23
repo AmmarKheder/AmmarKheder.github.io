@@ -84,8 +84,8 @@
 
     <section class="project-intro">
         <p>L’exposition à court terme aux particules fines (<strong>PM<sub>2.5</sub></strong>) est responsable d’environ un million de décès par an. Les prévisions opérationnelles utilisent des mailles de plusieurs dizaines de kilomètres, qui masquent la pollution que respirent chaque jour près de deux cents millions de personnes. Foehn est un <strong>modèle génératif</strong> qui apprend à partir d’estimations mondiales des PM<sub>2.5</sub> à l’échelle du kilomètre, et qui <strong>calcule d’où vient l’air</strong>&nbsp;: il prévoit les concentrations journalières de PM<sub>2.5</sub> à 1&nbsp;km sur toutes les terres habitées, jusqu’à une semaine à l’avance, sous la forme d’un ensemble calibré.</p>
-        <p>Foehn repose sur deux idées. <strong>FLEXGREEN</strong> suit l’air à rebours dans la prévision météorologique en trois dimensions et transforme les origines de cet air en cartes de transport, sans aucun paramètre appris. Un réseau de <strong>flow matching</strong> prévoit ensuite des fenêtres de la taille d’un continent en une seule passe, sans raccords entre tuiles, en générant des futurs possibles plutôt que leur moyenne floue.</p>
-        <p>Sur un an de prévisions rétrospectives (2022), évaluées dans des milliers de stations de mesure qui n’ont jamais servi à entraîner ni à sélectionner le modèle, Foehn a été, dans trois stations sur quatre, plus précis que la prévision opérationnelle émise au même moment, et sa moyenne d’ensemble a détecté les extrêmes locaux de pollution à quatre jours d’échéance aussi bien que la prévision opérationnelle à un jour. J’ai pris en charge la méthode, les expériences et la rédaction&nbsp;; la prépublication, cosignée avec Michael Boy et Zhi-Song Liu, est disponible sur <a href="https://arxiv.org/abs/2610.25941" target="_blank">arXiv (2610.25941)</a>.</p>
+        <p>Foehn repose sur deux idées. <strong>FLEXGREEN</strong> suit l’air à rebours dans la prévision météorologique en trois dimensions et transforme les origines de cet air en cartes de transport, sans aucun paramètre appris. Un réseau entraîné par <strong>flow matching</strong> prévoit ensuite des fenêtres de la taille d’un continent en une seule passe, sans raccords entre tuiles, en générant des futurs possibles plutôt que leur moyenne floue.</p>
+        <p>Sur un an de prévisions rétrospectives (2022), évaluées sur des milliers de stations de mesure qui n’ont jamais servi à entraîner ni à sélectionner le modèle, Foehn a été, pour trois stations sur quatre, plus précis que la prévision opérationnelle émise au même moment, et sa moyenne d’ensemble a détecté les extrêmes locaux de pollution à quatre jours d’échéance aussi bien que la prévision opérationnelle à un jour. J’ai mené le développement de la méthode, les expériences et la rédaction&nbsp;; la prépublication, cosignée avec Michael Boy et Zhi-Song Liu, est disponible sur <a href="https://arxiv.org/abs/2610.25941" target="_blank">arXiv (2610.25941)</a>.</p>
     </section>
 
     <section class="stats-grid">
@@ -101,7 +101,7 @@
             <li><strong>Calculer ce que la physique sait.</strong> FLEXGREEN lâche des particules d’air au-dessus de chaque point des terres émergées et parcourt la prévision météorologique à rebours, pas à pas, pour retrouver où se trouvait cet air&nbsp;: une fonction de Green du transport, calculée une fois par jour, sans aucun paramètre appris.</li>
             <li><strong>Apprendre le reste.</strong> Un réseau génératif entraîné par flow matching transforme du bruit en une prévision à l’échelle du kilomètre, conditionnée par le jour de départ, la météo et les cartes de transport, sur des fenêtres de la taille d’un continent, en une seule passe.</li>
             <li><strong>Des futurs possibles, pas leur moyenne.</strong> Chaque prévision est un ensemble de quatre membres générés à partir de bruits différents&nbsp;; après un affinage sur le CRPS, l’ensemble est calibré, si bien que les pics qui comptent pour la santé sont prévus au lieu d’être lissés.</li>
-            <li><strong>Validé là où il n’a jamais été entraîné.</strong> Un an de prévisions rétrospectives (2022), évaluées dans 6&nbsp;324 stations de six réseaux officiels qui n’ont jamais servi à entraîner ni à sélectionner le modèle, et comparées à la prévision opérationnelle émise au même moment.</li>
+            <li><strong>Validé là où il n’a jamais été entraîné.</strong> Un an de prévisions rétrospectives (2022), évaluées sur 6&nbsp;324 stations de six réseaux officiels qui n’ont jamais servi à entraîner ni à sélectionner le modèle, et comparées à la prévision opérationnelle émise au même moment.</li>
         </ol>
     </section>
 
@@ -128,8 +128,8 @@
                 </a>
                 <div class="video-body">
                     <h3 class="video-title">Foehn de A à Z</h3>
-                    <p class="video-caption">12 épisodes animés et un film de 44&nbsp;minutes expliquent Foehn bloc par bloc, du problème et des données jusqu’à FLEXGREEN, au générateur et aux résultats.</p>
-                    <p class="video-meta">En anglais, avec un doublage par IA sur les épisodes (jusqu’à 10 langues). Narration générée par IA à partir de ma propre voix&nbsp;; musique générée par IA.</p>
+                    <p class="video-caption">Douze épisodes animés et un film de 44&nbsp;minutes expliquent Foehn bloc par bloc, du problème et des données jusqu’à FLEXGREEN, au générateur et aux résultats.</p>
+                    <p class="video-meta">En anglais, avec un doublage par IA des épisodes (jusqu’à 10 langues). Narration générée par IA à partir de ma propre voix&nbsp;; musique générée par IA.</p>
                     <p class="video-links"><a href="https://www.youtube.com/playlist?list=PLVRzz9roC0QQ" target="_blank" rel="noopener">Playlist sur YouTube</a> <span class="sep" aria-hidden="true">&middot;</span> <a href="https://www.youtube.com/watch?v=J9X9GcSSdig" target="_blank" rel="noopener">Film complet, 43:58</a> <span class="sep" aria-hidden="true">&middot;</span> <a href="https://www.youtube.com/@FoehnAI" target="_blank" rel="noopener">@FoehnAI</a></p>
                 </div>
             </article>
@@ -160,8 +160,8 @@
                 <span class="gallery-caption">L’épisode de pollution de janvier 2022 à Pékin, à un et cinq jours d’échéance</span>
             </a>
             <a href="https://ammarkheder.com/Foehn/figures/web/fig_smoke.jpg" target="_blank" class="gallery-item">
-                <img src="https://ammarkheder.com/Foehn/figures/web/fig_smoke.jpg" alt="Fumées d’incendies prévues de un à sept jours à l’avance" loading="lazy" width="1800" height="1001" decoding="async">
-                <span class="gallery-caption">Les fumées du 18&nbsp;juillet 2022, prévues de un à sept jours à l’avance</span>
+                <img src="https://ammarkheder.com/Foehn/figures/web/fig_smoke.jpg" alt="Fumées d’incendies prévues d’un à sept jours à l’avance" loading="lazy" width="1800" height="1001" decoding="async">
+                <span class="gallery-caption">Les fumées du 18&nbsp;juillet 2022, prévues d’un à sept jours à l’avance</span>
             </a>
         </div>
     </section>

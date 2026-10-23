@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRAN-PM, par Ammar Kheder</title>
-    <meta name="description" content="CRAN-PM&nbsp;: un réseau d’attention croisée entre résolutions qui prédit chaque jour les PM2.5 à 1&nbsp;km dans toute l’Europe, avec un transfert zero-shot vers les États-Unis, le Canada et l’Inde. arXiv, 2026.">
+    <meta name="description" content="CRAN-PM&nbsp;: un réseau d’attention croisée entre résolutions qui prédit les PM2.5 journalières à 1&nbsp;km dans toute l’Europe, avec un transfert zero-shot vers les États-Unis, le Canada et l’Inde. arXiv, 2026.">
     <meta name="author" content="Ammar Kheder">
     <meta property="og:type" content="article">
     <meta property="og:title" content="CRAN-PM, par Ammar Kheder">
     <meta property="og:site_name" content="Ammar Kheder">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:locale:alternate" content="en_US">
-    <meta property="og:description" content="Un Vision Transformer à deux branches qui prédit chaque jour les PM2.5 à 1&nbsp;km dans toute l’Europe, en 1,8&nbsp;seconde par carte, avec un transfert zero-shot vers l’Amérique du Nord et l’Inde.">
+    <meta property="og:description" content="Un Vision Transformer à deux branches qui prédit les PM2.5 journalières à 1&nbsp;km dans toute l’Europe, en 1,8&nbsp;seconde par carte, avec un transfert zero-shot vers l’Amérique du Nord et l’Inde.">
     <meta property="og:image" content="https://ammarkheder.com/assets/ext/og/cranpm-teaser.jpg">
     <meta property="og:url" content="https://ammarkheder.com/fr/projects/cranpm.html">
     <link rel="canonical" href="https://ammarkheder.com/fr/projects/cranpm.html">
@@ -57,7 +57,7 @@
         <div class="hero-content">
             <p class="hero-kicker">Premier auteur &middot; 2026 &middot; prépublication arXiv</p>
             <h1>CRAN-PM</h1>
-            <p class="hero-tagline">Un réseau d’attention croisée entre résolutions pour prédire chaque jour les PM<sub>2.5</sub> à 1&nbsp;km dans toute l’Europe, avec un transfert zero-shot (sans réentraînement) vers l’Amérique du Nord et l’Inde.</p>
+            <p class="hero-tagline">Un réseau d’attention croisée entre résolutions pour prédire les PM<sub>2.5</sub> journalières à 1&nbsp;km dans toute l’Europe, avec un transfert zero-shot (sans réentraînement) vers l’Amérique du Nord et l’Inde.</p>
             <p class="hero-actions">
                 <a href="https://arxiv.org/abs/2603.11725" target="_blank" rel="noopener" class="pill-link">Prépublication arXiv</a>
                 <a href="https://github.com/AmmarKheder/cran_pm" target="_blank" rel="noopener" class="pill-link">Code sur GitHub</a>
@@ -71,9 +71,9 @@
 <main class="prose project-detail" id="main-content" tabindex="-1">
 
     <section class="project-intro">
-        <p>CRAN-PM est un Vision Transformer à deux branches qui prédit chaque jour les PM<sub>2.5</sub> à <strong>1&nbsp;km de résolution dans toute l’Europe</strong>. Une seule passe avant produit une carte de 29&nbsp;millions de pixels en 1,8&nbsp;seconde environ, sur un seul GPU.</p>
-        <p>L’architecture associe une branche globale à basse résolution (25&nbsp;km, qui capte la dynamique continentale) à une branche locale à haute résolution (1&nbsp;km, qui capte les détails à l’échelle de la ville), reliées par une attention croisée entre résolutions et un biais qui tient compte de l’altitude. Un module de réordonnancement des patchs guidé par le vent reprend le principe utilisé dans TopoFlow.</p>
-        <p>Le résultat le plus marquant est le <strong>transfert zero-shot</strong>&nbsp;: entraîné uniquement sur des données européennes (2017&ndash;2021), le modèle produit des prédictions précises des PM<sub>2.5</sub> aux États-Unis, au Canada et en Inde sans aucun réentraînement, et capte notamment le panache de fumée des incendies canadiens de 2023, qui a dérivé jusque dans l’est des États-Unis.</p>
+        <p>CRAN-PM est un Vision Transformer à deux branches qui prédit les PM<sub>2.5</sub> journalières à <strong>1&nbsp;km de résolution dans toute l’Europe</strong>. Une seule passe avant produit une carte de 29&nbsp;millions de pixels en 1,8&nbsp;seconde environ, sur un seul GPU.</p>
+        <p>L’architecture associe une branche globale à basse résolution (25&nbsp;km, pour la dynamique continentale) à une branche locale à haute résolution (1&nbsp;km, pour les détails à l’échelle de la ville), reliées par une attention croisée entre résolutions et un biais qui tient compte de l’altitude. Un module de réordonnancement des patchs guidé par le vent reprend le principe utilisé dans TopoFlow.</p>
+        <p>Le résultat le plus marquant est le <strong>transfert zero-shot</strong>&nbsp;: entraîné uniquement sur des données européennes (2017&ndash;2021), le modèle produit des prédictions précises des PM<sub>2.5</sub> aux États-Unis, au Canada et en Inde sans aucun réentraînement, et reproduit notamment le panache de fumée des incendies canadiens de 2023, qui a dérivé jusque dans l’est des États-Unis.</p>
     </section>
 
     <section class="stats-grid">
@@ -86,10 +86,10 @@
     <section class="project-section">
         <h2>Idées clés</h2>
         <ol class="feature-list">
-            <li><strong>Deux branches, une attention croisée entre résolutions.</strong> La branche globale, à basse résolution (25&nbsp;km), capte la circulation atmosphérique synoptique&nbsp;; la branche locale, à haute résolution (1&nbsp;km), capte les gradients urbains&nbsp;; l’attention croisée les fusionne.</li>
+            <li><strong>Deux branches, une attention croisée entre résolutions.</strong> La branche globale, à basse résolution (25&nbsp;km), représente la circulation atmosphérique synoptique&nbsp;; la branche locale, à haute résolution (1&nbsp;km), représente les gradients urbains&nbsp;; l’attention croisée les fusionne.</li>
             <li><strong>Une attention qui tient compte de l’altitude.</strong> Un biais appris, fondé sur un modèle numérique de terrain, permet au réseau de respecter les contraintes que le relief impose au transport des polluants.</li>
             <li><strong>Réordonnancement des patchs guidé par le vent.</strong> Les patchs sont triés selon la direction du vent, pour que l’attention circule en aval des sources.</li>
-            <li><strong>Transfert zero-shot d’un continent à l’autre.</strong> Entraîné sur l’Europe (2017&ndash;2021), testé sur l’Europe (2022), puis évalué tel quel sur les États-Unis, le Canada et l’Inde. Le modèle capte d’emblée les fumées d’incendies et les foyers de pollution de la plaine indo-gangétique.</li>
+            <li><strong>Transfert zero-shot d’un continent à l’autre.</strong> Entraîné sur l’Europe (2017&ndash;2021), testé sur l’Europe (2022), puis évalué tel quel sur les États-Unis, le Canada et l’Inde. Le modèle reproduit d’emblée les fumées d’incendies et les foyers de pollution de la plaine indo-gangétique.</li>
             <li><strong>Décodeur PixelShuffle.</strong> Un suréchantillonnage progressif, de la représentation latente à basse résolution jusqu’à la sortie à 1&nbsp;km, sans interpolation floue.</li>
         </ol>
     </section>
@@ -99,7 +99,7 @@
         <div class="photo-gallery figures">
             <a href="../../assets/ext/cranpm/fig2-architecture.webp" target="_blank" class="gallery-item">
                 <img src="../../assets/ext/cranpm/fig2-architecture.webp" alt="Architecture à deux branches de CRAN-PM" loading="lazy" width="1600" height="683" decoding="async">
-                <span class="gallery-caption">Architecture à deux branches, qui croise les résolutions</span>
+                <span class="gallery-caption">Architecture à deux branches et à résolutions croisées</span>
             </a>
             <a href="../../assets/ext/cranpm/fig3-europe-maps.webp" target="_blank" class="gallery-item">
                 <img src="../../assets/ext/cranpm/fig3-europe-maps.webp" alt="Vérité terrain et prédiction à l’échelle de l’Europe" loading="lazy" width="1600" height="1180" decoding="async">

@@ -73,7 +73,7 @@
     <section class="project-intro">
         <p>La plupart des villes du monde ne sont que partiellement surveillées&nbsp;: une poignée de stations couvrent quelques quartiers, le reste est muet. <strong>AQ-Net</strong> comble ce vide&nbsp;: il apprend à <em>réanalyser</em> la qualité de l’air sur toute une région, en s’appuyant uniquement sur les quelques stations existantes, ainsi que sur des données météorologiques de réanalyse et sur des encodages du temps.</p>
         <p>Le modèle associe trois briques&nbsp;: un <strong>LSTM avec attention multi-têtes</strong> pour les dépendances temporelles à longue portée, un <strong>encodage cyclique</strong> qui transpose le temps discret (jour de l’année, heure de la journée) dans un espace continu, et un module de <strong>kNN neuronal entraînable</strong> qui interpole des lieux équipés de capteurs vers ceux qui n’en ont pas, dans l’espace des caractéristiques plutôt que dans l’espace physique.</p>
-        <p>AQ-Net a été accepté à <strong>SCIA 2025</strong> (Scandinavian Conference on Image Analysis) et publié dans Springer LNCS. À Reykjav&iacute;k, j’en ai fait une présentation éclair et un poster.</p>
+        <p>AQ-Net a été accepté à <strong>SCIA 2025</strong> (Scandinavian Conference on Image Analysis) et publié dans Springer LNCS. Je l’ai présenté à Reykjav&iacute;k, sous la forme d’une présentation éclair et d’un poster.</p>
     </section>
 
     <section class="stats-grid">
@@ -88,8 +88,8 @@
         <ol class="feature-list">
             <li><strong>Un encodage qui tient compte du temps.</strong> Un LSTM couplé à une attention multi-têtes capte les dépendances à long terme du signal de pollution. Un encodage cyclique projette le temps calendaire discret dans un espace continu, si bien que le modèle ne voit jamais de rupture brutale à minuit ou au Nouvel An.</li>
             <li><strong>Interpolation spatiale par kNN neuronal.</strong> Au lieu d’une pondération par l’inverse de la distance dans l’espace physique, AQ-Net apprend un plongement dans l’espace des caractéristiques, où les plus proches voisins sont les lieux dont la pollution évolue de façon semblable. Le relief et la météorologie sont ainsi pris en compte implicitement.</li>
-            <li><strong>Des sorties de type réanalyse.</strong> Le modèle peut combler les lacunes (là où les stations manquent) et fonctionner à court terme (6&ndash;24&nbsp;h) comme à long terme (2&ndash;7&nbsp;jours).</li>
-            <li><strong>Des données réelles.</strong> Entraîné et évalué sur des stations du nord de la Chine de 2013 à 2017, soit la période qui a suivi la crise de la qualité de l’air de 2013, quand la qualité et la densité des données sont devenues fiables.</li>
+            <li><strong>Des sorties de type réanalyse.</strong> Le modèle peut combler les lacunes (là où les stations manquent) et être utilisé sur des horizons courts (6&ndash;24&nbsp;h) comme longs (2&ndash;7&nbsp;jours).</li>
+            <li><strong>Des données réelles.</strong> Entraîné et évalué sur des stations du nord de la Chine de 2013 à 2017, soit la période qui a suivi la crise de la qualité de l’air de 2013, quand les données sont devenues fiables, en qualité comme en densité.</li>
         </ol>
     </section>
 
