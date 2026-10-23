@@ -1391,13 +1391,16 @@ table.history { width: 100%; border-collapse: collapse; }
 .hero-cta a:hover { background: var(--link); color: #fff; text-decoration: none; transform: translate(-1px, -1px); box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1); }
 #research .section-desc { max-width: 860px; margin: -6px 0 22px; color: var(--muted); font-size: 1.05rem; }
 
-/* BibTeX under each publication */
-.pub-bib { margin: 0; }
+/* BibTeX under each publication.
+   The <details> is a flex item of .pub-links: min-width:0 lets it shrink to the column (a flex item
+   otherwise never gets narrower than its content, and the <pre> is as wide as its longest line);
+   the long lines then scroll inside the <pre> instead of widening the page. */
+.pub-bib { margin: 0; min-width: 0; max-width: 100%; }
 .pub-bib summary { cursor: pointer; list-style: none; }
 .pub-bib summary::-webkit-details-marker { display: none; }
 .pub-bib[open] { flex: 1 1 100%; }
 .pub-bib[open] summary { margin-bottom: 4px; }
-.pub-bib pre { font-family: 'Courier New', monospace; font-size: 0.8rem; line-height: 1.4; background: var(--accent-bg); border: 1px dashed var(--rule); border-radius: var(--sketchy-radius-sm); padding: 10px 12px; margin: 6px 0 2px; overflow: auto; white-space: pre; }
+.pub-bib pre { font-family: 'Courier New', monospace; font-size: 0.8rem; line-height: 1.4; background: var(--accent-bg); border: 1px dashed var(--rule); border-radius: var(--sketchy-radius-sm); padding: 10px 12px; margin: 6px 0 2px; overflow: auto; white-space: pre; max-width: 100%; }
 
 /* ── 2026-10: <picture> wrappers (WebP + PNG fallback) do not take part in the layout ── */
 picture { display: contents; }
