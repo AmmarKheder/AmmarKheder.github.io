@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ammar Kheder, Doctoral Researcher at LUT University</title>
-    <meta name="description" content="Ammar Kheder, Doctoral Researcher in Computational Engineering at LUT University. Foehn: global kilometre-scale probabilistic forecasts of air pollution (preprint, 2026); neural architectures that encode atmospheric physics; TopoFlow in npj Climate and Atmospheric Science.">
+    <title>Ammar Kheder, forecasting air pollution · LUT University</title>
+    <meta name="description" content="Doctoral researcher at LUT University. Foehn: global 1 km probabilistic PM2.5 forecasts up to a week ahead (preprint, 2026). Also TopoFlow (npj, 2026).">
     <meta name="author" content="Ammar Kheder">
     <meta name="keywords" content="Ammar Kheder, air quality, atmospheric modelling, deep learning, physics-informed neural networks, vision transformers, LUT University, TopoFlow, AQ-Net, CRAN-PM, LUMI supercomputer">
     <meta property="og:type" content="profile">
-    <meta property="og:title" content="Ammar Kheder, Doctoral Researcher at LUT University">
+    <meta property="og:title" content="Ammar Kheder, forecasting air pollution · LUT University">
     <meta property="og:description" content="Forecasting the air we breathe at the scale where people live: Foehn, global 1 km probabilistic forecasts of PM2.5 (preprint 2026); TopoFlow in npj Climate and Atmospheric Science.">
-    <meta property="og:image" content="https://ammarkheder.com/photo.jpeg">
+    <meta property="og:image" content="https://ammarkheder.com/assets/ext/og/foehn-film.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Foehn: a globe of PM2.5 at 1 km, with the title Air pollution forecast at 1 km, worldwide">
     <meta property="og:url" content="https://ammarkheder.com/">
     <link rel="canonical" href="https://ammarkheder.com/">
     <meta name="twitter:card" content="summary_large_image">
@@ -54,75 +57,46 @@
 
 <main class="prose" id="top" tabindex="-1">
 
-    <header class="page-header">
-        <h1><span class="fw-light">Ammar</span> <span class="fw-bold">Kheder</span></h1>
-        <p class="subtitle">Doctoral Researcher in Computational Engineering &middot; LUT University &middot; AMC-Lahti</p>
-        <p class="tagline">Teaching neural networks how the atmosphere flows.</p>
-        <p class="hero-cta">
-            <a href="https://arxiv.org/abs/2610.25941" target="_blank">Foehn preprint &rarr;</a>
-            <a href="https://ammarkheder.com/Foehn/#viewer" target="_blank">Explore the 1 km forecasts</a>
-            <a href="videos.html">Watch the film (8 min)</a>
-        </p>
+    <header class="hero">
+        <div class="hero-text">
+            <p class="hero-eyebrow">Doctoral Researcher in Computational Engineering &middot; LUT University &middot; AMC-Lahti</p>
+            <h1><span class="fw-light">Ammar</span> <span class="fw-bold">Kheder</span></h1>
+            <p class="tagline">I build forecasts of the air we breathe, <mark class="mark">at the scale where people live</mark>.</p>
+            <p class="hero-cta">
+                <a href="https://arxiv.org/abs/2610.25941" target="_blank" rel="noopener">Read the Foehn preprint &rarr;</a>
+                <a href="#watch">Watch the series</a>
+            </p>
+        </div>
+        <figure class="hero-portrait">
+            <div class="avatar-swap" title="Tap or hover to reveal the Arita illustration. Tap again to flip back.">
+                <img src="photo-440.webp" alt="Ammar Kheder" class="avatar avatar-front" width="440" height="440" decoding="async">
+                <img src="pic/ammar_arita-440.webp" alt="Ammar Kheder, portrait illustrated by Mitsuhiro Arita" class="avatar avatar-back" loading="lazy" width="440" height="440" decoding="async">
+            </div>
+            <figcaption>Tap: my portrait, illustrated by Mitsuhiro Arita</figcaption>
+        </figure>
     </header>
 
-    <section class="intro">
-        <div class="avatar-swap" title="Tap or hover to reveal the Arita illustration. Tap again to flip back.">
-            <span class="avatar-hint" aria-hidden="true">tap</span>
-            <img src="photo.jpeg" alt="Ammar Kheder" class="avatar avatar-front" width="1080" height="1080">
-            <img src="pic/ammar_arita.jpeg" alt="Ammar Kheder, portrait illustrated by Mitsuhiro Arita" class="avatar avatar-back" loading="lazy" width="1764" height="2048" decoding="async">
+    <section class="flagship" id="foehn" aria-labelledby="foehn-title">
+        <div class="flagship-text">
+            <p class="flagship-kicker">Latest preprint &middot; October 2026 &middot; lead author</p>
+            <h2 id="foehn-title">Foehn</h2>
+            <p class="flagship-lead">Short-term exposure to fine particles accounts for about a million deaths a year, yet operational forecasts run on grids tens of kilometres wide, which hide the pollution breathed by nearly two hundred million people a day. Foehn, my latest model, forecasts PM<sub>2.5</sub> at 1 km over all inhabited land, up to a week ahead.</p>
+            <dl class="flagship-facts">
+                <div><dt>1 km</dt><dd>all inhabited land, up to 7 days ahead</dd></div>
+                <div><dt>3 in 4</dt><dd>stations where Foehn is more accurate than the operational forecast (5,954 stations, retrospective forecasts of 2022)</dd></div>
+                <div><dt>&minus;17&nbsp;%</dt><dd>error one day ahead against the operational forecast (6,324 stations)</dd></div>
+            </dl>
+            <p class="flagship-actions">
+                <a href="https://ammarkheder.com/Foehn/#viewer" target="_blank" rel="noopener">Explore the 1 km forecasts</a>
+                <a href="projects/foehn.html">Case study</a>
+                <a href="https://github.com/AmmarKheder/Foehn" target="_blank" rel="noopener">Code</a>
+            </p>
+            <p class="flagship-more"><a href="https://ammarkheder.com/Foehn/#air" target="_blank" rel="noopener">Where was the air you breathe? Try it &rarr;</a></p>
         </div>
-        <p>I build forecasts of the air we breathe, at the scale where people live. My models compute what physics knows, how the atmosphere carries pollution from where it was emitted, and learn the rest with generative networks. The latest, <a href="projects/foehn.html">Foehn</a>, forecasts PM<sub>2.5</sub> at 1 km over all inhabited land up to a week ahead, as calibrated ensembles (preprint, October 2026). Based at LUT University in Lahti, with the Atmospheric Modelling Centre (AMC-Lahti) and INAR, University of Helsinki.</p>
-        <p>I have hands-on experience running large-scale distributed training on the <strong>LUMI supercomputer</strong>, scaling experiments up to 1,024 AMD MI250X GPUs for training vision transformer models on high-resolution atmospheric reanalysis data.</p>
-        <p>MSc in Engineering (Big Data &amp; AI) from EiCnam Paris, with a one-year apprenticeship at <strong>INRIA Bordeaux</strong> within the Mnemosyne team, co-led by <a href="https://www.inria.fr/fr/frederic-alexandre" target="_blank">Fr&eacute;d&eacute;ric Alexandre</a> and <a href="https://github.com/rougier" target="_blank">Nicolas Rougier</a>.</p>
-        <p class="keywords"><strong>Keywords.</strong> <em>Air quality, atmospheric modelling, generative models (flow matching), Lagrangian transport, physics-informed neural networks, vision transformers, high-performance computing, large-scale distributed training.</em></p>
-        <p class="cv-download">
-            <a href="AmmarKheder-CV.pdf" target="_blank">Download CV (PDF) &darr;</a>
-        </p>
-    </section>
-
-    <!-- Stats banner -->
-    <section class="home-stats" aria-label="Key numbers">
-        <div class="stat-card">
-            <p class="stat-value stat-text">1 km</p>
-            <p class="stat-label">Foehn, global forecasts<br><span>7 days ahead, all inhabited land</span></p>
-        </div>
-        <div class="stat-card">
-            <p class="stat-value stat-text">npj</p>
-            <p class="stat-label">Nature Portfolio<br><span>1 publication, 2026</span></p>
-        </div>
-        <div class="stat-card">
-            <p class="stat-value" id="home-stat-cites">10</p>
-            <p class="stat-label">Citations<br><span id="home-stat-cites-sub">across 4 works</span></p>
-        </div>
-        <div class="stat-card">
-            <p class="stat-value">1,024</p>
-            <p class="stat-label">GPUs scaled<br><span>LUMI / AMD MI250X</span></p>
-        </div>
-    </section>
-
-    <!-- Featured paper -->
-    <section class="featured-paper" aria-label="Featured paper">
-        <a href="projects/foehn.html" class="featured-paper-card">
-            <div class="featured-img">
-                <picture><source srcset="assets/ext/foehn/fig-overview.webp" type="image/webp"><img src="https://ammarkheder.com/Foehn/figures/web/fig_overview.jpg" alt="Foehn: four polluted basins forecast at 1 km against the operational forecast and the 1 km estimates" loading="lazy" width="1600" height="1545" decoding="async"></picture>
-            </div>
-            <div class="featured-body">
-                <p class="featured-kicker">Latest preprint &middot; October 2026 &middot; lead author</p>
-                <h2 class="featured-title">Foehn</h2>
-                <p class="featured-sub">Global probabilistic forecasting of air pollution: kilometre-scale, calibrated ensembles of PM<sub>2.5</sub> up to a week ahead over all inhabited land. A generative model that computes where the air comes from (FLEXGREEN) and learns the rest.</p>
-                <p class="featured-venue">arXiv preprint <em>2610.25941</em>, with M. Boy and Z.-S. Liu.</p>
-                <p class="featured-cta">Read the case study <span class="arrow">&rarr;</span></p>
-            </div>
-        </a>
-    </section>
-
-    <!-- Featured video -->
-    <section class="featured-video" aria-label="Featured video">
-        <p class="featured-kicker">Watch &middot; Scientific video</p>
-        <div class="video-grid video-grid-single">
+        <div class="flagship-media">
             <article class="video-card">
                 <a class="video-thumb" href="https://www.youtube.com/watch?v=XB7i0QX7OCo" target="_blank" rel="noopener" data-yt="XB7i0QX7OCo" aria-label="Play: Foehn in 8 minutes (7:46)">
-                    <img src="assets/ext/video/foehn-film.webp" alt="" width="960" height="540" loading="lazy" decoding="async">
+                    <img src="assets/ext/video/foehn-film.webp" alt="" width="960" height="540" decoding="async">
                     <span class="video-play" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><path d="M32 4.6C47.4 3.8 60.1 16.2 59.7 31.7 59.3 47.4 47.1 60.2 31.5 59.5 16.2 58.9 3.7 47 4.3 32 4.9 16.9 16.9 5.3 32 4.6Z" fill="#fffdf7" stroke="#0a0a0a" stroke-width="2.5" stroke-linejoin="round"/><path d="M36.5 3.3C50.6 5.4 61.3 17.9 60.4 33 59.5 47.8 49.1 59.2 35 61.2" fill="none" stroke="#0a0a0a" stroke-width="1.2" stroke-linecap="round" opacity=".55" transform="rotate(-3 32 32)"/><path d="M26 21.5 44.5 32 26 42.5Z" fill="#0a0a0a" stroke="#0a0a0a" stroke-width="4" stroke-linejoin="round"/></svg></span>
                     <span class="video-badge">7:46</span>
                 </a>
@@ -135,55 +109,57 @@
         </div>
     </section>
 
-    <section id="research" aria-label="Research">
-        <h2>Research</h2>
-        <p class="section-desc">Three questions, one line of work: where does the air come from, what does it carry, and how do we forecast it at the scale where people live?</p>
+    <section id="watch" aria-labelledby="watch-title">
+        <h2 id="watch-title">Watch</h2>
+        <article class="video-card video-card-wide" id="series">
+            <a class="video-thumb" href="https://www.youtube.com/playlist?list=PLVRzz9roC0QQ" target="_blank" rel="noopener" data-yt="eELs9NFNCbQ" data-list="PLVRzz9roC0QQ" aria-label="Play: Foehn from A to Z (playlist, 12 episodes and a full film)">
+                <img src="assets/ext/video/foehn-series.webp" alt="" width="960" height="540" loading="lazy" decoding="async">
+                <span class="video-play" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><path d="M32 4.6C47.4 3.8 60.1 16.2 59.7 31.7 59.3 47.4 47.1 60.2 31.5 59.5 16.2 58.9 3.7 47 4.3 32 4.9 16.9 16.9 5.3 32 4.6Z" fill="#fffdf7" stroke="#0a0a0a" stroke-width="2.5" stroke-linejoin="round"/><path d="M36.5 3.3C50.6 5.4 61.3 17.9 60.4 33 59.5 47.8 49.1 59.2 35 61.2" fill="none" stroke="#0a0a0a" stroke-width="1.2" stroke-linecap="round" opacity=".55" transform="rotate(-3 32 32)"/><path d="M26 21.5 44.5 32 26 42.5Z" fill="#0a0a0a" stroke="#0a0a0a" stroke-width="4" stroke-linejoin="round"/></svg></span>
+                <span class="video-badge">Playlist &middot; 12 episodes + full film</span>
+            </a>
+            <div class="video-body">
+                <h3 class="video-title">Foehn from A to Z</h3>
+                <p class="video-caption">12 animated episodes and a 44-minute film explain Foehn block by block, from the problem and the data to FLEXGREEN, the generator and the results.</p>
+                <p class="video-meta">English, with AI-dubbed audio on the episodes (up to 10 languages). Narration generated by AI from my own voice; music by AI.</p>
+                <p class="video-links"><a href="https://www.youtube.com/playlist?list=PLVRzz9roC0QQ" target="_blank" rel="noopener">Playlist on YouTube</a> <span class="sep" aria-hidden="true">&middot;</span> <a href="https://www.youtube.com/watch?v=J9X9GcSSdig" target="_blank" rel="noopener">Full film, 43:58</a> <span class="sep" aria-hidden="true">&middot;</span> <a href="https://www.youtube.com/@FoehnAI" target="_blank" rel="noopener">@FoehnAI</a></p>
+            </div>
+        </article>
+        <p class="section-more"><a href="videos.html">All videos &rarr;</a></p>
+    </section>
+
+    <section id="research" aria-labelledby="research-title">
+        <h2 id="research-title">Research</h2>
+        <p class="section-desc">One line of work: from sparse stations (AQ-Net, 2025) to physics-guided transformers (TopoFlow, 2026), 1 km over Europe (CRAN-PM, 2026) and the whole planet (Foehn, 2026).</p>
         <div class="project-grid research-grid">
-            <a href="projects/foehn.html" class="project-card">
-                <div class="project-card-cover"><picture><source srcset="assets/ext/foehn/fig-overview.webp" type="image/webp"><img src="https://ammarkheder.com/Foehn/figures/web/fig_overview.jpg" alt="Foehn: 1 km forecasts of four polluted basins" loading="lazy" width="1600" height="1545" decoding="async"></picture></div>
+            <a href="projects/aqnet.html" class="project-card">
+                <div class="project-card-cover"><picture><source srcset="assets/ext/aqnet/mapc.webp" type="image/webp"><img src="https://raw.githubusercontent.com/AmmarKheder/AQ-Net/main/img/mapc.png" alt="AQ-Net pollution map" loading="lazy" width="1600" height="913" decoding="async"></picture></div>
                 <div class="project-card-body">
-                    <p class="project-card-kicker">Preprint &middot; 2026</p>
-                    <h3 class="project-card-title">Foehn</h3>
-                    <p class="project-card-desc">Global, kilometre-scale, probabilistic forecasts of PM<sub>2.5</sub> up to a week ahead: a generative model that computes where the air comes from and learns the rest. More accurate than the operational forecast at three stations in four.</p>
+                    <p class="project-card-kicker">SCIA 2025 &middot; Springer LNCS</p>
+                    <h3 class="project-card-title">AQ-Net</h3>
+                    <p class="project-card-desc">Air-quality reanalysis for stations with and without sensors: LSTM with attention and a neural kNN (northern China).</p>
                     <p class="project-card-cta">Read the case study <span class="arrow">&rarr;</span></p>
                 </div>
             </a>
-            <a href="https://ammarkheder.com/Foehn/#air" target="_blank" class="project-card">
-                <div class="project-card-cover"><picture><source srcset="assets/ext/foehn/fig-transport.webp" type="image/webp"><img src="https://ammarkheder.com/Foehn/figures/web/fig_transport.jpg" alt="Where the air reaching Kano was on the three preceding days" loading="lazy" width="1600" height="1179" decoding="async"></picture></div>
+            <a href="projects/topoflow.html" class="project-card">
+                <div class="project-card-cover"><picture><source srcset="assets/ext/topoflow/china-pm25-publication.webp" type="image/webp"><img src="https://ammarkheder.com/TopoFlow/assets/figures/china_pm25_publication.png" alt="TopoFlow PM2.5 prediction" loading="lazy" width="1600" height="1089" decoding="async"></picture></div>
                 <div class="project-card-body">
-                    <p class="project-card-kicker">FLEXGREEN &middot; Green's functions of the transport</p>
-                    <h3 class="project-card-title">Where was the air you breathe?</h3>
-                    <p class="project-card-desc">The air above any place, followed backwards through the weather forecast with no learned parameter. Click anywhere on land and see where its air was on the three previous days.</p>
-                    <p class="project-card-cta">Try it <span class="arrow">&rarr;</span></p>
+                    <p class="project-card-kicker">npj Clim. Atmos. Sci. &middot; 2026</p>
+                    <h3 class="project-card-title">TopoFlow</h3>
+                    <p class="project-card-desc">A terrain- and wind-aware Vision Transformer: PM<sub>2.5</sub> RMSE of 9.71 &micro;g/m&sup3; over China, a <span class="nowrap">71&ndash;80&nbsp;%</span> improvement over operational forecasting systems.</p>
+                    <p class="project-card-cta">Read the case study <span class="arrow">&rarr;</span></p>
+                </div>
+            </a>
+            <a href="projects/cranpm.html" class="project-card">
+                <div class="project-card-cover"><picture><source srcset="assets/ext/cranpm/fig1-teaser.webp" type="image/webp"><img src="https://ammarkheder.com/cran_pm/assets/figures/fig1_teaser.png" alt="CRAN-PM Europe predictions" loading="lazy" width="1600" height="916" decoding="async"></picture></div>
+                <div class="project-card-body">
+                    <p class="project-card-kicker">arXiv preprint &middot; 2026</p>
+                    <h3 class="project-card-title">CRAN-PM</h3>
+                    <p class="project-card-desc">A cross-resolution Vision Transformer that produces the 29-million-pixel European map at 1 km in 1.8&nbsp;s on one GPU.</p>
+                    <p class="project-card-cta">Read the case study <span class="arrow">&rarr;</span></p>
                 </div>
             </a>
         </div>
-    </section>
-
-    <div class="main-grid">
-
-    <section id="news">
-        <h2>News</h2>
-        <div class="news-wrap">
-            <ol class="news-list">
-                <li class="news-featured">
-                    <span class="news-date">23 Oct 2026</span>
-                    <span class="news-badge">New</span>
-                    <strong>Foehn from A to Z</strong>, an animated series that explains how Foehn works: twelve episodes and a full film of about 44 minutes, from the problem and the data to FLEXGREEN, the generator and the results. English, with AI-dubbed audio on the episodes (up to 10 languages); narration and music generated by AI. <a href="videos.html#series">Watch the series</a>.
-                </li>
-                <li><span class="news-date">Oct 2026</span> <strong>Foehn</strong>, global kilometre-scale probabilistic forecasts of air pollution: preprint on <a href="https://arxiv.org/abs/2610.25941" target="_blank">arXiv</a>, interactive forecasts and an 8-minute film at <a href="https://ammarkheder.com/Foehn/" target="_blank">ammarkheder.com/Foehn</a>, code on <a href="https://github.com/AmmarKheder/Foehn" target="_blank">GitHub</a>.</li>
-                <li><span class="news-date">September 2026</span> Presented <strong>TopoFlow</strong>, our physics-guided Vision Transformer for high-resolution air quality prediction, at <a href="https://www.iac2026.cn/#/" target="_blank">IAC 2026</a> (International Aerosol Conference) in Xi&rsquo;an, China, with great conversations with the community on day one.</li>
-
-                <li><span class="news-date">August 2026</span> Invited talk at the Boya Forum on Environmental Research, <a href="https://www.linkedin.com/school/peking-university/" target="_blank">Peking University</a> College of Environmental Sciences and Engineering, Beijing, presenting &ldquo;Encoding Topography, Wind, and Cross-Scale Atmospheric Context into Vision Transformers for High-Resolution Air Pollution Forecasting&rdquo; and sharing recent work on TopoFlow and CRAN-PM, hosted by Dongjie Shang.</li>
-
-                <li><span class="news-date">June 2026</span> Research visit to the <a href="https://team.inria.fr/arches/people/" target="_blank">ARCHES team</a> at Inria, hosted by Claire Monteleoni, to strengthen the France&ndash;Finland collaboration.</li>
-                <li><span class="news-date">Apr 2026</span> <strong>TopoFlow</strong> published in <a href="https://www.nature.com/articles/s41612-026-01417-5" target="_blank"><em>npj Climate and Atmospheric Science</em></a> (Nature Portfolio).</li>
-                <li><span class="news-date">May 2026</span> Two-day research stay (5&ndash;6 May) with AMC member <a href="https://www.professoren.tum.de/en/chen-jia" target="_blank">Prof.&nbsp;Jia Chen</a> and her group at the Technical University of Munich (TUM), marking the start of a new international collaboration.</li>
-                <li><span class="news-date">Apr 2026</span> Talk accepted at <a href="https://www.iac2026.cn/#/" target="_blank"><strong>IAC 2026</strong></a> (International Aerosol Conference), Xi&rsquo;an, China.</li>
-                
-            </ol>
-            <p class="news-all-link"><a href="news.html">All news in the archive &rarr;</a></p>
-        </div>
+        <p class="section-more"><a href="projects.html">All research and projects &rarr;</a></p>
     </section>
 
     <section id="publications">
@@ -279,7 +255,29 @@
         </ol>
     </section>
 
-    </div><!-- /main-grid -->
+    <section id="news">
+        <h2>News</h2>
+        <div class="news-wrap">
+            <ol class="news-list">
+                <li class="news-featured">
+                    <span class="news-date">23 Oct 2026</span>
+                    <span class="news-badge">New</span>
+                    <strong>Foehn from A to Z</strong>, an animated series that explains how Foehn works: twelve episodes and a full film of about 44 minutes, from the problem and the data to FLEXGREEN, the generator and the results. English, with AI-dubbed audio on the episodes (up to 10 languages); narration and music generated by AI. <a href="videos.html#series">Watch the series</a>.
+                </li>
+                <li><span class="news-date">Oct 2026</span> <strong>Foehn</strong>, global kilometre-scale probabilistic forecasts of air pollution: preprint on <a href="https://arxiv.org/abs/2610.25941" target="_blank">arXiv</a>, interactive forecasts and an 8-minute film at <a href="https://ammarkheder.com/Foehn/" target="_blank">ammarkheder.com/Foehn</a>, code on <a href="https://github.com/AmmarKheder/Foehn" target="_blank">GitHub</a>.</li>
+                <li><span class="news-date">September 2026</span> Presented <strong>TopoFlow</strong>, our physics-guided Vision Transformer for high-resolution air quality prediction, at <a href="https://www.iac2026.cn/#/" target="_blank">IAC 2026</a> (International Aerosol Conference) in Xi&rsquo;an, China, with great conversations with the community on day one.</li>
+
+                <li><span class="news-date">August 2026</span> Invited talk at the Boya Forum on Environmental Research, <a href="https://www.linkedin.com/school/peking-university/" target="_blank">Peking University</a> College of Environmental Sciences and Engineering, Beijing, presenting &ldquo;Encoding Topography, Wind, and Cross-Scale Atmospheric Context into Vision Transformers for High-Resolution Air Pollution Forecasting&rdquo; and sharing recent work on TopoFlow and CRAN-PM, hosted by Dongjie Shang.</li>
+
+                <li><span class="news-date">June 2026</span> Research visit to the <a href="https://team.inria.fr/arches/people/" target="_blank">ARCHES team</a> at Inria, hosted by Claire Monteleoni, to strengthen the France&ndash;Finland collaboration.</li>
+                <li><span class="news-date">Apr 2026</span> <strong>TopoFlow</strong> published in <a href="https://www.nature.com/articles/s41612-026-01417-5" target="_blank"><em>npj Climate and Atmospheric Science</em></a> (Nature Portfolio).</li>
+                <li><span class="news-date">May 2026</span> Two-day research stay (5&ndash;6 May) with AMC member <a href="https://www.professoren.tum.de/en/chen-jia" target="_blank">Prof.&nbsp;Jia Chen</a> and her group at the Technical University of Munich (TUM), marking the start of a new international collaboration.</li>
+                <li><span class="news-date">Apr 2026</span> Talk accepted at <a href="https://www.iac2026.cn/#/" target="_blank"><strong>IAC 2026</strong></a> (International Aerosol Conference), Xi&rsquo;an, China.</li>
+                
+            </ol>
+            <p class="news-all-link"><a href="news.html">All news in the archive &rarr;</a></p>
+        </div>
+    </section>
 
     <span id="about"></span><span id="contact"></span>
     <section id="experience" class="two-col">
