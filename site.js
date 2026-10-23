@@ -21,10 +21,13 @@
         if (e.key === 'Escape') { closeMenu(); }
     });
 
-    /* ── "New" badges expire on their own (data-until, a date) ── */
+    /* ── "New" badges expire on their own (data-until, a date); the highlighted row goes back to a normal row ── */
     Array.prototype.forEach.call(document.querySelectorAll('.news-badge[data-until]'), function (b) {
         var until = Date.parse(b.getAttribute('data-until'));
-        if (!isNaN(until) && Date.now() > until) { b.parentNode.removeChild(b); }
+        if (isNaN(until) || Date.now() <= until) { return; }
+        var row = b.closest ? b.closest('li') : null;
+        if (row) { row.classList.remove('news-featured'); }
+        b.parentNode.removeChild(b);
     });
 
     /* ── reduced motion: the looping clips in the galleries stay on their poster ── */

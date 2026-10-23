@@ -1390,7 +1390,6 @@ table.history { width: 100%; border-collapse: collapse; }
 .hero-cta a:first-child { background: var(--link); color: #fff; }
 .hero-cta a:hover { background: var(--link); color: #fff; text-decoration: none; transform: translate(-1px, -1px); box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1); }
 #research .section-desc { max-width: 860px; margin: -6px 0 22px; color: var(--muted); font-size: 1.05rem; }
-.research-grid { margin-bottom: 8px; }
 
 /* BibTeX under each publication */
 .pub-bib { margin: 0; }
@@ -1617,8 +1616,6 @@ main:focus-visible { outline: none; }
     font-size: 0.92rem;
     letter-spacing: 0.02em;
 }
-.video-links { margin-top: 12px; }
-.video-card .video-links { margin-top: auto; }
 .video-links a { white-space: nowrap; }
 .video-links .sep, .video-related .sep { color: var(--muted); margin: 0 4px; }
 
