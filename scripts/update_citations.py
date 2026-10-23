@@ -36,6 +36,7 @@ TITLE_TO_DOI = {
     "cross-resolution attention": "10.48550/arXiv.2603.11725",
     "inverse neural operator": "10.48550/arXiv.2603.11854",
     "deep spatio-temporal": "10.1007/978-3-031-95911-0_6",
+    "global probabilistic forecasting": "10.48550/arXiv.2610.25941",
 }
 
 

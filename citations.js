@@ -1,107 +1,48 @@
-/* Citation counts.
-   Primary source: citations.json (committed to repo, refreshed by
-   scripts/update_citations.py — Google Scholar via the GitHub Actions
-   workflow). Fallback: OpenAlex API for any DOI not in the JSON.
-   Cache fallbacks 24h in localStorage. */
+/* Citation counts, read from citations.json: a copy of the Google Scholar profile
+   (scripts/update_citations.py rewrites it). A badge is shown only when the count is
+   above zero, and no third-party request is made. */
 (function () {
-    const CACHE_KEY = 'ak_citations_v1';
-    const TTL = 24 * 60 * 60 * 1000;
+    'use strict';
 
-    let openAlexCache = {};
-    try {
-        const stored = localStorage.getItem(CACHE_KEY);
-        if (stored) {
-            const parsed = JSON.parse(stored);
-            if (Date.now() - parsed.t < TTL && parsed.data) openAlexCache = parsed.data;
-        }
-    } catch (e) { /* ignore */ }
+    var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-    async function loadScholar() {
-        try {
-            const r = await fetch('citations.json', { cache: 'no-store' });
-            if (!r.ok) return null;
-            const d = await r.json();
-            return (d && d.counts) ? d : null;
-        } catch (e) { return null; }
-    }
-
-    async function fromOpenAlex(doi) {
-        if (Object.prototype.hasOwnProperty.call(openAlexCache, doi)) {
-            return openAlexCache[doi];
-        }
-        try {
-            const r = await fetch('https://api.openalex.org/works/doi:' + doi);
-            if (!r.ok) { openAlexCache[doi] = null; return null; }
-            const d = await r.json();
-            const c = (typeof d.cited_by_count === 'number') ? d.cited_by_count : 0;
-            openAlexCache[doi] = c;
-            return c;
-        } catch (e) { openAlexCache[doi] = null; return null; }
+    function formatDate(iso) {
+        var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || '');
+        if (!m) { return ''; }
+        return Number(m[3]) + ' ' + MONTHS[Number(m[2]) - 1] + ' ' + m[1];
     }
 
     function renderBadge(el, count) {
-        const titleEl = el.querySelector('.pub-title');
-        if (!titleEl) return;
-        const badge = document.createElement('span');
+        var titleEl = el.querySelector('.pub-title');
+        if (!titleEl) { return; }
+        var badge = document.createElement('span');
         badge.className = 'cite-count';
-        const word = count === 1 ? 'citation' : 'citations';
-        badge.textContent = count + ' ' + word;
+        badge.textContent = count + (count === 1 ? ' citation' : ' citations');
         titleEl.appendChild(badge);
     }
 
-    async function run() {
-        const entries = document.querySelectorAll('[data-doi]');
-        if (!entries.length) return;
-
-        const scholar = await loadScholar();
-        const sCounts = (scholar && scholar.counts) ? scholar.counts : {};
-        let total = 0;
-        let counted = 0;
-        const tasks = [];
-
-        entries.forEach(function (el) {
-            const doi = el.dataset.doi;
-            if (Object.prototype.hasOwnProperty.call(sCounts, doi)) {
-                const c = sCounts[doi];
-                renderBadge(el, c);
-                total += c;
-                counted++;
-                return;
-            }
-            tasks.push(fromOpenAlex(doi).then(function (c) {
-                if (c !== null) {
-                    renderBadge(el, c);
-                    total += c;
-                    counted++;
+    function run() {
+        var entries = document.querySelectorAll('[data-doi]');
+        if (!entries.length) { return; }
+        fetch('citations.json', { cache: 'no-store' })
+            .then(function (r) { return r.ok ? r.json() : null; })
+            .then(function (d) {
+                if (!d || !d.counts) { return; }
+                var sum = 0;
+                Array.prototype.forEach.call(entries, function (el) {
+                    var c = d.counts[el.getAttribute('data-doi')];
+                    if (typeof c === 'number' && c > 0) { renderBadge(el, c); sum += c; }
+                });
+                var total = (typeof d.total === 'number') ? d.total : sum;
+                var totalEl = document.getElementById('citation-total');
+                if (totalEl && total > 0) {
+                    var when = formatDate(d.updated);
+                    totalEl.textContent = total + (total === 1 ? ' citation' : ' citations') +
+                        ' on Google Scholar' + (when ? ' (' + when + ')' : '');
+                    totalEl.hidden = false;
                 }
-            }));
-        });
-
-        await Promise.all(tasks);
-        try {
-            localStorage.setItem(CACHE_KEY,
-                JSON.stringify({ t: Date.now(), data: openAlexCache }));
-        } catch (e) {}
-
-        const totalEl = document.getElementById('citation-total');
-        if (totalEl && counted) {
-            const src = scholar ? ' (Google Scholar)' : '';
-            totalEl.textContent = total + ' citation' + (total === 1 ? '' : 's')
-                + ' across ' + counted + ' work' + (counted === 1 ? '' : 's')
-                + src;
-            totalEl.style.display = '';
-        }
-
-        // Home stats card
-        const homeStat = document.getElementById('home-stat-cites');
-        const homeStatSub = document.getElementById('home-stat-cites-sub');
-        if (homeStat && counted) {
-            homeStat.textContent = total;
-            if (homeStatSub) {
-                homeStatSub.textContent = 'across ' + counted
-                    + ' work' + (counted === 1 ? '' : 's');
-            }
-        }
+            })
+            .catch(function () { /* no badge, no total */ });
     }
 
     if (document.readyState === 'loading') {

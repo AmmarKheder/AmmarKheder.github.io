@@ -162,21 +162,21 @@
         <p class="section-more"><a href="projects.html">All research and projects &rarr;</a></p>
     </section>
 
-    <section id="publications">
-        <h2>Publications</h2>
-        <p class="citation-total" id="citation-total" style="display:none"></p>
+    <section id="publications" aria-labelledby="publications-title">
+        <h2 id="publications-title">Publications</h2>
+        <p class="citation-total" id="citation-total" hidden></p>
         <ol class="publications">
             <li class="pub-featured" data-doi="10.48550/arXiv.2610.25941">
                 <p class="pub-title">Global probabilistic forecasting of air pollution</p>
                 <p class="pub-meta"><strong>A. Kheder</strong>, M. Boy, Z.-S. Liu</p>
-                <p class="pub-venue">arXiv preprint, <span class="pub-year">2026</span>.</p>
-                <p class="pub-links">
-                    <a class="btn-arxiv" href="https://arxiv.org/abs/2610.25941" target="_blank">arXiv</a>
-                    <a href="https://github.com/AmmarKheder/Foehn" target="_blank">Code</a>
-                    <a href="https://ammarkheder.com/Foehn/" target="_blank">Project</a>
+                <p class="pub-venue"><span class="pub-type">Preprint</span> arXiv preprint, <span class="pub-year">2026</span>. <span class="pub-lead">Lead author</span></p>
+                <p class="pub-sum">Global 1 km forecasts of PM<sub>2.5</sub> up to a week ahead; more accurate than the operational forecast at three stations in four (retrospective, 2022).</p>
+                <div class="pub-links">
+                    <a href="https://arxiv.org/abs/2610.25941" target="_blank" rel="noopener">arXiv</a>
+                    <a href="https://github.com/AmmarKheder/Foehn" target="_blank" rel="noopener">Code</a>
+                    <a href="https://ammarkheder.com/Foehn/" target="_blank" rel="noopener">Project</a>
                     <a href="projects/foehn.html">Case study</a>
-                </p>
-                <details class="pub-bib"><summary>BibTeX</summary><pre>@misc{kheder2026foehn,
+                    <details class="pub-bib"><summary>Cite</summary><pre>@misc{kheder2026foehn,
   title         = {Global probabilistic forecasting of air pollution},
   author        = {Kheder, Ammar and Boy, Michael and Liu, Zhi-Song},
   year          = {2026},
@@ -185,18 +185,20 @@
   primaryClass  = {cs.AI},
   url           = {https://arxiv.org/abs/2610.25941}
 }</pre></details>
+                </div>
             </li>
             <li data-doi="10.1038/s41612-026-01417-5">
                 <p class="pub-title">TopoFlow: topography-aware pollutant Flow learning for high-resolution air quality prediction</p>
                 <p class="pub-meta"><strong>A. Kheder</strong>, H. Toropainen, W. Peng, S. Ant&atilde;o, J. Chen, M. Boy, Z.-S. Liu</p>
-                <p class="pub-venue"><em>npj Climate and Atmospheric Science</em> 9, 143, Nature Portfolio, <span class="pub-year">2026</span>.</p>
-                <p class="pub-links">
-                    <a class="btn-nature" href="https://www.nature.com/articles/s41612-026-01417-5" target="_blank">Nature</a>
-                    <a class="btn-arxiv" href="https://arxiv.org/abs/2602.16821" target="_blank">arXiv</a>
-                    <a href="https://github.com/AmmarKheder/topoflow" target="_blank">Code</a>
-                    <a href="https://ammarkheder.com/TopoFlow/" target="_blank">Project</a>
-                </p>
-                <details class="pub-bib"><summary>BibTeX</summary><pre>@article{kheder2026topoflow,
+                <p class="pub-venue"><span class="pub-type">Journal</span> <em>npj Climate and Atmospheric Science</em> 9, 143, Nature Portfolio, <span class="pub-year">2026</span>. <span class="pub-lead">Lead author</span></p>
+                <p class="pub-sum">Terrain- and wind-aware Vision Transformer; PM<sub>2.5</sub> RMSE 9.71 &micro;g/m&sup3; over China, a 71&ndash;80&nbsp;% improvement over operational forecasting systems.</p>
+                <div class="pub-links">
+                    <a href="https://www.nature.com/articles/s41612-026-01417-5" target="_blank" rel="noopener">Nature</a>
+                    <a href="https://arxiv.org/abs/2602.16821" target="_blank" rel="noopener">arXiv</a>
+                    <a href="https://github.com/AmmarKheder/topoflow" target="_blank" rel="noopener">Code</a>
+                    <a href="https://ammarkheder.com/TopoFlow/" target="_blank" rel="noopener">Project</a>
+                    <a href="projects/topoflow.html">Case study</a>
+                    <details class="pub-bib"><summary>Cite</summary><pre>@article{kheder2026topoflow,
   title   = {TopoFlow: topography-aware pollutant flow learning for high-resolution air quality prediction},
   author  = {Kheder, Ammar and Toropainen, Helmi and Peng, Wenqing and Ant{\~a}o, Samuel and Chen, Jia and Boy, Michael and Liu, Zhi-Song},
   journal = {npj Climate and Atmospheric Science},
@@ -206,17 +208,19 @@
   year    = {2026},
   doi     = {10.1038/s41612-026-01417-5}
 }</pre></details>
+                </div>
             </li>
             <li data-doi="10.48550/arXiv.2603.11725">
                 <p class="pub-title">CRAN-PM: Cross-Resolution Attention Network for High-Resolution PM<sub>2.5</sub> Prediction</p>
                 <p class="pub-meta"><strong>A. Kheder</strong>, H. Toropainen, W. Peng, S. Ant&atilde;o, Z.-S. Liu, M. Boy</p>
-                <p class="pub-venue">Preprint, <span class="pub-year">2026</span>.</p>
-                <p class="pub-links">
-                    <a class="btn-arxiv" href="https://arxiv.org/abs/2603.11725" target="_blank">arXiv</a>
-                    <a href="https://github.com/AmmarKheder/cran_pm" target="_blank">Code</a>
-                    <a href="https://ammarkheder.com/cran_pm/" target="_blank">Project</a>
-                </p>
-                <details class="pub-bib"><summary>BibTeX</summary><pre>@misc{kheder2026cranpm,
+                <p class="pub-venue"><span class="pub-type">Preprint</span> arXiv preprint, <span class="pub-year">2026</span>. <span class="pub-lead">Lead author</span></p>
+                <p class="pub-sum">Cross-resolution Vision Transformer: the 29-million-pixel European map at 1 km in 1.8&nbsp;s on one GPU.</p>
+                <div class="pub-links">
+                    <a href="https://arxiv.org/abs/2603.11725" target="_blank" rel="noopener">arXiv</a>
+                    <a href="https://github.com/AmmarKheder/cran_pm" target="_blank" rel="noopener">Code</a>
+                    <a href="https://ammarkheder.com/cran_pm/" target="_blank" rel="noopener">Project</a>
+                    <a href="projects/cranpm.html">Case study</a>
+                    <details class="pub-bib"><summary>Cite</summary><pre>@misc{kheder2026cranpm,
   title         = {CRAN-PM: Cross-Resolution Attention Network for High-Resolution PM2.5 Prediction},
   author        = {Kheder, Ammar and Toropainen, Helmi and Peng, Wenqing and Ant{\~a}o, Samuel and Liu, Zhi-Song and Boy, Michael},
   year          = {2026},
@@ -224,25 +228,28 @@
   archivePrefix = {arXiv},
   url           = {https://arxiv.org/abs/2603.11725}
 }</pre></details>
+                </div>
             </li>
             <li data-doi="10.48550/arXiv.2603.11854">
                 <p class="pub-title">Inverse Neural Operator for ODE Parameter Optimization</p>
                 <p class="pub-meta">Z.-S. Liu, W. Peng, H. Toropainen, <strong>A. Kheder</strong>, A. Rupp, H. Froning, X. Lin, M. Boy</p>
-                <p class="pub-venue">Preprint, <span class="pub-year">2026</span>.</p>
-                <p class="pub-links">
-                    <a class="btn-arxiv" href="https://arxiv.org/abs/2603.11854" target="_blank">arXiv</a>
-                </p>
+                <p class="pub-venue"><span class="pub-type">Preprint</span> arXiv preprint, <span class="pub-year">2026</span>.</p>
+                <p class="pub-sum">Recovers hidden ODE parameters from sparse observations, 487&times; faster than iterative gradient descent.</p>
+                <div class="pub-links">
+                    <a href="https://arxiv.org/abs/2603.11854" target="_blank" rel="noopener">arXiv</a>
+                </div>
             </li>
             <li data-doi="10.1007/978-3-031-95911-0_6">
                 <p class="pub-title">Deep Spatio-Temporal Neural Network for Air Quality Reanalysis</p>
                 <p class="pub-meta"><strong>A. Kheder</strong>, B. Foreback, L. Wang, Z.-S. Liu, M. Boy</p>
-                <p class="pub-venue"><em>Scandinavian Conference on Image Analysis (SCIA)</em>, Springer LNCS, <span class="pub-year">2025</span>.</p>
-                <p class="pub-links">
-                    <a class="btn-arxiv" href="https://arxiv.org/abs/2502.11941" target="_blank">arXiv</a>
-                    <a href="https://link.springer.com/chapter/10.1007/978-3-031-95911-0_6" target="_blank">Springer</a>
-                    <a href="https://github.com/AmmarKheder/AQ-Net" target="_blank">Code</a>
-                </p>
-                <details class="pub-bib"><summary>BibTeX</summary><pre>@inproceedings{kheder2025aqnet,
+                <p class="pub-venue"><span class="pub-type">Conference</span> <em>Scandinavian Conference on Image Analysis (SCIA)</em>, Springer LNCS, <span class="pub-year">2025</span>. <span class="pub-lead">Lead author</span></p>
+                <p class="pub-sum">Reanalysis of PM<sub>2.5</sub> at stations with and without sensors, using a neural kNN (northern China).</p>
+                <div class="pub-links">
+                    <a href="https://link.springer.com/chapter/10.1007/978-3-031-95911-0_6" target="_blank" rel="noopener">Springer</a>
+                    <a href="https://arxiv.org/abs/2502.11941" target="_blank" rel="noopener">arXiv</a>
+                    <a href="https://github.com/AmmarKheder/AQ-Net" target="_blank" rel="noopener">Code</a>
+                    <a href="projects/aqnet.html">Case study</a>
+                    <details class="pub-bib"><summary>Cite</summary><pre>@inproceedings{kheder2025aqnet,
   title     = {Deep Spatio-Temporal Neural Network for Air Quality Reanalysis},
   author    = {Kheder, Ammar and Foreback, Benjamin and Wang, Lili and Liu, Zhi-Song and Boy, Michael},
   booktitle = {Scandinavian Conference on Image Analysis (SCIA)},
@@ -251,32 +258,29 @@
   year      = {2025},
   doi       = {10.1007/978-3-031-95911-0_6}
 }</pre></details>
+                </div>
             </li>
         </ol>
+        <p class="section-more"><a href="https://scholar.google.com/citations?user=ZYvKJF4AAAAJ&amp;hl=en" target="_blank" rel="noopener">All publications on Google Scholar &rarr;</a></p>
     </section>
 
-    <section id="news">
-        <h2>News</h2>
-        <div class="news-wrap">
+    <section id="news" aria-labelledby="news-title">
+        <h2 id="news-title">News</h2>
+        <ol class="news-list">
+                <li class="news-featured"><span class="news-when"><span class="news-date">23 Oct 2026</span> <span class="news-badge" data-until="2026-11-20">New</span></span> <span class="news-text"><strong>Foehn from A to Z</strong>: 12 animated episodes and a 44-minute film explain Foehn block by block. <a href="videos.html#series">Watch the series &rarr;</a></span></li>
+                <li><span class="news-when"><span class="news-date">19 Oct 2026</span></span> <span class="news-text"><strong>Foehn</strong> preprint on <a href="https://arxiv.org/abs/2610.25941" target="_blank" rel="noopener">arXiv</a>, with <a href="https://ammarkheder.com/Foehn/" target="_blank" rel="noopener">interactive 1 km forecasts</a> and the <a href="https://github.com/AmmarKheder/Foehn" target="_blank" rel="noopener">code</a>.</span></li>
+                <li><span class="news-when"><span class="news-date">7 Sep 2026</span></span> <span class="news-text">Presented <strong>TopoFlow</strong> at <a href="https://www.iac2026.cn/#/" target="_blank" rel="noopener">IAC 2026</a>, the International Aerosol Conference, in Xi&rsquo;an.</span></li>
+                <li><span class="news-when"><span class="news-date">Aug 2026</span></span> <span class="news-text">Invited talk at the Boya Forum on Environmental Research, <a href="https://www.linkedin.com/school/peking-university/" target="_blank" rel="noopener">Peking University</a>.</span></li>
+        </ol>
+        <details class="news-more">
+            <summary>Earlier in 2026 <span class="news-more-count">(3)</span></summary>
             <ol class="news-list">
-                <li class="news-featured">
-                    <span class="news-date">23 Oct 2026</span>
-                    <span class="news-badge">New</span>
-                    <strong>Foehn from A to Z</strong>, an animated series that explains how Foehn works: twelve episodes and a full film of about 44 minutes, from the problem and the data to FLEXGREEN, the generator and the results. English, with AI-dubbed audio on the episodes (up to 10 languages); narration and music generated by AI. <a href="videos.html#series">Watch the series</a>.
-                </li>
-                <li><span class="news-date">Oct 2026</span> <strong>Foehn</strong>, global kilometre-scale probabilistic forecasts of air pollution: preprint on <a href="https://arxiv.org/abs/2610.25941" target="_blank">arXiv</a>, interactive forecasts and an 8-minute film at <a href="https://ammarkheder.com/Foehn/" target="_blank">ammarkheder.com/Foehn</a>, code on <a href="https://github.com/AmmarKheder/Foehn" target="_blank">GitHub</a>.</li>
-                <li><span class="news-date">September 2026</span> Presented <strong>TopoFlow</strong>, our physics-guided Vision Transformer for high-resolution air quality prediction, at <a href="https://www.iac2026.cn/#/" target="_blank">IAC 2026</a> (International Aerosol Conference) in Xi&rsquo;an, China, with great conversations with the community on day one.</li>
-
-                <li><span class="news-date">August 2026</span> Invited talk at the Boya Forum on Environmental Research, <a href="https://www.linkedin.com/school/peking-university/" target="_blank">Peking University</a> College of Environmental Sciences and Engineering, Beijing, presenting &ldquo;Encoding Topography, Wind, and Cross-Scale Atmospheric Context into Vision Transformers for High-Resolution Air Pollution Forecasting&rdquo; and sharing recent work on TopoFlow and CRAN-PM, hosted by Dongjie Shang.</li>
-
-                <li><span class="news-date">June 2026</span> Research visit to the <a href="https://team.inria.fr/arches/people/" target="_blank">ARCHES team</a> at Inria, hosted by Claire Monteleoni, to strengthen the France&ndash;Finland collaboration.</li>
-                <li><span class="news-date">Apr 2026</span> <strong>TopoFlow</strong> published in <a href="https://www.nature.com/articles/s41612-026-01417-5" target="_blank"><em>npj Climate and Atmospheric Science</em></a> (Nature Portfolio).</li>
-                <li><span class="news-date">May 2026</span> Two-day research stay (5&ndash;6 May) with AMC member <a href="https://www.professoren.tum.de/en/chen-jia" target="_blank">Prof.&nbsp;Jia Chen</a> and her group at the Technical University of Munich (TUM), marking the start of a new international collaboration.</li>
-                <li><span class="news-date">Apr 2026</span> Talk accepted at <a href="https://www.iac2026.cn/#/" target="_blank"><strong>IAC 2026</strong></a> (International Aerosol Conference), Xi&rsquo;an, China.</li>
-                
+                    <li><span class="news-when"><span class="news-date">Jun 2026</span></span> <span class="news-text">Research visit to the <a href="https://team.inria.fr/arches/people/" target="_blank" rel="noopener">ARCHES team</a> at Inria, hosted by Claire Monteleoni.</span></li>
+                    <li><span class="news-when"><span class="news-date">May 2026</span></span> <span class="news-text">Two-day research stay (5&ndash;6 May) with <a href="https://www.professoren.tum.de/en/chen-jia" target="_blank" rel="noopener">Prof.&nbsp;Jia Chen</a> and her group at the Technical University of Munich (TUM).</span></li>
+                    <li><span class="news-when"><span class="news-date">24 Apr 2026</span></span> <span class="news-text"><strong>TopoFlow</strong> published in <a href="https://www.nature.com/articles/s41612-026-01417-5" target="_blank" rel="noopener"><em>npj Climate and Atmospheric Science</em></a> (Nature Portfolio).</span></li>
             </ol>
-            <p class="news-all-link"><a href="news.html">All news in the archive &rarr;</a></p>
-        </div>
+        </details>
+        <p class="news-all-link"><a href="news.html">All news &rarr;</a></p>
     </section>
 
     <section id="about" class="about" aria-labelledby="about-title">

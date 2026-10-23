@@ -1,5 +1,6 @@
 /* Shared behaviour for every page (no library).
    - the CSS-only mobile menu closes after a tap on one of its links, on the brand, and on Escape
+   - a "New" badge in the news list disappears after its data-until date
    - video cards: a plain click opens the video in a lightbox; the YouTube player is created only then,
      so nothing is requested from YouTube before a click. Ctrl/Cmd/Shift-click, a middle click and
      browsers without <dialog> follow the link to YouTube instead. */
@@ -17,6 +18,12 @@
     });
     document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') { closeMenu(); }
+    });
+
+    /* ── "New" badges expire on their own (data-until, a date) ── */
+    Array.prototype.forEach.call(document.querySelectorAll('.news-badge[data-until]'), function (b) {
+        var until = Date.parse(b.getAttribute('data-until'));
+        if (!isNaN(until) && Date.now() > until) { b.parentNode.removeChild(b); }
     });
 
     /* ── video lightbox ───────────────────────────────────── */

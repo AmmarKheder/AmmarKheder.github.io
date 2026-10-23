@@ -405,37 +405,32 @@ h3 {
     color: var(--ink-dark);
 }
 
-/* ── News (numbered list) ────────────────────────────────── */
-.news-wrap { counter-reset: news; }
+/* ── News (home): a date column and the text ─────────────── */
 .news-list {
     list-style: none;
     padding-left: 0;
 }
 .news-list li {
-    counter-increment: news;
-    position: relative;
-    padding: 7px 0 7px 3em;
+    display: grid;
+    grid-template-columns: 7.5rem minmax(0, 1fr);
+    gap: 0 16px;
+    align-items: baseline;
+    padding: 9px 0;
     font-size: 1.02rem;
     line-height: 1.55;
     border-bottom: 1px dashed var(--rule);
 }
 .news-list li:last-child { border-bottom: none; }
-.news-list li::before {
-    content: counter(news, decimal-leading-zero) ".";
-    position: absolute;
-    left: 0;
-    top: 7px;
-    font-family: var(--font-head);
-    font-weight: 400;
-    color: var(--muted-2);
-    font-size: 0.95rem;
+.news-when {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
 }
-
 .news-date {
     font-family: var(--font-head);
     font-weight: 700;
     color: var(--link);
-    margin-right: 8px;
     font-size: 0.95rem;
     letter-spacing: 0.02em;
 }
@@ -451,20 +446,24 @@ h3 {
     background: var(--danger);
     padding: 1px 9px;
     border-radius: var(--sketchy-radius-sm);
-    margin-right: 8px;
     transform: rotate(-2deg);
-    vertical-align: 1px;
 }
 
-.news-featured {
+.news-list li.news-featured {
     background: var(--accent-bg);
     border: 2px solid var(--ink-dark);
     border-radius: var(--sketchy-radius-sm);
-    padding: 12px 14px 12px 3em !important;
-    margin: 6px 0 10px -6px;
+    padding: 12px 14px;
+    margin: 0 -14px 8px;   /* the box hangs out so that its text lines up with the other rows */
     box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.06);
 }
-.news-featured::before { left: 12px !important; top: 12px !important; }
+@media (max-width: 560px) {
+    .news-list li.news-featured { margin: 0 0 8px; }
+    .news-list li { grid-template-columns: 1fr; gap: 2px; }
+    .news-when { flex-direction: row; align-items: center; gap: 10px; }
+}
+
+.news-archive-list .news-date { margin-right: 8px; }
 
 /* "All news →" link below the home news list */
 .news-all-link {
@@ -613,11 +612,14 @@ h3 {
 .news-more summary::-webkit-details-marker,
 .news-more summary::marker { display: none; content: none; }
 .news-more summary::before {
-    content: "▸";
+    content: "";
     display: inline-block;
-    color: var(--link);
+    width: 0;
+    height: 0;
+    border-left: 8px solid var(--link);
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
     transition: transform 0.2s ease;
-    font-size: 0.9rem;
 }
 .news-more[open] summary::before { transform: rotate(90deg); }
 .news-more summary:hover { color: var(--link-hover); }
@@ -684,36 +686,33 @@ h3 {
 .pub-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
-    font-size: 0.92rem;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
 }
-.pub-links a {
+.pub-links a,
+.pub-bib summary {
+    display: inline-block;
+    padding: 7px 14px;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 0.88rem;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
     color: var(--link);
+    background: transparent;
     border: 1.5px solid var(--link);
     border-radius: var(--sketchy-radius-sm);
-    padding: 1px 9px;
-    font-size: 0.78rem;
-    font-weight: 700;
-    font-family: var(--font-head);
-    letter-spacing: 0.02em;
     transition: all 0.18s;
 }
-.pub-links a:hover {
+.pub-links a:first-child { background: var(--link); color: #fff; }
+.pub-links a:hover,
+.pub-bib summary:hover {
     background: var(--link);
     color: #fff;
     text-decoration: none;
     transform: translateY(-1px);
 }
-.pub-links .btn-nature {
-    color: var(--danger);
-    border-color: var(--danger);
-}
-.pub-links .btn-nature:hover { background: var(--danger); color: #fff; }
-.pub-links .btn-arxiv {
-    color: #b31b1b;
-    border-color: #b31b1b;
-}
-.pub-links .btn-arxiv:hover { background: #b31b1b; color: #fff; }
 
 .pub-featured {
     background: var(--accent-bg);
@@ -725,13 +724,13 @@ h3 {
 }
 .pub-featured::before { left: 12px !important; top: 10px !important; }
 
-/* Citation badge (live-fetched from OpenAlex) */
+/* Citation badge (from citations.json, only when the count is above zero) */
 .cite-count {
     display: inline-block;
     margin-left: 10px;
     font-family: var(--font-body);
     font-weight: 700;
-    font-size: 0.72rem;
+    font-size: 0.78rem;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--link);
@@ -988,7 +987,7 @@ table.history { width: 100%; border-collapse: collapse; }
     html { font-size: 16px; }
     .prose { padding: 32px 20px 20px; }
     .page-header h1 { font-size: 2.3rem; }
-    .news-list li, .publications > li { padding-left: 2.3em; }
+    .publications > li { padding-left: 2.3em; }
     .pub-title { font-size: 1.12rem; }
 }
 
@@ -1566,9 +1565,11 @@ table.history { width: 100%; border-collapse: collapse; }
 .research-grid { margin-bottom: 8px; }
 
 /* BibTeX under each publication */
-.pub-bib { margin: 6px 0 2px; }
-.pub-bib summary { cursor: pointer; font-family: var(--font-head); font-weight: 700; font-size: 0.88rem; color: var(--muted); letter-spacing: 0.02em; }
-.pub-bib summary:hover { color: var(--link); }
+.pub-bib { margin: 0; }
+.pub-bib summary { cursor: pointer; list-style: none; }
+.pub-bib summary::-webkit-details-marker { display: none; }
+.pub-bib[open] { flex: 1 1 100%; }
+.pub-bib[open] summary { margin-bottom: 4px; }
 .pub-bib pre { font-family: 'Courier New', monospace; font-size: 0.76rem; line-height: 1.4; background: var(--accent-bg); border: 1px dashed var(--rule); border-radius: var(--sketchy-radius-sm); padding: 10px 12px; margin: 6px 0 2px; overflow: auto; white-space: pre; }
 
 /* ── 2026-10: <picture> wrappers (WebP + PNG fallback) do not take part in the layout ── */
@@ -2092,3 +2093,22 @@ mark.mark {
 .pill-solid { background: var(--link); color: #fff; }
 .contact-row .pill-solid { font-family: var(--font-body); font-size: 1.05rem; } /* the @ of the display font reads like an o-slash */
 .pill-solid:hover { background: var(--link-hover); border-color: var(--link-hover); }
+
+/* ── Home: publications ─────────────────────────────────────── */
+.pub-venue .pub-type {
+    display: inline-block;
+    margin-right: 6px;
+    padding: 0 8px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: var(--ink-dark);
+    border: 1.5px solid var(--ink-dark);
+    border-radius: var(--sketchy-radius-sm);
+    vertical-align: 1px;
+}
+.pub-lead { margin-left: 6px; font-style: italic; color: var(--muted); }
+.pub-sum { max-width: 80ch; margin: 2px 0 0; font-size: 1rem; line-height: 1.5; color: var(--ink); }
