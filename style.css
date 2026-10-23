@@ -1623,3 +1623,6 @@ footer .footer-sub {
 .pub-bib summary { cursor: pointer; font-family: var(--font-head); font-weight: 700; font-size: 0.88rem; color: var(--muted); letter-spacing: 0.02em; }
 .pub-bib summary:hover { color: var(--link); }
 .pub-bib pre { font-family: 'Courier New', monospace; font-size: 0.76rem; line-height: 1.4; background: var(--accent-bg); border: 1px dashed var(--rule); border-radius: var(--sketchy-radius-sm); padding: 10px 12px; margin: 6px 0 2px; overflow: auto; white-space: pre; }
+
+/* ── 2026-10: <picture> wrappers (WebP + PNG fallback) do not take part in the layout ── */
+picture { display: contents; }
