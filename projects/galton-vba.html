@@ -22,8 +22,9 @@
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
-<nav class="navbar">
+<nav class="navbar" aria-label="Main">
     <a href="../index.html" class="brand">
         <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
             <rect width="64" height="64" rx="11" fill="#fafafa"/>
@@ -33,8 +34,8 @@
         </svg>
         <span>Ammar Kheder</span>
     </a>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle-check" aria-hidden="true">
-    <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-check" aria-label="Menu">
+    <label for="nav-toggle" class="nav-toggle" aria-hidden="true">
         <span></span><span></span><span></span>
     </label>
     <div class="nav-links">
@@ -78,7 +79,7 @@
     </div>
 </section>
 
-<main class="prose project-detail">
+<main class="prose project-detail" id="main-content" tabindex="-1">
 
     <section class="project-intro">
         <p>Built with my classmate <strong>Louis</strong> during the first-year statistics lab at <a href="https://iutp.univ-poitiers.fr/sd/" target="_blank">DUT&nbsp;STID Niort</a>, this project reimagines the iconic <strong>Galton board</strong>, the 19th-century apparatus invented by Sir Francis Galton, entirely in <strong>VBA</strong> inside Microsoft Excel.</p>

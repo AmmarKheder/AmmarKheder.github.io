@@ -21,8 +21,9 @@
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
-<nav class="navbar">
+<nav class="navbar" aria-label="Main">
     <a href="../index.html" class="brand">
         <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
             <rect width="64" height="64" rx="11" fill="#fafafa"/>
@@ -30,8 +31,8 @@
         </svg>
         <span>Ammar Kheder</span>
     </a>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle-check" aria-hidden="true">
-    <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></label>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-check" aria-label="Menu">
+    <label for="nav-toggle" class="nav-toggle" aria-hidden="true"><span></span><span></span><span></span></label>
     <div class="nav-links">
         <a href="../index.html#news" class="nav-item">News</a>
         <a href="../index.html#publications" class="nav-item">Publications</a>
@@ -61,7 +62,7 @@
     </div>
 </section>
 
-<main class="prose project-detail">
+<main class="prose project-detail" id="main-content" tabindex="-1">
 
     <section class="project-intro">
         <p>CRAN-PM is a dual-branch Vision Transformer that predicts daily PM<sub>2.5</sub> at <strong>1 km resolution across all of Europe</strong>. A single forward pass produces a 29-million-pixel map in about 1.8 seconds on a single GPU.</p>

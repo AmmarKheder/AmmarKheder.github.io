@@ -22,8 +22,9 @@
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
-<nav class="navbar">
+<nav class="navbar" aria-label="Main">
     <a href="../index.html" class="brand">
         <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
             <rect width="64" height="64" rx="11" fill="#fafafa"/>
@@ -31,8 +32,8 @@
         </svg>
         <span>Ammar Kheder</span>
     </a>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle-check" aria-hidden="true">
-    <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></label>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-check" aria-label="Menu">
+    <label for="nav-toggle" class="nav-toggle" aria-hidden="true"><span></span><span></span><span></span></label>
     <div class="nav-links">
         <a href="../index.html#news" class="nav-item">News</a>
         <a href="../index.html#publications" class="nav-item">Publications</a>
@@ -62,7 +63,7 @@
     </div>
 </section>
 
-<main class="prose project-detail">
+<main class="prose project-detail" id="main-content" tabindex="-1">
 
     <section class="project-intro">
         <p>Short-term exposure to fine particulate matter (<strong>PM<sub>2.5</sub></strong>) accounts for about a million deaths a year. Operational forecasts run on grids tens of kilometres wide, which hide the pollution breathed by nearly two hundred million people a day. Foehn is a <strong>generative model</strong> that learns from global kilometre-scale estimates of PM<sub>2.5</sub> and <strong>computes where the air comes from</strong>: it forecasts daily PM<sub>2.5</sub> at 1 km over all inhabited land, up to a week ahead, as a calibrated ensemble.</p>

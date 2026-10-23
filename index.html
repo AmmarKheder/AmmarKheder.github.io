@@ -29,8 +29,9 @@
     </script>
 </head>
 <body>
+<a class="skip-link" href="#top">Skip to main content</a>
 
-<nav class="navbar">
+<nav class="navbar" aria-label="Main">
     <a href="#top" class="brand">
         <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
             <rect width="64" height="64" rx="11" fill="#fafafa"/>
@@ -40,8 +41,8 @@
         </svg>
         <span>Ammar Kheder</span>
     </a>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle-check" aria-hidden="true">
-    <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-check" aria-label="Menu">
+    <label for="nav-toggle" class="nav-toggle" aria-hidden="true">
         <span></span><span></span><span></span>
     </label>
     <div class="nav-links">
@@ -73,7 +74,7 @@
     </div>
 </nav>
 
-<main class="prose" id="top">
+<main class="prose" id="top" tabindex="-1">
 
     <header class="page-header">
         <h1><span class="fw-light">Ammar</span> <span class="fw-bold">Kheder</span></h1>

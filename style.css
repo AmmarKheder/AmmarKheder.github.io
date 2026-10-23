@@ -1626,3 +1626,80 @@ footer .footer-sub {
 
 /* ── 2026-10: <picture> wrappers (WebP + PNG fallback) do not take part in the layout ── */
 picture { display: contents; }
+
+/* ═════════════════════════════════════════════════════════════
+   2026-10: accessibility. Skip link, visible keyboard focus, reduced motion,
+   keyboard-operable mobile menu, readable footer line
+   ═════════════════════════════════════════════════════════════ */
+.skip-link {
+    position: absolute;
+    left: 12px;
+    top: -80px;
+    z-index: 300;
+    background: var(--ink-dark);
+    color: var(--nav-ink);
+    font-family: var(--font-head);
+    font-size: 1rem;
+    letter-spacing: 0.03em;
+    padding: 8px 18px;
+    border: 2px solid #fff;
+    border-radius: var(--sketchy-radius-sm);
+    box-shadow: 3px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.skip-link:focus,
+.skip-link:focus-visible {
+    top: 10px;
+    color: #fff;
+    text-decoration: none;
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+}
+main:focus,
+main:focus-visible { outline: none; }
+
+:focus-visible {
+    outline: 3px solid var(--link);
+    outline-offset: 3px;
+}
+.navbar a:focus-visible,
+.navbar label:focus-visible,
+.project-hero a:focus-visible { outline-color: #fff; }
+
+footer .footer-sub { color: var(--muted); }
+
+@media (max-width: 640px) {
+    /* the checkbox behind the hamburger can take focus; the label shows the ring */
+    .nav-toggle-check {
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        opacity: 0;
+        overflow: hidden;
+    }
+    .nav-toggle-check:focus-visible ~ .nav-toggle {
+        outline: 3px solid #fff;
+        outline-offset: 6px;
+        border-radius: 2px;
+    }
+    /* a closed menu has no links to tab through */
+    .nav-links {
+        visibility: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease, visibility 0s linear 0.3s;
+    }
+    .nav-toggle-check:checked ~ .nav-links {
+        visibility: visible;
+        transition-delay: 0s;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    .intro .avatar-swap .avatar-hint { animation: none; opacity: 0; }
+}
