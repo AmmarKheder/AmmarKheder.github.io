@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://ammarkheder.com/</loc></url>
-  <url><loc>https://ammarkheder.com/projects.html</loc></url>
-  <url><loc>https://ammarkheder.com/news.html</loc></url>
-  <url><loc>https://ammarkheder.com/videos.html</loc></url>
-  <url><loc>https://ammarkheder.com/teaching.html</loc></url>
-  <url><loc>https://ammarkheder.com/projects/aqnet.html</loc></url>
-  <url><loc>https://ammarkheder.com/projects/cdesp.html</loc></url>
-  <url><loc>https://ammarkheder.com/projects/cranpm-studio.html</loc></url>
-  <url><loc>https://ammarkheder.com/projects/cranpm.html</loc></url>
-  <url><loc>https://ammarkheder.com/projects/foehn.html</loc></url>
-  <url><loc>https://ammarkheder.com/projects/galton-vba.html</loc></url>
-  <url><loc>https://ammarkheder.com/projects/lingorob.html</loc></url>
-  <url><loc>https://ammarkheder.com/projects/pokemon-nao.html</loc></url>
-  <url><loc>https://ammarkheder.com/projects/pokemoncards.html</loc></url>
-  <url><loc>https://ammarkheder.com/projects/topoflow.html</loc></url>
+  <url><loc>https://ammarkheder.com/</loc><lastmod>2026-10-23</lastmod></url>
+  <url><loc>https://ammarkheder.com/projects.html</loc><lastmod>2026-10-23</lastmod></url>
+  <url><loc>https://ammarkheder.com/news.html</loc><lastmod>2026-10-23</lastmod></url>
+  <url><loc>https://ammarkheder.com/videos.html</loc><lastmod>2026-10-23</lastmod></url>
+  <url><loc>https://ammarkheder.com/teaching.html</loc><lastmod>2026-10-23</lastmod></url>
+  <url><loc>https://ammarkheder.com/bia.html</loc><lastmod>2026-10-23</lastmod></url>
+  <url><loc>https://ammarkheder.com/firefighter.html</loc><lastmod>2026-10-23</lastmod></url>
+  <url><loc>https://ammarkheder.com/projects/aqnet.html</loc><lastmod>2026-10-23</lastmod></url>
+  <url><loc>https://ammarkheder.com/projects/cdesp.html</loc><lastmod>2026-10-23</lastmod></url>
+  <url><loc>https://ammarkheder.com/projects/cranpm-studio.html</loc><lastmod>2026-10-23</lastmod></url>
+  <url><loc>https://ammarkheder.com/projects/cranpm.html</loc><lastmod>2026-10-23</lastmod></url>
+  <url><loc>https://ammarkheder.com/projects/foehn.html</loc><lastmod>2026-10-23</lastmod></url>
+  <url><loc>https://ammarkheder.com/projects/galton-vba.html</loc><lastmod>2026-10-23</lastmod></url>
+  <url><loc>https://ammarkheder.com/projects/lingorob.html</loc><lastmod>2026-10-23</lastmod></url>
+  <url><loc>https://ammarkheder.com/projects/pokemon-nao.html</loc><lastmod>2026-10-23</lastmod></url>
+  <url><loc>https://ammarkheder.com/projects/pokemoncards.html</loc><lastmod>2026-10-23</lastmod></url>
+  <url><loc>https://ammarkheder.com/projects/topoflow.html</loc><lastmod>2026-10-23</lastmod></url>
 </urlset>
