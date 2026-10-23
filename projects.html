@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects, by Ammar Kheder</title>
-    <meta name="description" content="Selected projects by Ammar Kheder. Research-adjacent side projects at the intersection of AI, robotics, industrial software, and pop culture.">
+    <title>Research and projects, by Ammar Kheder</title>
+    <meta name="description" content="Forecasting air pollution with physics-aware deep learning, and earlier projects in software, robotics and statistics.">
     <meta name="author" content="Ammar Kheder">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Projects, by Ammar Kheder">
-    <meta property="og:description" content="Side projects at the intersection of AI, robotics, industrial software, and pop culture.">
+    <meta property="og:title" content="Research and projects, by Ammar Kheder">
+    <meta property="og:description" content="Forecasting air pollution with physics-aware deep learning, and earlier projects in software, robotics and statistics.">
     <meta property="og:image" content="https://ammarkheder.com/assets/ext/og/foehn-overview.jpg">
     <meta property="og:url" content="https://ammarkheder.com/projects.html">
     <link rel="canonical" href="https://ammarkheder.com/projects.html">
@@ -48,192 +48,122 @@
 <main class="prose" id="main-content" tabindex="-1">
 
     <header class="page-header">
-        <h1><span class="fw-light">Selected</span> <span class="fw-bold">Projects</span></h1>
-        <p class="subtitle">Research-adjacent side projects at the intersection of AI, robotics, and pop culture.</p>
+        <h1><span class="fw-light">Research &amp;</span> <span class="fw-bold">projects</span></h1>
+        <p class="subtitle">Forecasting air pollution with physics-aware deep learning, and earlier projects in software, robotics and statistics.</p>
     </header>
 
-    <section class="project-grid">
-
-        <a href="projects/foehn.html" class="project-card">
-            <div class="project-card-cover">
-                <picture><source srcset="assets/ext/foehn/fig-overview.webp" type="image/webp"><img src="https://ammarkheder.com/Foehn/figures/web/fig_overview.jpg" alt="Foehn 1 km PM2.5 forecasts of four polluted basins" loading="lazy" width="1600" height="1545" decoding="async"></picture>
-            </div>
+    <section class="project-group" aria-labelledby="group-research">
+        <h2 id="group-research">Air-pollution forecasting</h2>
+        <a href="projects/foehn.html" class="project-card project-card-wide">
+            <div class="project-card-cover"><img src="assets/ext/video/foehn-film.webp" alt="Foehn: a globe of PM2.5 at 1 km, worldwide" width="960" height="540" loading="lazy" decoding="async"></div>
             <div class="project-card-body">
                 <p class="project-card-kicker">arXiv preprint &middot; 2026 &middot; lead author</p>
                 <h3 class="project-card-title">Foehn</h3>
                 <p class="project-card-desc">Global probabilistic forecasting of air pollution at 1 km, up to a week ahead, over all inhabited land. A generative model that computes where the air comes from (FLEXGREEN) and learns the rest by flow matching; validated at thousands of stations against the operational forecast.</p>
-                <p class="project-card-tags">
-                    <span>Generative model</span>
-                    <span>Flow matching</span>
-                    <span>Lagrangian transport</span>
-                    <span>LUMI</span>
-                </p>
                 <p class="project-card-cta">Read the case study <span class="arrow">&rarr;</span></p>
             </div>
         </a>
+        <div class="project-grid project-grid-2">
+            <a href="projects/topoflow.html" class="project-card">
+                    <div class="project-card-cover">
+                        <picture><source srcset="assets/ext/topoflow/china-pm25-publication.webp" type="image/webp"><img src="https://ammarkheder.com/TopoFlow/assets/figures/china_pm25_publication.png" alt="TopoFlow PM2.5 prediction" loading="lazy" width="1600" height="1089" decoding="async"></picture>
+                    </div>
+                    <div class="project-card-body">
+                        <p class="project-card-kicker">npj Clim. Atmos. Sci. &middot; 2026 &middot; lead author</p>
+                        <h3 class="project-card-title">TopoFlow</h3>
+                        <p class="project-card-desc">A topography-aware Vision Transformer for high-resolution air quality prediction over China. Wind-following patches, elevation-aware attention, six pollutants. Published in <em>npj Climate and Atmospheric Science</em> (Nature Portfolio).</p>
+                        <p class="project-card-cta">Read the case study <span class="arrow">&rarr;</span></p>
+                    </div>
+        
+            </a>
+            <a href="projects/cranpm.html" class="project-card">
+                    <div class="project-card-cover">
+                        <picture><source srcset="assets/ext/cranpm/fig1-teaser.webp" type="image/webp"><img src="https://ammarkheder.com/cran_pm/assets/figures/fig1_teaser.png" alt="CRAN-PM Europe predictions" loading="lazy" width="1600" height="916" decoding="async"></picture>
+                    </div>
+                    <div class="project-card-body">
+                        <p class="project-card-kicker">arXiv preprint &middot; 2026 &middot; lead author</p>
+                        <h3 class="project-card-title">CRAN-PM</h3>
+                        <p class="project-card-desc">A dual-branch cross-resolution Vision Transformer that predicts daily 1 km PM<sub>2.5</sub> across Europe in 1.8 seconds, with zero-shot transfer to USA, Canada and India.</p>
+                        <p class="project-card-cta">Read the case study <span class="arrow">&rarr;</span></p>
+                    </div>
+        
+            </a>
+            <a href="projects/cranpm-studio.html" class="project-card">
+                    <div class="project-card-cover">
+                        <img src="https://ammarkheder.com/cran-pm/assets/studio_schematic.png" alt="CranPM Studio pipeline" loading="lazy" width="1494" height="792" decoding="async">
+                    </div>
+                    <div class="project-card-body">
+                        <p class="project-card-kicker">Open-source software &middot; v1.0</p>
+                        <h3 class="project-card-title">CranPM Studio</h3>
+                        <p class="project-card-desc">The open-source software release of CRAN-PM: a Python package and live web demo for 1 km PM<sub>2.5</sub> forecasting over Europe. Stable API, CLI, dual CUDA/ROCm, HuggingFace demo. RMSE 6.85 µg/m³ at T+1.</p>
+                        <p class="project-card-cta">Read the case study <span class="arrow">&rarr;</span></p>
+                    </div>
+        
+            </a>
+            <a href="projects/aqnet.html" class="project-card">
+                    <div class="project-card-cover">
+                        <picture><source srcset="assets/ext/aqnet/mapc.webp" type="image/webp"><img src="https://raw.githubusercontent.com/AmmarKheder/AQ-Net/main/img/mapc.png" alt="AQ-Net pollution map" loading="lazy" width="1600" height="913" decoding="async"></picture>
+                    </div>
+                    <div class="project-card-body">
+                        <p class="project-card-kicker">SCIA 2025 &middot; Springer LNCS</p>
+                        <h3 class="project-card-title">AQ-Net</h3>
+                        <p class="project-card-desc">A deep spatio-temporal network for air-quality reanalysis. LSTM with attention plus a learnable neural kNN, trained on Northern China stations. Predicts pollution where no sensor exists.</p>
+                        <p class="project-card-cta">Read the case study <span class="arrow">&rarr;</span></p>
+                    </div>
+        
+            </a>
+        </div>
+    </section>
 
-        <a href="projects/topoflow.html" class="project-card">
-            <div class="project-card-cover">
-                <picture><source srcset="assets/ext/topoflow/china-pm25-publication.webp" type="image/webp"><img src="https://ammarkheder.com/TopoFlow/assets/figures/china_pm25_publication.png" alt="TopoFlow PM2.5 prediction" loading="lazy" width="1600" height="1089" decoding="async"></picture>
-            </div>
-            <div class="project-card-body">
-                <p class="project-card-kicker">npj Clim. Atmos. Sci. &middot; 2026 &middot; lead author</p>
-                <h3 class="project-card-title">TopoFlow</h3>
-                <p class="project-card-desc">A topography-aware Vision Transformer for high-resolution air quality prediction over China. Wind-following patches, elevation-aware attention, six pollutants. Published in <em>npj Climate and Atmospheric Science</em> (Nature Portfolio).</p>
-                <p class="project-card-tags">
-                    <span>Vision Transformer</span>
-                    <span>Air quality</span>
-                    <span>Physics-informed</span>
-                    <span>LUMI</span>
-                </p>
-                <p class="project-card-cta">Read the case study <span class="arrow">&rarr;</span></p>
-            </div>
-        </a>
-
-        <a href="projects/cranpm.html" class="project-card">
-            <div class="project-card-cover">
-                <picture><source srcset="assets/ext/cranpm/fig1-teaser.webp" type="image/webp"><img src="https://ammarkheder.com/cran_pm/assets/figures/fig1_teaser.png" alt="CRAN-PM Europe predictions" loading="lazy" width="1600" height="916" decoding="async"></picture>
-            </div>
-            <div class="project-card-body">
-                <p class="project-card-kicker">arXiv preprint &middot; 2026 &middot; lead author</p>
-                <h3 class="project-card-title">CRAN-PM</h3>
-                <p class="project-card-desc">A dual-branch cross-resolution Vision Transformer that predicts daily 1 km PM<sub>2.5</sub> across Europe in 1.8 seconds, with zero-shot transfer to USA, Canada and India.</p>
-                <p class="project-card-tags">
-                    <span>Vision Transformer</span>
-                    <span>Cross-resolution</span>
-                    <span>Zero-shot transfer</span>
-                    <span>96M params</span>
-                </p>
-                <p class="project-card-cta">Read the case study <span class="arrow">&rarr;</span></p>
-            </div>
-        </a>
-
-        <a href="projects/cranpm-studio.html" class="project-card">
-            <div class="project-card-cover">
-                <img src="https://ammarkheder.com/cran-pm/assets/studio_schematic.png" alt="CranPM Studio pipeline" loading="lazy" width="1494" height="792" decoding="async">
-            </div>
-            <div class="project-card-body">
-                <p class="project-card-kicker">Open-source software &middot; v1.0</p>
-                <h3 class="project-card-title">CranPM Studio</h3>
-                <p class="project-card-desc">The open-source software release of CRAN-PM: a Python package and live web demo for 1 km PM<sub>2.5</sub> forecasting over Europe. Stable API, CLI, dual CUDA/ROCm, HuggingFace demo. RMSE 6.85 µg/m³ at T+1.</p>
-                <p class="project-card-tags">
-                    <span>Open Source</span>
-                    <span>Python package</span>
-                    <span>Live demo</span>
-                    <span>CUDA + ROCm</span>
-                </p>
-                <p class="project-card-cta">Read the case study <span class="arrow">&rarr;</span></p>
-            </div>
-        </a>
-
-        <a href="projects/aqnet.html" class="project-card">
-            <div class="project-card-cover">
-                <picture><source srcset="assets/ext/aqnet/mapc.webp" type="image/webp"><img src="https://raw.githubusercontent.com/AmmarKheder/AQ-Net/main/img/mapc.png" alt="AQ-Net pollution map" loading="lazy" width="1600" height="913" decoding="async"></picture>
-            </div>
-            <div class="project-card-body">
-                <p class="project-card-kicker">SCIA 2025 &middot; Springer LNCS</p>
-                <h3 class="project-card-title">AQ-Net</h3>
-                <p class="project-card-desc">A deep spatio-temporal network for air-quality reanalysis. LSTM with attention plus a learnable neural kNN, trained on Northern China stations. Predicts pollution where no sensor exists.</p>
-                <p class="project-card-tags">
-                    <span>LSTM</span>
-                    <span>Neural kNN</span>
-                    <span>SCIA 2025</span>
-                    <span>Reanalysis</span>
-                </p>
-                <p class="project-card-cta">Read the case study <span class="arrow">&rarr;</span></p>
-            </div>
-        </a>
-
-        <a href="projects/cdesp.html" class="project-card">
-            <div class="project-card-cover">
-                <img src="pic/cdesp-cover.jpg" alt="cDESP, SaaS compliance platform" loading="lazy" width="1280" height="720" decoding="async">
-            </div>
-            <div class="project-card-body">
-                <p class="project-card-kicker">Wabel Group &times; DCRR &middot; 2024</p>
-                <h3 class="project-card-title">cDESP</h3>
-                <p class="project-card-desc">A SaaS compliance platform for industrial refrigeration pressure equipment (ESP). Built by Wabel Group for DCRR to replace spreadsheet chaos with a single source of truth for DESP regulatory obligations.</p>
-                <p class="project-card-tags">
-                    <span>B2B SaaS</span>
-                    <span>Regulatory</span>
-                    <span>Industrial</span>
-                    <span>Multi-tenant</span>
-                </p>
-                <p class="project-card-cta">Read the case study <span class="arrow">&rarr;</span></p>
-            </div>
-        </a>
-
-        <a href="projects/pokemon-nao.html" class="project-card">
-            <div class="project-card-cover">
-                <picture><source srcset="pic/cover.webp" type="image/webp"><img src="pic/cover.png" alt="Pokémon Robot Auction" loading="lazy" width="2000" height="886" decoding="async"></picture>
-            </div>
-            <div class="project-card-body">
-                <p class="project-card-kicker">Live event &middot; 22 Dec 2023</p>
-                <h3 class="project-card-title">Pok&eacute;mon Robot Auction</h3>
-                <p class="project-card-desc">The world&rsquo;s first Pok&eacute;mon card auction co-hosted by a NAO humanoid robot. A live proof of concept in human-machine interaction, acknowledged in a letter from the Cabinet of the French President.</p>
-                <p class="project-card-tags">
-                    <span>NAO Robot</span>
-                    <span>Live Streaming</span>
-                    <span>Robotics</span>
-                    <span>HMI</span>
-                </p>
-                <p class="project-card-cta">Read the case study <span class="arrow">&rarr;</span></p>
-            </div>
-        </a>
-
-        <a href="projects/pokemoncards.html" class="project-card">
-            <div class="project-card-cover">
-                <picture><source srcset="pic/pokemoncards-cover.webp" type="image/webp"><img src="pic/pokemoncards-cover.png" alt="Pokémon Card Detection demo" loading="lazy" width="2000" height="937" decoding="async"></picture>
-            </div>
-            <div class="project-card-body">
-                <p class="project-card-kicker">ML web app &middot; 2023</p>
-                <h3 class="project-card-title">Pok&eacute;mon Card Detection</h3>
-                <p class="project-card-desc">A Flask + TensorFlow web app that identifies Pok&eacute;mon Base Set cards from a photo and extracts their name, number, set and year. Trained on French Base Set 2, but works on English cards too.</p>
-                <p class="project-card-tags">
-                    <span>TensorFlow</span>
-                    <span>Flask</span>
-                    <span>Computer Vision</span>
-                    <span>Open Source</span>
-                </p>
-                <p class="project-card-cta">Read the case study <span class="arrow">&rarr;</span></p>
-            </div>
-        </a>
-
-        <a href="projects/lingorob.html" class="project-card">
-            <div class="project-card-cover">
-                <img src="pic/ammar_inria.jpeg" alt="Ammar with NAO at INRIA Bordeaux" loading="lazy" width="1600" height="1200" decoding="async">
-            </div>
-            <div class="project-card-body">
-                <p class="project-card-kicker">INRIA Bordeaux &middot; 2021&ndash;2022</p>
-                <h3 class="project-card-title">LingoRob</h3>
-                <p class="project-card-desc">A crowdsourcing platform for multi-language linguistic corpora, built at INRIA&rsquo;s Mnemosyne team to train brain-inspired language models for human-robot interaction. Apprenticeship project supervised by Xavier Hinaut.</p>
-                <p class="project-card-tags">
-                    <span>NAO Robot</span>
-                    <span>Crowdsourcing</span>
-                    <span>NLP</span>
-                    <span>Django</span>
-                </p>
-                <p class="project-card-cta">Read the case study <span class="arrow">&rarr;</span></p>
-            </div>
-        </a>
-
-        <a href="projects/galton-vba.html" class="project-card">
-            <div class="project-card-cover">
-                <img src="pic/galton-cover.jpg" alt="Galton Board in Excel (VBA)" loading="lazy" width="1280" height="720" decoding="async">
-            </div>
-            <div class="project-card-body">
-                <p class="project-card-kicker">Excel VBA &middot; Jan 2020 &middot; DUT STID</p>
-                <h3 class="project-card-title">Galton Board in Excel</h3>
-                <p class="project-card-desc">A simulation of Sir Francis Galton&rsquo;s pinball, built entirely in Microsoft Excel with VBA. Rockets fall through pegs, converging from a binomial distribution to the Gaussian bell curve. An interactive proof of the Law of Large Numbers and the Central Limit Theorem.</p>
-                <p class="project-card-tags">
-                    <span>Excel</span>
-                    <span>VBA</span>
-                    <span>Statistics</span>
-                    <span>Visualisation</span>
-                </p>
-                <p class="project-card-cta">Read the case study <span class="arrow">&rarr;</span></p>
-            </div>
-        </a>
-
+    <section class="project-group" aria-labelledby="group-earlier">
+        <h2 id="group-earlier">Earlier and side projects</h2>
+        <ul class="project-list">
+            <li><a href="projects/cdesp.html" class="project-row">
+                <img src="assets/ext/thumbs/cdesp.webp" alt="cDESP, SaaS compliance platform" width="264" height="148" loading="lazy" decoding="async">
+                <span class="project-row-text">
+                    <span class="project-row-kicker">Wabel Group &times; DCRR &middot; 2024</span>
+                    <span class="project-row-title">cDESP</span>
+                    <span class="project-row-desc">A SaaS compliance platform for industrial refrigeration pressure equipment, built by Wabel Group for DCRR.</span>
+                </span>
+                <span class="project-row-arrow" aria-hidden="true">&rarr;</span>
+            </a></li>
+            <li><a href="projects/pokemon-nao.html" class="project-row">
+                <img src="assets/ext/thumbs/pokemon-nao.webp" alt="Pok&eacute;mon Robot Auction" width="264" height="148" loading="lazy" decoding="async">
+                <span class="project-row-text">
+                    <span class="project-row-kicker">Live event &middot; 22 Dec 2023</span>
+                    <span class="project-row-title">Pok&eacute;mon Robot Auction</span>
+                    <span class="project-row-desc">The world&rsquo;s first Pok&eacute;mon card auction co-hosted by a NAO humanoid robot, acknowledged in a letter from the Cabinet of the French President.</span>
+                </span>
+                <span class="project-row-arrow" aria-hidden="true">&rarr;</span>
+            </a></li>
+            <li><a href="projects/pokemoncards.html" class="project-row">
+                <img src="assets/ext/thumbs/pokemoncards.webp" alt="Pok&eacute;mon Card Detection demo" width="264" height="148" loading="lazy" decoding="async">
+                <span class="project-row-text">
+                    <span class="project-row-kicker">ML web app &middot; 2023</span>
+                    <span class="project-row-title">Pok&eacute;mon Card Detection</span>
+                    <span class="project-row-desc">A Flask and TensorFlow web app that identifies Pok&eacute;mon Base Set cards from a photo.</span>
+                </span>
+                <span class="project-row-arrow" aria-hidden="true">&rarr;</span>
+            </a></li>
+            <li><a href="projects/lingorob.html" class="project-row">
+                <img src="assets/ext/thumbs/lingorob.webp" alt="Ammar with NAO at INRIA Bordeaux" width="264" height="148" loading="lazy" decoding="async">
+                <span class="project-row-text">
+                    <span class="project-row-kicker">INRIA Bordeaux &middot; 2021&ndash;2022</span>
+                    <span class="project-row-title">LingoRob</span>
+                    <span class="project-row-desc">A crowdsourcing platform for multi-language corpora, built in INRIA&rsquo;s Mnemosyne team for human-robot interaction.</span>
+                </span>
+                <span class="project-row-arrow" aria-hidden="true">&rarr;</span>
+            </a></li>
+            <li><a href="projects/galton-vba.html" class="project-row">
+                <img src="assets/ext/thumbs/galton.webp" alt="Galton Board in Excel (VBA)" width="264" height="148" loading="lazy" decoding="async">
+                <span class="project-row-text">
+                    <span class="project-row-kicker">Excel VBA &middot; Jan 2020 &middot; DUT STID</span>
+                    <span class="project-row-title">Galton Board in Excel</span>
+                    <span class="project-row-desc">Galton&rsquo;s pinball built in Excel with VBA: the binomial converging to the bell curve.</span>
+                </span>
+                <span class="project-row-arrow" aria-hidden="true">&rarr;</span>
+            </a></li>
+        </ul>
     </section>
 
 </main>
