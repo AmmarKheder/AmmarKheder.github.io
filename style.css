@@ -1633,16 +1633,23 @@ main:focus-visible { outline: none; }
     color: var(--muted);
 }
 .video-links {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 16px;   /* the links wrap as whole items, so no separator is left hanging at the end of a line */
     margin-top: auto;
-    padding-top: 10px;
+    padding-top: 4px;
     border-top: 1px dashed var(--rule);
     font-family: var(--font-head);
     font-weight: 700;
     font-size: 0.92rem;
     letter-spacing: 0.02em;
 }
-.video-links a { white-space: nowrap; }
-.video-links .sep, .video-related .sep { color: var(--muted); margin: 0 4px; }
+.video-links a { padding: 7px 0; white-space: nowrap; }   /* a target taller than the text line */
+.video-links .sep { display: none; }
+.video-related .sep { color: var(--muted); margin: 0 4px; }
+@media (max-width: 640px) {
+    .video-links a { padding: 11px 0; }
+}
 
 /* wide card: the poster on the left (46 %), the text on the right */
 .video-card-wide .video-body { justify-content: center; }
@@ -1892,8 +1899,10 @@ mark.mark {
 }
 .flagship-actions a:first-child { background: var(--nav-ink); color: var(--nav-bg); }
 .flagship-actions a:hover { background: #fff; color: var(--nav-bg); border-color: #fff; text-decoration: none; }
-.flagship-more { margin-top: 16px; font-size: 1rem; }
+.flagship-more { margin-top: 6px; font-size: 1rem; }
 .flagship-more a {
+    display: inline-block;
+    padding: 12px 0;   /* a comfortable target: the line is 17 px high */
     color: #fdeca0;
     text-decoration: underline dashed;
     text-decoration-thickness: 1.5px;
