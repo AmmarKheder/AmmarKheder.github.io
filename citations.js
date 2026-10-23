@@ -1,15 +1,26 @@
 /* Citation counts, read from citations.json: a copy of the Google Scholar profile
    (scripts/update_citations.py rewrites it). A badge is shown only when the count is
-   above zero, and no third-party request is made. */
+   above zero, and no third-party request is made. The texts follow <html lang>; citations.json is
+   read next to this script, so the pages in fr/ find it too. */
 (function () {
     'use strict';
 
-    var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    var TEXTS = {
+        en: { months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+              one: ' citation', many: ' citations', where: ' on Google Scholar', first: '1' },
+        fr: { months: ['janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin', 'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.'],
+              one: '\u00a0citation', many: '\u00a0citations', where: ' sur Google Scholar', first: '1er' }
+    };
+    var pageLang = (document.documentElement.getAttribute('lang') || 'en').toLowerCase().split('-')[0];
+    var T = TEXTS[pageLang] || TEXTS.en;
+    var DATA_URL = 'citations.json';
+    try { DATA_URL = new URL('citations.json', document.currentScript.src).href; } catch (err) { /* page-relative */ }
 
     function formatDate(iso) {
         var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || '');
         if (!m) { return ''; }
-        return Number(m[3]) + ' ' + MONTHS[Number(m[2]) - 1] + ' ' + m[1];
+        var day = Number(m[3]);
+        return (day === 1 ? T.first : String(day)) + ' ' + T.months[Number(m[2]) - 1] + ' ' + m[1];
     }
 
     function renderBadge(el, count) {
@@ -17,14 +28,14 @@
         if (!titleEl) { return; }
         var badge = document.createElement('span');
         badge.className = 'cite-count';
-        badge.textContent = count + (count === 1 ? ' citation' : ' citations');
+        badge.textContent = count + (count === 1 ? T.one : T.many);
         titleEl.appendChild(badge);
     }
 
     function run() {
         var entries = document.querySelectorAll('[data-doi]');
         if (!entries.length) { return; }
-        fetch('citations.json', { cache: 'no-store' })
+        fetch(DATA_URL, { cache: 'no-store' })
             .then(function (r) { return r.ok ? r.json() : null; })
             .then(function (d) {
                 if (!d || !d.counts) { return; }
@@ -37,8 +48,8 @@
                 var totalEl = document.getElementById('citation-total');
                 if (totalEl && total > 0) {
                     var when = formatDate(d.updated);
-                    totalEl.textContent = total + (total === 1 ? ' citation' : ' citations') +
-                        ' on Google Scholar' + (when ? ' (' + when + ')' : '');
+                    totalEl.textContent = total + (total === 1 ? T.one : T.many) +
+                        T.where + (when ? ' (' + when + ')' : '');
                     totalEl.hidden = false;
                 }
             })

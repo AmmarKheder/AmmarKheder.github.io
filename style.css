@@ -2209,3 +2209,47 @@ mark.mark {
     .project-hero-compact h1 { font-size: 2.4rem; }
 }
 .stats-grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 620px; }
+
+/* ═════════════════════════════════════════════════════════════
+   Language switch (EN · FR): at the end of the menu bar of every page, and in the mobile menu.
+   Written by tools/i18n_skeleton.py, one entry per language of its LANGS table;
+   the current language is a plain label marked with aria-current.
+   ═════════════════════════════════════════════════════════════ */
+.lang-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 1px;
+    padding: 1px 5px;
+    border: 1.5px dashed rgba(244, 241, 232, 0.4);
+    border-radius: var(--sketchy-radius-sm);
+    font-family: var(--font-head);
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+.lang-opt {
+    color: var(--nav-ink);
+    padding: 3px 4px 1px;
+    border-bottom: 2px solid transparent;
+}
+a.lang-opt { opacity: 0.75; transition: opacity 0.2s, border-color 0.2s; }
+a.lang-opt:hover { color: #fff; opacity: 1; text-decoration: none; border-bottom-color: #fff; }
+.lang-opt[aria-current] { color: #fff; font-weight: 700; border-bottom-color: #fff; }
+.lang-sep { color: rgba(244, 241, 232, 0.45); }
+@media (min-width: 901px) and (max-width: 1080px) {
+    /* just above the hamburger: tighter spacing, so the bar stays on one line with the switch
+       (and with the longer French labels) */
+    .navbar { padding-left: 18px; padding-right: 18px; }
+    .brand { gap: 9px; font-size: 1.2rem; }
+    .nav-links { gap: 10px; }
+    .nav-item { letter-spacing: 0.01em; }
+    .nav-item.nav-contact { padding: 4px 9px; }
+    .nav-sep { margin: 0 1px; }
+    .lang-switch { padding: 1px 3px; }
+}
+@media (max-width: 900px) {
+    /* in the dropdown: on the row of the icons, at its right end; taller tap targets */
+    .nav-links .lang-switch { margin: 0 20px 0 auto; padding: 0 6px; font-size: 1rem; }
+    .lang-opt { padding: 11px 9px 9px; }
+}

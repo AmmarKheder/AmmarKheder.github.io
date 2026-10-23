@@ -4,9 +4,18 @@
    - looping gallery clips do not autoplay when the visitor prefers reduced motion
    - video cards: a plain click opens the video in a lightbox; the YouTube player is created only then,
      so nothing is requested from YouTube before a click. Ctrl/Cmd/Shift-click, a middle click and
-     browsers without <dialog> follow the link to YouTube instead. */
+     browsers without <dialog> follow the link to YouTube instead.
+   - the labels this script writes follow <html lang> (English pages at the root, French ones in fr/) */
 (function () {
     'use strict';
+
+    /* ── labels in the language of the page ──────────────────── */
+    var LABELS = {
+        en: { player: 'Video player', close: 'Close video', video: 'Video' },
+        fr: { player: 'Lecteur vidéo', close: 'Fermer la vidéo', video: 'Vidéo' }
+    };
+    var pageLang = (document.documentElement.getAttribute('lang') || 'en').toLowerCase().split('-')[0];
+    var T = LABELS[pageLang] || LABELS.en;
 
     /* ── mobile menu ───────────────────────────────────────── */
     var toggle = document.getElementById('nav-toggle');
@@ -47,10 +56,11 @@
     function build() {
         dlg = document.createElement('dialog');
         dlg.className = 'video-modal';
-        dlg.setAttribute('aria-label', 'Video player');
+        dlg.setAttribute('aria-label', T.player);
         dlg.innerHTML = '<div class="video-modal-bar"><span class="video-modal-title"></span>' +
-            '<button type="button" class="video-modal-close" aria-label="Close video">&times;</button></div>' +
+            '<button type="button" class="video-modal-close">&times;</button></div>' +
             '<div class="video-frame"></div>';
+        dlg.querySelector('.video-modal-close').setAttribute('aria-label', T.close);
         document.body.appendChild(dlg);
         frame = dlg.querySelector('.video-frame');
         titleEl = dlg.querySelector('.video-modal-title');
@@ -78,7 +88,7 @@
         if (!dlg) { build(); }
         var card = a.closest('.video-card');
         var heading = card && card.querySelector('.video-title');
-        var title = (heading ? heading.textContent : (a.getAttribute('aria-label') || 'Video')).trim();
+        var title = (heading ? heading.textContent : (a.getAttribute('aria-label') || T.video)).trim();
         var ratio = (a.getAttribute('data-ratio') || '16/9').split('/');
         var portrait = Number(ratio[1]) > Number(ratio[0]);
         dlg.classList.toggle('is-portrait', portrait);
