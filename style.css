@@ -2254,3 +2254,8 @@ a.lang-opt:hover { color: #fff; opacity: 1; text-decoration: none; border-bottom
     .nav-links .lang-switch { margin: 0 20px 0 auto; padding: 0 6px; font-size: 1rem; }
     .lang-opt { padding: 11px 9px 9px; }
 }
+
+/* YouTube channel icon in the menu; between 900 and 1080 px the Scholar icon leaves room for it (Scholar stays in the footer and About) */
+@media (min-width: 900.02px) and (max-width: 1080px) {
+    .nav-links .nav-icon[aria-label="Google Scholar"] { display: none; }
+}
