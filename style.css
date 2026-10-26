@@ -2259,3 +2259,16 @@ a.lang-opt:hover { color: #fff; opacity: 1; text-decoration: none; border-bottom
 @media (min-width: 900.02px) and (max-width: 1080px) {
     .nav-links .nav-icon[aria-label="Google Scholar"] { display: none; }
 }
+
+/* Home page: the news block stands out, right after About */
+#news {
+    background: rgba(255, 255, 255, 0.72);
+    border: 2px solid #1a1a1a;
+    border-radius: 18px 22px 16px 24px / 22px 16px 24px 18px;
+    box-shadow: 5px 6px 0 rgba(0, 0, 0, 0.10);
+    padding: 18px 24px 14px;
+    margin-top: 28px;
+}
+#news > h2 { margin-top: 4px; }
+#news .news-list li.news-featured { font-size: 1.08em; }
+@media (max-width: 600px) { #news { padding: 14px 14px 10px; } }

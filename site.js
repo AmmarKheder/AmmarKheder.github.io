@@ -114,3 +114,23 @@
         openVideo(a);
     });
 })();
+
+/* Language: on a first visit with a French browser, an English page opens its French version (once; the visitor's own choice
+   on the EN · FR switch is remembered and always wins). Crawlers report an English browser language, so indexing is unaffected. */
+(function () {
+    var KEY = 'site-lang';
+    document.addEventListener('click', function (e) {
+        var a = e.target.closest && e.target.closest('a.lang-opt');
+        if (!a) return;
+        try { localStorage.setItem(KEY, (a.getAttribute('hreflang') || a.getAttribute('lang') || '').slice(0, 2)); } catch (_) {}
+    });
+    try {
+        if (document.documentElement.lang !== 'en' || localStorage.getItem(KEY)) return;
+        var first = ((navigator.languages && navigator.languages[0]) || navigator.language || '').toLowerCase();
+        if (first.slice(0, 2) !== 'fr') return;
+        var alt = document.querySelector('link[rel="alternate"][hreflang="fr"]');
+        if (!alt || !alt.href) return;
+        localStorage.setItem(KEY, 'fr');
+        location.replace(alt.href + location.hash);
+    } catch (_) {}
+})();
