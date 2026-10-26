@@ -28,7 +28,7 @@ Commands (run from anywhere; the site root is the parent of this tools/ director
                                              - og:locale and og:locale:alternate
                                              - JSON-LD: a WebPage node (ProfilePage for a Person, CollectionPage
                                                for an ItemList) with url + inLanguage, the original entity as mainEntity
-                                             - the language switch "EN · FR" at the end of the navbar links
+                                             - the language switch "EN · FR" at the end of the navbar, after the menu links
                                                (current language marked with aria-current, links to the same page)
                                              - 404.html: GitHub Pages serves only the root 404.html, so a missing
                                                address under /fr/ is sent to /fr/404.html by a two-line script
@@ -47,7 +47,7 @@ Adding a language: add one row to LANGS below, run `python3 tools/i18n_skeleton.
 <code>/ pages (tools/i18n_glossary_<code>.md for the wording), run `python3 tools/i18n_skeleton.py check`.
 Adding a page: write the English page (it must match PAGE_GLOBS), run the script: its other-language
 skeletons, hreflang links, switch and sitemap entries follow.
-The switch styles are in style.css (.lang-switch); site.js and citations.js pick their visible
+The switch sits after the menu links, at the end of the navbar; its styles are in style.css (.lang-switch); site.js and citations.js pick their visible
 strings from <html lang>.
 
 Python 3.6+ standard library only.
@@ -425,11 +425,12 @@ def switch_html(cur, page, langs):
 
 
 def insert_switch(text, html_line):
-    """Put the switch at the end of the navbar links (the last </div> of the navbar)."""
+    """Put the switch at the end of the navbar, after the menu links (just before </nav>):
+    it stays in the bar at every width, next to the hamburger on phones."""
     m = NAVBAR_RE.search(text)
     if not m:
         return text
-    i = text.rfind("</div>", m.start(), m.end())
+    i = text.rfind("</nav>", m.start(), m.end())
     if i < 0:
         return text
     line_start = text.rfind("\n", 0, i) + 1
