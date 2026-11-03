@@ -1339,3 +1339,17 @@ html.modal-open { overflow: hidden; }
     .about p, .project-intro p { text-align: left; }
     h2, h3, .pub-title, .stat-card, .project-card, .video-card { break-after: avoid; break-inside: avoid; }
 }
+
+/* ── 17. About: text left, contact icons and portrait right (the hero is text only) ── */
+.hero { grid-template-columns: minmax(0, 1fr); }
+.hero .tagline { max-width: 52ch; }
+.about-grid { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 24px 56px; align-items: start; margin-bottom: 8px; }
+.about-grid .about-text p { max-width: none; }
+.about-side { text-align: center; }
+.icon-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 4px 0 18px; }
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border: 2px solid var(--ink-strong); border-radius: 9px; background: var(--ink-strong); color: #fff; font-family: var(--font-head); font-weight: 700; font-size: 0.95rem; letter-spacing: 0.02em; text-decoration: none; box-shadow: 2px 2px 0 var(--shade); }
+.icon-btn svg { width: 22px; height: 22px; }
+.icon-btn:hover { background: var(--link); border-color: var(--link); color: #fff; text-decoration: none; transform: translate(-1px, -1px); box-shadow: 3px 3px 0 var(--shade); }
+.icon-btn:active { transform: translate(1px, 1px); box-shadow: 1px 1px 0 var(--shade); }
+.about-side .hero-portrait { margin-top: 4px; }
+@media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; } .about-side { order: -1; } }
