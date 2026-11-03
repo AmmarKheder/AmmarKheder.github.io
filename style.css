@@ -540,6 +540,7 @@ main:where(.project-detail, .prose:has(> .page-header)) { max-width: var(--conta
 .project-detail { padding-top: 0; }
 .project-detail::before { content: ''; display: block; height: 1px; margin-bottom: clamp(44px, 5.5vw, 60px); background: var(--rule); }   /* hairline between the hero and the text column */
 .video-page::before { content: none; }
+.video-page { padding-top: clamp(40px, 5vw, 64px); }   /* the one .project-detail page with a .page-header: no hero above it */
 
 /* page header (projects, videos): serif title, lead line, strong rule */
 .page-header { max-width: none; margin: 0 0 clamp(32px, 4vw, 48px); padding-bottom: clamp(24px, 3vw, 32px); border-bottom: 1px solid var(--rule-strong); }
@@ -707,10 +708,10 @@ main:where(.project-detail, .prose:has(> .page-header)) { max-width: var(--conta
 .news-toc a:hover { color: var(--accent); box-shadow: inset 0 -2px 0 var(--accent); border-radius: 0; }
 .news-year + .news-year { margin-top: clamp(44px, 5.5vw, 60px); padding-top: clamp(44px, 5.5vw, 60px); border-top: 1px solid var(--rule); }
 .news-year h2 { font-size: clamp(2.6rem, 1.8rem + 3vw, 4.4rem); line-height: 1; letter-spacing: -0.025em; font-weight: 600; font-variation-settings: 'opsz' 144; }
-.news-year h3 { margin: 28px 0 0; padding-bottom: 10px; font-family: var(--font-text); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--rule-strong); }
+.news-year h3 { max-width: 36rem; margin: 28px 0 0; padding-bottom: 10px; font-family: var(--font-text); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--rule-strong); }
 .news-year h2 + h3 { margin-top: 18px; }
 .news-archive-list { list-style: none; }
-.news-archive-list li { max-width: 72ch; padding: 14px 0; line-height: 1.55; color: var(--ink-2); border-bottom: 1px solid var(--rule); }
+.news-archive-list li { max-width: 36rem; padding: 14px 0;   /* rem, not ch: the month rule above shares the exact same width */ line-height: 1.55; color: var(--ink-2); border-bottom: 1px solid var(--rule); }
 .news-archive-list li strong { color: var(--ink); }
 .news-date { margin-right: 8px; font-size: 0.84rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
 .news-cat { display: inline-block; margin-right: 8px; padding: 2px 8px; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; line-height: 1.5; text-transform: uppercase; white-space: nowrap; vertical-align: 0.12em; color: var(--ink-2); border: 1px solid var(--rule); border-radius: 3px; }
