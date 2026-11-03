@@ -173,14 +173,14 @@ def build() -> Path:
     pdf.set_text_color(*pdf.INK)
     pdf.multi_cell(
         0, 4.6,
-        "Doctoral researcher in computational engineering at LUT University (AMC-Lahti, "
-        "INAR), combining atmospheric physics with generative networks for air-quality "
-        "forecasting. Lead author of Foehn, a global 1 km probabilistic PM2.5 forecast "
-        "up to a week ahead (preprint, 2026), and of TopoFlow (npj Climate and "
-        "Atmospheric Science, 2026). Large-scale distributed training on the LUMI "
-        "supercomputer (up to 1,024 AMD MI250X GPUs). Creator of Otso, the real-time "
-        "global 1 km air-pollution forecast app (ammarkheder.com/Otso). Freelance AI "
-        "research expert with Mercor.",
+        "Creator of Otso (ammarkheder.com/Otso), a real-time global air-pollution "
+        "forecast app at 1 km resolution, updated daily. Doctoral researcher in "
+        "computational engineering at LUT University (AMC-Lahti, INAR), combining "
+        "atmospheric physics with generative networks. Lead author of Foehn, the "
+        "model behind Otso (preprint submitted to Nature, 2026), and of TopoFlow "
+        "(npj Climate and Atmospheric Science, 2026). Large-scale distributed "
+        "training on the LUMI supercomputer (up to 1,024 AMD MI250X GPUs). "
+        "Freelance AI research expert with Mercor.",
     )
 
     # ---- Education ---- #
