@@ -1339,3 +1339,18 @@ html.modal-open { overflow: hidden; }
     .about p, .project-intro p { text-align: left; }
     h2, h3, .pub-title, .stat-card, .project-card, .video-card { break-after: avoid; break-inside: avoid; }
 }
+
+/* ── 17. Compact home: name and role line only in the hero; About = text left, portrait right ── */
+.hero { grid-template-columns: minmax(0, 1fr); padding: 6px 0 8px; gap: 10px; }
+.hero h1 { font-size: 1.6rem; margin-bottom: 0; }
+.hero-eyebrow { font-size: 0.9rem; margin-top: 2px; }
+.hero-cta { margin-top: 10px; gap: 10px; }
+.hero-cta a { padding: 4px 14px; font-size: 0.92rem; }
+.about { margin-top: 10px; }
+.about p { font-size: 1.02rem; line-height: 1.6; }
+.about-grid { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 24px 56px; align-items: start; margin-bottom: 8px; }
+.about-grid .about-text p { max-width: none; }
+.about-side { text-align: center; }
+.about-side .hero-portrait { margin-top: 4px; }
+@media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; } .about-side { order: -1; } }
+@media (max-width: 640px) { .hero h1 { font-size: 1.45rem; } }
