@@ -413,12 +413,14 @@ h3 { margin-bottom: 16px; font-size: 1.6rem; }
     transition: opacity 0.45s ease;
 }
 .avatar-swap .avatar-back { opacity: 0; }
-.avatar-swap:hover .avatar-front,
-.avatar-swap:focus-within .avatar-front,
 .avatar-swap.is-flipped .avatar-front { opacity: 0; }
-.avatar-swap:hover .avatar-back,
-.avatar-swap:focus-within .avatar-back,
 .avatar-swap.is-flipped .avatar-back { opacity: 1; }
+@media (hover: hover) and (pointer: fine) {   /* hover only on mouse devices: on touch screens a tap sticks :hover */
+    .avatar-swap:hover .avatar-front { opacity: 0; }
+    .avatar-swap:hover .avatar-back { opacity: 1; }
+    .avatar-swap.is-flipped:hover .avatar-front { opacity: 1; }
+    .avatar-swap.is-flipped:hover .avatar-back { opacity: 0; }
+}
 .avatar-swap.avatar-reveal-once .avatar-front { animation: avatarRevealFront 1.4s ease; }
 .avatar-swap.avatar-reveal-once .avatar-back { animation: avatarRevealBack 1.4s ease; }
 @keyframes avatarRevealFront { 0%, 100% { opacity: 1; } 35%, 65% { opacity: 0; } }
