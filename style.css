@@ -1353,3 +1353,13 @@ html.modal-open { overflow: hidden; }
 .icon-btn:active { transform: translate(1px, 1px); box-shadow: 1px 1px 0 var(--shade); }
 .about-side .hero-portrait { margin-top: 4px; }
 @media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; } .about-side { order: -1; } }
+
+/* ── 18. Compact hero: smaller name and tagline, lighter highlight ── */
+.hero { padding: 12px 0 16px; }
+.hero h1 { font-size: 2.9rem; margin-bottom: 4px; }
+.hero-eyebrow { font-size: 1.05rem; }
+.hero .tagline { max-width: 60ch; margin-top: 14px; font-size: 1.2rem; }
+.hero .tagline::before { width: 26px; margin-right: 10px; vertical-align: 5px; }
+.hero .tagline .mark { padding: 0 0.15em; background: linear-gradient(transparent 62%, rgba(249, 213, 76, 0.55) 62%); }
+.hero-cta { margin-top: 18px; }
+@media (max-width: 640px) { .hero h1 { font-size: 2.3rem; } .hero .tagline { font-size: 1.1rem; } }
