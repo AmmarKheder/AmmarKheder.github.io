@@ -271,6 +271,22 @@ def build() -> Path:
         "Preprint, 2026 (under review). arXiv:2603.11725",
     )
     pdf.pub(
+        "Climate downscaling with likelihood functional flow matching.",
+        "Z.-S. Liu, H. Toropainen, A. Kheder, M. Boy.",
+        "Preprint, 2026. arXiv:2610.33482",
+    )
+    pdf.pub(
+        "Nowcasting aerosol particle size distributions from PM2.5 with "
+        "physics-regularized flow matching.",
+        "Z.-S. Liu, J. Koykka, W. Peng, A. Kheder, P. Clusius, M. Boy.",
+        "Preprint, 2026. arXiv:2610.33557",
+    )
+    pdf.pub(
+        "An actively trained neural operator for near-explicit atmospheric chemistry.",
+        "Z.-S. Liu, W. Peng, A. Kheder, R. Makkonen, M. Boy.",
+        "Preprint, 2026. arXiv:2610.33771",
+    )
+    pdf.pub(
         "Inverse Neural Operator for ODE Parameter Optimization.",
         "Z.-S. Liu, W. Peng, H. Toropainen, A. Kheder, A. Rupp, H. Froning, X. Lin, "
         "M. Boy.",
