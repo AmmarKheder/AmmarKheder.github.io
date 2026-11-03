@@ -23,14 +23,10 @@
     <link rel="alternate" hreflang="fr" href="https://ammarkheder.com/fr/">
     <link rel="alternate" hreflang="x-default" href="https://ammarkheder.com/">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#0f1013" media="(prefers-color-scheme: dark)">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
-    <link rel="preload" href="../assets/fonts/cabin-sketch-700.woff2" as="font" type="font/woff2" crossorigin>
+    <meta name="theme-color" content="#1a1a1a">
+    <link rel="preload" href="/assets/fonts/cabin-sketch-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/neucha-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="../style.css">
-    <script>document.documentElement.classList.add('js');</script>
     <link rel="icon" type="image/svg+xml" href="../assets/brand/foehn-mark.svg">
     <link rel="icon" type="image/png" sizes="64x64" href="../favicon.png">
     <link rel="apple-touch-icon" href="../apple-touch-icon.png">
@@ -50,7 +46,7 @@
 
 <nav class="navbar" aria-label="Menu principal">
     <a href="#top" class="brand">
-        <img class="brand-mark" src="../assets/brand/foehn-mark.svg" width="34" height="34" alt="">
+        <img class="brand-mark" src="../assets/brand/foehn-mark.svg" width="40" height="40" alt="">
         <span>Ammar Kheder</span>
     </a>
     <input type="checkbox" id="nav-toggle" class="nav-toggle-check" aria-label="Menu">
@@ -61,159 +57,201 @@
         <a href="videos.html" class="nav-item">Vidéos</a>
         <a href="#publications" class="nav-item">Publications</a>
         <a href="#contact" class="nav-item nav-contact">Contact</a>
-        <span class="nav-sep" aria-hidden="true"></span>
-        <a href="https://github.com/AmmarKheder" target="_blank" rel="noopener" aria-label="GitHub" class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
-        <a href="https://scholar.google.com/citations?user=ZYvKJF4AAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar" class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg></a>
-        <a href="https://www.youtube.com/@FoehnAI/playlists" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube&nbsp;: Foehn AI" class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1 31.4 31.4 0 0 0 .5-5.8 31.4 31.4 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg></a>
+        <span class="nav-sep"></span>
+        <a href="https://github.com/AmmarKheder" target="_blank" rel="noopener" aria-label="GitHub" class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+        <a href="https://scholar.google.com/citations?user=ZYvKJF4AAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar" class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg></a>
+        <a href="https://www.youtube.com/@FoehnAI/playlists" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube: Foehn AI" class="nav-icon nav-yt"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1 31.4 31.4 0 0 0 .5-5.8 31.4 31.4 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg></a>
     </div>
     <span class="lang-switch" role="group" aria-label="Langue" translate="no"><a class="lang-opt" href="../index.html" hreflang="en" lang="en" rel="alternate" title="English">EN</a><span class="lang-sep" aria-hidden="true">&middot;</span><span class="lang-opt" aria-current="true" lang="fr">FR</span></span>
 </nav>
 
-<main id="top" tabindex="-1">
+<main class="prose" id="top" tabindex="-1">
 
     <header class="hero">
-        <div class="hero-inner">
-            <div class="hero-text">
-                <p class="hero-eyebrow">Doctorant en ingénierie computationnelle &middot; <span class="nowrap">LUT University &middot; <a href="https://amc-lahti.fi/" target="_blank" rel="noopener">AMC-Lahti</a></span></p>
-                <h1 class="hero-name"><span class="n1">Ammar</span> <span class="n2">Kheder</span></h1>
-                <p class="hero-statement">Doctorant, je travaille sur la <span class="u-sketch">prévision de la qualité de l’air</span>, à l’aide de la physique et de l’apprentissage automatique.</p>
-                <p class="hero-cta">
-                    <a class="btn btn-solid" href="https://arxiv.org/abs/2610.25941" target="_blank" rel="noopener">Lire la prépublication de Foehn <span class="arrow" aria-hidden="true">&rarr;</span></a>
-                    <a class="btn btn-text" href="#watch">Voir la série</a>
-                </p>
-            </div>
-            <figure class="hero-figure">
-                <div class="hero-globe"><img src="../assets/ext/foehn/foehn-globes-poster.jpg" alt="Globe de la prévision de PM2.5 par Foehn à 1 km, centré sur l’Europe et l’Afrique" width="1020" height="500" fetchpriority="high" decoding="async"></div>
-                <figcaption><span><span class="dot" aria-hidden="true"></span>Foehn &middot; prévisions interactives à 1&nbsp;km</span><span class="cap-sep"><span data-foehn-cases>3</span> cas d’étude</span><a class="cap-sep" href="https://ammarkheder.com/Foehn/#viewer" target="_blank" rel="noopener">Visualiseur &rarr;</a></figcaption>
-            </figure>
+        <div class="hero-text">
+            <h1><span class="fw-light">Ammar</span> <span class="fw-bold">Kheder</span></h1>
+            <p class="hero-eyebrow">Doctorant en ingénierie computationnelle &middot; LUT University &middot; <a href="https://amc-lahti.fi/" target="_blank" rel="noopener">AMC-Lahti</a></p>
+            <p class="hero-cta">
+                <a href="https://arxiv.org/abs/2610.25941" target="_blank" rel="noopener">Lire la prépublication de Foehn &rarr;</a>
+                <a href="#watch">Voir la série</a>
+            </p>
         </div>
     </header>
 
-    <section class="stats" aria-label="Foehn en chiffres">
-        <dl class="stats-inner">
-            <div><dt><span class="stat-label">Résolution</span>1&nbsp;km</dt><dd>toutes les terres habitées</dd></div>
-            <div><dt><span class="stat-label">Échéance</span>7&nbsp;jours</dt><dd>d’avance, probabiliste</dd></div>
-            <div><dt><span class="stat-label">Stations</span>3 sur 4</dt><dd>plus précis que la prévision opérationnelle <small class="stat-note">5&nbsp;954 stations, 2022</small></dd></div>
-            <div><dt><span class="stat-label">Erreur à 1 jour</span>&minus;17&nbsp;%</dt><dd>par rapport à la prévision opérationnelle <small class="stat-note">6&nbsp;324 stations</small></dd></div>
-            <div><dt><span class="stat-label">GPU</span>1&nbsp;024</dt><dd>LUMI, AMD MI250X</dd></div>
-            <div><dt><span class="stat-label">Langues</span>31</dt><dd>pistes audio du film de 8&nbsp;min</dd></div>
-        </dl>
-    </section>
+    <section id="about" class="about" aria-labelledby="about-title">
+        <span id="experience"></span>
+        <h2 id="about-title">À propos</h2>
+        <div class="about-grid">
+            <div class="about-text">
+        <p>Je suis doctorant en ingénierie computationnelle à LUT University, à Lahti, au sein de l’<a href="https://amc-lahti.fi/" target="_blank" rel="noopener">Atmospheric Modelling Centre (AMC-Lahti)</a> et de l’INAR, Université d’Helsinki, sous la direction du <a href="https://scholar.google.com/citations?user=sv7zMEwAAAAJ&amp;hl=en" target="_blank" rel="noopener">Pr&nbsp;Michael&nbsp;Boy</a> et de <a href="https://holmes-alan.github.io/" target="_blank" rel="noopener">Zhi-Song&nbsp;Liu</a>, professeur associé. J’essaie de combiner ce que la physique nous dit du trajet de l’air avec ce que les réseaux génératifs peuvent apprendre des données. En parallèle de la thèse, je suis expert en recherche IA en freelance chez <a href="https://mercor.com/" target="_blank" rel="noopener">Mercor</a>, où je construis des workflows d’analyse de données scientifiques qui servent à entraîner des agents IA capables de piloter un ordinateur.</p>
+        <p>J’ai la chance de faire tourner ces modèles sur le <strong>supercalculateur LUMI</strong>, avec jusqu’à 1&nbsp;024 GPU AMD MI250X. Avant la thèse&nbsp;: diplôme d’ingénieur (Big Data et IA) à l’EiCnam Paris, avec un an d’alternance à l’<strong>INRIA Bordeaux</strong>, dans l’équipe Mnemosyne (<a href="https://www.inria.fr/fr/frederic-alexandre" target="_blank" rel="noopener">Fr&eacute;d&eacute;ric Alexandre</a>, <a href="https://github.com/rougier" target="_blank" rel="noopener">Nicolas Rougier</a>).</p>
+        <p class="topics"><strong>Thèmes&nbsp;:</strong> qualité de l’air, modélisation atmosphérique, modèles génératifs (flow matching), transport lagrangien, réseaux de neurones informés par la physique, vision transformers, calcul haute performance, entraînement distribué à grande échelle.</p>
 
-    <section class="section flagship" id="foehn" aria-labelledby="foehn-title">
-        <div class="container">
-            <p class="kicker reveal"><span class="kicker-num">01</span> Dernière prépublication &middot; octobre 2026 &middot; avec <a href="https://scholar.google.com/citations?user=sv7zMEwAAAAJ&amp;hl=en" target="_blank" rel="noopener">Michael Boy</a> et <a href="https://holmes-alan.github.io/" target="_blank" rel="noopener">Zhi-Song Liu</a></p>
-            <div class="flagship-grid">
-                <div class="flagship-text reveal">
-                    <h2 id="foehn-title" class="display-xl">Foehn</h2>
-                    <p class="lead">L’exposition à court terme aux particules fines est responsable d’environ un million de décès par an. Pourtant, les prévisions opérationnelles sont calculées sur des grilles aux mailles de plusieurs dizaines de kilomètres, qui masquent la pollution respirée chaque jour par près de deux cents millions de personnes. Foehn, le modèle que nous présentons dans cette prépublication, prévoit les PM<sub>2.5</sub> à 1&nbsp;km sur toutes les terres habitées, jusqu’à une semaine à l’avance.</p>
-                    <p class="actions">
-                        <a class="btn btn-solid" href="https://ammarkheder.com/Foehn/#viewer" target="_blank" rel="noopener">Explorer les prévisions à 1&nbsp;km</a>
-                        <a class="btn btn-outline" href="projects/foehn.html">Étude de cas</a>
-                        <a class="btn btn-outline" href="https://github.com/AmmarKheder/Foehn" target="_blank" rel="noopener">Code</a>
-                    </p>
-                    <p class="more-link"><a href="https://ammarkheder.com/Foehn/#air" target="_blank" rel="noopener">Où était l’air que vous respirez&nbsp;? Essayez &rarr;</a></p>
-                </div>
-                <div class="flagship-media reveal">
-                    <article class="video-card">
-                        <a class="video-thumb video-thumb-corner" href="https://www.youtube.com/watch?v=XB7i0QX7OCo" target="_blank" rel="noopener" data-yt="XB7i0QX7OCo" aria-label="Lire&nbsp;: Foehn en 8&nbsp;minutes (7:46)">
-                            <img src="../assets/ext/video/foehn-film.webp" alt="" width="960" height="540" decoding="async">
-                            <span class="video-play" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><circle cx="32" cy="32" r="31" fill="currentColor"/><path d="M26 21 45 32 26 43Z" class="tri"/></svg></span>
-                            <span class="video-badge">7:46</span>
-                        </a>
-                        <div class="video-body">
-                            <h3 class="video-title">Foehn en 8&nbsp;minutes</h3>
-                            <p class="video-caption">Des particules que vous respirez à une prévision à 1&nbsp;km, partout sur Terre&nbsp;: l’air remonté dans le temps, le générateur, les résultats.</p>
-                            <p class="video-meta">Audio en 31 langues &middot; sous-titres en 33 (Paramètres &gt; Piste audio)</p>
-                        </div>
-                    </article>
-                </div>
+            </div>
+            <aside class="about-side" id="contact">
+                <figure class="hero-portrait">
+                    <div class="avatar-swap" title="Touchez ou survolez l’image pour voir l’illustration d’Arita. Touchez à nouveau pour revenir.">
+                        <img src="../photo-440.webp" alt="Ammar Kheder" class="avatar avatar-front" width="440" height="440" decoding="async">
+                        <img src="../pic/ammar_arita-440.webp" alt="Ammar Kheder, portrait illustré par Mitsuhiro Arita" class="avatar avatar-back" loading="lazy" width="440" height="440" decoding="async">
+                    </div>
+                    <figcaption>Touchez&nbsp;: mon portrait, illustré par Mitsuhiro Arita</figcaption>
+                </figure>
+            </aside>
+        </div>
+        <div class="two-col history-cols">
+            <div>
+                <h3>Expérience</h3>
+                <table class="history">
+                    <tbody>
+                        <tr><td>depuis 2026</td><td><span class="role">Expert en recherche IA (freelance)</span><br><span class="place"><a href="https://mercor.com/" target="_blank" rel="noopener">Mercor</a>, San Francisco (à distance). Workflows d’analyse de données scientifiques (Python, ML, données atmosphériques et climatiques) pour entraîner des agents IA qui pilotent un ordinateur&nbsp;; niveau «&nbsp;top contributor&nbsp;» atteint en deux semaines</span></td></tr>
+                        <tr><td>depuis 2024</td><td><a href="teaching.html" class="exp-link"><span class="role">Chercheur junior et assistant d’enseignement <span class="exp-arrow">&rarr;</span></span><br><span class="place">LUT University, Lahti, Finlande</span></a></td></tr>
+                        <tr><td>2023 &ndash; 2026</td><td><span class="role">CEO, Wabel Group</span><br><span class="place">Services d’IA et développement web</span></td></tr>
+                        <tr><td>2021 &ndash; 2022</td><td><span class="role">Ingénieur de recherche (alternance)</span><br><span class="place">INRIA Bordeaux, équipe Mnemosyne</span></td></tr>
+                        <tr><td>2021 &ndash; 2023</td><td><a href="firefighter.html" class="exp-link"><span class="role">Sapeur-pompier volontaire <span class="exp-arrow">&rarr;</span></span><br><span class="place">Sapeurs-pompiers des Deux-S&egrave;vres</span></a></td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <h3>Formation</h3>
+                <table class="history">
+                    <tbody>
+                        <tr><td>depuis 2024</td><td><span class="role">Doctorat en ingénierie computationnelle</span><br><span class="place">LUT University, Finlande</span></td></tr>
+                        <tr><td>2021 &ndash; 2024</td><td><span class="role">Diplôme d’ingénieur, Big Data et IA</span><br><span class="place">EiCnam Paris, en alternance à l’INRIA Bordeaux</span></td></tr>
+                        <tr><td>2019 &ndash; 2021</td><td><span class="role">Bachelor, science des données</span><br><span class="place">BUT Niort. Statistique, big data, informatique décisionnelle</span></td></tr>
+                    </tbody>
+                </table>
             </div>
         </div>
+
+        <p class="about-line"><strong>En dehors de la recherche&nbsp;:</strong> <a href="firefighter.html">sapeur-pompier volontaire, 2021&ndash;2023</a> &middot; <a href="bia.html">brevet d’initiation aéronautique (BIA), 2016&ndash;17</a></p>
+        <p class="about-line"><strong>Langues&nbsp;:</strong> français et arabe (langues maternelles), anglais (courant).</p>
+
+        <h3 class="about-sub">Exposés et visites</h3>
+        <p class="about-line"><strong>2026&nbsp;:</strong> <a href="news.html#y2026">IAC 2026, Xi&rsquo;an</a> (TopoFlow) &middot; <a href="news.html#y2026">Boya Forum, Université de Pékin</a> (exposé invité) &middot; séjours de recherche à la <a href="news.html#y2026">TUM</a> et dans l’<a href="news.html#y2026">équipe ARCHES d’Inria</a>.</p>
+        <p class="about-line"><strong>2025&nbsp;:</strong> <a href="news.html#y2025">SCIA, Reykjav&iacute;k</a> (AQ-Net, présentation éclair et poster) &middot; <a href="news.html#y2025">EAC, Lecce</a> (poster AQ-Net) &middot; <a href="news.html#y2025">LUT Doctoral School Science Conference</a> &middot; visites à l’<a href="news.html#y2025">INRIA Bordeaux, à l’&Eacute;cole polytechnique et à l’Université technique d’Istanbul</a>.</p>
+
     </section>
 
-    <section class="section" id="watch" aria-labelledby="watch-title">
-        <div class="container">
-            <header class="section-head reveal">
-                <p class="kicker"><span class="kicker-num">02</span> Regarder</p>
-                <h2 id="watch-title">Foehn, expliqué bloc par bloc</h2>
-            </header>
-            <article class="video-card video-card-wide reveal" id="series">
-                <a class="video-thumb" href="https://www.youtube.com/playlist?list=PLVRzz9roC0QQ" target="_blank" rel="noopener" data-yt="eELs9NFNCbQ" data-list="PLVRzz9roC0QQ" aria-label="Lire&nbsp;: Foehn de A à Z (playlist, 12 épisodes et un film complet)">
-                    <img src="../assets/ext/video/foehn-series.webp" alt="" width="960" height="540" loading="lazy" decoding="async">
-                    <span class="video-play" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><circle cx="32" cy="32" r="31" fill="currentColor"/><path d="M26 21 45 32 26 43Z" class="tri"/></svg></span>
+    <section id="news" aria-labelledby="news-title">
+        <h2 id="news-title">Actualités</h2>
+        <ol class="news-list">
+                <li class="news-featured"><span class="news-when"><span class="news-date">23 oct. 2026</span> <span class="news-badge" data-until="2026-11-20">Nouveau</span></span> <span class="news-text"><strong>Foehn de A à Z</strong>&nbsp;: 12 épisodes animés et un film de 44&nbsp;minutes expliquent Foehn bloc par bloc. <a href="videos.html#series">Voir la série &rarr;</a></span></li>
+                <li><span class="news-when"><span class="news-date">19 oct. 2026</span></span> <span class="news-text">Prépublication de <strong>Foehn</strong> sur <a href="https://arxiv.org/abs/2610.25941" target="_blank" rel="noopener">arXiv</a>, avec des <a href="https://ammarkheder.com/Foehn/" target="_blank" rel="noopener">prévisions interactives à 1&nbsp;km</a> et le <a href="https://github.com/AmmarKheder/Foehn" target="_blank" rel="noopener">code</a>.</span></li>
+                <li><span class="news-when"><span class="news-date">7 sept. 2026</span></span> <span class="news-text">Présentation de <strong>TopoFlow</strong> à l’<a href="https://www.iac2026.cn/#/" target="_blank" rel="noopener">IAC 2026</a>, l’International Aerosol Conference, à Xi&rsquo;an.</span></li>
+                <li><span class="news-when"><span class="news-date">août 2026</span></span> <span class="news-text">Exposé invité au Boya Forum on Environmental Research, <a href="https://www.linkedin.com/school/peking-university/" target="_blank" rel="noopener">Université de Pékin</a>.</span></li>
+        </ol>
+        <details class="news-more">
+            <summary>Plus tôt en 2026 <span class="news-more-count">(3)</span></summary>
+            <ol class="news-list">
+                    <li><span class="news-when"><span class="news-date">juin 2026</span></span> <span class="news-text">Séjour de recherche dans l’<a href="https://team.inria.fr/arches/people/" target="_blank" rel="noopener">équipe ARCHES</a> d’Inria, auprès de Claire Monteleoni.</span></li>
+                    <li><span class="news-when"><span class="news-date">mai 2026</span></span> <span class="news-text">Séjour de recherche de deux jours (5&ndash;6 mai) auprès de la <a href="https://www.professoren.tum.de/en/chen-jia" target="_blank" rel="noopener">Pr&nbsp;Jia Chen</a> et de son groupe, à l’Université technique de Munich (TUM).</span></li>
+                    <li><span class="news-when"><span class="news-date">24 avr. 2026</span></span> <span class="news-text">Publication de <strong>TopoFlow</strong> dans <a href="https://www.nature.com/articles/s41612-026-01417-5" target="_blank" rel="noopener"><em>npj Climate and Atmospheric Science</em></a> (Nature Portfolio).</span></li>
+            </ol>
+        </details>
+        <p class="news-all-link"><a href="news.html">Toutes les actualités &rarr;</a></p>
+    </section>
+
+    <section class="flagship" id="foehn" aria-labelledby="foehn-title">
+        <div class="flagship-text">
+            <p class="flagship-kicker">Dernière prépublication &middot; octobre 2026 &middot; avec <a href="https://scholar.google.com/citations?user=sv7zMEwAAAAJ&amp;hl=en" target="_blank" rel="noopener">Michael Boy</a> et <a href="https://holmes-alan.github.io/" target="_blank" rel="noopener">Zhi-Song Liu</a></p>
+            <h2 id="foehn-title">Foehn</h2>
+            <p class="flagship-lead">L’exposition à court terme aux particules fines est responsable d’environ un million de décès par an. Pourtant, les prévisions opérationnelles sont calculées sur des grilles aux mailles de plusieurs dizaines de kilomètres, qui masquent la pollution respirée chaque jour par près de deux cents millions de personnes. Foehn, le modèle que nous présentons dans cette prépublication, prévoit les PM<sub>2.5</sub> à 1&nbsp;km sur toutes les terres habitées, jusqu’à une semaine à l’avance.</p>
+            <dl class="flagship-facts">
+                <div><dt>1&nbsp;km</dt><dd>toutes les terres habitées, jusqu’à 7&nbsp;jours à l’avance</dd></div>
+                <div><dt>3 sur 4</dt><dd>stations où Foehn est plus précis que la prévision opérationnelle (5&nbsp;954 stations, prévisions rétrospectives sur 2022)</dd></div>
+                <div><dt>&minus;17&nbsp;%</dt><dd>d’erreur à un jour d’échéance par rapport à la prévision opérationnelle (6&nbsp;324 stations)</dd></div>
+            </dl>
+            <p class="flagship-actions">
+                <a href="https://ammarkheder.com/Foehn/#viewer" target="_blank" rel="noopener">Explorer les prévisions à 1&nbsp;km</a>
+                <a href="projects/foehn.html">Étude de cas</a>
+                <a href="https://github.com/AmmarKheder/Foehn" target="_blank" rel="noopener">Code</a>
+            </p>
+            <p class="flagship-more"><a href="https://ammarkheder.com/Foehn/#air" target="_blank" rel="noopener">Où était l’air que vous respirez&nbsp;? Essayez &rarr;</a></p>
+        </div>
+        <div class="flagship-media">
+            <article class="video-card">
+                <a class="video-thumb video-thumb-corner" href="https://www.youtube.com/watch?v=XB7i0QX7OCo" target="_blank" rel="noopener" data-yt="XB7i0QX7OCo" aria-label="Lire&nbsp;: Foehn en 8&nbsp;minutes (7:46)">
+                    <img src="../assets/ext/video/foehn-film.webp" alt="" width="960" height="540" decoding="async">
+                    <span class="video-play" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><path d="M32 4.6C47.4 3.8 60.1 16.2 59.7 31.7 59.3 47.4 47.1 60.2 31.5 59.5 16.2 58.9 3.7 47 4.3 32 4.9 16.9 16.9 5.3 32 4.6Z" fill="#fffdf7" stroke="#0a0a0a" stroke-width="2.5" stroke-linejoin="round"/><path d="M36.5 3.3C50.6 5.4 61.3 17.9 60.4 33 59.5 47.8 49.1 59.2 35 61.2" fill="none" stroke="#0a0a0a" stroke-width="1.2" stroke-linecap="round" opacity=".55" transform="rotate(-3 32 32)"/><path d="M26 21.5 44.5 32 26 42.5Z" fill="#0a0a0a" stroke="#0a0a0a" stroke-width="4" stroke-linejoin="round"/></svg></span>
+                    <span class="video-badge">7:46</span>
                 </a>
                 <div class="video-body">
-                    <span class="video-kicker">Playlist &middot; 12 épisodes + film complet</span>
-                    <h3 class="video-title">Foehn de A à Z</h3>
-                    <p class="video-caption">12 épisodes animés et un film de 44&nbsp;minutes expliquent Foehn bloc par bloc, du problème et des données jusqu’à FLEXGREEN, au générateur et aux résultats.</p>
-                    <p class="video-meta">En anglais, avec un doublage par IA des épisodes (jusqu’à 10 langues). Narration générée par IA à partir de ma propre voix&nbsp;; musique générée par IA.</p>
-                    <p class="video-links"><a href="https://www.youtube.com/playlist?list=PLVRzz9roC0QQ" target="_blank" rel="noopener">Playlist sur YouTube</a> <span class="sep" aria-hidden="true">&middot;</span> <a href="https://www.youtube.com/watch?v=J9X9GcSSdig" target="_blank" rel="noopener">Film complet, 43:58</a> <span class="sep" aria-hidden="true">&middot;</span> <a href="https://www.youtube.com/@FoehnAI" target="_blank" rel="noopener">@FoehnAI</a></p>
+                    <h3 class="video-title">Foehn en 8&nbsp;minutes</h3>
+                    <p class="video-caption">Des particules que vous respirez à une prévision à 1&nbsp;km, partout sur Terre&nbsp;: l’air remonté dans le temps, le générateur, les résultats.</p>
+                    <p class="video-meta">Audio en 31 langues &middot; sous-titres en 33 (Paramètres &gt; Piste audio)</p>
                 </div>
             </article>
-            <p class="section-more reveal"><a href="videos.html">Toutes les vidéos &rarr;</a></p>
         </div>
     </section>
 
-    <section class="section" id="research" aria-labelledby="research-title">
-        <div class="container">
-            <header class="section-head reveal">
-                <p class="kicker"><span class="kicker-num">03</span> Recherche</p>
-                <h2 id="research-title">Un même fil de recherche</h2>
-                <p class="section-desc">Des stations éparses (AQ-Net, 2025) aux transformers guidés par la physique (TopoFlow, 2026), puis à une résolution de 1&nbsp;km sur l’Europe (CRAN-PM, 2026) et sur toute la planète (Foehn, 2026).</p>
-            </header>
-            <div class="project-grid">
-                <a href="projects/aqnet.html" class="project-card reveal">
-                    <span class="project-cover"><img src="../assets/ext/aqnet/mapc.webp" alt="Carte de pollution d’AQ-Net" loading="lazy" width="1600" height="913" decoding="async"></span>
-                    <span class="project-body">
-                        <span class="project-kicker">SCIA 2025 &middot; Springer LNCS</span>
-                        <span class="project-title">AQ-Net</span>
-                        <span class="project-desc">Réanalyse de la qualité de l’air pour les stations avec et sans capteurs&nbsp;: un LSTM avec attention et un kNN neuronal (nord de la Chine).</span>
-                        <span class="project-cta">Lire l’étude de cas <span class="arrow" aria-hidden="true">&rarr;</span></span>
-                    </span>
-                </a>
-                <a href="projects/topoflow.html" class="project-card reveal">
-                    <span class="project-cover"><img src="../assets/ext/topoflow/china-pm25-publication.webp" alt="Prévision des PM2.5 par TopoFlow" loading="lazy" width="1600" height="1089" decoding="async"></span>
-                    <span class="project-body">
-                        <span class="project-kicker">npj Clim. Atmos. Sci. &middot; 2026</span>
-                        <span class="project-title">TopoFlow</span>
-                        <span class="project-desc">Un Vision Transformer qui tient compte du relief et du vent&nbsp;: une RMSE de 9,71&nbsp;&micro;g/m&sup3; pour les PM<sub>2.5</sub> sur la Chine, soit une amélioration de <span class="nowrap">71&ndash;80&nbsp;%</span> par rapport aux systèmes de prévision opérationnels.</span>
-                        <span class="project-cta">Lire l’étude de cas <span class="arrow" aria-hidden="true">&rarr;</span></span>
-                    </span>
-                </a>
-                <a href="projects/cranpm.html" class="project-card reveal">
-                    <span class="project-cover"><img src="../assets/ext/cranpm/fig1-teaser.webp" alt="Prévisions de CRAN-PM sur l’Europe" loading="lazy" width="1600" height="916" decoding="async"></span>
-                    <span class="project-body">
-                        <span class="project-kicker">Prépublication arXiv &middot; 2026</span>
-                        <span class="project-title">CRAN-PM</span>
-                        <span class="project-desc">Un Vision Transformer à résolutions croisées qui produit la carte de l’Europe à 1&nbsp;km (29&nbsp;millions de pixels) en 1,8&nbsp;s sur un seul GPU.</span>
-                        <span class="project-cta">Lire l’étude de cas <span class="arrow" aria-hidden="true">&rarr;</span></span>
-                    </span>
-                </a>
+    <section id="watch" aria-labelledby="watch-title">
+        <h2 id="watch-title">À voir</h2>
+        <article class="video-card video-card-wide" id="series">
+            <a class="video-thumb" href="https://www.youtube.com/playlist?list=PLVRzz9roC0QQ" target="_blank" rel="noopener" data-yt="eELs9NFNCbQ" data-list="PLVRzz9roC0QQ" aria-label="Lire&nbsp;: Foehn de A à Z (playlist, 12 épisodes et un film complet)">
+                <img src="../assets/ext/video/foehn-series.webp" alt="" width="960" height="540" loading="lazy" decoding="async">
+                <span class="video-play" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><path d="M32 4.6C47.4 3.8 60.1 16.2 59.7 31.7 59.3 47.4 47.1 60.2 31.5 59.5 16.2 58.9 3.7 47 4.3 32 4.9 16.9 16.9 5.3 32 4.6Z" fill="#fffdf7" stroke="#0a0a0a" stroke-width="2.5" stroke-linejoin="round"/><path d="M36.5 3.3C50.6 5.4 61.3 17.9 60.4 33 59.5 47.8 49.1 59.2 35 61.2" fill="none" stroke="#0a0a0a" stroke-width="1.2" stroke-linecap="round" opacity=".55" transform="rotate(-3 32 32)"/><path d="M26 21.5 44.5 32 26 42.5Z" fill="#0a0a0a" stroke="#0a0a0a" stroke-width="4" stroke-linejoin="round"/></svg></span>
+                <span class="video-badge">Playlist &middot; 12 épisodes + film complet</span>
+            </a>
+            <div class="video-body">
+                <h3 class="video-title">Foehn de A à Z</h3>
+                <p class="video-caption">12 épisodes animés et un film de 44&nbsp;minutes expliquent Foehn bloc par bloc, du problème et des données jusqu’à FLEXGREEN, au générateur et aux résultats.</p>
+                <p class="video-meta">En anglais, avec un doublage par IA des épisodes (jusqu’à 10 langues). Narration générée par IA à partir de ma propre voix&nbsp;; musique générée par IA.</p>
+                <p class="video-links"><a href="https://www.youtube.com/playlist?list=PLVRzz9roC0QQ" target="_blank" rel="noopener">Playlist sur YouTube</a> <span class="sep" aria-hidden="true">&middot;</span> <a href="https://www.youtube.com/watch?v=J9X9GcSSdig" target="_blank" rel="noopener">Film complet, 43:58</a> <span class="sep" aria-hidden="true">&middot;</span> <a href="https://www.youtube.com/@FoehnAI" target="_blank" rel="noopener">@FoehnAI</a></p>
             </div>
-            <p class="section-more reveal"><a href="projects.html">Toute la recherche et les projets &rarr;</a></p>
-        </div>
+        </article>
+        <p class="section-more"><a href="videos.html">Toutes les vidéos &rarr;</a></p>
     </section>
 
-    <section class="section" id="publications" aria-labelledby="publications-title">
-        <div class="container">
-            <header class="section-head reveal">
-                <p class="kicker"><span class="kicker-num">04</span> Articles</p>
-                <h2 id="publications-title">Publications</h2>
-                <p class="citation-total" id="citation-total" hidden></p>
-            </header>
-            <ol class="publications">
-                <li class="pub-featured reveal" data-doi="10.48550/arXiv.2610.25941">
-                    <p class="pub-title" lang="en">Global probabilistic forecasting of air pollution</p>
-                    <p class="pub-meta"><strong>A. Kheder</strong>, M. Boy, Z.-S. Liu</p>
-                    <p class="pub-venue"><span class="pub-type">Prépublication</span> arXiv:2610.25941, <span class="pub-year">2026</span>. <span class="pub-lead">Premier auteur</span></p>
-                    <p class="pub-sum">Prévisions mondiales des PM<sub>2.5</sub> à 1&nbsp;km, jusqu’à une semaine à l’avance&nbsp;; plus précises que la prévision opérationnelle dans trois stations sur quatre (prévisions rétrospectives sur 2022).</p>
-                    <div class="pub-links">
-                        <a href="https://arxiv.org/abs/2610.25941" target="_blank" rel="noopener">arXiv</a>
-                        <a href="https://github.com/AmmarKheder/Foehn" target="_blank" rel="noopener">Code</a>
-                        <a href="https://ammarkheder.com/Foehn/" target="_blank" rel="noopener">Projet</a>
-                        <a href="projects/foehn.html">Étude de cas</a>
-                        <details class="pub-bib"><summary>Citer</summary><pre tabindex="0">@misc{kheder2026foehn,
+    <section id="research" aria-labelledby="research-title">
+        <h2 id="research-title">Recherche</h2>
+        <p class="section-desc">Un même fil de recherche&nbsp;: des stations éparses (AQ-Net, 2025) aux transformers guidés par la physique (TopoFlow, 2026), puis à une résolution de 1&nbsp;km sur l’Europe (CRAN-PM, 2026) et sur toute la planète (Foehn, 2026).</p>
+        <div class="project-grid research-grid">
+            <a href="projects/aqnet.html" class="project-card">
+                <div class="project-card-cover"><picture><source srcset="../assets/ext/aqnet/mapc.webp" type="image/webp"><img src="https://raw.githubusercontent.com/AmmarKheder/AQ-Net/main/img/mapc.png" alt="Carte de pollution d’AQ-Net" loading="lazy" width="1600" height="913" decoding="async"></picture></div>
+                <div class="project-card-body">
+                    <p class="project-card-kicker">SCIA 2025 &middot; Springer LNCS</p>
+                    <h3 class="project-card-title">AQ-Net</h3>
+                    <p class="project-card-desc">Réanalyse de la qualité de l’air pour les stations avec et sans capteurs&nbsp;: un LSTM avec attention et un kNN neuronal (nord de la Chine).</p>
+                    <p class="project-card-cta">Lire l’étude de cas <span class="arrow">&rarr;</span></p>
+                </div>
+            </a>
+            <a href="projects/topoflow.html" class="project-card">
+                <div class="project-card-cover"><picture><source srcset="../assets/ext/topoflow/china-pm25-publication.webp" type="image/webp"><img src="https://ammarkheder.com/TopoFlow/assets/figures/china_pm25_publication.png" alt="Prévision des PM2.5 par TopoFlow" loading="lazy" width="1600" height="1089" decoding="async"></picture></div>
+                <div class="project-card-body">
+                    <p class="project-card-kicker">npj Clim. Atmos. Sci. &middot; 2026</p>
+                    <h3 class="project-card-title">TopoFlow</h3>
+                    <p class="project-card-desc">Un Vision Transformer qui tient compte du relief et du vent&nbsp;: une RMSE de 9,71&nbsp;&micro;g/m&sup3; pour les PM<sub>2.5</sub> sur la Chine, soit une amélioration de <span class="nowrap">71&ndash;80&nbsp;%</span> par rapport aux systèmes de prévision opérationnels.</p>
+                    <p class="project-card-cta">Lire l’étude de cas <span class="arrow">&rarr;</span></p>
+                </div>
+            </a>
+            <a href="projects/cranpm.html" class="project-card">
+                <div class="project-card-cover"><picture><source srcset="../assets/ext/cranpm/fig1-teaser.webp" type="image/webp"><img src="https://ammarkheder.com/cran_pm/assets/figures/fig1_teaser.png" alt="Prévisions de CRAN-PM sur l’Europe" loading="lazy" width="1600" height="916" decoding="async"></picture></div>
+                <div class="project-card-body">
+                    <p class="project-card-kicker">Prépublication arXiv &middot; 2026</p>
+                    <h3 class="project-card-title">CRAN-PM</h3>
+                    <p class="project-card-desc">Un Vision Transformer à résolutions croisées qui produit la carte de l’Europe à 1&nbsp;km (29&nbsp;millions de pixels) en 1,8&nbsp;s sur un seul GPU.</p>
+                    <p class="project-card-cta">Lire l’étude de cas <span class="arrow">&rarr;</span></p>
+                </div>
+            </a>
+        </div>
+        <p class="section-more"><a href="projects.html">Toute la recherche et les projets &rarr;</a></p>
+    </section>
+
+    <section id="publications" aria-labelledby="publications-title">
+        <h2 id="publications-title">Publications</h2>
+        <p class="citation-total" id="citation-total" hidden></p>
+        <ol class="publications">
+            <li class="pub-featured" data-doi="10.48550/arXiv.2610.25941">
+                <p class="pub-title" lang="en">Global probabilistic forecasting of air pollution</p>
+                <p class="pub-meta"><strong>A. Kheder</strong>, M. Boy, Z.-S. Liu</p>
+                <p class="pub-venue"><span class="pub-type">Prépublication</span> arXiv:2610.25941, <span class="pub-year">2026</span>. <span class="pub-lead">Premier auteur</span></p>
+                <p class="pub-sum">Prévisions mondiales des PM<sub>2.5</sub> à 1&nbsp;km, jusqu’à une semaine à l’avance&nbsp;; plus précises que la prévision opérationnelle dans trois stations sur quatre (prévisions rétrospectives sur 2022).</p>
+                <div class="pub-links">
+                    <a href="https://arxiv.org/abs/2610.25941" target="_blank" rel="noopener">arXiv</a>
+                    <a href="https://github.com/AmmarKheder/Foehn" target="_blank" rel="noopener">Code</a>
+                    <a href="https://ammarkheder.com/Foehn/" target="_blank" rel="noopener">Projet</a>
+                    <a href="projects/foehn.html">Étude de cas</a>
+                    <details class="pub-bib"><summary>Citer</summary><pre tabindex="0">@misc{kheder2026foehn,
   title         = {Global probabilistic forecasting of air pollution},
   author        = {Kheder, Ammar and Boy, Michael and Liu, Zhi-Song},
   year          = {2026},
@@ -222,20 +260,20 @@
   primaryClass  = {cs.AI},
   url           = {https://arxiv.org/abs/2610.25941}
 }</pre></details>
-                    </div>
-                </li>
-                <li class="reveal" data-doi="10.1038/s41612-026-01417-5">
-                    <p class="pub-title" lang="en">TopoFlow: topography-aware pollutant Flow learning for high-resolution air quality prediction</p>
-                    <p class="pub-meta"><strong>A. Kheder</strong>, H. Toropainen, W. Peng, S. Ant&atilde;o, J. Chen, M. Boy, Z.-S. Liu</p>
-                    <p class="pub-venue"><span class="pub-type">Revue</span> <em>npj Climate and Atmospheric Science</em> 9, 143, Nature Portfolio, <span class="pub-year">2026</span>. <span class="pub-lead">Premier auteur</span></p>
-                    <p class="pub-sum">Vision Transformer qui tient compte du relief et du vent&nbsp;; RMSE de 9,71&nbsp;&micro;g/m&sup3; pour les PM<sub>2.5</sub> sur la Chine, soit une amélioration de 71&ndash;80&nbsp;% par rapport aux systèmes de prévision opérationnels.</p>
-                    <div class="pub-links">
-                        <a href="https://www.nature.com/articles/s41612-026-01417-5" target="_blank" rel="noopener">Nature</a>
-                        <a href="https://arxiv.org/abs/2602.16821" target="_blank" rel="noopener">arXiv</a>
-                        <a href="https://github.com/AmmarKheder/topoflow" target="_blank" rel="noopener">Code</a>
-                        <a href="https://ammarkheder.com/TopoFlow/" target="_blank" rel="noopener">Projet</a>
-                        <a href="projects/topoflow.html">Étude de cas</a>
-                        <details class="pub-bib"><summary>Citer</summary><pre tabindex="0">@article{kheder2026topoflow,
+                </div>
+            </li>
+            <li data-doi="10.1038/s41612-026-01417-5">
+                <p class="pub-title" lang="en">TopoFlow: topography-aware pollutant Flow learning for high-resolution air quality prediction</p>
+                <p class="pub-meta"><strong>A. Kheder</strong>, H. Toropainen, W. Peng, S. Ant&atilde;o, J. Chen, M. Boy, Z.-S. Liu</p>
+                <p class="pub-venue"><span class="pub-type">Revue</span> <em>npj Climate and Atmospheric Science</em> 9, 143, Nature Portfolio, <span class="pub-year">2026</span>. <span class="pub-lead">Premier auteur</span></p>
+                <p class="pub-sum">Vision Transformer qui tient compte du relief et du vent&nbsp;; RMSE de 9,71&nbsp;&micro;g/m&sup3; pour les PM<sub>2.5</sub> sur la Chine, soit une amélioration de 71&ndash;80&nbsp;% par rapport aux systèmes de prévision opérationnels.</p>
+                <div class="pub-links">
+                    <a href="https://www.nature.com/articles/s41612-026-01417-5" target="_blank" rel="noopener">Nature</a>
+                    <a href="https://arxiv.org/abs/2602.16821" target="_blank" rel="noopener">arXiv</a>
+                    <a href="https://github.com/AmmarKheder/topoflow" target="_blank" rel="noopener">Code</a>
+                    <a href="https://ammarkheder.com/TopoFlow/" target="_blank" rel="noopener">Projet</a>
+                    <a href="projects/topoflow.html">Étude de cas</a>
+                    <details class="pub-bib"><summary>Citer</summary><pre tabindex="0">@article{kheder2026topoflow,
   title   = {TopoFlow: topography-aware pollutant flow learning for high-resolution air quality prediction},
   author  = {Kheder, Ammar and Toropainen, Helmi and Peng, Wenqing and Ant{\~a}o, Samuel and Chen, Jia and Boy, Michael and Liu, Zhi-Song},
   journal = {npj Climate and Atmospheric Science},
@@ -245,19 +283,19 @@
   year    = {2026},
   doi     = {10.1038/s41612-026-01417-5}
 }</pre></details>
-                    </div>
-                </li>
-                <li class="reveal" data-doi="10.48550/arXiv.2603.11725">
-                    <p class="pub-title" lang="en">CRAN-PM: Cross-Resolution Attention Network for High-Resolution PM<sub>2.5</sub> Prediction</p>
-                    <p class="pub-meta"><strong>A. Kheder</strong>, H. Toropainen, W. Peng, S. Ant&atilde;o, Z.-S. Liu, M. Boy</p>
-                    <p class="pub-venue"><span class="pub-type">Prépublication</span> arXiv:2603.11725, <span class="pub-year">2026</span>. <span class="pub-lead">Premier auteur</span></p>
-                    <p class="pub-sum">Vision Transformer à résolutions croisées&nbsp;: la carte de l’Europe à 1&nbsp;km (29&nbsp;millions de pixels) en 1,8&nbsp;s sur un seul GPU.</p>
-                    <div class="pub-links">
-                        <a href="https://arxiv.org/abs/2603.11725" target="_blank" rel="noopener">arXiv</a>
-                        <a href="https://github.com/AmmarKheder/cran_pm" target="_blank" rel="noopener">Code</a>
-                        <a href="https://ammarkheder.com/cran_pm/" target="_blank" rel="noopener">Projet</a>
-                        <a href="projects/cranpm.html">Étude de cas</a>
-                        <details class="pub-bib"><summary>Citer</summary><pre tabindex="0">@misc{kheder2026cranpm,
+                </div>
+            </li>
+            <li data-doi="10.48550/arXiv.2603.11725">
+                <p class="pub-title" lang="en">CRAN-PM: Cross-Resolution Attention Network for High-Resolution PM<sub>2.5</sub> Prediction</p>
+                <p class="pub-meta"><strong>A. Kheder</strong>, H. Toropainen, W. Peng, S. Ant&atilde;o, Z.-S. Liu, M. Boy</p>
+                <p class="pub-venue"><span class="pub-type">Prépublication</span> arXiv:2603.11725, <span class="pub-year">2026</span>. <span class="pub-lead">Premier auteur</span></p>
+                <p class="pub-sum">Vision Transformer à résolutions croisées&nbsp;: la carte de l’Europe à 1&nbsp;km (29&nbsp;millions de pixels) en 1,8&nbsp;s sur un seul GPU.</p>
+                <div class="pub-links">
+                    <a href="https://arxiv.org/abs/2603.11725" target="_blank" rel="noopener">arXiv</a>
+                    <a href="https://github.com/AmmarKheder/cran_pm" target="_blank" rel="noopener">Code</a>
+                    <a href="https://ammarkheder.com/cran_pm/" target="_blank" rel="noopener">Projet</a>
+                    <a href="projects/cranpm.html">Étude de cas</a>
+                    <details class="pub-bib"><summary>Citer</summary><pre tabindex="0">@misc{kheder2026cranpm,
   title         = {CRAN-PM: Cross-Resolution Attention Network for High-Resolution PM2.5 Prediction},
   author        = {Kheder, Ammar and Toropainen, Helmi and Peng, Wenqing and Ant{\~a}o, Samuel and Liu, Zhi-Song and Boy, Michael},
   year          = {2026},
@@ -265,28 +303,28 @@
   archivePrefix = {arXiv},
   url           = {https://arxiv.org/abs/2603.11725}
 }</pre></details>
-                    </div>
-                </li>
-                <li class="reveal" data-doi="10.48550/arXiv.2603.11854">
-                    <p class="pub-title" lang="en">Inverse Neural Operator for ODE Parameter Optimization</p>
-                    <p class="pub-meta">Z.-S. Liu, W. Peng, H. Toropainen, <strong>A. Kheder</strong>, A. Rupp, H. Froning, X. Lin, M. Boy</p>
-                    <p class="pub-venue"><span class="pub-type">Prépublication</span> arXiv:2603.11854, <span class="pub-year">2026</span>.</p>
-                    <p class="pub-sum">Retrouve les paramètres cachés d’une EDO à partir d’observations éparses, 487&nbsp;fois plus vite qu’une descente de gradient itérative.</p>
-                    <div class="pub-links">
-                        <a href="https://arxiv.org/abs/2603.11854" target="_blank" rel="noopener">arXiv</a>
-                    </div>
-                </li>
-                <li class="reveal" data-doi="10.1007/978-3-031-95911-0_6">
-                    <p class="pub-title" lang="en">Deep Spatio-Temporal Neural Network for Air Quality Reanalysis</p>
-                    <p class="pub-meta"><strong>A. Kheder</strong>, B. Foreback, L. Wang, Z.-S. Liu, M. Boy</p>
-                    <p class="pub-venue"><span class="pub-type">Conférence</span> <em>Scandinavian Conference on Image Analysis (SCIA)</em>, Springer LNCS, <span class="pub-year">2025</span>. <span class="pub-lead">Premier auteur</span></p>
-                    <p class="pub-sum">Réanalyse des PM<sub>2.5</sub> aux stations avec et sans capteurs, à l’aide d’un kNN neuronal (nord de la Chine).</p>
-                    <div class="pub-links">
-                        <a href="https://link.springer.com/chapter/10.1007/978-3-031-95911-0_6" target="_blank" rel="noopener">Springer</a>
-                        <a href="https://arxiv.org/abs/2502.11941" target="_blank" rel="noopener">arXiv</a>
-                        <a href="https://github.com/AmmarKheder/AQ-Net" target="_blank" rel="noopener">Code</a>
-                        <a href="projects/aqnet.html">Étude de cas</a>
-                        <details class="pub-bib"><summary>Citer</summary><pre tabindex="0">@inproceedings{kheder2025aqnet,
+                </div>
+            </li>
+            <li data-doi="10.48550/arXiv.2603.11854">
+                <p class="pub-title" lang="en">Inverse Neural Operator for ODE Parameter Optimization</p>
+                <p class="pub-meta">Z.-S. Liu, W. Peng, H. Toropainen, <strong>A. Kheder</strong>, A. Rupp, H. Froning, X. Lin, M. Boy</p>
+                <p class="pub-venue"><span class="pub-type">Prépublication</span> arXiv:2603.11854, <span class="pub-year">2026</span>.</p>
+                <p class="pub-sum">Retrouve les paramètres cachés d’une EDO à partir d’observations éparses, 487&nbsp;fois plus vite qu’une descente de gradient itérative.</p>
+                <div class="pub-links">
+                    <a href="https://arxiv.org/abs/2603.11854" target="_blank" rel="noopener">arXiv</a>
+                </div>
+            </li>
+            <li data-doi="10.1007/978-3-031-95911-0_6">
+                <p class="pub-title" lang="en">Deep Spatio-Temporal Neural Network for Air Quality Reanalysis</p>
+                <p class="pub-meta"><strong>A. Kheder</strong>, B. Foreback, L. Wang, Z.-S. Liu, M. Boy</p>
+                <p class="pub-venue"><span class="pub-type">Conférence</span> <em>Scandinavian Conference on Image Analysis (SCIA)</em>, Springer LNCS, <span class="pub-year">2025</span>. <span class="pub-lead">Premier auteur</span></p>
+                <p class="pub-sum">Réanalyse des PM<sub>2.5</sub> aux stations avec et sans capteurs, à l’aide d’un kNN neuronal (nord de la Chine).</p>
+                <div class="pub-links">
+                    <a href="https://link.springer.com/chapter/10.1007/978-3-031-95911-0_6" target="_blank" rel="noopener">Springer</a>
+                    <a href="https://arxiv.org/abs/2502.11941" target="_blank" rel="noopener">arXiv</a>
+                    <a href="https://github.com/AmmarKheder/AQ-Net" target="_blank" rel="noopener">Code</a>
+                    <a href="projects/aqnet.html">Étude de cas</a>
+                    <details class="pub-bib"><summary>Citer</summary><pre tabindex="0">@inproceedings{kheder2025aqnet,
   title     = {Deep Spatio-Temporal Neural Network for Air Quality Reanalysis},
   author    = {Kheder, Ammar and Foreback, Benjamin and Wang, Lili and Liu, Zhi-Song and Boy, Michael},
   booktitle = {Scandinavian Conference on Image Analysis (SCIA)},
@@ -295,102 +333,10 @@
   year      = {2025},
   doi       = {10.1007/978-3-031-95911-0_6}
 }</pre></details>
-                    </div>
-                </li>
-            </ol>
-            <p class="section-more reveal"><a href="https://scholar.google.com/citations?user=ZYvKJF4AAAAJ&amp;hl=en" target="_blank" rel="noopener">Toutes les publications sur Google Scholar &rarr;</a></p>
-        </div>
-    </section>
-
-    <section class="section about" id="about" aria-labelledby="about-title">
-        <span id="experience"></span>
-        <div class="container">
-            <header class="section-head reveal">
-                <p class="kicker"><span class="kicker-num">05</span> Profil</p>
-                <h2 id="about-title">À propos</h2>
-            </header>
-            <div class="about-grid">
-                <figure class="about-portrait reveal">
-                    <div class="portrait-pair">
-                        <img src="../photo-440.webp" alt="Ammar Kheder" width="440" height="440" loading="lazy" decoding="async">
-                        <img src="../pic/ammar_arita-440.webp" alt="Ammar Kheder, portrait illustré par Mitsuhiro Arita" width="440" height="440" loading="lazy" decoding="async">
-                    </div>
-                    <figcaption>Photo<span class="sep" aria-hidden="true">&middot;</span>portrait à l’encre par Mitsuhiro Arita</figcaption>
-                </figure>
-                <div class="about-text reveal">
-                    <p class="lead">Je suis doctorant en ingénierie computationnelle à LUT University, à Lahti, au sein de l’<a href="https://amc-lahti.fi/" target="_blank" rel="noopener">Atmospheric Modelling Centre (AMC-Lahti)</a> et de l’INAR, Université d’Helsinki, sous la direction du <a href="https://scholar.google.com/citations?user=sv7zMEwAAAAJ&amp;hl=en" target="_blank" rel="noopener">Pr&nbsp;Michael&nbsp;Boy</a> et de <a href="https://holmes-alan.github.io/" target="_blank" rel="noopener">Zhi-Song&nbsp;Liu</a>, professeur associé. J’essaie de combiner ce que la physique nous dit du trajet de l’air avec ce que les réseaux génératifs peuvent apprendre des données. En parallèle de la thèse, je suis expert en recherche IA en freelance chez <a href="https://mercor.com/" target="_blank" rel="noopener">Mercor</a>, où je construis des workflows d’analyse de données scientifiques qui servent à entraîner des agents IA capables de piloter un ordinateur.</p>
-                    <p>J’ai la chance de faire tourner ces modèles sur le <strong>supercalculateur LUMI</strong>, avec jusqu’à 1&nbsp;024 GPU AMD MI250X. Avant la thèse&nbsp;: diplôme d’ingénieur (Big Data et IA) à l’EiCnam Paris, avec un an d’alternance à l’<strong>INRIA Bordeaux</strong>, dans l’équipe Mnemosyne (<a href="https://www.inria.fr/fr/frederic-alexandre" target="_blank" rel="noopener">Fr&eacute;d&eacute;ric Alexandre</a>, <a href="https://github.com/rougier" target="_blank" rel="noopener">Nicolas Rougier</a>).</p>
-                    <p class="topics"><strong>Thèmes</strong> qualité de l’air, modélisation atmosphérique, modèles génératifs (flow matching), transport lagrangien, réseaux de neurones informés par la physique, vision transformers, calcul haute performance, entraînement distribué à grande échelle.</p>
                 </div>
-            </div>
-
-            <div class="history-cols reveal">
-                <div>
-                    <h3 class="sub-head">Expérience</h3>
-                    <table class="history">
-                        <tbody>
-                            <tr><td>depuis 2026</td><td><span class="role">Expert en recherche IA (freelance)</span><br><span class="place"><a href="https://mercor.com/" target="_blank" rel="noopener">Mercor</a>, San Francisco (à distance)</span></td></tr>
-                            <tr><td>depuis 2024</td><td><a href="teaching.html" class="exp-link"><span class="role">Chercheur junior et assistant d’enseignement <span class="exp-arrow" aria-hidden="true">&rarr;</span></span><br><span class="place">LUT University, Lahti, Finlande</span></a></td></tr>
-                            <tr><td>2023 &ndash; 2026</td><td><span class="role">CEO, Wabel Group</span><br><span class="place">Services d’IA et développement web</span></td></tr>
-                            <tr><td>2021 &ndash; 2022</td><td><span class="role">Ingénieur de recherche (alternance)</span><br><span class="place">INRIA Bordeaux, équipe Mnemosyne</span></td></tr>
-                            <tr><td>2021 &ndash; 2023</td><td><a href="firefighter.html" class="exp-link"><span class="role">Sapeur-pompier volontaire <span class="exp-arrow" aria-hidden="true">&rarr;</span></span><br><span class="place">Sapeurs-pompiers des Deux-S&egrave;vres</span></a></td></tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div>
-                    <h3 class="sub-head">Formation</h3>
-                    <table class="history">
-                        <tbody>
-                            <tr><td>depuis 2024</td><td><span class="role">Doctorat en ingénierie computationnelle</span><br><span class="place">LUT University, Finlande</span></td></tr>
-                            <tr><td>2021 &ndash; 2024</td><td><span class="role">Diplôme d’ingénieur, Big Data et IA</span><br><span class="place">EiCnam Paris, en alternance à l’INRIA Bordeaux</span></td></tr>
-                            <tr><td>2019 &ndash; 2021</td><td><span class="role">Bachelor, science des données</span><br><span class="place">BUT Niort. Statistique, big data, informatique décisionnelle</span></td></tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <div class="about-lines reveal">
-                <p class="about-line"><strong>En dehors de la recherche</strong> <a href="firefighter.html">sapeur-pompier volontaire, 2021&ndash;2023</a> &middot; <a href="bia.html">brevet d’initiation aéronautique (BIA), 2016&ndash;17</a></p>
-                <p class="about-line"><strong>Langues</strong> français et arabe (langues maternelles), anglais (courant).</p>
-                <h3 class="sub-head">Exposés et visites</h3>
-                <p class="about-line"><strong>2026</strong> <a href="news.html#y2026">IAC 2026, Xi&rsquo;an</a> (TopoFlow) &middot; <a href="news.html#y2026">Boya Forum, Université de Pékin</a> (exposé invité) &middot; séjours de recherche à la <a href="news.html#y2026">TUM</a> et dans l’<a href="news.html#y2026">équipe ARCHES d’Inria</a>.</p>
-                <p class="about-line"><strong>2025</strong> <a href="news.html#y2025">SCIA, Reykjav&iacute;k</a> (AQ-Net, présentation éclair et poster) &middot; <a href="news.html#y2025">EAC, Lecce</a> (poster AQ-Net) &middot; <a href="news.html#y2025">LUT Doctoral School Science Conference</a> &middot; visites à l’<a href="news.html#y2025">INRIA Bordeaux, à l’&Eacute;cole polytechnique et à l’Université technique d’Istanbul</a>.</p>
-            </div>
-
-            <div id="contact" class="contact-row reveal">
-                <a class="pill-link pill-solid" href="mailto:ammar.kheder@lut.fi">ammar.kheder@lut.fi</a>
-                <a class="pill-link" href="../AmmarKheder-CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
-                <a class="pill-link" href="https://github.com/AmmarKheder" target="_blank" rel="noopener">GitHub</a>
-                <a class="pill-link" href="https://scholar.google.com/citations?user=ZYvKJF4AAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
-                <a class="pill-link" href="https://orcid.org/0009-0001-2306-1223" target="_blank" rel="noopener">ORCID</a>
-                <a class="pill-link" href="https://www.linkedin.com/in/ammar-kheder-a37053193/" target="_blank" rel="noopener">LinkedIn</a>
-                <a class="pill-link" href="https://www.researchgate.net/profile/Ammar-Kheder-2" target="_blank" rel="noopener">ResearchGate</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" id="news" aria-labelledby="news-title">
-        <div class="container">
-            <header class="section-head reveal">
-                <p class="kicker"><span class="kicker-num">06</span> Récent</p>
-                <h2 id="news-title">Actualités</h2>
-            </header>
-            <ol class="news-list reveal">
-                <li class="news-featured"><span class="news-when"><span class="news-date">23 oct. 2026</span> <span class="news-badge" data-until="2026-11-20">Nouveau</span></span> <span class="news-text"><strong>Foehn de A à Z</strong>&nbsp;: 12 épisodes animés et un film de 44&nbsp;minutes expliquent Foehn bloc par bloc. <a href="videos.html#series">Voir la série &rarr;</a></span></li>
-                <li><span class="news-when"><span class="news-date">19 oct. 2026</span></span> <span class="news-text">Prépublication de <strong>Foehn</strong> sur <a href="https://arxiv.org/abs/2610.25941" target="_blank" rel="noopener">arXiv</a>, avec des <a href="https://ammarkheder.com/Foehn/" target="_blank" rel="noopener">prévisions interactives à 1&nbsp;km</a> et le <a href="https://github.com/AmmarKheder/Foehn" target="_blank" rel="noopener">code</a>.</span></li>
-                <li><span class="news-when"><span class="news-date">7 sept. 2026</span></span> <span class="news-text">Présentation de <strong>TopoFlow</strong> à l’<a href="https://www.iac2026.cn/#/" target="_blank" rel="noopener">IAC 2026</a>, l’International Aerosol Conference, à Xi&rsquo;an.</span></li>
-                <li><span class="news-when"><span class="news-date">août 2026</span></span> <span class="news-text">Exposé invité au Boya Forum on Environmental Research, <a href="https://www.linkedin.com/school/peking-university/" target="_blank" rel="noopener">Université de Pékin</a>.</span></li>
-            </ol>
-            <details class="news-more reveal">
-                <summary>Plus tôt en 2026 <span class="news-more-count">(3)</span></summary>
-                <ol class="news-list">
-                    <li><span class="news-when"><span class="news-date">juin 2026</span></span> <span class="news-text">Séjour de recherche dans l’<a href="https://team.inria.fr/arches/people/" target="_blank" rel="noopener">équipe ARCHES</a> d’Inria, auprès de Claire Monteleoni.</span></li>
-                    <li><span class="news-when"><span class="news-date">mai 2026</span></span> <span class="news-text">Séjour de recherche de deux jours (5&ndash;6 mai) auprès de la <a href="https://www.professoren.tum.de/en/chen-jia" target="_blank" rel="noopener">Pr&nbsp;Jia Chen</a> et de son groupe, à l’Université technique de Munich (TUM).</span></li>
-                    <li><span class="news-when"><span class="news-date">24 avr. 2026</span></span> <span class="news-text">Publication de <strong>TopoFlow</strong> dans <a href="https://www.nature.com/articles/s41612-026-01417-5" target="_blank" rel="noopener"><em>npj Climate and Atmospheric Science</em></a> (Nature Portfolio).</span></li>
-                </ol>
-            </details>
-            <p class="section-more reveal"><a href="news.html">Toutes les actualités &rarr;</a></p>
-        </div>
+            </li>
+        </ol>
+        <p class="section-more"><a href="https://scholar.google.com/citations?user=ZYvKJF4AAAAJ&amp;hl=en" target="_blank" rel="noopener">Toutes les publications sur Google Scholar &rarr;</a></p>
     </section>
 
 </main>
@@ -398,7 +344,7 @@
 <footer class="site-footer">
     <div class="footer-inner">
         <div class="footer-brand">
-            <img src="../signature.svg" width="200" height="80" alt="Ammar Kheder" decoding="async">
+            <img src="../signature.svg" width="200" height="80" alt="Ammar Kheder" loading="lazy" decoding="async">
             <p class="footer-tagline">Apprendre aux réseaux de neurones comment circule l’atmosphère.</p>
         </div>
         <div class="footer-col">
@@ -433,6 +379,7 @@
 </footer>
 
 <script src="../citations.js" defer></script>
+<script src="../home.js" defer></script>
 <script src="../site.js" defer></script>
 </body>
 </html>
