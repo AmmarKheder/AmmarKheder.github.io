@@ -178,8 +178,9 @@ def build() -> Path:
         "forecasting. Lead author of Foehn, a global 1 km probabilistic PM2.5 forecast "
         "up to a week ahead (preprint, 2026), and of TopoFlow (npj Climate and "
         "Atmospheric Science, 2026). Large-scale distributed training on the LUMI "
-        "supercomputer (up to 1,024 AMD MI250X GPUs). Freelance AI research expert "
-        "with Mercor.",
+        "supercomputer (up to 1,024 AMD MI250X GPUs). Creator of Otso, the real-time "
+        "global 1 km air-pollution forecast app (ammarkheder.com/Otso). Freelance AI "
+        "research expert with Mercor.",
     )
 
     # ---- Education ---- #
@@ -297,6 +298,9 @@ def build() -> Path:
 
     # ---- Selected projects ---- #
     pdf.section("Selected projects")
+    pdf.bullet("Otso (2026): real-time global air-pollution forecast at 1 km, updated "
+               "daily on LUMI, available in all languages as a web app and PWA. "
+               "ammarkheder.com/Otso")
     pdf.bullet("cDESP, a B2B SaaS compliance platform for industrial refrigeration "
                "pressure equipment. Built by Wabel Group for DCRR. esp.dcrr.fr")
     pdf.bullet("Pokemon Robot Auction (22 Dec 2023, Paris). The world's first Pokemon "
