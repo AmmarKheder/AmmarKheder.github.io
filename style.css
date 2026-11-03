@@ -544,3 +544,9 @@ html.js .reveal.is-in { opacity: 1; transform: none; }
 .about { margin-top: 10px; }
 .about p { font-size: 1.02rem; line-height: 1.6; }
 @media (max-width: 640px) { .hero h1 { font-size: 1.9rem; } }
+
+/* ── 20. Name at text size ── */
+.hero h1 { font-size: 1.6rem; margin-bottom: 0; }
+.hero-eyebrow { font-size: 0.9rem; margin-top: 2px; }
+.hero-cta { margin-top: 10px; }
+@media (max-width: 640px) { .hero h1 { font-size: 1.45rem; } }
