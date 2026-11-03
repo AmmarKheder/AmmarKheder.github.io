@@ -1361,3 +1361,9 @@ html.modal-open { overflow: hidden; }
     .about-side .avatar-swap { width: min(78vw, 360px); height: min(78vw, 360px); }
     .about-side .hero-portrait figcaption { font-size: 0.9rem; }
 }
+
+/* ── 19. Portrait caption: small, below the image ── */
+.about-side .hero-portrait { display: flex; flex-direction: column; align-items: center; }
+.about-side .hero-portrait .avatar-swap { order: 0; }
+.about-side .hero-portrait figcaption { order: 1; margin-top: 10px; font-size: 0.75rem; text-transform: none; letter-spacing: 0; color: var(--muted); }
+@media (max-width: 900px) { .about-side .hero-portrait figcaption { font-size: 0.72rem; } }
