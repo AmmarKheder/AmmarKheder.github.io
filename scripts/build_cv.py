@@ -173,12 +173,13 @@ def build() -> Path:
     pdf.set_text_color(*pdf.INK)
     pdf.multi_cell(
         0, 4.6,
-        "Doctoral researcher in computational engineering at LUT University, working "
-        "on neural architectures that explicitly encode atmospheric physics for air "
-        "quality and Earth system prediction. Hands-on experience with large-scale "
-        "distributed training on the LUMI supercomputer (up to 1,024 AMD MI250X GPUs). "
-        "Lead author of TopoFlow (npj Climate and Atmospheric Science, 2026). Founder "
-        "and CEO of Wabel Group, an AI and web development company.",
+        "Doctoral researcher in computational engineering at LUT University (AMC-Lahti, "
+        "INAR), combining atmospheric physics with generative networks for air-quality "
+        "forecasting. Lead author of Foehn, a global 1 km probabilistic PM2.5 forecast "
+        "up to a week ahead (preprint, 2026), and of TopoFlow (npj Climate and "
+        "Atmospheric Science, 2026). Large-scale distributed training on the LUMI "
+        "supercomputer (up to 1,024 AMD MI250X GPUs). Freelance AI research expert "
+        "with Mercor.",
     )
 
     # ---- Education ---- #
@@ -206,13 +207,22 @@ def build() -> Path:
     # ---- Experience ---- #
     pdf.section("Experience")
     pdf.entry(
+        "2026 - now",
+        "AI Research Expert (freelance)",
+        "Mercor, San Francisco (remote)",
+        "Scientific data-analysis workflows (Python, ML, atmospheric and climate data) "
+        "used to train AI agents that operate computers. Top contributor tier within "
+        "two weeks.",
+    )
+    pdf.entry(
         "2024 - now",
         "Junior Researcher and Teaching Assistant",
         "LUT University, Computational Engineering",
-        "Research on physics-informed deep learning for atmospheric science. "
-        "Teaching assistant for Foundations of AI and Machine Learning (twice) "
-        "and Foundations of Computer Science. "
-        "Contributor to the AMC-Lahti summer school (25 participants, 2025).",
+        "Research on generative, physics-aware deep learning for atmospheric science. "
+        "Teaching assistant for Foundations of AI and Machine Learning (practical "
+        "sessions and exam grading, twice) and Foundations of Computer Science; "
+        "co-supervision of one master's thesis a year. Contributor to the AMC-Lahti "
+        "summer school (25 participants, 2025).",
     )
     pdf.entry(
         "2023 - 2026",
@@ -240,10 +250,17 @@ def build() -> Path:
     # ---- Publications ---- #
     pdf.section("Publications")
     pdf.pub(
+        "Global probabilistic forecasting of air pollution (Foehn): 1 km PM2.5 "
+        "forecasts up to a week ahead over all inhabited land.",
+        "A. Kheder, M. Boy, Z.-S. Liu.",
+        "Preprint, 2026. arXiv:2610.25941. Interactive forecasts, film and code at "
+        "ammarkheder.com/Foehn",
+    )
+    pdf.pub(
         "TopoFlow: topography-aware pollutant Flow learning for high-resolution "
         "air quality prediction.",
         "A. Kheder, H. Toropainen, W. Peng, S. Antao, J. Chen, M. Boy, Z.-S. Liu.",
-        "npj Climate and Atmospheric Science (Nature Portfolio), 2026. "
+        "npj Climate and Atmospheric Science 9, 143 (Nature Portfolio), 2026. "
         "DOI: 10.1038/s41612-026-01417-5",
     )
     pdf.pub(
@@ -267,8 +284,10 @@ def build() -> Path:
 
     # ---- Talks and presentations ---- #
     pdf.section("Talks and presentations")
-    pdf.bullet("Accepted talk at IAC 2026 (International Aerosol Conference), Xi'an, "
-               "China.")
+    pdf.bullet("IAC 2026 (International Aerosol Conference), Xi'an, China (September 2026): "
+               "TopoFlow.")
+    pdf.bullet("Boya Forum on Environmental Research, Peking University (August 2026): "
+               "invited talk.")
     pdf.bullet("EAC 2025 (European Aerosol Conference), Lecce, Italy. AQ-Net poster.")
     pdf.bullet("SCIA 2025, Reykjavik, Iceland. Speed talk and poster, Springer LNCS "
                "publication.")
@@ -298,6 +317,8 @@ def build() -> Path:
 
     # ---- Visits ---- #
     pdf.section("Academic visits")
+    pdf.bullet("June 2026: research visit to the ARCHES team at Inria, hosted by "
+               "Claire Monteleoni.")
     pdf.bullet("May 2026 (5-6 May): two-day research stay with AMC member Prof. Jia Chen "
                "and her group at the Technical University of Munich (TUM). Start of a new "
                "international collaboration.")
@@ -314,8 +335,9 @@ def build() -> Path:
                "JavaScript, HTML / CSS, VBA.")
     pdf.bullet("HPC: distributed training on LUMI (up to 1,024 AMD MI250X GPUs), DDP, "
                "ROCm / CUDA, Slurm, Zarr.")
-    pdf.bullet("Deep learning: vision transformers, recurrent and graph neural "
-               "networks, physics-informed and Reservoir Computing models.")
+    pdf.bullet("Deep learning: generative models (flow matching), vision transformers, "
+               "recurrent and graph neural networks, physics-informed models; "
+               "Lagrangian transport (FLEXPART-style) coupled to neural networks.")
     pdf.bullet("Web and product: Django, Flask, full-stack web, B2B SaaS delivery.")
 
     # ---- Languages ---- #
